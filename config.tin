@@ -5,7 +5,7 @@
 #NOP
 #NOP==========================================================================
 #NOP La password de tu Cuenta:  IMPORTANTE BORRAR ESTO ANTES DE DISTRIBUIR
-#VAR passwd {Shaktty4me}
+#VAR passwd {EMPTY}
 #NOP--------------------------------------------------------------------------
 #NOP    Configuracion basica del cliente
 #NOP--------------------------------------------------------------------------
