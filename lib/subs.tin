@@ -1,0 +1,4 @@
+#subs {Pronuncias el cántico: %1} {<acf>Pronuncias el cántico: <CAF>%1}
+#subs {¡Envuelves a %1 en tu %2!} {<acf>Envuelves a <fac>%1 <acf>en tu <CAF>%2}
+#subs {¡Envuelves a %1 en tu %2!} {<acf>¡Envuelves a <fac>%1 <acf>en tu <CAF>%2}
+#subs {¡Envuelves a %1 en tu %2!} {<caf>¡Envuelves a <fac>%1<caf> en tu <CAF>%2<caf>!}

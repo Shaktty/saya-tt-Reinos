@@ -1,0 +1,30 @@
+#READ lib/hechizos.tin
+#VARIABLE {xp} {cobradores,lobos,zombis,entes,vrocs,espiritus,sacerdotes,,novicios,acolitos,peregrinos,soldados,aguasnegras,diablillos,animales} {5}
+#VARIABLE         {PJPGS}  {651}
+#VARIABLE         {PJPVS}  {2171}
+#ALIAS            {pi} {db volcanico;cb petreo;eq;piel} {5}
+#VARIABLE         {f10var}  {x}
+#VARIABLE         {f11var}  {r}
+#VARIABLE         {f12var}  {po}
+#VARIABLE         {f1var}  {te}
+#VARIABLE         {f2var}  {bf}
+#VARIABLE         {f3var}  {man}
+#VARIABLE         {f4var}  {gr}
+#VARIABLE         {f5var}  {z}
+#VARIABLE         {f6var}  {subetu}
+#VARIABLE         {f7var}  {esp}
+#VARIABLE         {f8var}  {ee}
+#VARIABLE         {f9var}  {par}
+#ALIAS            {denv} {desenvainar} {5}
+#ALIAS            {env} {envainar} {5}
+#VARIABLE	  {pincho} {garrote} 
+#ALIAS            {on} {blandir $pincho} {5}
+#ALIAS            {of} {envainar $pincho} {5}
+#ALIAS {bbb} { bando ! } {5}
+#ALIAS {bb} { bando @la %^BOLD%^MAGENTA%^M%^BLACK%^aga %^MAGENTA%^S%^RED%^alvaje%^BLACK%^: %^ORANGE%^%0%^RESET%^ } {5}
+#ALIAS {cc} { chat ! } {5}
+#ALIAS {dsirv} { decir sirviente te ordeno: %0 } {5}
+#ALIAS {uuu} { ciu ! } {5}
+#ALIAS {ppr} { prompt PV: $v/$PJPVS GP: $g/$PJPGS | $e | $p | $s |$j|$b|$a>} {5}
+#PROMPT {PV: %1/%2 GP: %3/%4 | %5 | %6 | %7 |%8|%9|%10>}   {<afc>[..Pvs.<cfa>%1<119>/<cfa>%2<afc>..|.<fac>Gps.%3<149>/<fac>%4.<afc>.| <acf>Imagenes: %5<cfa> | <fca>Pieles: %6<cfa> |<fca> Caza: <119>$target <cfa>|<129>~%8~<fca>~%9~<119>~%10~~<cfa>|<109>%7<afc> ]<190> \>} {3}
+#PROMPT {^PV: %1/%2 GP: %3/%4 | %5 | %6 | %7 |%8|%9|%10>}  {<afc>[..Pvs.<cfa>%1<119>/<cfa>%2<afc>..|.<fac>Gps.%3<149>/<fac>%4.<afc>.| <acf>Imagenes: %5<cfa> | <fca>Pieles: %6<cfa> |<fca> Caza: <119>$target <cfa>|<129>~%8~<fca>~%9~<119>~%10~~<cfa>|<109>%7<afc> ]<190> \>} {3}

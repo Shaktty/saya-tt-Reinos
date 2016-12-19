@@ -1,0 +1,33 @@
+#VAR PJPVS {2121}
+#VAR PJPGS {272}
+#VAR larm hoz
+#var rarm cadena
+#ALIAS {ppr} { prompt PV: $v/$PJPVS GP: $g/$PJPGS | $s |$j|$b|$a> } {5}
+#ALIAS {0} { esconderse arbol } {5}
+#ALIAS {k} { ss; sg } {5}
+#ALIAS {ss} { sorprender %0,$target,$nicks,$xp } {5}
+#ALIAS {ldenv} { desenvainar $larm } {5}
+#ALIAS {lenv} { envainar $larm } {5}
+#ALIAS {to} {torbellino $target,%0,$nicks,$xp } {5}
+#ALIAS {j} {torbellino $target,%0,$xp } {5}
+#ALIAS {r} { concentracion } {5}
+#ALIAS {cc} { chat ! } {5}
+#ALIAS {bbb} { bando ! } {5}
+#ALIAS {z} {zancadilla $target,%0,$nicks } {5}
+#ALIAS {zz} {zancadilla $target,%0,$xp } {5}
+#ALIAS {x} {torbellino $target,%0,$nicks } {5}
+#PROMPT           {PV: %1/%2 GP: %3/%4 | %5 |%6|%7|%8}                {<afc>[..Pvs.<cfa>%1<119>/<cfa>%2<afc>..|.<fac>Gps.%3<149>/<fac>%4.<afc>.| <acf>$conc<afc> | <fca> Caza: <119>$target <cfa>|<129>~%6~<fca>~%7~<119>~%8~~<cfa>|<109>%5<afc> ]<190> \>}                                                                                                                                                            {3}
+#PROMPT           {^PV: %1/%2 GP: %3/%4 | %5 |%6|%7|%8}                 {<afc>[..Pvs.<cfa>%1<119>/<cfa>%2<afc>..|.<fac>Gps.%3<149>/<fac>%4.<afc>.| <acf>$conc<afc> | <fca> Caza: <119>$target <cfa>|<129>~%6~<fca>~%7~<119>~%8~~<cfa>|<109>%5<afc> ]<190> \>}                                                                                                                                                            {3}
+#VAR {f1var} {q} {5}
+#VAR {f2var} {-} {5}
+#VAR {f3var} {-} {5}
+#VAR {f4var} {qq} {5}
+#VAR {f5var} {-} {5}
+#VAR {f6var} {-} {5}
+#VAR {f7var} {-} {5}
+#VAR {f8var} {l} {5}
+#VAR {f8var} {ee} {5}
+#VAR {f9var} {subetu} {5}
+#VAR {f10var} {to} {5}
+#VAR {f11var} {cen} {5}
+#VAR {f12var} {ss} {5}

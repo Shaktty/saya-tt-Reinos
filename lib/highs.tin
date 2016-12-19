@@ -1,0 +1,267 @@
+#HIGHLIGHT {¡Te estremeces y pierdes la concentración!} {<CAF>} {5}
+#HIGHLIGHT        {Galopas en %1}  {<afc>}  {5}
+#HIGHLIGHT	  {Necesitas %1} {<FCA>} {5}
+#HIGHLIGHT        {Khealan}  {<afc>}  {5}
+#HIGHLIGHT        {Dejas de preever los próximos ataques de tus enemigos}                                    {<caf>}  {5}
+#HIGHLIGHT        {Comienzas a galopar en %1}       {<cfa>}  {5}
+#HIGHLIGHT        {Grunjo}  {<cfa>}  {5}
+#HIGHLIGHT        {Yckull}  {<cfa>}  {5}
+#HIGHLIGHT        {Armada con tu %1 comienzas a desollar el cuepro de %2}                                   {<fac>}  {5}
+#HIGHLIGHT        {Al acabar tu trabajo, dejas esparcida por el suelo la %1}                                      {<fca>}  {5}
+#HIGHLIGHT        {Kattak}  {<fca>}  {5}
+#HIGHLIGHT        {Kheleb}  {<fca>}  {5}
+#HIGHLIGHT        {Thorin}  {<fca>}  {5}
+#HIGHLIGHT        {Trampera}  {<fca>}  {5}
+#HIGHLIGHT        {Veleiron}  {<fca>}  {5}
+#HIGHLIGHT        {Eirea}  {GREEN}  {5}
+#HIGHLIGHT        {Limbo}  {WHITE}  {5}
+#HIGHLIGHT        {Poney}                 {b blue}                     {5}
+#HIGHLIGHT        {¡Tus imágnes se desvanecen!}         {b cyan}  {5}
+#HIGHLIGHT        {%1 no parece estar muy satisfecho con tus travesuras}                                  {b magenta}  {5}
+#HIGHLIGHT        {Buscas una buena postura para esconderte detrás de %1}                                    {b magenta}  {5}
+#HIGHLIGHT        {No puedes lanzar ningún hechizo ahora mismo}                         {b magenta}  {5}
+#HIGHLIGHT        {Te sientes más débil cuando tu hechizo de fuerza llega a su fin.}                                              {b magenta}  {5}
+#HIGHLIGHT        {Te vuelves a sentir pesado}        {b magenta}  {5}
+#HIGHLIGHT        {Tu hechizo de %1 }  {b magenta}  {5}
+#HIGHLIGHT        {Tus otras acciones te mantienen demasiado ocupado y pierdes la concentración arruinando tu hechizo}                                                                                {b magenta}  {5}
+#HIGHLIGHT        {%1 comienza a rodearte. Sin duda no trama nada bueno}  {b red}                      {5}
+#HIGHLIGHT        {No es posible apuñalar, estás inmersa en una lucha.}                                   {b red}  {5}
+#HIGHLIGHT        {No est?s suficientemente calmada}              {b red}  {5}
+#HIGHLIGHT        {No est?s suficientemente calmado}              {b red}  {5}
+#HIGHLIGHT        {Paras de perseguir a %1}     {b red}  {5}
+#HIGHLIGHT        {Reconoces el %1}  {b red}  {5}
+#HIGHLIGHT        {Tu v?ctima est? demasiado atenta, prueba m?s tarde}                                {b red}  {5}
+#HIGHLIGHT        {Tu víctima está demasiado atenta, prueba más tarde}                                   {b red}  {5}
+#HIGHLIGHT        {orbita}  {black}  {5}
+#HIGHLIGHT        {Estás fatigado mentalmente para formular el hechizo}                                 {blink,b magenta}  {5}
+#HIGHLIGHT        {Vislumbras una oportunidad de ataque contra}                         {blink,bold,green}  {5}
+#HIGHLIGHT        {?Tu enga?o ha quedado al descubierto!}                   {blink,bold,red}  {5}
+#HIGHLIGHT        {Tu ataque es especialmente eficaz atarvesando las defensas de %1}                                              {blink,bold,red}  {5}
+#HIGHLIGHT        {Consigues evitar a %1}   {blink,green}  {5}
+#HIGHLIGHT        {No estas peleandote con nadie}           {blink,green}  {5}
+#HIGHLIGHT        {No es posible apunyalar, estas inmersa en una lucha}                                 {blink,magenta}  {5}
+#HIGHLIGHT        {??Cazas a %1 golpe?ndole donde m?s duele!!}                        {blink,red}  {5}
+#HIGHLIGHT        {??Cazas a %1 golpe?ndole r?pidamente donde m?s duele!!}                                    {blink,red}  {5}
+#HIGHLIGHT        {Paras de perseguir a }   {blink,red}  {5}
+#HIGHLIGHT        {Tu globo de invulnerabilidad empieza a parpadear hasta que desaparece.}                                                    {blink,red}  {5}
+#HIGHLIGHT        {¡¡Cazas a %1 golpeándole donde más duele!!}                            {blink,red}  {5}
+#HIGHLIGHT        {¡¡Cazas a %1 golpeándole rápidamente donde más duele!!}                                         {blink,red}  {5}
+#HIGHLIGHT        {Tu embotada mente es incapaz de alcanzar tan pronto una cota tan elevada de concentracion. Descansa un poco.}                                                                                          {blink,yellow}  {5}
+#HIGHLIGHT        {Comienzas a soplar %0}  {blink}                      {5}
+#HIGHLIGHT        {Aprovechas que tu objetivo esta distraido con un oponente}                                       {blink}  {5}
+#HIGHLIGHT        {No perteneces a ninguna horda}           {blink}  {5}
+#HIGHLIGHT        {Tu piel vuelve a su estado normal.}                {blink}  {5}
+#HIGHLIGHT        {apresuramiento}  {blink}  {5}
+#HIGHLIGHT        {Cantas:}               {blue}                       {5}
+#HIGHLIGHT        {Tras un tiempo, decides darle un respiro a tu vista}                                 {bold,black,blink}  {5}
+#HIGHLIGHT        {Minera}  {bold,black}  {5}
+#HIGHLIGHT        {Minero}  {bold,black}  {5}
+#HIGHLIGHT        {Dejas de divisar el horizonte}           {bold,black}  {5}
+#HIGHLIGHT        {Mercenario}  {bold,black}  {5}
+#HIGHLIGHT        {¡Tus imagenes se desvanecen!}          {bold,blink,red}  {5}
+#HIGHLIGHT        {¡Tus imágenes se desvanecen!}          {bold,blink,red}  {5}
+#HIGHLIGHT        {La piel de %1 vuelve a su estado normal.}                      {bold,blink,reverse}  {5}
+#HIGHLIGHT        {%0 te mira con desconfianza mientras intentas esconderte a su espalda, y decides buscar otro escondite menos desconfiado.}                                                                                                       {bold,blink}  {5}
+#HIGHLIGHT        {thorin}  {bold,blue}  {5}
+#HIGHLIGHT        {%1 Las Garzas}  {bold,cyan}  {5}
+#HIGHLIGHT        {Ak'Anon}  {bold,cyan}  {5}
+#HIGHLIGHT        {Bueno}  {bold,cyan}  {5}
+#HIGHLIGHT        {Marinera}  {bold,cyan}  {5}
+#HIGHLIGHT        {Marinero}  {bold,cyan}  {5}
+#HIGHLIGHT        {Takome}  {bold,cyan}  {5}
+#HIGHLIGHT        {Lobo se echa hacia %1 y le propina una dentellada para acto seguido retroceder, en una maniobra de hostigamiento}                                                                                              {bold,green,blink}  {5}
+#HIGHLIGHT        {Chat}  {bold,green}  {5}
+#HIGHLIGHT        {Exito}  {bold,green}  {5}
+#HIGHLIGHT        {Meldon}  {bold,green}  {5}
+#HIGHLIGHT        {Sientes como el veneno de tu cuerpo es purgado, haciendote sentir mucho mas tranquilo.}                                                                    {bold,green}  {5}
+#HIGHLIGHT        {alejandose}  {bold,green}  {5}
+#HIGHLIGHT        {desde tu escondite}  {bold,green}  {5}
+#HIGHLIGHT        {girando los brazos en un armónico movimiento}                           {bold,green}  {5}
+#HIGHLIGHT        {revigorizado}  {bold,green}  {5}
+#HIGHLIGHT        {Terminas el hechizo sobre ti misma y te resguardas bajo la capa del caos}                                                      {bold,magenta,blink}  {5}
+#HIGHLIGHT        {�Tus imagenes se desvanecen!}            {bold,magenta,blink}  {5}
+#HIGHLIGHT        {Con sutileza y cautela te preparas para iniciar tu robo.}                                      {bold,magenta,reverse}  {5}
+#HIGHLIGHT        {%1 Ignis}  {bold,magenta}  {5}
+#HIGHLIGHT        {Artesana}  {bold,magenta}  {5}
+#HIGHLIGHT        {Artesano}  {bold,magenta}  {5}
+#HIGHLIGHT        {Eloras}  {bold,magenta}  {5}
+#HIGHLIGHT        {Ignis}  {bold,magenta}  {5}
+#HIGHLIGHT        {Zaynyr}  {bold,red,blink}  {5}
+#HIGHLIGHT        {Tus alas aún te duelen tras la última maniobra de picado que has realizado.}                                                           {bold,red,reverse}  {5}
+#HIGHLIGHT        {muerto}  {bold,red,reverse}  {5}
+#HIGHLIGHT        {%1 se desploma a causa de la p?rdida de sangre.}                             {bold,red}  {5}
+#HIGHLIGHT        {?%1 comienza a sangrar de manera muy intensa por culpa de tus heridas!}                                                     {bold,red}  {5}
+#HIGHLIGHT        {?%1 comienza a sangrar de manera muy intensa por culpa de tus heridas!}                                                    {bold,red}  {5}
+#HIGHLIGHT        {?Tu golpe cause una profunda herida a %1 en %2}                            {bold,red}  {5}
+#HIGHLIGHT        {Ar'Kaindia}  {bold,red}  {5}
+#HIGHLIGHT        {Cazas crÃ­ticamente}   {bold,red}  {5}
+#HIGHLIGHT        {Dendra}  {bold,red}  {5}
+#HIGHLIGHT        {Golthur}  {bold,red}  {5}
+#HIGHLIGHT        {Grimoszk}  {bold,red}  {5}
+#HIGHLIGHT        {Malo}  {bold,red}  {5}
+#HIGHLIGHT        {Mor Grodd?r}  {bold,red}  {5}
+#HIGHLIGHT        {Ordenas a %1, el Gran Lobo Ancestral habilidad dentellada sobre %2}                                                {bold,red}  {5}
+#HIGHLIGHT        {Te das cuenta de que %1}     {bold,red}  {5}
+#HIGHLIGHT        {Thyaser}  {bold,red}  {5}
+#HIGHLIGHT        {Tiene una fuerte hemorragia en %0}               {bold,red}  {5}
+#HIGHLIGHT        {acercandose}  {bold,red}  {5}
+#HIGHLIGHT        {moribundo}  {bold,red}  {5}
+#HIGHLIGHT        {mortalmente herido}  {bold,red}  {5}
+#HIGHLIGHT        {¡%1  comienza a sangrar de manera muy intensa por culpa de tus heridas!}                                                      {bold,red}  {5}
+#HIGHLIGHT        {¡%1 comienza a sangrar de manera muy intensa por culpa de tus heridas!}                                                     {bold,red}  {5}
+#HIGHLIGHT        {¡Tu golpe cause una profunda herida a %1 en %2}                             {bold,red}  {5}
+#HIGHLIGHT        {Â¡Cazas crÃ­ticamente a %1}            {bold,red}  {5}
+#HIGHLIGHT        {Es la hora de la verdad, %1 ¡dame algo que merezca la pena o prepárate para morir!}                                                                  {bold,reverse,cyan}  {5}
+#HIGHLIGHT        {Exclamas en %1: Es la hora de la verdad, %2 ¡dame algo que merezca la pena o prepárate para morir!}                                                                                  {bold,reverse,cyan}  {5}
+#HIGHLIGHT        { Te vuelves a sentir pesada.}          {bold,reverse,magenta}  {5}
+#HIGHLIGHT        {Te vuelves a sentir pesada.}         {bold,reverse,magenta}  {5}
+#HIGHLIGHT        {¡Golpeas de nuevo a %1 con un ataque rápido!}                            {bold,reverse,red}  {5}
+#HIGHLIGHT        {¡Lanzas un ataque de oportunidad contra %1!}                          {bold,reverse,red}  {5}
+#HIGHLIGHT        {Detienes tu implacable ráfaga de golpes puesto que tu enemigo ha fenecido}                                                        {bold,white,reverse}  {5}
+#HIGHLIGHT        {%1, el Gran Halcón Vigilante rasga}                 {bold,yellow}  {5}
+#HIGHLIGHT        {Erudita}  {bold,yellow}  {5}
+#HIGHLIGHT        {considerablemente herido}      {bold,yellow}  {5}
+#HIGHLIGHT        {considerablemente}  {bold,yellow}  {5}
+#HIGHLIGHT        {en un r?pido movimiento}     {bold,yellow}  {5}
+#HIGHLIGHT        {en un rápido movimiento}      {bold,yellow}  {5}
+#HIGHLIGHT        {ligeramente herida}  {bold,yellow}  {5}
+#HIGHLIGHT        {ligeramente herido}  {bold,yellow}  {5}
+#HIGHLIGHT        {moviendose}  {bold,yellow}  {5}
+#HIGHLIGHT        {Trampero}  {bold,}  {5}
+#HIGHLIGHT        {Erudito}  {bold,yellow}  {5}
+#HIGHLIGHT        {Erudita}  {bold,yellow}  {5}
+#HIGHLIGHT        {Keel}  {bold}  {5}
+#HIGHLIGHT        {Vagabunda}  {bold}  {5}
+#HIGHLIGHT        {Vagabundo}  {bold}  {5}
+#HIGHLIGHT        {%1 se %2 de ti}  {cyan}  {5}
+#HIGHLIGHT        {Estás rodeado por %1 imágenes idénticas a ti}                          {cyan}  {5}
+#HIGHLIGHT        {[Ak'anon]}  {cyan}  {5}
+#HIGHLIGHT        {%1 se da cuenta de la pu?alada}  {green}                      {5}
+#HIGHLIGHT        {Mejoras %0}            {green}                      {5}
+#HIGHLIGHT        {Vislumbras *}          {green}                      {5}
+#HIGHLIGHT        {^Su bolsa %1}          {green}                      {5}
+#HIGHLIGHT        {perfecto estado}       {green}                      {5}
+#HIGHLIGHT        {%0 %1 te golpea sin producir %2}             {green}  {5}
+#HIGHLIGHT        {%0 , el Gran Lobo Ancestral que consigue esquivar el golpe.}                                         {green}  {5}
+#HIGHLIGHT        {%1, el Gran Lobo Ancestral te protege valientemente}                                 {green}  {5}
+#HIGHLIGHT        {Aprendes de esta actividad y ganas 1 punto de oficio.}                                   {green}  {5}
+#HIGHLIGHT        {Aranya}  {green}  {5}
+#HIGHLIGHT        {Comienzas a concentrarte en tu victima, y te sientes capaz de golpear los puntos débiles de tu enemigo}                                                                                     {green}  {5}
+#HIGHLIGHT        {Continuas observando a lo lejos intentado captar cualquier movimiento}                                                   {green}  {5}
+#HIGHLIGHT        {De pronto te paras ante algo que ha llamado tu atención, lo recoges y lo guardas, tendrás que identificarlo tranquilamente.}                                                                                                         {green}  {5}
+#HIGHLIGHT        {Divisas}  {green}  {5}
+#HIGHLIGHT        {Encuentras una piedra en el suelo que parece que puede serte útil.}                                                {green}  {5}
+#HIGHLIGHT        {Estas rodeada por %1 Espadas que te protegen}                          {green}  {5}
+#HIGHLIGHT        {Está en excelente estado.}        {green}  {5}
+#HIGHLIGHT        {Finalmente logras colocarte y te escondes perfectamente}                                     {green}  {5}
+#HIGHLIGHT        {Jornalera}  {green}  {5}
+#HIGHLIGHT        {Jornalero}  {green}  {5}
+#HIGHLIGHT        {No puedes imbuir mas poder runico, no lo soportaria.}                                  {green}  {5}
+#HIGHLIGHT        {Observas}  {green}  {5}
+#HIGHLIGHT        {Proteges}  {green}  {5}
+#HIGHLIGHT        {Surges de la maleza del bosque sorprendiendo a tu enemigo}                                       {green}  {5}
+#HIGHLIGHT        {Tu %1 te sigue en silencio}          {green}  {5}
+#HIGHLIGHT        {Un buen golpe deja momentaneamente aturdido a %1}                              {green}  {5}
+#HIGHLIGHT        {Ya est?s concentrada}  {green}  {5}
+#HIGHLIGHT        {Ya estás concentrada}   {green}  {5}
+#HIGHLIGHT        {^Su bolsa %1}  {green}  {5}
+#HIGHLIGHT        {buen estado}  {green}  {5}
+#HIGHLIGHT        {con terrible precisi?n}    {green}  {5}
+#HIGHLIGHT        {con terrible precisión}     {green}  {5}
+#HIGHLIGHT        {esquivas}  {green}  {5}
+#HIGHLIGHT        {evasiva}  {green}  {5}
+#HIGHLIGHT        {lianas}  {green}  {5}
+#HIGHLIGHT        {los movimientos de}  {green}  {5}
+#HIGHLIGHT        {para cazar de una forma efectiva}              {green}  {5}
+#HIGHLIGHT        {perfecto}  {green}  {5}
+#HIGHLIGHT        {ramas}  {green}  {5}
+#HIGHLIGHT        {vincas}  {green}  {5}
+#HIGHLIGHT        {^Intentas concentrarte para cazar a tu enemigo en medio de la lucha.}                                                  {light}  {5}
+#HIGHLIGHT        {Los efectos de tu bendici?n desaparecen.}                      {magenta,bold}  {5}
+#HIGHLIGHT        {Ves como tus im?genes intentan esconderse sin mucho ?xito}                                       {magenta,bold}  {5}
+#HIGHLIGHT        {Comienzas a formular el hechizo %1}                {magenta}  {5}
+#HIGHLIGHT        {Encapuchado}  {magenta}  {5}
+#HIGHLIGHT        {Intentas esconderte entre las sombras.}                    {magenta}  {5}
+#HIGHLIGHT        {Observas desde tu escondite los movimientos de %1 para cazar de forma efectiva}                                                            {magenta}  {5}
+#HIGHLIGHT        {Sastre}  {magenta}  {5}
+#HIGHLIGHT        {Modista}  {magenta}  {5}
+#HIGHLIGHT        {Tu piel es de piedra}  {magenta}  {5}
+#HIGHLIGHT        {borracho}  {magenta}  {5}
+#HIGHLIGHT        {Eso ha tenido que hacerle mucho danyo}                   {red,b cyan}  {5}
+#HIGHLIGHT        {Debido a la batalla te ves obligada a olvidar la idea de esconderte.}                                                  {red,blink}  {5}
+#HIGHLIGHT        {cr?ticamente}  {red,bold}  {5}
+#HIGHLIGHT        {críticamente}  {red,bold}  {5}
+#HIGHLIGHT        {rectificar tu estilo de lucha}           {red,bold}  {5}
+#HIGHLIGHT        {[Milicia Gnomica]}     {red}                        {5}
+#HIGHLIGHT        {fuerza sobrehumana}    {red}                        {5}
+#HIGHLIGHT        {%0 tejidos y organos}  {red}  {5}
+#HIGHLIGHT        {%1 se retuerce mientras aprieta sus heridas}                         {red}  {5}
+#HIGHLIGHT        {Abandonas tu estado de concentraciión bañada en un sudor frío, descubriendo heridas %!}                                                                       {red}  {5}
+#HIGHLIGHT        {Has quedado al descubierto!}         {red}  {5}
+#HIGHLIGHT        {No estas suficientemente calmado.}               {red}  {5}
+#HIGHLIGHT        {Surges desde tu escondite para cazar a tu víctima}                                {red}  {5}
+#HIGHLIGHT        {Tensas tus m?sculos preparando un nuevo ataque. ?Golpeas a %1 y r?pidamente, secundas %0}                                                                      {red}  {5}
+#HIGHLIGHT        {^Descubres a %1}  {red}  {5}
+#HIGHLIGHT        {^Notas a %1}  {red}  {5}
+#HIGHLIGHT        {efectiva}  {red}  {5}
+#HIGHLIGHT        {herido críticamente}  {red}  {5}
+#HIGHLIGHT        {mortalmente}  {red}  {5}
+#HIGHLIGHT        {El árbol empieza a crujir y cae con gran estrépito.}                                   {reverse,green}  {5}
+#HIGHLIGHT        {¡Estás ocupado talando un árbol!}                 {reverse,red,blink}  {5}
+#HIGHLIGHT        {%1 deja de sangrar.}  {reverse,red}  {5}
+#HIGHLIGHT        {Estás rodeado por un globo translúcido}                    {reverse}  {5}
+#HIGHLIGHT        {Las runas de tu punyal dejan de brillar.}                      {reverse}  {5}
+#HIGHLIGHT        {Mirmus}  {reverse}  {5}
+#HIGHLIGHT        {Te haces consciente de la presencia de %1}                       {reverse}  {5}
+#HIGHLIGHT        {Buscas durante un rato sin encontrar nada que llame tu atención.}                                               {underscore,red}  {5}
+#HIGHLIGHT        {No puedes formular otro hechizo hasta que transcurra algún tiempo.}                                                {underscore}  {5}
+#HIGHLIGHT        {^%1 de Anduar}         {yellow}                     {5}
+#HIGHLIGHT        { %0 te protege %1}  {yellow}  {5}
+#HIGHLIGHT        {%0 Paras el ataque de %1}      {yellow}  {5}
+#HIGHLIGHT        {%0 percepcion de ambros brazos por igual.}                       {yellow}  {5}
+#HIGHLIGHT        {%1 de Anduar}  {yellow}  {5}
+#HIGHLIGHT        {%1, el Gran %2 Ancestral.}       {yellow}  {5}
+#HIGHLIGHT        {Asno}  {yellow}  {5}
+#HIGHLIGHT        {Est?s rodeada por un globo transl?cido.}                     {yellow}  {5}
+#HIGHLIGHT        {Estás rodeada por un globo translúcido.}                     {yellow}  {5}
+#HIGHLIGHT        {Esta runa no tiene efecto en ti, ya que eres ambidiestro.}                                       {yellow}  {5}
+#HIGHLIGHT        {Leñador}  {yellow}  {5}
+#HIGHLIGHT        {Leñadora}  {yellow}  {5}
+#HIGHLIGHT        {Registras lentamente la zona intentando encontrar algo de interés}                                               {yellow}  {5}
+#HIGHLIGHT        {Su piel es de piedra.}   {yellow}  {5}
+#HIGHLIGHT        {[Keel]}  {yellow}  {5}
+#HIGHLIGHT        {^%0 te protege %1}  {yellow}  {5}
+#HIGHLIGHT        {con un relampagueante giro}        {yellow}  {5}
+#HIGHLIGHT        {gravedad}  {yellow}  {5}
+#HIGHLIGHT        {herido de gravedad}  {yellow}  {5}
+#HIGHLIGHT        {lleno de heridas}  {yellow}  {5}
+#HIGHLIGHT        {Es demasiado pronto para ejecutar otra maniobra de caza.} {red} {5}
+#HIGHLIGHT        {Debes equilibrarte después de realizar el movimiento de ataque doble.} {red} {5}
+#HIGHLIGHT	  {Detienes tu maniobra de torbellino, pues la has realizado durante demasiado tiempo y temes que tu rival esté preparado para otra acometida.} {red} {5}  
+#HIGH {Aradia} {bold,red}
+#HIGH {Zeiring} {bold,red}
+#HIGH {Kurst} {bold,red}
+#HIGH {Louaril} {bold,red}
+#HIGH {Lerwyn} {bold,red}
+#HIGH {Lexanord} {bold,red}
+#HIGH {Sveinbjorn} {bold,red}
+#HIGH {Maellor} {bold,red}
+#HIGH {Hayuso} {bold,red}
+#HIGH {Mhodin} {bold,red}
+#HIGH {Mhodhin} {bold,red}
+#HIGH {Szhmaynlath} {bold,red}
+#HIGH {Zetrus} {bold,red}
+#HIGH {Eshgortheon} {bold,red}
+#HIGH {Tahurtz} {bold,red}
+#HIGH {Xeroxs} {bold,red}
+#HIGH {Zethrus} {bold,red}
+#HIGHLIGHT {¡Eres invulnerable a tu hechizo!} {bold,white,reverse} {5}
+#HIGHLIGHT {¡Resistes los efectos de tu propio hechizo!} {bold,white,reverse} {5}
+#HIGH {Estás demasiado cansada para continuar desollando el cadáver.} {bold,magenta,reverse} {5} 
+#high {¿Por qué no dejas descansar un poco a tus ojos antes de volver a otear?} {<fca>} {5}
+#high {No estás suficientemente calmada.} {<fca>} {5}
+#high {La buena visibilidad aumenta tu rango de visión.} {<cfa>} {5}
+#high {No estás peleándote con nadie.} {bold,green,reverse} {5}
+#HIGHLIGHT {Tu cuerpo está desdibujado y no tienes silueta.} {bold,green} {5}
+#HIGHLIGHT {Solitarios} {<caf>} {5}
+#HIGHLIGHT {Renegado} {<cfa>} {5}

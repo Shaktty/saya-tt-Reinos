@@ -1,0 +1,122 @@
+#ALIAS {bolaof} {formular disipar magia:$pj globo} {5}
+#ALIAS {dii} {formular disipar magia:$target %0} {5}
+#ALIAS {dip} {formular disipar magia:$target piel de piedra} {5}
+#ALIAS {ind} {formular indetectable:$pj} {5}
+#ALIAS {piel} {formular piel de piedra:$pj} {5}
+#ALIAS {ami} {formular amistad:$pj} {5}
+#ALIAS {par} {formular parpadeo:$pj} {5}
+#ALIAS {big} {formular agrandar:$pj} {5}
+#ALIAS {fue} {formular fuerza:$pj} {5}
+#ALIAS {esc} {formular escudo:$pj} {5}
+#ALIAS {esce} {formular escudo de energia:$pj} {5}
+#ALIAS {caida} {formular caida de pluma:$pj} {5}
+#ALIAS {esp} {formular espejismo:$pj} {5}
+#ALIAS {aura} {formular armadura espiritual:$pj} {5}
+#ALIAS {oen} {formular augurio de oen:$pj} {5}
+#ALIAS {ppr} {formular proteccion contra proyectiles:$pj} {5}
+#ALIAS {pam} {formular proteccion contra armas magicas:$pj} {5}
+#ALIAS {pac} {formular proteccion contra armas comunes:$pj} {5}
+#ALIAS {bol} {formular globo menor de invulnerabilidad:$pj} {5}
+#ALIAS {bola} {formular globo mayor de invulnerabilidad:$pj} {5}
+#ALIAS {devo} {formular devolver conjuro mayor:$pj} {5}
+#ALIAS {cp} {formular cantrip:proyectil $target,%0,$nicks,$xp} {5}
+#ALIAS {tee} {formular toque helado:$pj} {5}
+#ALIAS {to} {neruandi $target,%0,$nicks,$xp } {5}
+#ALIAS {cal} { formular causar heridas ligeras:%0,$target,$nicks,$xp } {5}
+#ALIAS {cam} { formular causar heridas moderadas:%0,$target,$nicks,$xp } {5}
+#ALIAS {cas} { formular causar heridas serias:%0,$target,$nicks,$xp } {5}
+#ALIAS {oir} {formular clariaudiencia} {5}
+#ALIAS {hh} { formular $hh2:%0,$target,$nicks,$xp } {5}
+#ALIAS {arm} { formular armadura:$pj } {5}
+#ALIAS {nu} { formular nube hedionda:%0 } {5}
+#ALIAS {nf} { formular nube de frio:$target,%0,$nicks,$xp } {5}
+#ALIAS {deb} { formular debilidad:$target,%0,$nicks,$xp } {5}
+#ALIAS {debf} { formular debilidad frio:$target,%0,$nicks,$xp } {5}
+#ALIAS {co} { formular cono de frio:$target,%0,$nicks,$xp } {5}
+#ALIAS {cv} { formular cavar:%1,aqui } {5}
+#ALIAS {nuu} { formular nube hedionda:terminar } {5}
+#ALIAS {bf} { formular bola de fuego:$target,%0,$nicks,$xp } {5}
+#ALIAS {bef} { formular bola encadenada de fuego:$target,%0,$nicks,$xp } {5}
+#ALIAS {lep} { formular lepra:$target,%0,$nicks,$xp } {5}
+#ALIAS {ba} { formular bola de agua:$target,%0,$nicks,$xp } {5}
+#ALIAS {y} { formular bola de fuego:%0,$nicks,$xp } {5}
+#ALIAS {q} { formular defenestrar:%0,$nicks,$xp } {5}
+#ALIAS {bols} { formular bolsillos profundos:$pj,%0 } {5}
+#ALIAS {caida} { formular caida de pluma:$pj } {5}
+#ALIAS {deca} { formular cantrip:decapitar cuerpo } {5}
+#ALIAS {ceg} { formular ceguera:$target,%0,$nicks,$xp } {5}
+#ALIAS {cona} { formular conocer alineamiento:%0 } {5}
+#ALIAS {ccuerpo} { formular conservar cuerpo:$target,%0,$nicks,$xp cerrar } {5}
+#ALIAS {cont} { formular contenedor dimensional } {5}
+#ALIAS {acero} { formular cuerpo de acero:$pj } {5}
+#ALIAS {dee} { formular debilidad:$target,%0,$nicks,$xp } {5}
+#ALIAS {ess} { formular descarga de espadas espectrales:%0,$target,$nicks,$xp } {5}
+#ALIAS {det} { formular detectar magia:%0 } {5}
+#ALIAS {disco} { formular disco flotante de ikim } {5}
+#ALIAS {dis} { formular disipar magia:$target,%0,$nicks,$xp } {5}
+#ALIAS {di} { formular disipar magia:$pj } {5}
+#ALIAS {nuu} { formular disipar magia:nube } {5}
+#ALIAS {do} { formular dormir:$target,%0,$nicks,$xp } {5}
+#ALIAS {enc} { formular encantar arma:$encan ; #showme Encantando $arma con conjuro de ataque $encan; formular encantar arma:$arma } {5}
+#ALIAS {ww} { formular esfera elastica de wylan:$wylan,$target,%0,$nicks,$xp } {5}
+#ALIAS {esf} { formular esfera llameante:$target,%0,$nicks,$xp } {5}
+#ALIAS {ef} { formular estallido de fuego:$target,%0,$nicks,$xp } {5}
+#ALIAS {h} { formular flecha acida de dvneil:$target,%0,$nicks,$xp } {5}
+#ALIAS {hh} { formular flecha magica:$target,%0,$nicks,$xp } {5}
+#ALIAS {rep} { formular repudiar:$target,%0,$nicks,$xp } {5}
+#ALIAS {rp} { formular repulsion:$target,%0,$nicks,$xp } {5}
+#ALIAS {fa} { formular flecha de agua:$target,%0,$nicks,$xp } {5}
+#ALIAS {fe} { formular flecha electrica:$target,%0,$nicks,$xp } {5}
+#ALIAS {fm} { formular flecha magica:$target,%0,$nicks,$xp } {5}
+#ALIAS {jj} { formular flecha de hielo:$target,%0,$nicks,$xp } {5}
+#ALIAS {j} { formular flecha de llamas:$target,%0,$nicks,$xp } {5}
+#ALIAS {r} { formular golpe de rayo:%0,$target,$nicks,$xp } {5}
+#ALIAS {gi} { formular golpe ilusorio:$target,%0,$nicks,$xp } {5}
+#ALIAS {gr} { formular granizo:$target,$nicks,$xp } {5}
+#ALIAS {gr} { formular granizo:$target,%0,$nicks,$xp } {5}
+#ALIAS {imb} { formular imbecilidad:$target,%0,$nicks,$xp } {5}
+#ALIAS {jis} { formular incontrolable risa de shasha:$target,%0,$nicks,$xp } {5}
+#ALIAS {ins} { formular insensibilidad:$target,%0,$nicks,$xp } {5}
+#ALIAS {int} { formular intoxicar:$target,%0,$nicks,$xp } {5}
+#ALIAS {irr} { formular irritacion:$target,%0,$caza,$xp } {5}
+#ALIAS {len} { formular lentitud:$target,%0,$nicks,$xp } {5}
+#ALIAS {ding} { formular llamada a la puerta:%1 } {5}
+#ALIAS {v} { formular magia de las sombras:$target,%0,$nicks,$xp } {5}
+#ALIAS {man} { formular manos ardientes:$target,%0,$nicks,$xp } {5}
+#ALIAS {z} { formular meteoros diminutos de ignis:$target,%0,$nicks,$xp } {5}
+#ALIAS {mi} { formular miedo:$target,%0,$nicks,$xp } {5}
+#ALIAS {nuf} { formular nube de frio:%0,$target,$nicks,$xp } {5}
+#ALIAS {nuh} { formular nube hedionda:aqui } {5}
+#ALIAS {olv} { formular olvidar:hechizo $target,%0,$nicks,$xp } {5}
+#ALIAS {par} { formular parpadeo:$pj } {5}
+#ALIAS {dvn} { formular transformacion de dvneil:$pj } {5}
+#ALIAS {piel} { formular piel de piedra:$pj } {5}
+#ALIAS {pre} { formular precognicion:$pj } {5}
+#ALIAS {po} { formular presa sacudidora:$target,%0,$nicks,$xp } {5}
+#ALIAS {x} { formular proyectil magico mayor:$target,%0,$nicks,$xp } {5}
+#ALIAS {pmm} { formular proyectil magico menor:$target,%0,$nicks,$xp } {5}
+#ALIAS {red} { formular reducir:$target,%0,$nicks,$xp } {5}
+#ALIAS {resf} { formular resfriar:$target,%0,$nicks,$xp } {5}
+#ALIAS {rfrio} { formular resistir frio:$arg,$pj } {5}
+#ALIAS {rfire} { formular resistir fuego:$arg,$pj } {5}
+#ALIAS {rmen} { formular resistir mental:$arg,$pj } {5}
+#ALIAS {rmag} { formular resistir magico:$pj } {5}
+#ALIAS {res} { formular resistir %1:$pj } {5}
+#ALIAS {mur} { formular muro de %1:%2 } {5}
+#ALIAS {ct} { formular contrahechizo:$target,%0,$nicks,$xp } {5}
+#ALIAS {ret} { formular retener muertos vivientes:$target,%0,$nicks,$xp } {5}
+#ALIAS {sil} { formular silueta imprecisa:$pj } {5}
+#ALIAS {sim} { formular simulacro:$pj } {5}
+#ALIAS {fsirv} { formular sirviente invisible } {5}
+#ALIAS {sor} { formular sordera:$target,%0,$nicks,$xp } {5}
+#ALIAS {tela} { formular telaraña:$target,%0,$nicks,$xp } {5}
+#ALIAS {tq} { formular toque helado:$target,%0,$nicks,$xp } {5}
+#ALIAS {vv} { formular toque vampirico:$target,%0,$nicks,$xp } {5}
+#ALIAS {th} { formular tormenta de hielo:$target,%0,$nicks,$xp } {5}
+#ALIAS {te} { formular tormenta electrica:$target,%0,$nicks,$xp } {5}
+#ALIAS {ll} { formular llamarada electrica:$target,%0,$nicks,$xp } {5}
+#ALIAS {ta} { formular tormenta acida:$target,%0,$nicks,$xp } {5}
+#ALIAS cons {formular consuncion de los restos:cuerpo} {5}
+#ALIAS sa {formular sangre a acido:$target,%0,$nicks,$xp} {5}
+#ALIAS {dvneil} {formular transformacion de dvneil:aeltas} {5}
+#al bff {formular bola encadenada de fuego:wryxer,%0,elpe,arenvael,shandreel,lithzaca,emiya,khealan,melitos,basara,vertor,ransit,nadrak,zeiring,nika,zidriz,hadracael,kashiwa,dalim,kurst,rijja,sydonai,munr,daemcane,zhiereng,zethrus,mykarin,phurky,namae,eirol,sinafae,gurlen,ernak,bergom,shyakh,ducard,siky,rowahzarrya,aldamare,tahurtz,vuurgh,wrunk,wryxer,harad,kromer,boffur,linath,blacyn,strife,wik,rakham,kriik,branak,shaila,louaril,ransit,boffur,yrwen,unndale,daemcane,shandreel,adultas,soldados,larvas,cobradores,lobos,zombis,entes,vrocs,espiritus,sacerdotes,,novicios,acolitos,peregrinos,soldados,aguasnegras,diablillos,animales  }  {5}

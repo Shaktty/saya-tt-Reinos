@@ -1,0 +1,33 @@
+#VARIABLE         {arma}  {punyal}
+#VARIABLE         {conc}  {NO}
+#VARIABLE         {escondite}  {ancestral.}
+#VARIABLE         {f10var}  {j}
+#VARIABLE         {f11var}  {at}
+#VARIABLE         {f12var}  {x}
+#VARIABLE         {f1var}  {q}
+#VARIABLE         {f2var}  {qq}
+#VARIABLE         {f3var}  {kk}
+#VARIABLE         {f4var}  {j}
+#VARIABLE         {f5var}  {00}
+#VARIABLE         {f6var}  {88}
+#VARIABLE         {f7var}  {cen}
+#VARIABLE         {f8var}  {ac}
+#VARIABLE         {f9var}  {subetu}
+#VARIABLE         {goods}  {bolsa,mochilas}
+#VARIABLE         {goody}  {armadura,placas,bolsas}
+#VARIABLE         {h1}  {tormenta de hielo}
+#VARIABLE         {h2}  {tormenta electrica}
+#VARIABLE         {hechi}  {globo menor de invulnerabilidad}
+#VARIABLE         {hh1}  {tormenta electrica}
+#VARIABLE         {hh2}  {-}
+#VARIABLE         {invoca}  {halcon}
+#VARIABLE         {lanza}  {cuchillo}
+#VARIABLE         {larm}  {espada}
+#VARIABLE         {nicks}  {elpe,arenvael,shandreel,lithzaca,emiya,khealan,melitos,basara,vertor,ransit,nadrak,zeiring,nika,zidriz,hadracael,kashiwa,dalim,kurst,rijja,sydonai,munr,daemcane,zhiereng,zethrus,mykarin,phurky,namae,eirol,sinafae,gurlen,ernak,bergom,shyakh,ducard,siky,rowahzarrya,aldamare,tahurtz,vuurgh,wrunk,wryxer,harad,kromer,boffur,linath,blacyn,strife,wik,rakham,kriik,branak,shaila,louaril,ransit,boffur,yrwen,unndale,daemcane,shandreel}
+#VARIABLE         {pincho}  {filo}
+#VARIABLE         {planta}  {blaulegit}
+#VARIABLE         {rarm}  {cimitarra}
+#VARIABLE         {target}  {wryxer}
+#VARIABLE         {wylan}  {radimcor}
+#VARIABLE         {xpleft}  {2893656}
+#VARIABLE         {xp}  {animales}

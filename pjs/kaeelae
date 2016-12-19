@@ -1,0 +1,48 @@
+#READ lib/hechizos.tin
+#ALIAS denv {desenvainar $arma} {5}
+#ALIAS env {envainar $arma} {5}
+#ALIAS {0} { esconderse arbol } {5}
+#VAR {arma} {tulgar}
+#VAR {pincho} {espina}
+#VAR {f1var} {1}
+#VAR {f2var} {to}
+#VAR {f3var} {rr}
+#VAR {f4var} {ui}
+#VAR {f5var} {z}
+#VAR {f6var} {subetu}
+#VAR {f7var} {gi}
+#VAR {f8var} {ess}
+#VAR {f9var} {subetu}
+#VAR {f10var} {ee}
+#VAR {f11var} {to}
+#VAR {f12var} {x}
+#VAR PJPVS {2521}
+#VAR PJPGS {691}
+#ALIAS {bbb} { bando ! } {5}
+#ALIAS {ui} {tirar abrojos} {5}
+#ALIAS {1} {esconderse} {5}
+#ALIAS {cc} { chat ! } {5}
+#ALIAS {dsirv} { decir sirviente te ordeno: %0 } {5}
+#ALIAS {gignis} { gritar Casa Ignis! } {5}
+#ALIAS {gkhaolel} { gritar %^BOLD%^BLACK%^Khaol, El Enmascarado! } {5}
+#ALIAS {gkhaol} { gritar %^BOLD%^BLACK%^Khaol! } {5}
+#ALIAS {gk} { gritar Khaol, El Enmascarado! } {5}
+#ALIAS {in} { indicar $target } {5}
+#ALIAS {jj} { oportunidad %0,$target,$nicks,$xp } {5}
+#NOP #ALIAS {j} { apuñalar $target,%0,$nicks,$xp } {5}
+#ALIAS {j} { apuñalar %0,$target,%0nicks,$xp } {5}
+#ALIAS {pp} { oportunidad $target,%0,$nicks,$xp } {5}
+#ALIAS {rm} { robar monedas a %0 } {5}
+#ALIAS {rm} { robar monedas a %0,$target,$nicks,$xp } {5}
+#ALIAS {ro} { robar de mochila a $target,$nicks } {5}
+#ALIAS {rr} { robar $goody a $target } {5}
+#ALIAS {rrm} { robar $goody de mochila a $target } {5}
+#ALIAS {rt} { robar monedas a $target } {5}
+#ALIAS {rutic} { tell %1 ?Jeje!, Muchas gracias por tu $goody %1, lo necesitaba } {5}
+#ALIAS {uuu} { ciu ! } {5}
+#ALIAS {uu} { ciu @%^BOLD%^BLACK%^Ignis (%^MAGENTA%^M-L%^BLACK%^)%^RED%^: %^B_MAGENTA%^WHITE%^ %0 %^RESET%^ } {5}
+#ALIAS {x} { apuñalar $target,%0,$nicks } {5}
+#ALIAS {ñ} { arrojar $lanza a $target } {5}
+#ALIAS {ppr} { prompt PV: $v/2501 GP: $g/682 | $e | $p | $s |$j|$b|$a>} {5}
+#PROMPT {PV: %1/%2 GP: %3/%4 | %5 | %6 | %7 |%8|%9|%10>}   {<afc>[..Pvs.<cfa>%1<119>/<cfa>%2<afc>..|.<fac>Gps.%3<149>/<fac>%4.<afc>.| <acf>Imagenes: %5<cfa> | <fca>Pieles: %6<cfa> |<fca> Caza: <119>$target <cfa>|<129>~%8~<fca>~%9~<119>~%10~~<cfa>|<109>%7<afc> ]<190> \>} {3}
+#PROMPT {^PV: %1/%2 GP: %3/%4 | %5 | %6 | %7 |%8|%9|%10>}  {<afc>[..Pvs.<cfa>%1<119>/<cfa>%2<afc>..|.<fac>Gps.%3<149>/<fac>%4.<afc>.| <acf>Imagenes: %5<cfa> | <fca>Pieles: %6<cfa> |<fca> Caza: <119>$target <cfa>|<129>~%8~<fca>~%9~<119>~%10~~<cfa>|<109>%7<afc> ]<190> \>} {3}
