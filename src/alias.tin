@@ -1,0 +1,128 @@
+#CLASS {RL_ALIAS} {kill};
+#CLASS {RL_ALIAS} {open};
+
+#ALIAS {/motd} {
+    #SHOWME {};
+    #SHOWME { <G02>                                     <099>};
+    #SHOWME { <G02><138>  ooooooooo.   ooooo           <178>88    <099>  <aef>Scripts de TinTin++ para Reinos de Leyenda MUD<099>};
+    #SHOWME { <G02><138>  `888   `Y88. `888'    <178>88   888888  <099>};
+    #SHOWME { <G02><138>   888   .d88'  888   <178>888888   88    <099>    <acd>Versión 0.1.0 -- Programado por Dunkelheit<099>};
+    #SHOWME { <G02><138>   888ooo88P'   888     <178>88           <099>    <acd>https://github.com/dunkelheit/rl-plus-plus<099>};
+    #SHOWME { <G02><138>   888`88b.     888                  <099>};
+    #SHOWME { <G02><138>   888  `88b.   888       o          <099>};
+    #SHOWME { <G02><138>  o888o  o888o o888ooooood8          <099>   <fac>Escribe /ayuda para ver la lista de comandos<099>};
+    #SHOWME { <G02>                                     <099>};
+    #SHOWME {};
+}
+
+#ALIAS {/ayuda} {
+    @message{Comandos disponibles en RL++};
+    #SHOWME {};
+    #SHOWME {<fac>/cargarAliasesBasicos <acd>Establece aliases básicos en una nueva ficha.<099>};
+    #SHOWME {<fac>/cargarAliasesBribon <acd>Establece aliases para sigilar y esconderse en una nueva ficha.<099>};
+    #SHOWME {<fac>/conectar <acd>Conecta a Reinos de Leyenda MUD.<099>};
+    #SHOWME {<fac>/limpiar <acd>Borra el contenido de la pantalla.<099>};
+    #SHOWME {<fac>/log <on|off> <acd>Activa o desactiva el logeado. Los logs se guardan en el directorio /logs.<099>};
+    #SHOWME {<fac>/reload <acd>Recarga el script. Sólo funciona en modo desarrollo.<099>};
+    #SHOWME {<fac>/rumbo <dirección> <acd>Camina automáticamente en una dirección, de forma similar al comando "galopar".<099>};
+    #SHOWME {<fac>/tars <acd>Computa una lista de enemigos. Has de tener el alias "tarear" establecido con tu "nickear" personal.<099>};
+    #SHOWME {};
+};
+
+#ALIAS {/conectar} {
+    #SESSION rl rlmud.org 5001;
+};
+
+#ALIAS {/limpiar} {
+    #system {tput clear};
+};
+
+#ALIAS {/log} {
+	#IF {"%0" == "on"} {
+		#IF {"$logging" != "on"} {
+			#FORMAT {logfile} {log/%t.log} {%Y-%m-%d};
+            #LOG {APPEND} {$logfile};
+            #VAR {logging} {on};
+            @message{Grabando...};
+		};
+		#ELSE {
+            @message{Ya estás grabando un log.};
+		};
+	};
+	#ELSEIF {"%0" == "off"} {
+		#IF {"$logging" == "on"} {
+            #LOG {OFF};
+            #VAR {logging} {off};
+            @message{Dejando de grabar...};
+		};
+		#ELSE {
+            @message{No estás grabando un log.};
+		};
+	};
+	#ELSE {
+        @message{Sintáxis: log on|off.};
+	};
+};
+
+#ALIAS {/cargarAliasesBasicos} {
+    alias save salvar;
+    alias g ojear $*$;
+    alias l mirar $*$;
+    alias quit salir;
+    alias scc sc -v;
+    alias sca sc -a;
+    alias tar nick tar $*$;
+    alias k matar $arg:tar$;
+    alias atar anick tar $*$;
+    alias mtar mnick tar $*$;
+    alias qtar qnick tar $*$;
+    alias fi finger $arg:me$;
+    alias q estado $arg:tar$;
+    alias qq estado todo;
+    alias en enterrar $*$;
+    alias b buscar $*$;
+    alias p perder $arg:todo$;
+    alias pp peleas parar;
+    alias est estatus $*$;
+    alias dip diplomacia $*$;
+    alias hab habilidades $*$;
+    alias ma maestria $*$;
+    alias mp maestria arma;
+    alias env envainar $arg:arma$;
+    alias emp empuñar $arg:arma$;
+    alias arma nick arma $*$\;alias mp maestria $*$;
+    alias ap abrir $*$;
+    alias cp cerrar $*$;
+    alias mm mirarme;
+    alias cv conversar $*$;
+    alias cm coger monedas de cuerpos;
+    alias x noticias $*$;
+    alias fc ficha cuenta $*$;
+};
+
+#ALIAS {/cargarAliasesBribon} {
+    alias h esconderse $*$;
+    alias E sigilar este;
+    alias NE sigilar noreste;
+    alias N sigilar norte;
+    alias NO sigilar noroeste;
+    alias O sigilar oeste;
+    alias SO sigilar sudoeste
+    alias S sigilar sur;
+    alias SE sigilar sudeste;
+    alias AR sigilar arriba;
+    alias AB sigilar abajo;
+    alias DE sigilar dentro;
+    alias FU sigilar fuera;  
+};
+
+#IF {$_development == 1} {
+    #ALIAS {/reload} {
+        @message{Recargando...};
+        #KILL {all};
+        #READ {src/main.tin};
+        @message{Script recargado satisfactoriamente.};
+    };
+};
+
+#CLASS {RL_ALIAS} {close};
