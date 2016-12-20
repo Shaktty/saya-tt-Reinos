@@ -63,6 +63,7 @@
 #NOP==========================================================================
 #EVENT {PROGRAM START} 
 {
+  #SYSTEM  {tput clear};
   #SHOWME <fca>;
   #SHOWME <fac>              Reinos de Leyenda - Eirea ;
   #SHOWME <fac>              http://reinosdeleyenda.org;
