@@ -2,11 +2,12 @@
 #ALIAS {we} {who enemigos} {5}
 #ALIAS {wa} {who aliados} {5}
 #ALIAS {p} {perder todos} {5}
+#ALIAS {pp} {peleas parar} {5}
 #ALIAS {bq} {bloqueos $invoca} {5}
 #ALIAS {maaa} {maestria arma;maestria arma 2} {5}
 #ALIAS {bqq} {bloqueos} {5}
 #ALIAS {maa} {maestria}
-#ALIAS {CDEV} {#ses s1 62.210.99.120 23 pjs/$pj;s} {5}
+#ALIAS {CDEV} {#ses s1 62.210.99.120 5001 pjs/$pj;s} {5}
 #ALIAS {a}  {agacharse} {5}
 #ALIAS {aa}  {levantarse} {5}
 #ALIAS {AR} { sigilar arriba } {5}
@@ -166,7 +167,6 @@
 #ALIAS {kx} { matar $xp } {5}
 #ALIAS {lt} { cb salvoconducto; ab }
 #ALIAS {mallo} { agarrar rama, apoyar el pie en la corteza, impulsar hacia arriba } {5}
-#ALIAS {mass} { #showme Llevas $cont golpes consecutivos } {5}
 #ALIAS {mas} { maestria %0 } {5}
 #ALIAS {ma} { mirar arbol } {5}
 #ALIAS {mb} { mirar base } {5}
@@ -259,4 +259,4 @@
 {5}
 
 #ALIAS {pdd} {pd cargando} {5}
-#al {mon} {montar $jaco} {5}
+#al {mon} {montar $jaco} {5}

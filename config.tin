@@ -4,8 +4,7 @@
 #NOP      (cc) 2016 Saya Faroth.  Mandadme un mudmail con cualquier duda.
 #NOP
 #NOP==========================================================================
-#NOP La password de tu Cuenta:  IMPORTANTE BORRAR ESTO ANTES DE DISTRIBUIR
-#VAR passwd {EMPTY}
+#read pjs/password
 #NOP--------------------------------------------------------------------------
 #NOP    Configuracion basica del cliente
 #NOP--------------------------------------------------------------------------
@@ -85,7 +84,7 @@
 }
 #EVENT {RECEIVED INPUT} {#VAR pj %0;#UNEVENT {RECEIVED INPUT};cdev}
 #NOP--------------------------------------------------------------------------
-#ALIAS cdev {#ses {s1} {62.210.99.120} {23} {pjs/$pj} } {5}
+#ALIAS cdev {#ses {s1} {62.210.99.120} {5001} {pjs/$pj} } {5}
 #NOP--------------------------------------------------------------------------
 #EVENT {SESSION CONNECTED} {$pj;$passwd}
 #NOP--------------------------------------------------------------------------

@@ -1,7 +1,7 @@
 #NOP      ESTE ARCHIVO DEFINE INICIALIZACION DE VARIABLES DE FORMA AUTOMATICA,
 #NOP      TRIGGERS LOCALES Y DEMAS AUTOMATISMOS PERMITIDOS
 #NOP
-#ACTION {Tu personaje ya se encuentra en Reinos de Leyenda. ?Deseas entrar con la copia existente? [s/n] } {s}
+#ACTION {Tu personaje ya se encuentra en Reinos de Leyenda. ¿Deseas entrar con la copia existente? [s/n] } {s}
 #ACTION {¿Es %1 el barco al que deseas embarcarte?} {s}
 #ACTION {Sientes tu energía restablecida por la magia del anillo.} {#delay {800} {#showme <FAC>--->Anillo listo}}
 #ACTION {¡Tus imágenes se desvanecen!} {#delay {14} {#showme <FAC>--->Imagenes listo}}
@@ -9,21 +9,17 @@
 #ACTION {Observas desde tu escondite los movimientos} {#delay {9} {#showme <ACF>----> Cazar listo!}}
 #ACTION {Observas los movimientos} {#delay {9} {#showme <ACF>----> Cazar listo!}}
 #ACTION {Tensas tus músculos preparando un nuevo ataque.} {#delay {9} {#showme <ACF>----> Ataquedoble listo!}}
-#ACTION {%1 -> HOSTILIDAD} { #variable nicks $nicks,%1 }
 #ACTION {Caza: %1} { #highlight %1 bold,red }
 #ACTION {Cierras los ojos y dejas reposar tus músculos para concentrarte en la sublimación %0} { #variable conc SI }
 #ACTION {Comienzas a concentrarte en tu victima, y te sientes capaz de golpear los puntos débiles de tu enemigo.} { #variable conc ON }
 #ACTION {Tu embotada %0} { #variable conc NO }
 #ACTION {Ya estás concentrada} { #variable conc SI } 
 #ACTION {Ya estás concentrándote en el combate.} { #variable conc SI }
-#ACTION {^El portero dice desde el otro lado: está bien, puedes pasar. Bienvenido al poblado} { de }
-#ACTION {^Finalmente la puerta comienza a abrirse dejandote el paso libre hacia en interior de la ciudad} { de; cr fu }
 #ACTION {^Nombre corto escondite cambiado de %1 a %2} { #variable escondite %2 }
 #ACTION {^Te faltan %1 puntos de experiencia para subir de nivel} { #variable xpleft %1 }
-#ACTION {llamada halcon} { #variable invoca halcon }
-#ACTION {llamada oso} { #variable invoca ancestral }
-#ACTION {llamada lobo} { #variable invoca ancestral }
-#ACTION {%1 -> GUERRA} { #variable nicks $nicks,%1 } 
-#ACTION {Cierras los ojos y dejas reposar tus músculos para concentrarte en la #sublimación de tus técnicas de combate, ¡todo lo que hay tu alrededor desaparece!} {#va conc ON}
+#ACTION {^llamada halcon} { #variable invoca halcon }
+#ACTION {^llamada oso} { #variable invoca ancestral }
+#ACTION {^llamada lobo} { #variable invoca ancestral }
+#ACTION {Cierras los ojos y dejas reposar tus músculos para concentrarte en la sublimación de tus técnicas de combate, ¡todo lo que hay tu alrededor desaparece!} {#va conc ON}
 #ACTION {- Tu última conexión fue } {#spl 1 3;ppr;fkeyshow;pkon}
-#ac {formular montura:%1} {#va jaco %1}
+#ACTION {ac} {formular montura:%1} {#va jaco %1}
