@@ -1,69 +1,73 @@
-/*
-*     Configuracion modular de Tintin++ para rlmud.org
-*     (cc) 2016 Saya Faroth.  Mandadme un mudmail con cualquier duda.
-*/
-#read {pjs/password};
-/*
-*    Configuracion basica el cliente
-*/
-#CONFIG           {256 COLORS}  {ON};
-#CONFIG           {AUTO TAB}  {5000};
-#CONFIG           {BUFFER SIZE}  {40000};
-#CONFIG           {CHARSET}  {UTF-8};
-#CONFIG           {COLOR PATCH}  {OFF};
-#CONFIG           {COMMAND COLOR}  {<fca>};
-#CONFIG           {COMMAND ECHO}  {ON};
-#CONFIG           {CONNECT RETRY}  {200};
-#CONFIG           {HISTORY SIZE}  {1000};
-#CONFIG           {LOG}  {RAW};
-#CONFIG           {PACKET PATCH}  {0.00};
-#CONFIG           {REPEAT CHAR}  {!};
-#CONFIG           {REPEAT ENTER}  {OFF};
-#CONFIG           {SCROLL LOCK}  {ON};
-#CONFIG           {SPEEDWALK}  {OFF};
-#CONFIG           {TINTIN CHAR}  {#};
-#CONFIG           {VERBATIM}  {OFF};
-#CONFIG           {VERBATIM CHAR}  {\};
-#CONFIG           {VERBOSE}  {OFF};
-#CONFIG           {WORDWRAP}  {ON};
-/*
-* Pathdirs
-*/
-#PATHDIR          {ab}  {ar}  {0};
-#PATHDIR          {ar}  {ab}  {0};
-#PATHDIR          {de}  {fu}  {0};
-#PATHDIR          {fu}  {de}  {0};
-#PATHDIR          {e}  {o}  {0};
-#PATHDIR          {n}  {s}  {0};
-#PATHDIR          {o}  {e}  {0};
-#PATHDIR          {s}  {n}  {0};
-#PATHDIR          {se}  {no}  {0};
-#PATHDIR          {so}  {ne}  {0};
-/*
-* Macros de movimiento
-*/
-#ALIAS NUMPADON {#read lib/numpad};
-#ALIAS SNUMPADON {#read lib/snumpad};
-/*
-*  Archivos de configuraciones comunes
-*/
-#read {lib/actions.tin};
-#read {lib/highs.tin};
-#read {lib/substitutes.tin};
-#read {lib/alias.tin};
-/*
-*  #NOP #read lib/hechizos.tin
-*/
-#read {lib/macros_fbar.tin};
-#read {lib/variables.tin};
-#read {lib/tab.tin};
-
+#NOP==========================================================================
+#NOP
+#NOP      Configuracion modular de Tintin++ para rlmud.org
+#NOP      (cc) 2016 Saya Faroth.  Mandadme un mudmail con cualquier duda.
+#NOP
+#NOP==========================================================================
+#READ pjs/password;
+#NOP--------------------------------------------------------------------------
+#NOP    Configuracion basica del cliente
+#NOP--------------------------------------------------------------------------
+#CONFIG           {256 COLORS}  {ON}
+#CONFIG           {AUTO TAB}  {5000}
+#CONFIG           {BUFFER SIZE}  {40000}
+#CONFIG           {CHARSET}  {UTF-8}
+#CONFIG           {COLOR PATCH}  {ON}
+#CONFIG           {COMMAND COLOR}  {<fca>}
+#CONFIG           {COMMAND ECHO}  {ON}
+#CONFIG           {CONNECT RETRY}  {200}
+#CONFIG           {HISTORY SIZE}  {1000}
+#CONFIG           {LOG}  {RAW}
+#CONFIG           {PACKET PATCH}  {10}
+#CONFIG           {REPEAT CHAR}  {!}
+#CONFIG           {REPEAT ENTER}  {OFF}
+#CONFIG           {SCROLL LOCK}  {ON}
+#CONFIG           {SPEEDWALK}  {OFF}
+#CONFIG           {TINTIN CHAR}  {#}
+#CONFIG           {VERBATIM}  {OFF}
+#CONFIG           {VERBATIM CHAR}  {\}
+#CONFIG           {VERBOSE}  {OFF}
+#CONFIG           {WORDWRAP}  {ON}
+#NOP--------------------------------------------------------------------------
+#NOP   Definicion de direcciones o pathdirs
+#NOP--------------------------------------------------------------------------
+#PATHDIR          {ab}  {ar}  {0}
+#PATHDIR          {ar}  {ab}  {0}
+#PATHDIR          {de}  {fu}  {0}
+#PATHDIR          {fu}  {de}  {0}
+#PATHDIR          {e}  {o}  {0}
+#PATHDIR          {n}  {s}  {0}
+#PATHDIR          {o}  {e}  {0}
+#PATHDIR          {s}  {n}  {0}
+#PATHDIR          {se}  {no}  {0}
+#PATHDIR          {so}  {ne}  {0}
+#MESSAGE ALL OFF
+#NOP--------------------------------------------------------------------------
+#NOP   Aliases para cargar/descargar numpads.
+#NOP--------------------------------------------------------------------------
+#ALIAS NUMPADON {#class num kill; #class num read lib/numpad;#CLASS NUM open}
+#ALIAS SNUMPADON {#class num kill : #CLASS num read lib/snumpad;#CLASS num open}
+#NOP--------------------------------------------------------------------------
+#NOP Archivos de configuraciones comunes
+#NOP--------------------------------------------------------------------------
+#read lib/actions.tin
+#read lib/highs.tin
+#read lib/substitutes.tin
+#read lib/alias.tin
+#NOP      -- Este lo leemos desde el archivo del pj que formule mejor
+#NOP #read lib/hechizos.tin
+#NOP
+#read lib/macros_fbar.tin
+#read lib/variables.tin
+#read lib/tab.tin
+#NOP==========================================================================
 #EVENT {PROGRAM START} 
 {
-  #SHOWME <fac>;             Reinos de Leyenda - Eirea ;
+  #SHOWME <fca>;
+  #SHOWME <fac>              Reinos de Leyenda - Eirea ;
   #SHOWME <fac>              http://reinosdeleyenda.org;
   #SHOWME <fca>;
-  #SHOWME <fca> Edita el archivo lib/password con la contrasenya de tu cuenta ;
+  #SHOWME <fca> Edita el archivo config.tin con la contrasenya de tu cuenta ;
   #SHOWME <fca>;
   #SHOWME <fca> lib/ contiene configuraciones comunes ;
   #SHOWME <fca> pjs/ contiene configuracion tipo para varias clases ;
@@ -79,4 +83,8 @@
   #SHOWME <acf>Jugador?;
 }
 #EVENT {RECEIVED INPUT} {#VAR pj %0;#UNEVENT {RECEIVED INPUT};cdev}
-#ALIAS cdev {#ses {s1} {62.210.99.120} {5001} {pjs/$pj} } {5}
+#NOP--------------------------------------------------------------------------
+#ALIAS cdev {#ses {s1} {62.210.99.120} {23} {pjs/$pj} } {5}
+#NOP--------------------------------------------------------------------------
+#EVENT {SESSION CONNECTED} {$pj;$passwd}
+#NOP--------------------------------------------------------------------------
