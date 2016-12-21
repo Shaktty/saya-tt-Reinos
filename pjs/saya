@@ -28,6 +28,7 @@
 #ALIAS {ac} { ordenar ejecutar acosar sobre $target } {5}
 #ALIAS {at} { ataquedoble $target,%0,$nicks,$xp } {5}
 #ALIAS {r} { concentracion } {5}
+#VARIABLE conc no
 #ALIAS {cemm} { chat @se %^ORANGE%^mece%^RESET%^ ágilmente de %^GREEN%^l%^ORANGE%^i%^BOLD%^a%^GREEN%^n%^RESET%^GREEN%^a %^RESET%^en %^GREEN%^l%^ORANGE%^i%^BOLD%^a%^GREEN%^n%^RESET%^GREEN%^a%^RESET%^ } {5}
 #ALIAS {ch0} { chat @%^GREEN%^F%^BOLD%^a%^WHITE%^r%^ORANGE%^o%^RESET%^GREEN%^t%^BOLD%^h%^RESET%^, la %^RED%^Maldita%^BOLD%^: %^MAGENTA%^%0%^RESET%^ } {5}
 #ALIAS {ch0} { chat @%^GREEN%^F%^BOLD%^a%^WHITE%^r%^ORANGE%^o%^RESET%^GREEN%^t%^BOLD%^h%^RESET%^, la %^RED%^Maldita%^BOLD%^: %^MAGENTA%^%0%^RESET%^ } {5}
