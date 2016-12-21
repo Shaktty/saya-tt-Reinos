@@ -29,23 +29,4 @@
 
 #SUBSTITUTE {^%* ha muerto.$} {<G02><118>@center{☠  %1 ☠}<099>};
 
-#IF {$_development == 1} {
-    #ALIAS {/testSubstitute} {
-        #SHOWME {¡Tus imágenes se desvanecen!};
-        #SHOWME {¡Tus imagenes se desvanecen!};
-        #SHOWME {Tu piel vuelve a su estado normal.};
-        #SHOWME {\e[33mPalomo\e[0m\e[0m se va hacia el noreste.\e[0m};
-        #SHOWME {\e[33mPalomo\e[0m\e[0m se va hacia arriba.\e[0m};
-        #SHOWME {nueve \e[33mPalomo\e[0m\e[0mes se va hacia el noreste.\e[0m};
-        #SHOWME {nueve \e[33mPalomo\e[0m\e[0mes se va hacia arriba.\e[0m};
-        #SHOWME {\e[33mPalomo\e[0m\e[0m se va en dirección noreste seguido de Gran Oso Borracho.\e[0m};
-        #SHOWME {\e[33mPalomo\e[0m\e[0m se va en dirección arriba seguido de Gran Oso Borracho.\e[0m};
-        #SHOWME {Palomo se va hacia el oeste.};
-        #SHOWME {Palomo se va hacia dentro.};
-        #SHOWME {Palomo se va hacia arriba.};
-        #SHOWME {[Palomo orbita a Eirea]};
-        #SHOWME {[Palomo orbita al Limbo]};
-    };
-};
-
 #CLASS {RL_SUBSTITUTE} {close};
