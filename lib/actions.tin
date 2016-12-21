@@ -17,3 +17,4 @@
 #ACTION {^llamada lobo} { #variable invoca ancestral }
 #ACTION {Cierras los ojos y dejas reposar tus músculos para concentrarte en la sublimación de tus técnicas de combate, ¡todo lo que hay tu alrededor desaparece!} {#va conc ON} 
 #ACTION {Tu última conexión fue } {#spl 1 3;ppr;fkeyshow;pkon}
+#ACTION {Nombre corto x cambiado de %1 a %2} {#va nicks %2;#SHOWME <FCA>Nicks cambiados a:<caf> $nicks<099>}

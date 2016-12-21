@@ -5,7 +5,7 @@
 #ALIAS {dii} {disipar $target espejismo} {5}
 #VAR {objetivo} {850}
 #ALIAS {di} {disipar $target} {5}
-#ALIAS {ct} {contrarrestar target} {5}
+#ALIAS {ct} {contrarrestar $target} {5}
 #ALIAS cgg {ordenar coger todo} {5}
 #ALIAS cgo {ordenar coger todo de cuerpos} {5}
 #ALIAS en {oro;enterrar} {5}
