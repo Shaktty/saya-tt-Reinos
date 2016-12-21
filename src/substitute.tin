@@ -12,16 +12,16 @@
 #SUBSTITUTE {^[%* orbita a Eirea]$} {[%1 <bee>entra<099> a Eirea]};
 #SUBSTITUTE {^[%* orbita al Limbo]$} {[%1 <g10>sale<099> de Eirea]};
 
-#SUBSTITUTE {^%* est{á|a} revigorizad{o|a}.$} {%1 @healthBar{100;50} @healthColor{100}100%+<099>};
-#SUBSTITUTE {^%* est{á|a} en perfecto estado.$} {%1 @healthBar{100;50} @healthColor{100}100%<099>};
-#SUBSTITUTE {^%* est{á|a} en buen estado.$} {%1 @healthBar{89;50} @healthColor{85}80-99%<099>};
-#SUBSTITUTE {^%* est{á|a} ligeramente herid{o|a}.$} {%1 @healthBar{72;50} @healthColor{72}65-79%<099>};
-#SUBSTITUTE {^%* est{á|a} considerablemente herid{o|a}.$} {%1 @healthBar{57;50} @healthColor{57}50-64%<099>};
-#SUBSTITUTE {^%* est{á|a} llen{o|a} de heridas.$} {%1 @healthBar{42;50} @healthColor{42}35-49%<099>};
-#SUBSTITUTE {^%* est{á|a} herid{o|a} de gravedad.$} {%1 @healthBar{27;50} @healthColor{27}20-34%<099>};
-#SUBSTITUTE {^%* est{á|a} herid{o|a} cr{í|i}ticamente.$} {%1 @healthBar{13;50} @healthColor{13}8-19%<099>};
-#SUBSTITUTE {^%* est{á|a} mortalmente herid{o|a}.$} {%1 @healthBar{4;50} @healthColor{4}1-7%<099>};
-#SUBSTITUTE {^%* est{á|a} moribund{o|a}.$} {%1 @healthBar{0;50} @healthColor{0}0%<099>};
+#NOP #SUBSTITUTE {^%* est{á|a} revigorizad{o|a}.$} {%1 @healthBar{100;50} @healthColor{100}100%+<099>};
+#NOP #SUBSTITUTE {^%* est{á|a} en perfecto estado.$} {%1 @healthBar{100;50} @healthColor{100}100%<099>};
+#NOP #SUBSTITUTE {^%* est{á|a} en buen estado.$} {%1 @healthBar{89;50} @healthColor{85}80-99%<099>};
+#NOP #SUBSTITUTE {^%* est{á|a} ligeramente herid{o|a}.$} {%1 @healthBar{72;50} @healthColor{72}65-79%<099>};
+#NOP #SUBSTITUTE {^%* est{á|a} considerablemente herid{o|a}.$} {%1 @healthBar{57;50} @healthColor{57}50-64%<099>};
+#NOP #SUBSTITUTE {^%* est{á|a} llen{o|a} de heridas.$} {%1 @healthBar{42;50} @healthColor{42}35-49%<099>};
+#NOP #SUBSTITUTE {^%* est{á|a} herid{o|a} de gravedad.$} {%1 @healthBar{27;50} @healthColor{27}20-34%<099>};
+#NOP #SUBSTITUTE {^%* est{á|a} herid{o|a} cr{í|i}ticamente.$} {%1 @healthBar{13;50} @healthColor{13}8-19%<099>};
+#NOP #SUBSTITUTE {^%* est{á|a} mortalmente herid{o|a}.$} {%1 @healthBar{4;50} @healthColor{4}1-7%<099>};
+#NOP #SUBSTITUTE {^%* est{á|a} moribund{o|a}.$} {%1 @healthBar{0;50} @healthColor{0}0%<099>};
 
 #VAR {attackType} {{Abrasas en ácido|Golpeas con un remolino de aire|Electrocutas|Congelas|Dañas con chispas mágicas|Golpeas con una onda psiónica|Envenenas|Golpeas con un chorro de agua|Rodeas de energía benigna|Quemas|Abrasas|Rodeas de energía maligna|Destrozas|Azotas con un halo divino|Cortas|Sesgas|Rajas|Pinchas|Perforas|Atraviesas|Aplastas|Golpeas|Desgarras|Laceras}};
 

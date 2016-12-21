@@ -1,8 +1,8 @@
 #SUBSTITUTE       {Finalmente dejas de mantener tu hechizo de indetectable.} {<148>Finalmente dejas de mantener tu hechizo de indetectable.  <ACF> Indetectable out!} {5}
 #SUBSTITUTE       {^%1 %2, el Gran %3 $Ancestral %4}              {%1 <fca> %2, el Gran %3 Ancestral,<010> %4}                   {5}
 #SUBSTITUTE       {%1 comienza a rodearte. Sin duda no trama nada bueno.}                                   {%1 comienza a rodearte. Sin duda no trama nada bueno. <119> OJO OJO RODEAR!!!<099>}                                                           {5}
-#SUBSTITUTE {^%* est{á|a} revigorizad{o|a}.$}             {%1 está revigorizado [<019>*<059>*<139>*<029>*<129>*+<099>]} {5} 
-#SUBSTITUTE {^%* est{á|a} en perfecto estado.$}           {%1 está en perfecto estado [<019>*<059>*<139>*<029>*<129>*<099>]} {5} 
+#SUBSTITUTE {^%* est{á|a} revigorizad{o|a}.$}             {^%* est{á|a} revigorizad{o|a}. [<019>*<059>*<139>*<029>*<129>*+<099>]@healthColor{100}100%+<099>} {5} 
+#SUBSTITUTE {^%* est{á|a} en perfecto estado.$}           {^%* est{á|a} en perfecto estado.$ [<019>*<059>*<139>*<029>*<129>*<099>]@healthColor{100}100%<099>} {5} 
 #SUBSTITUTE {^%* est{á|a} en buen estado.$}               {%1 está en buen estado [<019>*<059>*<139>*<029>*<099> ]}  {5} 
 #SUBSTITUTE {^%* est{á|a} ligeramente herid{o|a}.$}       {%1 está ligeramente herido [<019>*<059>*<139>*<029>*<099> ]}  {5} 
 #SUBSTITUTE {^%* est{á|a} considerablemente herid{o|a}.$} {%1 está considerablemente herido [<019>*<059>*<139>* <099> ]}  {5}
