@@ -9,7 +9,7 @@
 #ALIAS cgg {ordenar coger todo} {5}
 #ALIAS cgo {ordenar coger todo de cuerpos} {5}
 #ALIAS en {oro;enterrar} {5}
-#ALIAS planta {eskumla} {5}
+#VARIABLE planta {eskumla} 
 #TICKER {mass} {#showme <CAF> Objetivo: <fca>$objetivo<099>} {610}
 #ALIAS {0} { esconderse arbol } {5}
 #ALIAS {coo} { ordenar coger todo de cuerpos } {5}
@@ -58,4 +58,16 @@
 #NOP #PROMPT           {PV: %1/%2 GP: %3/%4 | %5 |%6|%7|%8}                {<afc>[..Pvs.<cfa>%1<119>/<cfa>%2<afc>..|.<fac>Gps.%3<149>/<fac>%4.<afc>.| <acf>$conc<afc> | <fca> Caza: <119>$target <cfa>|<129>~%6~<fca>~%7~<119>~%8~~<cfa>|<109>%5<afc> ]<190> \>}                                                                                                                                                            {3}
 #NOP #PROMPT           {^PV: %1/%2 GP: %3/%4 | %5 |%6|%7|%8}                 {<afc>[..Pvs.<cfa>%1<119>/<cfa>%2<afc>..|.<fac>Gps.%3<149>/<fac>%4.<afc>.| <acf>$conc<afc> | <fca> Caza: <119>$target <cfa>|<129>~%6~<fca>~%7~<119>~%8~~<cfa>|<109>%5<afc> ]<190> \>}                                                                                                                                                            {3}
 #NOP #ALIAS {ppr} { prompt PV: $v/$PJPVS GP: $g/$PJPGS | $s |$j|$b|$a> } {5}
-#VARIABLE target zhiereng
+#VARIABLE target zeiring
+#VARIABLE f1var {esconderse}
+#VARIABLE f2var {j}
+#VARIABLE f3var {q}
+#VARIABLE f4var {qq}
+#VARIABLE f5var {subetu}
+#VARIABLE f6var {00}
+#VARIABLE f7var {88}
+#VARIABLE f8var {k}
+#VARIABLE f9var {at}
+#VARIABLE f10var {ac}
+#VARIABLE f11var {x}
+#VARIABLE f12var {ee}
