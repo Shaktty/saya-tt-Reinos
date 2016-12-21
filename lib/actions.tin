@@ -21,6 +21,7 @@
 #ACTION {^llamada oso} { #variable invoca ancestral }
 #ACTION {^llamada lobo} { #variable invoca ancestral }
 #ACTION {Cierras los ojos y dejas reposar tus músculos para concentrarte en la sublimación de tus técnicas de combate, ¡todo lo que hay tu alrededor desaparece!} {#va conc ON}
+<<<<<<< HEAD
 #ACTION {Tu última conexión fue } {#spl 1 3;ppr;fkeyshow;pkon}
 #ACTION {^Pvs: %1(%2)  Pe: %3(%4)  Po: %5  Xp: %6  Psoc: %7$} {
     #VAR {PJPVS} {%2};
@@ -40,3 +41,6 @@
 #ACTION {^Puntos de Ener%+ (%1/%2) (%3)$} {
 #VAR PJPGS %2;
 }
+=======
+#ACTION {Tu última conexión fue } {#spl 0 3;ppr;fkeyshow;pkon}
+>>>>>>> classesbranch

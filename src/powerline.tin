@@ -1,0 +1,135 @@
+#CLASS {RL_POWERLINE} {kill};
+#CLASS {RL_POWERLINE} {open};
+
+#VAR {stats[health]} {0};
+#VAR {stats[maxHealth]} {0};
+#VAR {stats[energy]} {0};
+#VAR {stats[maxEnergy]} {0};
+#VAR {stats[heartbeat]} {0};
+#VAR {buffers[images]} {0};
+#VAR {buffers[stoneLayers]} {0};
+
+#FUNCTION {heartbeatToString} {
+    #SWITCH {$stats[heartbeat]} {
+        #CASE {0} {#RETURN <G06> <108> ❤ ❤ ❤ ❤  <099>};
+        #CASE {1} {#RETURN <G06> <118> ❤ <108>❤ ❤ ❤  <099>};
+        #CASE {2} {#RETURN <G06> <118> ❤ ❤ <108>❤ ❤  <099>};
+        #CASE {3} {#RETURN <G06> <118> ❤ ❤ ❤ <108>❤  <099>};
+        #CASE {4} {#RETURN <G06> <118> ❤ ❤ ❤ ❤  <099>}
+    };
+};
+
+#ACTION {^# } {
+    #VAR {stats[heartbeat]} {4};
+    #SHOWME {@powerline{}} {1};
+    #TICK {hb} {
+        #MATH {stats[heartbeat]} {$stats[heartbeat]+1};
+        #IF {$stats[heartbeat] > 4} {
+            #VAR {stats[heartbeat]} {1};
+        };
+        #SHOWME {@powerline{}} {1};
+    } {1};
+};
+
+#FUNCTION {powerline}
+{
+    #FORMAT {health} {<ABA><138> PV <afc>%s/%s <099>} {$stats[health]} {$stats[maxHealth]};
+    #FORMAT {energy} {<ABE><138> PE <eef>%s/%s <099>} {$stats[energy]} {$stats[maxEnergy]};
+    #FORMAT {tgt} {<129>Caza: <fac>%s<099>} {$target};
+    #FORMAT {heartbeatString} {@heartbeatToString{}};
+    #IF {$buffers[images] > 0} {
+        #FORMAT {images} {<G04><ffa> %s imagenes <099>} {$buffers[images]};
+    };
+    #ELSE {
+        #FORMAT {images} {};
+    };
+    #IF {$buffers[stoneLayers] > 0} {
+        #FORMAT {stoneLayers} {<G04><ffa> %s pieles <099>} {$buffers[stoneLayers]};
+    };
+    #ELSE { 
+        #FORMAT {stoneLayers} {};
+    };
+
+    #FORMAT {tgtLength} {%L} {$tgt};
+    #FORMAT {healthLength} {%L} {$health};
+    #FORMAT {energyLength} {%L} {$energy};
+    #FORMAT {heartbeatStringLength} {%L} {$heartbeatString};
+    #FORMAT {imagesLength} {%L} {$images};
+    #FORMAT {stoneLayersLength} {%L} {$stoneLayers};
+    #FORMAT {screenWidth} {%C};
+
+    #MATH {fillerLength} {$screenWidth - $healthLength - $energyLength - $heartbeatStringLength - $tgtLength - $imagesLength - $stoneLayersLength};
+    #FORMAT {filler} {<G03>%+${fillerLength}s<099>} {};
+    #FORMAT {result} {%s%s%s%s%s%s%s} {$health} {$energy} {$heartbeatString} {$filler} {$tgt} {$images} {$stoneLayers};
+}
+
+#ACTION {^Pvs: %1(%2)  Pe: %3(%4)  Po: %5  Xp: %6  Psoc: %7$} {
+    #VAR {stats[health]} {%1};
+    #VAR {stats[maxHealth]} {%2};
+    #VAR {stats[energy]} {%3};
+    #VAR {stats[maxEnergy]} {%4};
+    #SHOWME {@powerline{}} {1};
+};
+
+#ACTION {^Pvs: %1(%2)  Pe: %3(%4)  Fe: %5(%6)  Po: %7  Xp: %8  Psoc: %9$} {
+    #VAR {stats[health]} {%1};
+    #VAR {stats[maxHealth]} {%2};
+    #VAR {stats[energy]} {%3};
+    #VAR {stats[maxEnergy]} {%4};
+    #SHOWME {@powerline{}} {1};
+};
+
+#ACTION {^Pvs: %1\\%2 Pe: %3\\%4$} {
+    #MATH {healthDelta} {%1 - $stats[health]};
+    #VAR {stats[health]} {%1};
+    #VAR {stats[maxHealth]} {%2};
+    #VAR {stats[energy]} {%3};
+    #VAR {stats[maxEnergy]} {%4};
+    #SHOWME {Δ @deltaColor{$healthDelta}$healthDelta<099>};
+    #SHOWME {@powerline{}} {1};
+};
+
+#ACTION {^%1 imagenes semejantes a ti aparecen a tu alrededor.$} {
+    #VAR {buffers[images]} {@parseNumber{%1}};
+    #SHOWME {@powerline{}} {1};
+};
+
+#ACTION {^Estás rodead{o|a} por %1 im{a|á}genes idénticas a ti.$} {
+    #VAR {buffers[images]} {%1};
+    #SHOWME {@powerline{}} {1};
+};
+
+#ACTION {^# Una de tus im{a|á}genes desaparece cuando %* la golpea.$} {
+    #MATH {buffers[images]} {$buffers[images] - 1};
+    #IF {$buffers[images] < 0} {
+        #VAR {buffers[images]} 0;
+    }
+    #SHOWME {@powerline{}} {1};
+};
+
+#ACTION {^¡Tus im{a|á}genes se desvanecen!$} {
+    #VAR {buffers[images]} 0;
+    #SHOWME {@powerline{}} {1};
+} {4};
+
+#ACTION {^Tu piel queda cubierta por %1 fin{i|í}simas, pero resistentes, capas de piedra.$} {
+    #VAR {buffers[stoneLayers]} {%1};
+    #SHOWME {@powerline{}} {1};
+};
+
+#ACTION {^* El ataque de %* rebota en tu piel de piedra.$} {
+    #MATH {buffers[stoneLayers]} {$buffers[stoneLayers] - 1};
+    #IF {$buffers[stoneLayers] < 0} {
+        #VAR {buffers[stoneLayers]} 0;
+    }
+    #SHOWME {@powerline{}} {1};
+}
+
+#ACTION {^Tu piel vuelve a su estado normal.$} {
+    #VAR {buffers[stoneLayers]} 0;
+    #SHOWME {@powerline{}} {1};
+} {4};
+
+#NOP TODO: Tu piel de piedra se endurece y fortalece mágicamente, haciendo que tu total de capas de piedra suba a 5.;
+
+#CLASS {RL_POWERLINE} {close};

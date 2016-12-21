@@ -1,3 +1,7 @@
 logs/
 pjs/
+<<<<<<< HEAD
 mapa.tt
+=======
+.*.swp
+>>>>>>> classesbranch

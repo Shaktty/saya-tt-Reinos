@@ -1,8 +1,6 @@
 #ALIAS {sangre} {%^BOLD%^GREEN%^Sangre %^RESET%^ para la %^BOLD%^GREEN%^Elfa%^RESET%^ de los %^ORANGE%^B%^BOLD%^os%^GREEN%^q%^RESET%^GREEN%^u%^ORANGE%^e%^BOLD%^ s%^GREEN%^!%^RED%^!%^RESET%^} {5}
 #VARIABLE {xp} {viudas,negras,aranyas,hormigas,jabalies,conejos,zombis,necrofagos,esqueletos,lobos,culebras,gatos,boas,serpiente,babeantes}
 #ALIAS c {ch3} {5}
-#VAR PJPVS {3677}
-#VAR PJPGS {664}
 #ALIAS {dip} {disipar $target piel de piedra} {5}
 #ALIAS {dii} {disipar $target espejismo} {5}
 #VAR {objetivo} {850}
@@ -11,9 +9,8 @@
 #ALIAS cgg {ordenar coger todo} {5}
 #ALIAS cgo {ordenar coger todo de cuerpos} {5}
 #ALIAS en {oro;enterrar} {5}
-#ALIAS planta {eskumla} {5}
+#VARIABLE planta {eskumla} 
 #TICKER {mass} {#showme <CAF> Objetivo: <fca>$objetivo<099>} {610}
-#ALIAS {ppr} { prompt PV: $v/$PJPVS GP: $g/$PJPGS | $s |$j|$b|$a> } {5}
 #ALIAS {0} { esconderse arbol } {5}
 #ALIAS {coo} { ordenar coger todo de cuerpos } {5}
 #ALIAS {dd} { desmontar ancestral; esconderse ancestral } {5}
@@ -54,12 +51,23 @@
 #ALIAS {8} { ordenar ejecutar acosar sobre $target,%0,$nicks,$xp } {5}
 #ALIAS {999} { ordenar oso:ejecutar aguantar sobre parar } {5}
 #ALIAS {99} { ordenar oso:ejecutar aguantar sobre aqui } {5}
-#PROMPT           {PV: %1/%2 GP: %3/%4 | %5 |%6|%7|%8}                {<afc>[..Pvs.<cfa>%1<119>/<cfa>%2<afc>..|.<fac>Gps.%3<149>/<fac>%4.<afc>.| <acf>$conc<afc> | <fca> Caza: <119>$target <cfa>|<129>~%6~<fca>~%7~<119>~%8~~<cfa>|<109>%5<afc> ]<190> \>}                                                                                                                                                            {3}
-#PROMPT           {^PV: %1/%2 GP: %3/%4 | %5 |%6|%7|%8}                 {<afc>[..Pvs.<cfa>%1<119>/<cfa>%2<afc>..|.<fac>Gps.%3<149>/<fac>%4.<afc>.| <acf>$conc<afc> | <fca> Caza: <119>$target <cfa>|<129>~%6~<fca>~%7~<119>~%8~~<cfa>|<109>%5<afc> ]<190> \>}                                                                                                                                                            {3}
 #ALIAS {recoje} {dejar $goodies,pieles,carnes,pellejos;ordenar coger %goodies,pellejos,carnes,pieles} {5}
-#ALIAS {recoje} {dejar $goodies,pieles,carnes,pellejos;ordenar coger $goodies,pellejos,carnes,pieles} {5}
-#ac {Puedes atacar a %1} {#showme <FAC>Nickeando... ;cnick %1;#showme <CAF>%1}
 #va pincho corto
-#VARIABLE nicks {Klavvi.,Essel.,Jacobus.,Tahurtz.,Talisaren.,Hayuso.,Arkhram.,Klavvi.,Aplexius.,kobold}
-#VARIABLE xp {necrofago}
+#VARIABLE nicks {kobold,zeiring,zhiereng,gondolina}
 #VARIABLE xp {viudas,negras,aranyas,hormigas,jabalies,conejos,zombis,necrofagos,esqueletos,lobos,culebras,gatos,boas,serpiente,babeantes }
+#NOP #PROMPT           {PV: %1/%2 GP: %3/%4 | %5 |%6|%7|%8}                {<afc>[..Pvs.<cfa>%1<119>/<cfa>%2<afc>..|.<fac>Gps.%3<149>/<fac>%4.<afc>.| <acf>$conc<afc> | <fca> Caza: <119>$target <cfa>|<129>~%6~<fca>~%7~<119>~%8~~<cfa>|<109>%5<afc> ]<190> \>}                                                                                                                                                            {3}
+#NOP #PROMPT           {^PV: %1/%2 GP: %3/%4 | %5 |%6|%7|%8}                 {<afc>[..Pvs.<cfa>%1<119>/<cfa>%2<afc>..|.<fac>Gps.%3<149>/<fac>%4.<afc>.| <acf>$conc<afc> | <fca> Caza: <119>$target <cfa>|<129>~%6~<fca>~%7~<119>~%8~~<cfa>|<109>%5<afc> ]<190> \>}                                                                                                                                                            {3}
+#NOP #ALIAS {ppr} { prompt PV: $v/$PJPVS GP: $g/$PJPGS | $s |$j|$b|$a> } {5}
+#VARIABLE target zeiring
+#VARIABLE f1var {esconderse}
+#VARIABLE f2var {j}
+#VARIABLE f3var {q}
+#VARIABLE f4var {qq}
+#VARIABLE f5var {subetu}
+#VARIABLE f6var {00}
+#VARIABLE f7var {88}
+#VARIABLE f8var {k}
+#VARIABLE f9var {at}
+#VARIABLE f10var {ac}
+#VARIABLE f11var {x}
+#VARIABLE f12var {ee}

@@ -28,30 +28,20 @@
 #CONFIG           {VERBATIM CHAR}  {\}
 #CONFIG           {VERBOSE}  {OFF}
 #CONFIG           {WORDWRAP}  {ON}
-#NOP--------------------------------------------------------------------------
-#NOP   Definicion de direcciones o pathdirs
-#NOP--------------------------------------------------------------------------
-#PATHDIR          {ab}  {ar}  {0}
-#PATHDIR          {ar}  {ab}  {0}
-#PATHDIR          {de}  {fu}  {0}
-#PATHDIR          {fu}  {de}  {0}
-#PATHDIR          {e}  {o}  {0}
-#PATHDIR          {n}  {s}  {0}
-#PATHDIR          {o}  {e}  {0}
-#PATHDIR          {s}  {n}  {0}
-#PATHDIR          {se}  {no}  {0}
-#PATHDIR          {so}  {ne}  {0}
 #MESSAGE ALL OFF
-#NOP--------------------------------------------------------------------------
-#NOP   Aliases para cargar/descargar numpads.
-#NOP--------------------------------------------------------------------------
-#ALIAS NUMPADON {#class num kill; #class num read lib/numpad;#CLASS NUM open}
 #ALIAS SNUMPADON {#class num kill : #CLASS num read lib/snumpad;#CLASS num open}
-#NOP--------------------------------------------------------------------------
-#NOP Archivos de configuraciones comunes
-#NOP--------------------------------------------------------------------------
+#read src/pathdir.tin
+#read src/format.tin
+#read src/function.tin
+#read src/highlight.tin
+#read src/lang.tin
+#read src/pathdir.tin
+#read src/pathwalker.tin
+#read src/powerline.tin
+#read src/spells.tin
+#read src/substitute.tin
 #read lib/actions.tin
-#read lib/highs.tin
+#read lib/highlights.tin
 #read lib/substitutes.tin
 #read lib/alias.tin
 #NOP      -- Este lo leemos desde el archivo del pj que formule mejor
@@ -60,6 +50,8 @@
 #read lib/macros_fbar.tin
 #read lib/variables.tin
 #read lib/tab.tin
+#VAR {rlppPrefix} {<139>☥<099>};
+#VAR {rlppColor} {<fca>};
 #NOP==========================================================================
 #EVENT {PROGRAM START} 
 {
