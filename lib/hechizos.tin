@@ -26,7 +26,6 @@
 #ALIAS {cam} { formular causar heridas moderadas:%0,$target,$nicks,$xp } {5}
 #ALIAS {cas} { formular causar heridas serias:%0,$target,$nicks,$xp } {5}
 #ALIAS {oir} {formular clariaudiencia} {5}
-#ALIAS {hh} { formular $hh2:%0,$target,$nicks,$xp } {5}
 #ALIAS {arm} { formular armadura:$pj } {5}
 #ALIAS {nu} { formular nube hedionda:%0 } {5}
 #ALIAS {nf} { formular nube de frio:$target,%0,$nicks,$xp } {5}
@@ -39,8 +38,8 @@
 #ALIAS {bef} { formular bola encadenada de fuego:$target,%0,$nicks,$xp } {5}
 #ALIAS {lep} { formular lepra:$target,%0,$nicks,$xp } {5}
 #ALIAS {ba} { formular bola de agua:$target,%0,$nicks,$xp } {5}
-#ALIAS {y} { formular bola de fuego:%0,$nicks,$xp } {5}
-#ALIAS {q} { formular defenestrar:%0,$nicks,$xp } {5}
+#ALIAS {y} { formular bola de fuego:$target,%0,$nicks,$xp } {5}
+#ALIAS {q} { formular defenestrar:$target,%0,$nicks,$xp } {5}
 #ALIAS {bols} { formular bolsillos profundos:$pj,%0 } {5}
 #ALIAS {caida} { formular caida de pluma:$pj } {5}
 #ALIAS {deca} { formular cantrip:decapitar cuerpo } {5}
@@ -118,5 +117,5 @@
 #ALIAS {ta} { formular tormenta acida:$target,%0,$nicks,$xp } {5}
 #ALIAS cons {formular consuncion de los restos:cuerpo} {5}
 #ALIAS sa {formular sangre a acido:$target,%0,$nicks,$xp} {5}
-#ALIAS {dvneil} {formular transformacion de dvneil:aeltas} {5}
-#al bff {formular bola encadenada de fuego:wryxer,%0,elpe,arenvael,shandreel,lithzaca,emiya,khealan,melitos,basara,vertor,ransit,nadrak,zeiring,nika,zidriz,hadracael,kashiwa,dalim,kurst,rijja,sydonai,munr,daemcane,zhiereng,zethrus,mykarin,phurky,namae,eirol,sinafae,gurlen,ernak,bergom,shyakh,ducard,siky,rowahzarrya,aldamare,tahurtz,vuurgh,wrunk,wryxer,harad,kromer,boffur,linath,blacyn,strife,wik,rakham,kriik,branak,shaila,louaril,ransit,boffur,yrwen,unndale,daemcane,shandreel,adultas,soldados,larvas,cobradores,lobos,zombis,entes,vrocs,espiritus,sacerdotes,,novicios,acolitos,peregrinos,soldados,aguasnegras,diablillos,animales  }  {5}
+#ALIAS {dvneil} {formular transformacion de dvneil:$pj} {5}
+#al bff {formular bola encadenada de fuego:$target,%0,$nicks,$xp} {5}
