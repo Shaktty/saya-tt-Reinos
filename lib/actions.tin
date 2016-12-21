@@ -1,6 +1,3 @@
-#NOP      ESTE ARCHIVO DEFINE INICIALIZACION DE VARIABLES DE FORMA AUTOMATICA,
-#NOP      TRIGGERS LOCALES Y DEMAS AUTOMATISMOS PERMITIDOS
-#NOP
 #ACTION {Tu personaje ya se encuentra en Reinos de Leyenda. ¿Deseas entrar con la copia existente? [s/n] } {s}
 #ACTION {¿Es %1 el barco al que deseas embarcarte?} {s}
 #ACTION {Sientes tu energía restablecida por la magia del anillo.} {#delay {800} {#showme <FAC>--->Anillo listo}}
@@ -9,38 +6,14 @@
 #ACTION {Observas desde tu escondite los movimientos} {#delay {9} {#showme <ACF>----> Cazar listo!}}
 #ACTION {Observas los movimientos} {#delay {9} {#showme <ACF>----> Cazar listo!}}
 #ACTION {Tensas tus músculos preparando un nuevo ataque.} {#delay {9} {#showme <ACF>----> Ataquedoble listo!}}
-#ACTION {Caza: %1} { #highlight %1 bold,red }
 #ACTION {Cierras los ojos y dejas reposar tus músculos para concentrarte en la sublimación %0} { #variable conc SI }
 #ACTION {Comienzas a concentrarte en tu victima, y te sientes capaz de golpear los puntos débiles de tu enemigo.} { #variable conc ON }
 #ACTION {Tu embotada %0} { #variable conc NO }
 #ACTION {Ya estás concentrada} { #variable conc SI } 
 #ACTION {Ya estás concentrándote en el combate.} { #variable conc SI }
 #ACTION {^Nombre corto escondite cambiado de %1 a %2} { #variable escondite %2 }
-#ACTION {^Te faltan %1 puntos de experiencia para subir de nivel} { #variable xpleft %1 }
 #ACTION {^llamada halcon} { #variable invoca halcon }
 #ACTION {^llamada oso} { #variable invoca ancestral }
 #ACTION {^llamada lobo} { #variable invoca ancestral }
-#ACTION {Cierras los ojos y dejas reposar tus músculos para concentrarte en la sublimación de tus técnicas de combate, ¡todo lo que hay tu alrededor desaparece!} {#va conc ON}
-<<<<<<< HEAD
+#ACTION {Cierras los ojos y dejas reposar tus músculos para concentrarte en la sublimación de tus técnicas de combate, ¡todo lo que hay tu alrededor desaparece!} {#va conc ON} 
 #ACTION {Tu última conexión fue } {#spl 1 3;ppr;fkeyshow;pkon}
-#ACTION {^Pvs: %1(%2)  Pe: %3(%4)  Po: %5  Xp: %6  Psoc: %7$} {
-    #VAR {PJPVS} {%2};
-     #VAR {PJPGS} {%4};
-};
-#ACTION {^Pvs: %1(%2)  Pe: %3(%4)  Fe: %5(%6)  Po: %7  Xp: %8  Psoc: %9$} {
-    #VAR {PJPVS} {%2};
-    #VAR {PJPGS} {%4};
-};
-#ACTION {^Pvs: %1\\%2 Pe: %3\\%4$} {
-    #VAR {PJPVS} {%2};
-    #VAR {PJPGS} {%4};
-};
-#ACTION {^Puntos de Vida%+ (%1/%2) (%3)$} {
-#VAR PJPVS %2;
-}
-#ACTION {^Puntos de Ener%+ (%1/%2) (%3)$} {
-#VAR PJPGS %2;
-}
-=======
-#ACTION {Tu última conexión fue } {#spl 0 3;ppr;fkeyshow;pkon}
->>>>>>> classesbranch

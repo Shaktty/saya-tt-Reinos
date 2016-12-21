@@ -36,6 +36,7 @@
     #FORMAT {health} {<ABA><138> PV <afc>%s/%s <099>} {$stats[health]} {$stats[maxHealth]};
     #FORMAT {energy} {<ABE><138> PE <eef>%s/%s <099>} {$stats[energy]} {$stats[maxEnergy]};
     #FORMAT {tgt} {<129>Caza: <fac>%s<099>} {$target};
+    #FORMAT {con} {<G06><fca>Concentracion: <108>%s<099>} {$conc};
     #FORMAT {heartbeatString} {@heartbeatToString{}};
     #IF {$buffers[images] > 0} {
         #FORMAT {images} {<G04><ffa> %s imagenes <099>} {$buffers[images]};
@@ -51,6 +52,7 @@
     };
 
     #FORMAT {tgtLength} {%L} {$tgt};
+    #FORMAT {conLength} {%L} {$con};
     #FORMAT {healthLength} {%L} {$health};
     #FORMAT {energyLength} {%L} {$energy};
     #FORMAT {heartbeatStringLength} {%L} {$heartbeatString};
@@ -58,9 +60,9 @@
     #FORMAT {stoneLayersLength} {%L} {$stoneLayers};
     #FORMAT {screenWidth} {%C};
 
-    #MATH {fillerLength} {$screenWidth - $healthLength - $energyLength - $heartbeatStringLength - $tgtLength - $imagesLength - $stoneLayersLength};
+    #MATH {fillerLength} {$screenWidth - $healthLength - $energyLength - $heartbeatStringLength - $conLength - $tgtLength - $imagesLength - $stoneLayersLength};
     #FORMAT {filler} {<G03>%+${fillerLength}s<099>} {};
-    #FORMAT {result} {%s%s%s%s%s%s%s} {$health} {$energy} {$heartbeatString} {$filler} {$tgt} {$images} {$stoneLayers};
+    #FORMAT {result} {%s%s%s%s%s%s%s%s} {$health} {$energy} {$heartbeatString} {$filler} {$con} {$tgt} {$images} {$stoneLayers};
 }
 
 #ACTION {^Pvs: %1(%2)  Pe: %3(%4)  Po: %5  Xp: %6  Psoc: %7$} {
