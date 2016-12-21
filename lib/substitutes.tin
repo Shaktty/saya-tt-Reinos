@@ -6,11 +6,11 @@
 #SUBSTITUTE       {$pj no esta en muy buen estado}               {$pj no esta en muy buen estado  <129>VIDA<099>: [<019>*<059>*<139>*<099>  ]}                                                    {5}
 #SUBSTITUTE       {^%1 %2, el Gran %3 $Ancestral %4}              {%1 <fca> %2, el Gran %3 Ancestral,<010> %4}                   {5}
 #SUBSTITUTE       {%1 comienza a rodearte. Sin duda no trama nada bueno.}                                   {%1 comienza a rodearte. Sin duda no trama nada bueno. <119> OJO OJO RODEAR!!!<099>}                                                           {5}
-#SUBSTITUTE       {%1 está en buen estado}    {%1 esta en buen estado [<019>*<059>*<139>*<029>*<099> ]}                                {5}
-#SUBSTITUTE       {%1 está en mal estado}   {%1 esta en mal estado [<019>*    <099> ]}                 {5}
-#SUBSTITUTE       {%1 está en muy mal estado}       {%1 esta en muy mal estado [<019>*    <099> ]}                     {5}
-#SUBSTITUTE       {%1 está en perfecto estado}        {%1 esta en perfecto estado [<019>*<059>*<139>*<029>*<129>*<099>]}                                         {5}
-#SUBSTITUTE       {%1 no está en muy buen estado}           {%1 no esta en muy buen estado [<019>*<059>*<139>* <099> ]}                                  {5}
+#SUBSTITUTE       {%1 est{á|a} en buen estado}    {%1 esta en buen estado [<019>*<059>*<139>*<029>*<099> ]}                                {5}
+#SUBSTITUTE       {%1 est{á|a} en mal estado}   {%1 esta en mal estado [<019>*    <099> ]}                 {5}
+#SUBSTITUTE       {%1 est{á|a} en muy mal estado}       {%1 esta en muy mal estado [<019>*    <099> ]}                     {5}
+#SUBSTITUTE       {%1 est{á|a} en perfecto estado}        {%1 esta en perfecto estado [<019>*<059>*<139>*<029>*<129>*<099>]}                                         {5}
+#SUBSTITUTE       {%1 no est{á|a} en muy buen estado}           {%1 no esta en muy buen estado [<019>*<059>*<139>* <099> ]}                                  {5}
 #SUBSTITUTE       {%1 parece encogerse, mientras retrae su cuerpo hacia atrás, como si fuera a lanzarse sobre alguien}                                                                                 {%1, el Gran Lobo Ancestral prepara <119>mordisco<099>!!!}                                 {5}
 #SUBSTITUTE       {%1, el Gran Lobo Ancestral parece encogerse, mientras retrae su cuerpo hacia atrás, como si fuera a lanzarse sobre alguien}                                                                                                         {%1, el Gran Lobo Ancestral prepara <119>mordisco<099>!!!}                                 {5}
 #SUBSTITUTE       {Gran lobo ancestral es detenido por unas manos que salen del suelo!.}                                                   {.}  {5}

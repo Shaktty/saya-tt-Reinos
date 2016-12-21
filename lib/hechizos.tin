@@ -39,8 +39,8 @@
 #ALIAS {bef} { formular bola encadenada de fuego:$target,%0,$nicks,$xp } {5}
 #ALIAS {lep} { formular lepra:$target,%0,$nicks,$xp } {5}
 #ALIAS {ba} { formular bola de agua:$target,%0,$nicks,$xp } {5}
-#ALIAS {y} { formular bola de fuego:%0,$nicks,$xp } {5}
-#ALIAS {q} { formular defenestrar:%0,$nicks,$xp } {5}
+#ALIAS {y} { formular bola de fuego:$target,%0,$nicks,$xp } {5}
+#ALIAS {q} { formular defenestrar:$target,%0,$nicks,$xp } {5}
 #ALIAS {bols} { formular bolsillos profundos:$pj,%0 } {5}
 #ALIAS {caida} { formular caida de pluma:$pj } {5}
 #ALIAS {deca} { formular cantrip:decapitar cuerpo } {5}
