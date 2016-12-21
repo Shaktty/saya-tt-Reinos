@@ -1,7 +1,5 @@
 #READ lib/hechizos.tin
 #VARIABLE {xp} {cobradores,lobos,zombis,entes,vrocs,espiritus,sacerdotes,,novicios,acolitos,peregrinos,soldados,aguasnegras,diablillos,animales} {5}
-#VARIABLE         {PJPGS}  {651}
-#VARIABLE         {PJPVS}  {2171}
 #ALIAS            {pi} {db volcanico;cb petreo;eq;piel} {5}
 #VARIABLE         {f10var}  {x}
 #VARIABLE         {f11var}  {r}
