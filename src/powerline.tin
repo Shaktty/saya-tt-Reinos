@@ -99,12 +99,19 @@
     #SHOWME {@powerline{}} {1};
 };
 
-#ACTION {^Estás rodead{o|a} por %1 im{a|á}genes idénticas a ti.$} {
+#ACTION {^Estás rodead{o|a} por %1 im{a|á}genes id{é|e}nticas a ti.$} {
     #VAR {buffers[images]} {%1};
     #SHOWME {@powerline{}} {1};
 };
 
-#ACTION {^# Una de tus im{a|á}genes desaparece cuando %* la golpea.$} {
+#NOP TODO: Integrate with above via | -Shaktty
+#ACTION {^Estás rodeada por 1 im{á|a}gen id{é|e}ntica a ti.$} {
+    #VAR {buffers[images]} {1};
+    #SHOWME {@powerline{}} {1};
+};
+
+#NOP fixed by taking out the ^ and avoiding the # altogether -shaktty
+#ACTION {Una de tus im{a|á}genes desaparece cuando %* la golpea.$} {
     #MATH {buffers[images]} {$buffers[images] - 1};
     #IF {$buffers[images] < 0} {
         #VAR {buffers[images]} 0;
@@ -135,9 +142,14 @@
     #SHOWME {@powerline{}} {1};
 } {4};
 
-#NOP TODO: Tu piel de piedra se endurece y fortalece mágicamente, haciendo que tu total de capas de piedra suba a 5.;
-#ACTION {^Tu piel de piedra se endurece y fortalece mágicamente, haciendo que tu total de capas de piedra suba a %1.$} {
+#NOP Added regeneration calculations -Shaktty
+#ACTION {^Tu piel de piedra se endurece y fortalece m{á|a}gicamente, haciendo que tu total de capas de piedra suba a %1.$} {
     #VAR {buffers[stoneLayers]} {%1};
+    #SHOWME {@powerline{}} {1};
+};
+
+#ACTION {^Tus clones ilusorios se dividen y reorganizan, haciendo que tu total de im{a|á}genes suba a %1.$} {
+    #VAR {buffers[images]} {%1};
     #SHOWME {@powerline{}} {1};
 };
 
