@@ -29,7 +29,8 @@
 #CONFIG           {VERBOSE}  {OFF}
 #CONFIG           {WORDWRAP}  {ON}
 #MESSAGE ALL OFF
-#ALIAS SNUMPADON {#class num kill : #CLASS num read lib/snumpad;#CLASS num open}
+#NOP #ALIAS SNUMPADON {#class num kill : #CLASS num read lib/snumpad;#CLASS num open}
+#read lib/numpad.tin
 #read src/pathdir.tin
 #read src/format.tin
 #read src/function.tin
@@ -40,6 +41,8 @@
 #read src/powerline.tin
 #read src/spells.tin
 #read src/substitute.tin
+#read src/alias.tin
+#read src/target.tin
 #read lib/actions.tin
 #read lib/highlights.tin
 #read lib/substitutes.tin

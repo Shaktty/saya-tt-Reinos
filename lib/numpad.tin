@@ -1,69 +1,19 @@
-#MACRO {\eOl}
-{
-	abajo
-}
+#CLASS {tt_numpad} {kill};
+#CLASS {tt_numpad} {open};
 
-#MACRO {\eOm}
-{
-	arriba
-}
+#MACRO {\eOl} { abajo };
+#MACRO {\eOm} { arriba };
+#MACRO {\eOn} { estado todos };
+#MACRO {\eOo} { abajo };
+#MACRO {\eOp} { ojear };
+#MACRO {\eOq} { sudoeste };
+#MACRO {\eOr} { sur };
+#MACRO {\eOs} { sudeste };
+#MACRO {\eOt} { oeste };
+#MACRO {\eOu} { ojear };
+#MACRO {\eOv} { este };
+#MACRO {\eOw} { noroeste };
+#MACRO {\eOx} { norte };
+#MACRO {\eOy} { noreste };
 
-#MACRO {\eOn}
-{
-	estado todos
-}
-
-#MACRO {\eOo}
-{
-	abajo
-}
-#MACRO {\eOp}
-{
-	ojear
-}
-
-#MACRO {\eOq}
-{
-	sudoeste
-}
-
-#MACRO {\eOr}
-{
-	sur
-}
-
-#MACRO {\eOs}
-{
-	sudeste
-}
-
-#MACRO {\eOt}
-{
-	oeste
-}
-
-#MACRO {\eOu}
-{
-	ojear
-}
-
-#MACRO {\eOv}
-{
-	este
-}
-
-#MACRO {\eOw}
-{
-	noroeste
-}
-
-#MACRO {\eOx}
-{
-	norte
-}
-
-#MACRO {\eOy}
-{
-	noreste
-}
-
+#CLASS {tt_numpad} {close};

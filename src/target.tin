@@ -1,0 +1,16 @@
+#CLASS {RL_TARGET} {kill};
+#CLASS {RL_TARGET} {open};
+
+#ACTION {^Nombre corto %%1 cambiado de %%2 a %%3.$} {
+   #VARIABLE {targets} {%%3};
+   #VARIABLE {nicks} {$targets};
+   #SHOWME {<FCA> Nicks now are: $nicks}
+   #REPLACE {targets} {,} {;};
+   #LIST {targets} {create} {$targets};
+   #FOREACH {$targets[%*]} {name} {
+    #FORMAT {name} {%n} {$name};
+    #HIGHLIGHT {$name} {red bold} {10};
+};
+};
+
+#CLASS {RL_TARGET} {close};
