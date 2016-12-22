@@ -147,10 +147,9 @@
     #VAR {buffers[stoneLayers]} {%1};
     #SHOWME {@powerline{}} {1};
 };
-
 #ACTION {^Tus clones ilusorios se dividen y reorganizan, haciendo que tu total de im{a|á}genes suba a %1.$} {
-    #VAR {buffers[images]} {%1};
-    #SHOWME {@powerline{}} {1};
+   #VAR {buffers[images]} {%1};
+   #SHOWME {@powerline{}} {1};
 };
 
 #CLASS {RL_POWERLINE} {close};
