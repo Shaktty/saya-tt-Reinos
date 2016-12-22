@@ -41,8 +41,14 @@
     #FORMAT {health} {<ABA><138> PV <afc>%s/%s <099>} {$stats[health]} {$stats[maxHealth]};
     #FORMAT {energy} {<ABE><138> PE <eef>%s/%s <099>} {$stats[energy]} {$stats[maxEnergy]};
     #FORMAT {tgt} {<129>Caza: <fac>%s<099>} {$target};
-    #FORMAT {con} {<G06><fca>Concentracion: <119>%s <099>} {$conc};
     #FORMAT {heartbeatString} {@heartbeatToString{}};
+    #IF {$conc == 'NO' } {
+      #FORMAT {con} {<G06><fca>Concentracion: <119>%s <099>} {$conc};
+    };
+    #ELSE 
+    {
+      #FORMAT con {};
+    };
     #IF {$buffers[images] > 0} {
         #FORMAT {images} {<G04><ffa> %s imagenes <099>} {$buffers[images]};
     };

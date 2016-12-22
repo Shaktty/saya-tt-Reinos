@@ -48,7 +48,7 @@
 #NOP #read lib/hechizos.tin
 #NOP
 #read lib/macros_fbar.tin
-#read lib/variables.tin
+#NOP #read lib/variables.tin
 #read lib/tab.tin
 #VAR {rlppPrefix} {<139>☥<099>};
 #VAR {rlppColor} {<fca>};
