@@ -42,13 +42,6 @@
     #FORMAT {energy} {<ABE><138> PE <eef>%s/%s <099>} {$stats[energy]} {$stats[maxEnergy]};
     #FORMAT {tgt} {<129>Caza: <fac>%s<099>} {$target};
     #FORMAT {heartbeatString} {@heartbeatToString{}};
-    #IF {$conc == 'NO' } {
-      #FORMAT {con} {<G06><fca>Concentracion: <119>%s <099>} {$conc};
-    };
-    #ELSE 
-    {
-      #FORMAT con {};
-    };
     #IF {$buffers[images] > 0} {
         #FORMAT {images} {<G04><ffa> %s imagenes <099>} {$buffers[images]};
     };
@@ -63,7 +56,6 @@
     };
 
     #FORMAT {tgtLength} {%L} {$tgt};
-    #FORMAT {conLength} {%L} {$con};
     #FORMAT {healthLength} {%L} {$health};
     #FORMAT {energyLength} {%L} {$energy};
     #FORMAT {heartbeatStringLength} {%L} {$heartbeatString};
@@ -71,9 +63,9 @@
     #FORMAT {stoneLayersLength} {%L} {$stoneLayers};
     #FORMAT {screenWidth} {%C};
 
-    #MATH {fillerLength} {$screenWidth - $healthLength - $energyLength - $heartbeatStringLength - $conLength - $tgtLength - $imagesLength - $stoneLayersLength};
+    #MATH {fillerLength} {$screenWidth - $healthLength - $energyLength - $heartbeatStringLength - $tgtLength - $imagesLength - $stoneLayersLength};
     #FORMAT {filler} {<G03>%+${fillerLength}s<099>} {};
-    #FORMAT {result} {%s%s%s%s%s%s%s%s} {$health} {$energy} {$heartbeatString} {$filler} {$con} {$tgt} {$images} {$stoneLayers};
+    #FORMAT {result} {%s%s%s%s%s%s%s} {$health} {$energy} {$heartbeatString} {$filler} {$images} {$stoneLayers} {$tgt};
 }
 
 #ACTION {^Pvs: %1(%2)  Pe: %3(%4)  Po: %5  Xp: %6  Psoc: %7$} {
@@ -144,5 +136,9 @@
 } {4};
 
 #NOP TODO: Tu piel de piedra se endurece y fortalece mágicamente, haciendo que tu total de capas de piedra suba a 5.;
+#ACTION {^Tu piel de piedra se endurece y fortalece mágicamente, haciendo que tu total de capas de piedra suba a %1.$} {
+    #VAR {buffers[stoneLayers]} {%1};
+    #SHOWME {@powerline{}} {1};
+};
 
 #CLASS {RL_POWERLINE} {close};

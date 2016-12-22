@@ -19,8 +19,8 @@
 #ACTION {Tu última conexión fue } 
 {
   #spl 0 3;
-  #SHOWME {@fkeyshow{} {2}};
-  #SHOWME {@powerline{}{1}};
+  #showme {@fkeyshow{}} {2};
+  #SHOWME {@powerline{}} {1};
   pkon;
 }
 #ACTION {Nombre corto x cambiado de %1 a %2} {#va nicks %2;#SHOWME <FCA>Nicks cambiados a:<caf> $nicks<099>}
