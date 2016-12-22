@@ -2,7 +2,7 @@
 #ACTION {¿Es %1 el barco al que deseas embarcarte?} {s}
 #ACTION {Sientes tu energía restablecida por la magia del anillo.} {#delay {800} {#showme <FAC>--->Anillo listo}}
 #ACTION {¡Tus imágenes se desvanecen!} {#delay {14} {#showme <FAC>--->Imagenes listo}}
-#ACTION {^Tu piel vuelve a su estado normal.$} {#delay {25} {#showme <FAC>--->Pieles listo}}
+#ACTION {^Tu piel vuelve a su estado normal.$} {#delay {28} {#showme <FAC>--->Pieles listo}}
 #ACTION {Finalmente dejas de mantener tu hechizo de indetectable.} {#delay {200} {#showme <CAF>--->Indetectable listo}}
 #ACTION {Observas desde tu escondite los movimientos} {#delay {9} {#showme <ACF>----> Cazar listo!}}
 #ACTION {Observas los movimientos} {#delay {9} {#showme <ACF>----> Cazar listo!}}
