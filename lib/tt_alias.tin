@@ -188,7 +188,7 @@
 #ALIAS {oro} { coger bolsas de cuerpos} {5}
 #ALIAS {pasta} { riquezas } {5}
 #ALIAS {pe} { peleas } {5}
-#ALIAS {pkon} { #log a logs/log-$pj } {5}
+#ALIAS {pkon} { #log a log/log-$pj } {5}
 #ALIAS {prot} { protecciones } {5}
 #ALIAS {prr} { proteger } {5}
 #ALIAS {pr} { protegeme } {5}

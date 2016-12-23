@@ -15,8 +15,8 @@
 #CONFIG           {COLOR PATCH}  {ON}
 #CONFIG           {COMMAND COLOR}  {<fca>}
 #CONFIG           {COMMAND ECHO}  {ON}
-#CONFIG           {CONNECT RETRY}  {200}
-#CONFIG           {HISTORY SIZE}  {1000}
+#CONFIG           {CONNECT RETRY}  {0.2}
+#CONFIG           {HISTORY SIZE}  {100000}
 #CONFIG           {LOG}  {RAW}
 #CONFIG           {PACKET PATCH}  {10}
 #CONFIG           {REPEAT CHAR}  {!}
@@ -27,7 +27,7 @@
 #CONFIG           {VERBATIM}  {OFF}
 #CONFIG           {VERBATIM CHAR}  {\}
 #CONFIG           {VERBOSE}  {OFF}
-#CONFIG           {WORDWRAP}  {ON}
+#CONFIG           {WORDWRAP}  {OFF}
 #MESSAGE ALL OFF
 #NOP #ALIAS SNUMPADON {#class num kill : #CLASS num read lib/snumpad;#CLASS num open}
 #read lib/numpad.tin
