@@ -1,4 +1,4 @@
-#READ lib/hechizos.tin
+#READ lib/tt_magia.tin
 #ALIAS            {pi} {db volcanico;cb petreo;eq;piel} {5}
 #VARIABLE         {f10var}  {x}
 #VARIABLE         {f11var}  {r}

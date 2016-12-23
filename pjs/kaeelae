@@ -1,4 +1,4 @@
-#READ lib/hechizos.tin
+#READ lib/tt_magia.tin
 #ALIAS denv {desenvainar $arma} {5}
 #ALIAS env {envainar $arma} {5}
 #ALIAS {0} { esconderse arbol } {5}

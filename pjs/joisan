@@ -1,4 +1,4 @@
-#READ lib/hechizos.tin
+#READ lib/tt_magia.tin
 #HIGHLIGHT        {bola de fuego}  {bold,reverse,yellow}  {5}
 #HIGHLIGHT        {bola encadenada de fuego}      {bold,reverse,yellow}  {5}
 #HIGHLIGHT        {defenestrar}  {bold,reverse,yellow}  {5}
