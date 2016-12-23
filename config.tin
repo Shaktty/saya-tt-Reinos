@@ -48,7 +48,7 @@
 #read lib/alias.tin
 #NOP      -- Este lo leemos desde el archivo del pj que formule mejor
 #NOP #read lib/hechizos.tin
-#read lib/macros_fbar.tin
+#read src/macros_fbar.tin
 #read lib/tab.tin
 #VAR {rlppPrefix} {<139>☥<099>};
 #VAR {rlppColor} {<fca>};
