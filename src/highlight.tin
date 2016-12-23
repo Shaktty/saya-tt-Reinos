@@ -23,6 +23,7 @@
 #HIGHLIGHT {^Te vuelves a sentir pesad{a|o}.$}          {bold magenta} {5};
 #HIGHLIGHT {^Notas como el poder de la runa %* te abandona poco a poco.$} {bold magenta} {5};
 #HIGHLIGHT {^Dejas de preever los próximos ataques de tus enemigos} #{bold magenta} {5};
+#HIGHLIGHT {^Tu arco se evapora en tus manos%*$} {bold magenta} {5};
 
 /*
  * Dangers
