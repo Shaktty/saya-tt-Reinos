@@ -58,8 +58,7 @@
 #EVENT {PROGRAM START} 
 {
   #SYSTEM {clear};
-  #SHOWME <fac>  @center{Reinos de Leyenda - Eirea} ;
-  #SHOWME <fac>  @center{http://reinosdeleyenda.org};
+  #SHOWME <fac>@center{Reinos de Leyenda -- http://reinosdeleyenda.org};
   #SHOWME <fca>;
   #SHOWME <acf>Jugador?;
 }
