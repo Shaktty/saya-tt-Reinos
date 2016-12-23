@@ -42,16 +42,13 @@
 #read src/spells.tin
 #read src/substitute.tin
 #read src/alias.tin
-#read src/target.tin
 #read lib/actions.tin
 #read lib/highlights.tin
 #read lib/substitutes.tin
 #read lib/alias.tin
 #NOP      -- Este lo leemos desde el archivo del pj que formule mejor
 #NOP #read lib/hechizos.tin
-#NOP
 #read lib/macros_fbar.tin
-#NOP #read lib/variables.tin
 #read lib/tab.tin
 #VAR {rlppPrefix} {<139>☥<099>};
 #VAR {rlppColor} {<fca>};

@@ -72,3 +72,4 @@
 #VARIABLE f10var {ac}
 #VARIABLE f11var {x}
 #VARIABLE f12var {ee}
+#READ lib/numpad_sigilar.tin

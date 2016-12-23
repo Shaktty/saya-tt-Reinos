@@ -131,6 +131,7 @@
         #CASE {"mur denovetis"}             {#VAR spellName muro ilusorio};
         #CASE {"magius occultum"}           {#VAR spellName ocultar};
         #CASE {"maruma o manir"}            {#VAR spellName silueta imprecisa};
+        #CASE {"Dices en %1 'maruma o manir'"}            {#VAR spellName silueta imprecisa};
         #CASE {"it cualis"}                 {#VAR spellName simulacro};
         #CASE {"venti olabae"}              {#VAR spellName ventriloquia};
         
