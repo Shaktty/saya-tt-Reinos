@@ -1,3 +1,5 @@
+#CLASS {tt_highs} {kill};
+#CLASS {tt_highs} {open};
 
 #HIGHLIGHT        {¡Te estremeces y pierdes la concentración!} {<CAF>%0<099>} {5}
 #HIGHLIGHT        {Galopas en %1}  {<afc>}  {5}
@@ -269,3 +271,5 @@
 #HIGHLIGHT {Un escudo de energía rodea tu cuerpo} {bold,magenta} {5}
 #HIGHLIGHT {Tu aura de protección contra armas comunes se desvanece.} {bold,orange} {5}
 #HIGH {Estás transformada en un luchador enorme completamente erizado} bold,red
+
+#CLASS {tt_highs} {close};

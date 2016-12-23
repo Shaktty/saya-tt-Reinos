@@ -1,3 +1,6 @@
+#CLASS {tt_tab} {kill};
+#CLASS {tt_tab} {open};
+
 #TAB              {abandonar}
 #TAB		  {winclamit}
 #TAB		  {yavethalion}
@@ -145,3 +148,5 @@
 #TAB		  {barco}
 #TAB		  {angulo}
 #TAB		  {inclinacion}
+
+#CLASS {tt_tab} {close};
