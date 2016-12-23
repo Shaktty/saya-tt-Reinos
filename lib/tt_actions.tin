@@ -1,0 +1,31 @@
+#CLASS {tt_actions} {kill};
+#CLASS {tt_actions} {open};
+
+#ACTION {Tu personaje ya se encuentra en Reinos de Leyenda. ¿Deseas entrar con la copia existente? [s/n] } {s}
+#ACTION {¿Es %1 el barco al que deseas embarcarte?} {s}
+#ACTION {Sientes tu energía restablecida por la magia del anillo.} {#delay {800} {#showme <FAC>--->Anillo listo}}
+#ACTION {¡Tus imágenes se desvanecen!} {#delay {14} {#showme <FAC>--->Imagenes listo}}
+#ACTION {^Tu piel vuelve a su estado normal.$} {#delay {28} {#showme <FAC>--->Pieles listo}}
+#ACTION {Finalmente dejas de mantener tu hechizo de indetectable.} {#delay {200} {#showme <CAF>--->Indetectable listo}}
+#ACTION {Observas desde tu escondite los movimientos} {#delay {9} {#showme <ACF>----> Cazar listo!}}
+#ACTION {Observas los movimientos} {#delay {9} {#showme <ACF>----> Cazar listo!}}
+#ACTION {Tensas tus músculos preparando un nuevo ataque.} {#delay {9} {#showme <ACF>----> Ataquedoble listo!}}
+#ACTION {Cierras los ojos y dejas reposar tus músculos para concentrarte en la sublimación %0} { #variable conc SI }
+#ACTION {Comienzas a concentrarte en tu victima, y te sientes capaz de golpear los puntos débiles de tu enemigo.} { #variable conc ON }
+#ACTION {Tu embotada %0} { #variable conc NO }
+#ACTION {Ya estás concentrada} { #variable conc SI } 
+#ACTION {Ya estás concentrándote en el combate.} { #variable conc SI }
+#ACTION {^Nombre corto escondite cambiado de %1 a %2} { #variable escondite %2 }
+#ACTION {^llamada halcon} { #variable invoca halcon }
+#ACTION {^llamada oso} { #variable invoca ancestral }
+#ACTION {^llamada lobo} { #variable invoca ancestral }
+#ACTION {Cierras los ojos y dejas reposar tus músculos para concentrarte en la sublimación de tus técnicas de combate, ¡todo lo que hay tu alrededor desaparece!} {#va conc ON} 
+#ACTION {Tu última conexión fue } 
+{
+  #spl 0 3;
+  #showme {@fkeyshow{}} {2};
+  #SHOWME {@powerline{}} {1};
+  pkon;
+}
+#ACTION {Nombre corto x cambiado de %1 a %2} {#va nicks %2;#SHOWME <FCA>Nicks cambiados a:<caf> $nicks<099>}
+#CLASS {tt_actions} {close};

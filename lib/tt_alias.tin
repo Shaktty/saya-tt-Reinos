@@ -1,0 +1,239 @@
+#CLASS {tt_alias} {kill};
+#CLASS {tt_alias} {open};
+
+#ALIAS {AB} { sigilar abajo } {5}
+#ALIAS {we} {who enemigos} {5}
+#ALIAS {wa} {who aliados} {5}
+#ALIAS {p} {perder todos} {5}
+#ALIAS {pp} {peleas parar} {5}
+#ALIAS {bq} {bloqueos $invoca} {5}
+#ALIAS {maaa} {maestria arma;maestria arma 2} {5}
+#ALIAS {bqq} {bloqueos} {5}
+#ALIAS {maa} {maestria}
+#ALIAS {CDEV} {#ses s1 62.210.99.120 5001 pjs/$pj;s} {5}
+#ALIAS {a}  {agacharse} {5}
+#ALIAS {aa}  {levantarse} {5}
+#ALIAS {AR} { sigilar arriba } {5}
+#ALIAS {Aab} { acechar abajo } {5}
+#ALIAS {Aar} { acechar arriba } {5}
+#ALIAS {Ade} { acechar dentro } {5}
+#ALIAS {Ae} { acechar este } {5}
+#ALIAS {Afu} { acechar fuera } {5}
+#ALIAS {Ane} { acechar noreste } {5}
+#ALIAS {Ano} { acechar noroeste } {5}
+#ALIAS {An} { acechar norte } {5}
+#ALIAS {Ao} { acechar oeste } {5}
+#ALIAS {Ase} { acechar sudeste } {5}
+#ALIAS {Aso} { acechar sudoeste } {5}
+#ALIAS {As} { acechar sur } {5}
+#ALIAS {CASA} { sigilar casa } {5}
+#ALIAS {DE} { sigilar dentro } {5}
+#ALIAS {DIM} { dim } {5}
+#ALIAS {Dab} { divisar abajo } {5}
+#ALIAS {Dar} { divisar arriba } {5}
+#ALIAS {Da} { divisar a %0 } {5}
+#ALIAS {Dde} { divisar dentro } {5}
+#ALIAS {De} { divisar este } {5}
+#ALIAS {Dfu} { divisar fuera } {5}
+#ALIAS {Dne} { divisar noreste } {5}
+#ALIAS {Dno} { divisar noroeste } {5}
+#ALIAS {Dn} { divisar norte } {5}
+#ALIAS {Do} { divisar oeste } {5}
+#ALIAS {Dse} { divisar sudeste } {5}
+#ALIAS {Dso} { divisar sudoeste } {5}
+#ALIAS {Ds} { divisar sur } {5}
+#ALIAS {EE} { estado todos } {5}
+#ALIAS {ESCA} { sigilar escaleras } {5}
+#ALIAS {ESC} { sigilar escalera } {5}
+#ALIAS {Eab} { espiar hacia abajo } {5}
+#ALIAS {Ear} { espiar hacia arriba } {5}
+#ALIAS {Ea} { espiar a %0 } {5}
+#ALIAS {Ede} { espiar hacia dentro } {5}
+#ALIAS {Ee} { espiar hacia este } {5}
+#ALIAS {Efu} { espiar hacia fuera } {5}
+#ALIAS {Emm} { espiar mochila de %0 } {5}
+#ALIAS {Em} { espiar mochila de $target } {5}
+#ALIAS {Ene} { espiar hacia noreste } {5}
+#ALIAS {Eno} { espiar hacia noroeste } {5}
+#ALIAS {En} { espiar hacia norte } {5}
+#ALIAS {Eo} { espiar hacia oeste } {5}
+#ALIAS {Ese} { espiar hacia sudeste } {5}
+#ALIAS {Eso} { espiar hacia sudoeste } {5}
+#ALIAS {Es} { espiar hacia sur } {5}
+#ALIAS {Et} { espiar a $target } {5}
+#ALIAS {E} { sigilar este } {5}
+#ALIAS {FF} { ff } {5}
+#ALIAS {FU} { sigilar fuera } {5}
+#ALIAS {F} { f } {5}
+#ALIAS {I} { i } {5}
+#ALIAS {L} { ojear } {5}
+#ALIAS {MAS} { mas } {5}
+#ALIAS {M} { m } {5}
+#ALIAS {NE} { sigilar noreste } {5}
+#ALIAS {NO} { sigilar noroeste } {5}
+#ALIAS {Ne} { nadar este } {5}
+#ALIAS {Nne} { nadar noreste } {5}
+#ALIAS {Nno} { nadar noroeste } {5}
+#ALIAS {Nn} { nadar norte } {5}
+#ALIAS {Nse} { nadar sudeste } {5}
+#ALIAS {Nso} { nadar sudoeste } {5}
+#ALIAS {Ns} { nadar sur } {5}
+#ALIAS {N} { sigilar norte } {5}
+#ALIAS {OF} { oficio activar %1 } {5}
+#ALIAS {ON} { on } {5}
+#ALIAS {O} { sigilar oeste } {5}
+#ALIAS {PU} { sigilar puerta } {5}
+#ALIAS {RIP} { rip } {5}
+#ALIAS {Rab} { ruidos abajo } {5}
+#ALIAS {Rar} { ruidos arriba } {5}
+#ALIAS {Rde} { ruidos dentro } {5}
+#ALIAS {Re} { ruidos este } {5}
+#ALIAS {Rfu} { ruidos fuera } {5}
+#ALIAS {Rne} { ruidos noreste } {5}
+#ALIAS {Rno} { ruidos noroeste } {5}
+#ALIAS {Rn} { ruidos norte } {5}
+#ALIAS {Ro} { ruidos oeste } {5}
+#ALIAS {Rpu} { ruidos puerta } {5}
+#ALIAS {Rr} { ruidos } {5}
+#ALIAS {Rse} { ruidos sudeste } {5}
+#ALIAS {Rso} { ruidos sudoeste } {5}
+#ALIAS {Rs} { ruidos sur } {5}
+#ALIAS {SAE} { sae } {5}
+#ALIAS {SE} { sigilar sudeste } {5}
+#ALIAS {SG} { sg } {5}
+#ALIAS {SO} { sigilar sudoeste } {5}
+#ALIAS {Slar} { saltar arriba } {5}
+#ALIAS {Sle} { saltar este } {5}
+#ALIAS {Sll} { saltar $target } {5}
+#ALIAS {Slne} { saltar noreste } {5}
+#ALIAS {Slno} { saltar noroeste } {5}
+#ALIAS {Sln} { saltar norte } {5}
+#ALIAS {Slo} { saltar oeste } {5}
+#ALIAS {Slse} { saltar sudeste } {5}
+#ALIAS {Slso} { saltar sudoeste } {5}
+#ALIAS {Sls} { saltar sur } {5}
+#ALIAS {S} { sigilar sur } {5}
+#ALIAS {aa} { levantarse } {5}
+#ALIAS {add} { agruparse invitar } {5}
+#ALIAS {aj} { ajustar capucha } {5}
+#ALIAS {ap} { apartar capucha } {5}
+#ALIAS {arra} { arrabales } {5}
+#ALIAS {asen} { asentir mal } {5}
+#ALIAS {aver} { 88 } {5}
+#ALIAS {aw} { ausente %^GREEN%^Árbol%^WHITE%^: Entre las ramas %^GREEN%^[ninguna]%^RESET%^ } {5}
+#ALIAS {axp} { #VARIABLE xp $xp,%0 } {5}
+#ALIAS {b} { buscar } {5}
+#ALIAS {caza} { #VARIABLE target %0 } {5}
+#ALIAS {ca} { causar herida a $target,%0,$nicks,$xp } {5}
+#ALIAS {cbr} { coger bayas de brazalete } {5}
+#ALIAS {cb} { coger %1 de mochila } {5}
+#ALIAS {cen} { centrar $target } {5}
+#ALIAS {cgg} { coger $goody de cuerpos } {5}
+#ALIAS {cg} { coger todo de cuerpos } {5}
+#ALIAS {en} {enterrar} {5}
+#ALIAS {clrnk} { #VARIABLE nicks kobold } {5}
+#ALIAS {cnick} { #VARIABLE nicks %0,$nicks } {5}
+#ALIAS {conteo} { #VARIABLE cont 0; #showme Llevas $cont golpes consecutivos } {5}
+#ALIAS {con} { considerar %0,$xp,$nicks,$target } {5}
+#ALIAS {cp} { #VARIABLE pincho %0 } {5}
+#ALIAS {cr} { cerrar %0 } {5}
+#ALIAS {cxp} { #VARIABLE xp %0,$xp } {5}
+#ALIAS {cz} { caza } {5}
+#ALIAS {db} { poner %1 en mochila } {5}
+#ALIAS {deca} { decapitar cuerpo; dejar cabeza } {5}
+#ALIAS {denv} { ldenv; rdenv } {5}
+#ALIAS {dim} { diplomacia %0 } {5}
+#ALIAS {dtt} { dtrampa terminar } {5}
+#ALIAS {dt} { dtrampa } {5}
+#ALIAS {ee} { estado todos } {5}
+#ALIAS {eq} { equip } {5}
+#ALIAS {ext} { extraer flecha } {5}
+#ALIAS {faa} { familia ! } {5}
+#ALIAS {fff} { finger $target } {5}
+#ALIAS {ff} { finger %0 } {5}
+#ALIAS {fjj} { forrajear } {5}
+#ALIAS {fj} { forrajear $planta } {5}
+#ALIAS {fz} { forzar } {5}
+#ALIAS {ga} { golpear arbol } {5}
+#ALIAS {gc} { golpecertero } {5}
+#ALIAS {ge} { galopar este } {5}
+#ALIAS {gne} { galopar noreste } {5}
+#ALIAS {gno} { galopar noroeste } {5}
+#ALIAS {gn} { galopar norte } {5}
+#ALIAS {go} { galopar oeste } {5}
+#ALIAS {gse} { galopar sudeste } {5}
+#ALIAS {gso} { galopar sudoeste } {5}
+#ALIAS {gs} { galopar sur } {5}
+#ALIAS {h} { habilidades } {5}
+#ALIAS {im} { ingresar monedas } {5}
+#ALIAS {kx} { matar $xp } {5}
+#ALIAS {lt} { cb salvoconducto; ab }
+#ALIAS {mallo} { agarrar rama, apoyar el pie en la corteza, impulsar hacia arriba } {5}
+#ALIAS {mas} { maestria %0 } {5}
+#ALIAS {ma} { mirar arbol } {5}
+#ALIAS {mb} { mirar base } {5}
+#ALIAS {md} { mirar disco } {5}
+#ALIAS {mi} { colocar el cebo } {5}
+#ALIAS {mk} { mirar %0,$nicks,$target } {5}
+#ALIAS {mm} { mirar mochila } {5}
+#ALIAS {mon} { montar ancestral } {5}
+#ALIAS {mt} { mirar $target } {5}
+#ALIAS {mx} { mirar $xp } {5}
+#ALIAS {m} { mirar } {5}
+#ALIAS {news} { noticias %0 } {5}
+#ALIAS {novv} { novato ! } {5}
+#ALIAS {of} { envainar $pincho } {5}
+#ALIAS {on} { desenvainar $pincho } {5}
+#ALIAS {op} { abrir %0 } {5}
+#ALIAS {oro} { coger bolsas de cuerpos} {5}
+#ALIAS {pasta} { riquezas } {5}
+#ALIAS {pe} { peleas } {5}
+#ALIAS {pkon} { #log a logs/log-$pj } {5}
+#ALIAS {prot} { protecciones } {5}
+#ALIAS {prr} { proteger } {5}
+#ALIAS {pr} { protegeme } {5}
+#ALIAS {qs} { coger todo } {5}
+#ALIAS {q} { esconderse $target } {5}
+#ALIAS {rb} { rumbo } {5}
+#ALIAS {rdenv} { desenvainar $rarm } {5}
+#ALIAS {renv} { envainar $rarm } {5}
+#ALIAS {rip} { w muertos } {5}
+#ALIAS {rmas} { maestria $rarm } {5}
+#ALIAS {rv} { robar de vaina a $target,$nicks } {5}
+#ALIAS {sac} { sacudir arbol } {5}
+#ALIAS {sae} { salvar } {5}
+#ALIAS {salto} { saltar %1,$target,$nicks,$xp } {5}
+#ALIAS {sbt} { envainar todo; ta }
+#ALIAS {scc} { puntos -v } {5}
+#ALIAS {sc} { puntos -xp } {5}
+#ALIAS {sg} {seguir $target } {5}
+#ALIAS {sl} {saltar $target; denv }
+#ALIAS {sonn} {son $target } {5}
+#ALIAS {soo} { decir so } {5}
+#ALIAS {sp} {conversar %0} {5}
+#ALIAS {srr} {serrar lenyo %0 } {5}
+#ALIAS {ssirv} { agruparse invitar sirviente; decir sirviente te ordeno: agruparse }
+#ALIAS {stop} { peleas parar } {5}
+#ALIAS {subetu} { unwi todo; trepar arbol }
+#ALIAS {ta} { trepar arbol } {5}
+#ALIAS {tr} { trivial %0 } {5}
+#ALIAS {t} { tt $target %0 } {5}
+#ALIAS {unwi} { envainar } {5}
+#ALIAS {uuu} { ciu ! } {5}
+#ALIAS {ve} { velocidad %0 } {5}
+#ALIAS {wb} { w bueno } {5}
+#ALIAS {wcc} { w ciudadanias } {5}
+#ALIAS {wc} { w ciudadanos } {5}
+#ALIAS {wd} { w dendra } {5}
+#ALIAS {wgr} { w grimoszk } {5}
+#ALIAS {wg} { w mercenario } {5}
+#ALIAS {wi} { blandir } {5}
+#ALIAS {wkk} { w kheleb } {5}
+#ALIAS {wk} { w kattak } {5}
+#ALIAS {wm} { w malo } {5}
+#ALIAS {wr} { w mercenario } {5}
+#ALIAS {wtk} { w takome } {5}
+#ALIAS {wv} { w veleiron } {5}
+#ALIAS {pdd} {pd cargando} {5}
+#al {mon} {montar $jaco} {5}
+#CLASS {tt_alias} {close};
