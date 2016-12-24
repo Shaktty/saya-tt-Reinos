@@ -114,9 +114,9 @@
         #CASE {"pyros burios"}              {#VAR spellName estallido de fuego};
         #CASE {"spheros frezious"}          {#VAR spellName granizo};
         #CASE {"majos areos zappeous"}      {#VAR spellName llamarada eléctrica};
-        #CASE {"majos areos corrosiv"}      {#VAR spellName tormeta ácida};
-        #CASE {"sormuz frez os halos"}      {#VAR spellName tormeta de hielo};
-        #CASE {"eleius magical concere"}    {#VAR spellName tormeta eléctrica};
+        #CASE {"majos areos corrosiv"}      {#VAR spellName tormenta ácida};
+        #CASE {"sormuz frez os halos"}      {#VAR spellName tormenta de hielo};
+        #CASE {"eleius magical concere"}    {#VAR spellName tormenta eléctrica};
         
         #NOP =============== Ilusion ===============;
         #CASE {"falax majyz objetum"}       {#VAR spellName aura mágica de Nystul};
@@ -131,7 +131,7 @@
         #CASE {"mur denovetis"}             {#VAR spellName muro ilusorio};
         #CASE {"magius occultum"}           {#VAR spellName ocultar};
         #CASE {"maruma o manir"}            {#VAR spellName silueta imprecisa};
-        #CASE {"Dices en %1 'maruma o manir'"}            {#VAR spellName silueta imprecisa};
+#NOP         #CASE {"Dices en %1 'maruma o manir'"}            {#VAR spellName silueta imprecisa};
         #CASE {"it cualis"}                 {#VAR spellName simulacro};
         #CASE {"venti olabae"}              {#VAR spellName ventriloquia};
         
@@ -306,6 +306,7 @@
 };
 
 #SUBSTITUTE {^Pronuncias el cántico: '%*'$} {@translateSpell{Pronuncias el cántico: '%1';%1}};
+#SUBSTITUTE {^Dices en %1: '%2'$} {@translateSpell{Dices en %1: '%2';%2}};
 #SUBSTITUTE {^%* pronuncia el cántico: '%*'$} {@translateSpell{%1 pronuncia el cántico: '%2';%2}};
 
 #CLASS {RL_SPELLS} {close};
