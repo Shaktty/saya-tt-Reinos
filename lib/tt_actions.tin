@@ -4,7 +4,7 @@
 #ACTION {Tu personaje ya se encuentra en Reinos de Leyenda. ¿Deseas entrar con la copia existente? [s/n] } {s}
 #ACTION {¿Es %1 el barco al que deseas embarcarte?} {s}
 #ACTION {Sientes tu energía restablecida por la magia del anillo.} {#delay {800} {#showme <FAC>--->Anillo listo}}
-#ACTION {¡Tus imágenes se desvanecen!} {#delay {14} {#showme <FAC>--->Imagenes listo}}
+#ACTION {^{¡|}Tus im{á|a}genes se desvanecen!$} {#delay {14} {#showme <FAC>--->Imagenes listo}}
 #ACTION {^Tu piel vuelve a su estado normal.$} {#delay {28} {#showme <FAC>--->Pieles listo}}
 #ACTION {Finalmente dejas de mantener tu hechizo de indetectable.} {#delay {200} {#showme <CAF>--->Indetectable listo}}
 #ACTION {Observas desde tu escondite los movimientos} {#delay {9} {#showme <ACF>----> Cazar listo!}}
@@ -28,4 +28,5 @@
   pkon;
 }
 #ACTION {Nombre corto x cambiado de %1 a %2} {#va nicks %2;#SHOWME <FCA>Nicks cambiados a:<caf> $nicks<099>}
+
 #CLASS {tt_actions} {close};
