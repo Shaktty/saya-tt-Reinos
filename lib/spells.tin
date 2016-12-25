@@ -25,6 +25,17 @@
         #CASE {"repeal prokyum"}            {#VAR spellName protección contra proyectiles};
         #CASE {"plaunum demigrum"}          {#VAR spellName repudiar};
         #CASE {"repelish forceum"}          {#VAR spellName repulsión};
+        #CASE {"minor hielum resit"}        {#VAR spellName resistir frío};
+        #CASE {"minor fogos resit"}         {#VAR spellName resistir fuego};
+        #CASE {"minor arcane resit"}        {#VAR spellName resistir mágico};
+        #CASE {"minor malevola resit"}      {#VAR spellName resistir mal};
+        #CASE {"minor benevola resit"}      {#VAR spellName resistir bien};
+        #CASE {"minor relampagum resit"}    {#VAR spellName resistir eléctrico};
+        #CASE {"minor virus resit"}         {#VAR spellName resistir enfermedad};
+        #CASE {"minor acid resit"}          {#VAR spellName resistir ácido};
+        #CASE {"minor ventulae resit"}      {#VAR spellName resistir aire};
+        #CASE {"minor mentale resit"}       {#VAR spellName resistir mental};
+        #CASE {"minor posonae resit"}       {#VAR spellName resistir veneno};
         
         #NOP =============== Adivinacion ===============;
         #CASE {"klairis lkrejum soniks"}    {#VAR spellName clariaudiencia};
@@ -40,7 +51,7 @@
         #CASE {"majio exodus oculus"}           {#VAR spellName ojo mágico de Éxodus};
         #CASE {"mer conoectrik"}            {#VAR spellName precognición};
         #CASE {"je vei comoun deux mes yeux sont libreus"}  {#VAR spellName ver realmente};
-        #CASE {"ein aluin ulu zuel dos"}    {#VAR spellName localizar?};
+        #CASE {"ein aluin ulu zuel dos"}    {#VAR spellName invocar elemental};
         
         #NOP =============== Alteracion ===============;
         #CASE {"groez us marj"}             {#VAR spellName agrandar};
@@ -61,6 +72,8 @@
         #CASE {"sangx o axcid"}             {#VAR spellName sangre a ácido};
         #CASE {"trans ikrat ondomendo wiclat skrauwen"}    {#VAR spellName teleportación};
         #CASE {"elo disendi es ferundalae"}    {#VAR spellName transformación de DvNeil};
+        #CASE {"fais alijus"}               {#VAR spellName contenedor dimensional};
+        #CASE {"maleus hielum rissas"}      {#VAR spellName debilidad frío};
         
         #NOP =============== Conjuracion ===============;
         #CASE {"fais alijus"}               {#VAR spellName contenedor dimensional};
@@ -134,6 +147,7 @@
 #NOP         #CASE {"Dices en %1 'maruma o manir'"}            {#VAR spellName silueta imprecisa};
         #CASE {"it cualis"}                 {#VAR spellName simulacro};
         #CASE {"venti olabae"}              {#VAR spellName ventriloquia};
+        #CASE {"flobben ark-ark das"}       {#VAR spellName descarga de espadas espectrales};
         
         #NOP =============== Necromancia ===============;
         #CASE {"morti elai aradi"}                  {#VAR spellName animar muertos};

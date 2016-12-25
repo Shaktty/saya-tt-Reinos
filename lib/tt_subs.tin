@@ -37,11 +37,8 @@
 #SUBSTITUTE       {Al intentar saltar, te tropiezas con las ramas, y caes inevitablemente al suelo.}                                                              {<091>Al intentar saltar, te tropiezas con las ramas, y caes inevitablemente al suelo.<199> WARNING!! WARNING!! OSTION!!<099>}                                                                                                     {5}
 #SUBSTITUTE       {Estas rodeada por %1 imagenes identicas a ti}                          {<099>Estas rodeada por <159>%1<099> identicas a ti}                           {5}
 #SUBSTITUTE       {^Obtienes %1 puntos de experiencia]}               {<099>XP: <179>%1<099>}  {5}
-#SUBSTITUTE       {^Obtienes %1 puntos de experiencia]}               {<099>XP: <179>%1<099>}  {5}
-#SUBSTITUTE       {Estás siendo atacada por %1}          {<100>Enemigo: <119>%1<099>}   {5}
 #SUBSTITUTE       {Estás siendo atacada por %1}         {<100>Enemigo: <119>%1<099>}   {5}
 #SUBSTITUTE       {Ves a %1 llegar al pie del árbol.}                {<109>ATENCION!!: <099>Ves a <119>%1<099> llegar al pie del árbol}                                          {5}
-#SUBSTITUTE       {Ves a %1 llegar al pie del árbol.}               {<109>ATENCION!!: <099>Ves a <119>%1<099> llegar al pie del árbol}                                         {5}
 #SUBSTITUTE       {¡Oh, vaya, %1 parece haberse dado cuenta de tus intenciones!}                                           {<109>Apuñalas a <129>%1<119> pero ¡Te caza!<099>}                           {5}
 #SUBSTITUTE       {Oh, vaya, %1 parece haberse dado cuenta de tus intenciones!}                                          {<109>Apuñalas a <129>%1<119> pero ¡Te caza!<099>}                         {5}
 #SUBSTITUTE       {Empiezas a buscar un buen escondite por la zona}                             {<109>Empiezas a buscar un buen escondite por la zona<129>.<099>}                                        {5}
