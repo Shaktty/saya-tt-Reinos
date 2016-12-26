@@ -235,5 +235,7 @@
 #ALIAS {wtk} { w takome } {5}
 #ALIAS {wv} { w veleiron } {5}
 #ALIAS {pdd} {pd cargando} {5}
-#al {mon} {montar $jaco} {5}
+#ALIAS {mon} {montar $jaco} {5}
+#ALIAS {ui} {tirar abrojos} {5}
+
 #CLASS {tt_alias} {close};

@@ -20,7 +20,6 @@
 #ALIAS {bbb} { bando ! } {5}
 #ALIAS {bb} { bando @la %^BOLD%^MAGENTA%^M%^BLACK%^aga %^MAGENTA%^S%^RED%^alvaje%^BLACK%^: %^ORANGE%^%0%^RESET%^ } {5}
 #ALIAS {cc} { chat ! } {5}
-#ALIAS {dsirv} { decir sirviente te ordeno: %0 } {5}
 #ALIAS {uuu} { ciu ! } {5}
 #VARIABLE {xp} {cobradores,lobos,zombis,entes,vrocs,espiritus,sacerdotes,,novicios,acolitos,peregrinos,soldados,aguasnegras,diablillos,animales}
 #VARIABLE {nicks} {zhiereng,sharz,daakeh,wrunk,syllops,vuurgh,tahurtz,zeiring,thyaser,gurlen,aldamare,zethrus,gondolina,tritux}

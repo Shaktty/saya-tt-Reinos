@@ -109,6 +109,7 @@
 #ALIAS {sil} { formular silueta imprecisa:$pj } {5};
 #ALIAS {sim} { formular simulacro:$pj } {5};
 #ALIAS {fsirv} { formular sirviente invisible } {5};
+#ALIAS {dsirv} { decir sirviente te ordeno: %0 } {5};
 #ALIAS {sor} { formular sordera:$target,%0,$nicks,$xp } {5};
 #ALIAS {tela} { formular telaraña:$target,%0,$nicks,$xp } {5};
 #ALIAS {tq} { formular toque helado:$target,%0,$nicks,$xp } {5};

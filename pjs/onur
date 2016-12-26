@@ -1,5 +1,5 @@
-#VAR PJPVS {2121}
-#VAR PJPGS {272}
+/* vim: set syntax=tt */
+
 #VAR larm hoz
 #var rarm cadena
 #ALIAS {ppr} { prompt PV: $v/$PJPVS GP: $g/$PJPGS | $s |$j|$b|$a> } {5}
