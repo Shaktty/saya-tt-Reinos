@@ -1,0 +1,10 @@
+#CLASS {tt_pane} {kill};
+#CLASS {tt_pane} {open};
+
+#sys touch /tmp/chats
+#sys "tmux splitw -h -l 10 'tail -f /tmp/chats'" 
+#ACTION {^[{Chat|Renegado|Solitarios|Keel}] %*} {#sys echo '%0' >>/tmp/chats};
+#NOP #GAG {^[{Chat|Renegado|Solitarios|Keel}] %*}
+
+
+#CLASS {tt_pane} {close};
