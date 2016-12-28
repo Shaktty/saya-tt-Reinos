@@ -10,6 +10,8 @@
 #ACTION {Observas desde tu escondite los movimientos} {#delay {9} {#showme <ACF>----> Cazar listo!}};
 #ACTION {Observas los movimientos} {#delay {9} {#showme <ACF>----> Cazar listo!}};
 #ACTION {Tensas tus músculos preparando un nuevo ataque.} {#delay {9} {#showme <ACF>----> Ataquedoble listo!}};
+#ACTION {^Ordenas a %* habilidad picado sobre %2.$} {#delay {55} {#showme <ACF>----> Picado listo!}};
+#ACTION {^Ordenas a %* habilidad acosar sobre %2.$} {#delay {55} {#showme <ACF>----> Acosar listo!}};
 #ACTION {Cierras los ojos y dejas reposar tus músculos para concentrarte en la sublimación %0} { #variable conc SI };
 #ACTION {Comienzas a concentrarte en tu victima, y te sientes capaz de golpear los puntos débiles de tu enemigo.} { #variable conc ON };
 #ACTION {Tu embotada %0} { #variable conc NO };
