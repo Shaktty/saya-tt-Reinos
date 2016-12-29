@@ -26,7 +26,6 @@
 #SUBSTITUTE {Comienzas a formular el hechizo %1}                {<059>Comienzas a formular el hechizo <159>%1<099>} {5};
 #SUBSTITUTE {Al intentar saltar, te tropiezas con las ramas, y caes inevitablemente al suelo.} {<091>Al intentar saltar, te tropiezas con las ramas, y caes inevitablemente al suelo.<199> WARNING!! WARNING!! OSTION!!<099>}  {5};
 #SUBSTITUTE {Estas rodeada por %1 imagenes identicas a ti}                          {<099>Estas rodeada por <159>%1<099> identicas a ti} {5};
-#SUBSTITUTE {^Obtienes %1 puntos de experiencia]}               {<099>XP: <179>%1<099>}  {5};
 #SUBSTITUTE {Estás siendo atacada por %1}         {<100>Enemigo: <119>%1<099>}   {5};
 #SUBSTITUTE {Ves a %1 llegar al pie del árbol.}                {<109>ATENCION!!: <099>Ves a <119>%1<099> llegar al pie del árbol} {5};
 #SUBSTITUTE {¡Oh, vaya, %1 parece haberse dado cuenta de tus intenciones!} {<109>Apuñalas a <129>%1<119> pero ¡Te caza!<099>} {5};
@@ -75,18 +74,15 @@
 #SUBSTITUTE {Esta rodeado por un aura mistica brillante.} {Esta rodeado por un aura mistica brillante. <159>------>>>> <169> Aura Espiritual ON<099>}  {5};
 #SUBSTITUTE {Estas rodead%1 pos %2 imagen%3 identicas a %4} {Estas rodead%1 por <129>%2<099> imagen%3 identicas a %4 <159>-------->>>>  <119>%1 <169>Imagenes <099>} {5};
 #SUBSTITUTE {La silueta de Gran lobo ancestral desaparece entre remolinos de humo blanquecino y azulado}  {La silueta de Gran lobo ancestral desaparece entre remolinos de humo blanquecino y azulado <129> OJO LOBO <119> DIES <099>!}                                                                                                    {5};
-#SUBSTITUTE {Las imagenes de %1 se desvanecen !!} {Las imagenes de %1 se desvanecen !!  <129>IMAGENES OUT DE <159>%1<119> DALE DALE!!!   }  {5};
 #SUBSTITUTE {Las imagenes de %1 se desvanecen.} {Las imagenes de<119> %1<099> se desvanecen.           <119>%1 SIN IMAGENES!!! DALE!!<099>}  {5};
 #SUBSTITUTE {Observas como %1 observa tus movimientos detenidamente} {Observas como <119>%1<099> observa tus movimientos detenidamente. <119> OJO OJO OJO CAZAR CAZAR!!!<099>} {5};
 #SUBSTITUTE {Pronuncias el cántico: '%1'.} {Pronuncias el cantico: '<140>%1<099>'.} {5};
 #SUBSTITUTE {Te concentras en el hechizo '%1'.} {Te concentras en el hechizo '<140>%1<099>'.} {5};
 #SUBSTITUTE {Te haces consciente de la presencia de %1} {Te haces consciente de la presencia de %1.     <119> DESCUBRES A <159> %1 <119>!!! !!!<099>}  {5};
 #SUBSTITUTE {Tiene %1 imagenes identicas a su alrededor} {Tiene <129>%1<099> imagenes identicas a su alrededor <159>-------->>>>  <119>%1 <169>Imagenes <099>} {5};
-#SUBSTITUTE {Tu %1 vuelve a su estado normal} {Tu <caf>%1<099> vuelve a su estado normal} {5};
 #SUBSTITUTE {Ves como %1 se aleja de ti mientras te mira con el rostro enfurecido.} {Ves como <119>%1<099> se aleja de ti mientras te mira con el rostro enfurecido.  <119> !!! EMBESTIR EMBESTIR !!!!<099>}  {5};
 #SUBSTITUTE {Vuelves a ver a %1 esta vez descendiendo a gran velocidad. Su picado ha comenzado} {Vuelves a ver a <fac>%1<099> esta vez descendiendo a gran velocidad. <acf>Su picado ha comenzado.<099>} {5};
 #SUBSTITUTE {¡%1 convulsiona en agonía cuando %2 le apuñala por la espalda!} {¡%1 convulsiona en agonía cuando %2 le apuñala por la espalda!  <119>%1<129> %2<179> -~- <159>%1<119> !!!} {5};
-#SUBSTITUTE {Pronuncias el cántico: %1} {<acf>Pronuncias el cántico: <CAF><199>%1}
 #SUBSTITUTE {¡Envuelves a %1 en tu %2!} {<caf>¡Envuelves a <fac>%1<caf> en tu <CAF><199>%2<caf>!}
 
 #CLASS {tt_subs} {close};
