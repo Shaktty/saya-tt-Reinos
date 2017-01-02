@@ -47,6 +47,7 @@
 #ALIAS {toma} { poner %1 en ancestral } {5}
 #ALIAS {x} { cazar $target,%0,$nicks } {5}
 #ALIAS {z} { ataquedoble $target,%0,$nicks } {5}
+#SUBSTITUTE {^%1 se desploma a causa de la pérdida de sangre} {<fac>%1 <099>se desploma a causa de la pérdida de sangre  <119> STUN STUN!<099>}
 #READ lib/numpad_sigilar.tin
 #TICKER {mass} {#showme <CAF> Objetivo: <fca>$objetivo<099>} {610}
 #VAR {objetivo} {3250}
