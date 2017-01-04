@@ -1,3 +1,4 @@
 log/
 pjs/password
+pjs/*.tin
 .*.swp

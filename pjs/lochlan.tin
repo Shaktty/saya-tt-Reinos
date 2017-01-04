@@ -1,0 +1,1989 @@
+.ACTION {%1 -> GUERRA}
+{
+	.variable nicks %1,$nicks
+}
+{5}
+
+.ACTION {%1 -> HOSTILIDAD}
+{
+	.variable nicks $nicks,%0
+}
+{5}
+
+.ACTION {La puerta %1 está cerrada}
+{
+	abrir %1;
+	%1
+}
+{5}
+
+.ACTION {Una de tus imagenes desaparece cuando %0}
+{
+	.math imagenes {$imagenes-1}
+}
+{5}
+
+.ACTION {[%1 orbita a Eirea]}
+{
+	.tab %1
+}
+{5}
+
+.ACTION {[Lochlan orbita a Eirea]}
+{
+	.split
+}
+{5}
+
+.ACTION {^Te faltan %1 Puntos de experiencia para subir de nivel}
+{
+	.variable xpleft %1
+}
+{5}
+
+.ACTION {rtero dice desde el otro lado: está bien, puedes pasar. Bienvenido al poblado }
+{
+	dentro
+}
+{5}
+
+.ALIAS {CDEV}
+{
+	.session a rlmud.org 23;
+	lochlan;
+	kerovan
+}
+{5}
+
+.ALIAS {CZ}
+{
+	cz
+}
+{5}
+
+.ALIAS {DIM}
+{
+	dim
+}
+{5}
+
+.ALIAS {EE}
+{
+	estado todos
+}
+{5}
+
+.ALIAS {F}
+{
+	f
+}
+{5}
+
+.ALIAS {FF}
+{
+	ff
+}
+{5}
+
+.ALIAS {GCONF}
+{
+	gconf
+}
+{5}
+
+.ALIAS {I}
+{
+	i
+}
+{5}
+
+.ALIAS {L}
+{
+	ojear
+}
+{5}
+
+.ALIAS {RIP}
+{
+	rip
+}
+{5}
+
+.ALIAS {Sl}
+{
+	saltar
+}
+{5}
+
+.ALIAS {Sle}
+{
+	saltar e
+}
+{5}
+
+.ALIAS {Sln}
+{
+	saltar n
+}
+{5}
+
+.ALIAS {Slne}
+{
+	saltar ne
+}
+{5}
+
+.ALIAS {Slno}
+{
+	saltar no
+}
+{5}
+
+.ALIAS {Slo}
+{
+	saltar o
+}
+{5}
+
+.ALIAS {Sls}
+{
+	saltar s
+}
+{5}
+
+.ALIAS {Slse}
+{
+	saltar se
+}
+{5}
+
+.ALIAS {Slso}
+{
+	saltar so
+}
+{5}
+
+.ALIAS {a}
+{
+	pronunciar azurae:$target,%0,$nicks,$xp
+}
+{5}
+
+.ALIAS {acero}
+{
+	formular cuerpo de acero:lochlan
+}
+{5}
+
+.ALIAS {add}
+{
+	agruparse invitar
+}
+{5}
+
+.ALIAS {ai}
+{
+	abandonar el barco
+}
+{5}
+
+.ALIAS {almacen}
+{
+	tocar a la puerta dos veces
+}
+{5}
+
+.ALIAS {arra}
+{
+	arrabales
+}
+{5}
+
+.ALIAS {az}
+{
+	azotar %0
+}
+{5}
+
+.ALIAS {bb}
+{
+	buscar
+}
+{5}
+
+.ALIAS {bru}
+{
+	unwi escudo;
+	mano
+}
+{5}
+
+.ALIAS {caida}
+{
+	formular caida de pluma:lochlan
+}
+{5}
+
+.ALIAS {caza}
+{
+	.variable target %0
+}
+{5}
+
+.ALIAS {cb}
+{
+	coger %1 de mochila
+}
+{5}
+
+.ALIAS {cd}
+{
+	descargar %0 de $montura
+}
+{5}
+
+.ALIAS {ceg}
+{
+	formular ceguera:$target,%0,$nicks,$xp
+}
+{5}
+
+.ALIAS {cemm}
+{
+	chat @entra en trance y se %^BOLD%^tele%^MAGENTA%^P%^CYAN%^orta%^RESET%^ magicamente a otro lugar
+}
+{5}
+
+.ALIAS {cen}
+{
+	centar %0,$target
+}
+{5}
+
+.ALIAS {cg}
+{
+	coger todo de cuerpos;
+	enterrar
+}
+{5}
+
+.ALIAS {clrnk}
+{
+	.variable nicks andhrar
+}
+{5}
+
+.ALIAS {cm}
+{
+	coger %1 de bolsita
+}
+{5}
+
+.ALIAS {cnick}
+{
+	.variable nicks %0,$nicks
+}
+{5}
+
+.ALIAS {cniv}
+{
+	.variable nivel %0
+}
+{5}
+
+.ALIAS {cog}
+{
+	pronunciar raeasd
+}
+{5}
+
+.ALIAS {con}
+{
+	considerar %0,$xp
+}
+{5}
+
+.ALIAS {conf}
+{
+	pronunciar tanber
+}
+{5}
+
+.ALIAS {cont}
+{
+	formular contenedor dimensional
+}
+{5}
+
+.ALIAS {cr}
+{
+	cerrar %0
+}
+{5}
+
+.ALIAS {cxp}
+{
+	.variable xp %0,$xp
+}
+{5}
+
+.ALIAS {cz}
+{
+	caza
+}
+{5}
+
+.ALIAS {db}
+{
+	poner %1 en mochila
+}
+{5}
+
+.ALIAS {dd}
+{
+	formular dormir:$target,%0,$nicks,$xp
+}
+{5}
+
+.ALIAS {ddd}
+{
+	decir %1 %^CYAN%^%0%^RESET%^
+}
+{5}
+
+.ALIAS {deca}
+{
+	decapitar cuerpo
+}
+{5}
+
+.ALIAS {dee}
+{
+	formular debilidad:$target,%0,$nicks,$xp
+}
+{5}
+
+.ALIAS {denv}
+{
+	desenvainar $arma
+}
+{5}
+
+.ALIAS {des}
+{
+	desmontar
+}
+{5}
+
+.ALIAS {desmon}
+{
+	desmontar $montura
+}
+{5}
+
+.ALIAS {det}
+{
+	formular detectar magia:%0
+}
+{5}
+
+.ALIAS {dett}
+{
+	det lochlan
+}
+{5}
+
+.ALIAS {di}
+{
+	formular disipar magia:lochlan
+}
+{5}
+
+.ALIAS {dim}
+{
+	diplomacia %0
+}
+{5}
+
+.ALIAS {ding}
+{
+	formular llamada a la puerta:%1
+}
+{5}
+
+.ALIAS {dis}
+{
+	formular disipar magia:$target,%0,$nicks,$xp
+}
+{5}
+
+.ALIAS {disco}
+{
+	formular disco flotante de ikim
+}
+{5}
+
+.ALIAS {dm}
+{
+	poner %1 en bolsita
+}
+{5}
+
+.ALIAS {dsirv}
+{
+	decir sirviente te ordeno: %0
+}
+{5}
+
+.ALIAS {ee}
+{
+	estado todos
+}
+{5}
+
+.ALIAS {ef}
+{
+	formular estallido de fuego:$target,%0,$nicks,$xp
+}
+{5}
+
+.ALIAS {eff}
+{
+	formular estallido de fuego:$target,%0,$nicks,$xp
+}
+{5}
+
+.ALIAS {en}
+{
+	oro
+}
+{5}
+
+.ALIAS {enc}
+{
+	formular encantar arma:%1;
+	formular encantar arma:$arma
+}
+{5}
+
+.ALIAS {env}
+{
+	envainar $arma
+}
+{5}
+
+.ALIAS {eq}
+{
+	equip
+}
+{5}
+
+.ALIAS {esf}
+{
+	formular esfera llameante:$target,%0,$nicks,$xp
+}
+{5}
+
+.ALIAS {fa}
+{
+	familia @la %^RED%^M%^BOLD%^BLACK%^atrona %^WHITE%^: %^MAGENTA%^%0%^RESET%^
+}
+{5}
+
+.ALIAS {faa}
+{
+	familia !
+}
+{5}
+
+.ALIAS {ff}
+{
+	finger %0
+}
+{5}
+
+.ALIAS {fff}
+{
+	finger $target
+}
+{5}
+
+.ALIAS {fj}
+{
+	forrajear
+}
+{5}
+
+.ALIAS {fjj}
+{
+	forrajear $planta
+}
+{5}
+
+.ALIAS {fsirv}
+{
+	formular sirviente invisible
+}
+{5}
+
+.ALIAS {fue}
+{
+	formular fuerza:lochlan
+}
+{5}
+
+.ALIAS {g}
+{
+	kx;
+	gg
+}
+{5}
+
+.ALIAS {ga}
+{
+	golpear arbol
+}
+{5}
+
+.ALIAS {gc}
+{
+	golpecertero
+}
+{5}
+
+.ALIAS {gconf}
+{
+	.write .lochlan.tin;
+	.killall;
+	.read .lochlan.tin
+}
+{5}
+
+.ALIAS {ge}
+{
+	galopar este
+}
+{5}
+
+.ALIAS {gg}
+{
+	golpearcano $target,%0,$nicks,$xp
+}
+{5}
+
+.ALIAS {gn}
+{
+	galopar norte
+}
+{5}
+
+.ALIAS {gne}
+{
+	galopar noreste
+}
+{5}
+
+.ALIAS {gno}
+{
+	galopar noroeste
+}
+{5}
+
+.ALIAS {go}
+{
+	galopar oeste
+}
+{5}
+
+.ALIAS {gr}
+{
+	formular granizo:$target,$nicks,$xp
+}
+{5}
+
+.ALIAS {grito}
+{
+	gritar Mag@s Runic@s!
+}
+{5}
+
+.ALIAS {gs}
+{
+	galopar sur
+}
+{5}
+
+.ALIAS {gse}
+{
+	galopar sudeste
+}
+{5}
+
+.ALIAS {gso}
+{
+	galopar sudoeste
+}
+{5}
+
+.ALIAS {hd}
+{
+	horda
+}
+{5}
+
+.ALIAS {hda}
+{
+	horda aceptar
+}
+{5}
+
+.ALIAS {hdd}
+{
+	horda terminar
+}
+{5}
+
+.ALIAS {id}
+{
+	herbalismo identificar
+}
+{5}
+
+.ALIAS {ii}
+{
+	mirar lochlan
+}
+{5}
+
+.ALIAS {im}
+{
+	formular imbecilidad:$target,%0,$nicks
+}
+{5}
+
+.ALIAS {imb}
+{
+	formular imbecilidad:$target,%0,$nicks,$xp
+}
+{5}
+
+.ALIAS {in}
+{
+	ingresar monedas
+}
+{5}
+
+.ALIAS {inroca}
+{
+	decir omenak;
+	abajo
+}
+{5}
+
+.ALIAS {ins}
+{
+	formular insensibilidad:$target,%0,$nicks,$xp
+}
+{5}
+
+.ALIAS {jis}
+{
+	formular incontrolable risa de shasha:$target,%0,$nicks,$xp
+}
+{5}
+
+.ALIAS {k}
+{
+	matar $target,%0,$nicks;
+	gg
+}
+{5}
+
+.ALIAS {kk}
+{
+	k;
+	gg
+}
+{5}
+
+.ALIAS {kx}
+{
+	matar $xp
+}
+{5}
+
+.ALIAS {ldenv}
+{
+	desenvainar negra
+}
+{5}
+
+.ALIAS {lego}
+{
+	env;
+	cb arco;
+	wi arco
+}
+{5}
+
+.ALIAS {legoo}
+{
+	db arco;
+	denv
+}
+{5}
+
+.ALIAS {len}
+{
+	formular lentitud:$target,%0,$nicks,$xp
+}
+{5}
+
+.ALIAS {lit}
+{
+	formular reducir:$target,%0,$nicks,$xp
+}
+{5}
+
+.ALIAS {ll}
+{
+	pronunciar kalfue:%0,$target,$nicks,$xp
+}
+{5}
+
+.ALIAS {lt}
+{
+	cb salvoconducto;
+	ab
+}
+{5}
+
+.ALIAS {lt2}
+{
+	levantar tapa;
+	alcantarillas
+}
+{5}
+
+.ALIAS {m}
+{
+	mirar $target
+}
+{5}
+
+.ALIAS {ma}
+{
+	mirar arbol
+}
+{5}
+
+.ALIAS {mallo}
+{
+	agarrar rama, apoyar el pie en la corteza, impulsar hacia arriba
+}
+{5}
+
+.ALIAS {man}
+{
+	formular manos ardientes:$target,%0,$nicks,$xp
+}
+{5}
+
+.ALIAS {mapa}
+{
+	.loadpath
+}
+{5}
+
+.ALIAS {mas}
+{
+	maestria %0
+}
+{5}
+
+.ALIAS {mb}
+{
+	mirar bolsita
+}
+{5}
+
+.ALIAS {mc}
+{
+	mirar cuerpo
+}
+{5}
+
+.ALIAS {md}
+{
+	mirar $montura
+}
+{5}
+
+.ALIAS {mk}
+{
+	mirar %0,$nicks
+}
+{5}
+
+.ALIAS {mm}
+{
+	mirar mochila
+}
+{5}
+
+.ALIAS {mon}
+{
+	montar $montura
+}
+{5}
+
+.ALIAS {mx}
+{
+	mirar $xp
+}
+{5}
+
+.ALIAS {news}
+{
+	noticias %0
+}
+{5}
+
+.ALIAS {niv}
+{
+	mano;
+	wi escudo
+}
+{5}
+
+.ALIAS {nu}
+{
+	formular nube hedionda:aqui
+}
+{5}
+
+.ALIAS {nuu}
+{
+	formular disipar magia:nube
+}
+{5}
+
+.ALIAS {nv}
+{
+	navegar
+}
+{5}
+
+.ALIAS {nvv}
+{
+	navegar detener
+}
+{5}
+
+.ALIAS {olv}
+{
+	formular olvidar:hechizo $target,%0,$nicks,$xp
+}
+{5}
+
+.ALIAS {olvv}
+{
+	formular olvidar:idioma $target,%0,$nicks,$xp
+}
+{5}
+
+.ALIAS {oo}
+{
+	pronunciar kalasd
+}
+{5}
+
+.ALIAS {op}
+{
+	abrir %0
+}
+{5}
+
+.ALIAS {or}
+{
+	orientar
+}
+{5}
+
+.ALIAS {oro}
+{
+	coger bolsas de cuerpos;
+	enterrar
+}
+{5}
+
+.ALIAS {p}
+{
+	formular presa sacudidora:$target,%0,$nicks,$xp
+}
+{5}
+
+.ALIAS {par}
+{
+	formular parpadeo:lochlan
+}
+{5}
+
+.ALIAS {pasta}
+{
+	riquezas
+}
+{5}
+
+.ALIAS {pb}
+{
+	poner %1 en bolsita
+}
+{5}
+
+.ALIAS {pd}
+{
+	poner %0 en $montura
+}
+{5}
+
+.ALIAS {pe}
+{
+	peleas
+}
+{5}
+
+.ALIAS {pko}
+{
+	.log a /tmp/lochlan.html
+}
+{5}
+
+.ALIAS {pkon}
+{
+	.log o /tmp/lochlan.html
+}
+{5}
+
+.ALIAS {poneyboy}
+{
+	cb riendas;
+	recuperar huargo;
+	dar riendas a huargo;
+	ensillar huargo;
+	riendas huargo;
+	montar huargo
+}
+{5}
+
+.ALIAS {pr}
+{
+	proteger
+}
+{5}
+
+.ALIAS {prec}
+{
+	formular precognicion:lochlan
+}
+{5}
+
+.ALIAS {pro}
+{
+	formular proteccion contra armas magicas:lochlan
+}
+{5}
+
+.ALIAS {prot}
+{
+	protecciones
+}
+{5}
+
+.ALIAS {prr}
+{
+	proteger huargo
+}
+{5}
+
+.ALIAS {q}
+{
+	formular meteoros diminutos de ignis:$target,%0,$nicks,$xp
+}
+{5}
+
+.ALIAS {qs}
+{
+	coger todo
+}
+{5}
+
+.ALIAS {r}
+{
+	formular golpe de rayo:%0,$target,$nicks,$xp
+}
+{5}
+
+.ALIAS {red}
+{
+	formular reducir:$target,%0,$nicks,$xp
+}
+{5}
+
+.ALIAS {rep}
+{
+	reparar
+}
+{5}
+
+.ALIAS {res}
+{
+	formular resfriar:$target,%0,$nicks,$xp
+}
+{5}
+
+.ALIAS {ret}
+{
+	formular retener muertos vivientes:$target,%0,$nicks,$xp
+}
+{5}
+
+.ALIAS {rf}
+{
+	formular estallido de fuego:$target,%0,$nicks,$xp
+}
+{5}
+
+.ALIAS {rfr}
+{
+	formular resistir frio:lochlan
+}
+{5}
+
+.ALIAS {rfrio}
+{
+	formular resistir frio:$arg,lochlan
+}
+{5}
+
+.ALIAS {rip}
+{
+	w m
+}
+{5}
+
+.ALIAS {rm}
+{
+	formular resistir magico:lochlan
+}
+{5}
+
+.ALIAS {rv}
+{
+	recolectar vid
+}
+{5}
+
+.ALIAS {sae}
+{
+	salvar
+}
+{5}
+
+.ALIAS {sc}
+{
+	puntos -xp
+}
+{5}
+
+.ALIAS {scc}
+{
+	puntos -v
+}
+{5}
+
+.ALIAS {scl}
+{
+	ficha montura
+}
+{5}
+
+.ALIAS {sg}
+{
+	seguir $target
+}
+{5}
+
+.ALIAS {sil}
+{
+	formular silueta imprecisa:lochlan
+}
+{5}
+
+.ALIAS {soo}
+{
+	decir so
+}
+{5}
+
+.ALIAS {sor}
+{
+	formular sordera:$target,%0,$nicks,$xp
+}
+{5}
+
+.ALIAS {sp}
+{
+	conversar
+}
+{5}
+
+.ALIAS {ssa}
+{
+	estilo ataque $nivel
+}
+{5}
+
+.ALIAS {sse}
+{
+	estilo esquiva $nivel
+}
+{5}
+
+.ALIAS {ssirv}
+{
+	agruparse invitar sirviente;
+	decir sirviente te ordeno: agruparse
+}
+{5}
+
+.ALIAS {ssp}
+{
+	estilo parada $nivel
+}
+{5}
+
+.ALIAS {sss}
+{
+	estilo equilibrio $nivel
+}
+{5}
+
+.ALIAS {stop}
+{
+	peleas parar
+}
+{5}
+
+.ALIAS {subetu}
+{
+	envainar arcana;
+	trepar arbol
+}
+{5}
+
+.ALIAS {ta}
+{
+	trepar arbol
+}
+{5}
+
+.ALIAS {tela}
+{
+	formular telaraña:$target,%0,$nicks,$xp
+}
+{5}
+
+.ALIAS {to}
+{
+	neruandi $target,%0,$nicks,$xp
+}
+{5}
+
+.ALIAS {tor}
+{
+	pronunciar nelasd
+}
+{5}
+
+.ALIAS {tq}
+{
+	formular toque helado:$target,%0,$nicks,$xp
+}
+{5}
+
+.ALIAS {unwi}
+{
+	desempuñar
+}
+{5}
+
+.ALIAS {v}
+{
+	formular toque vampirico:$target,%0,$nicks,$xp
+}
+{5}
+
+.ALIAS {ve}
+{
+	velocidad
+}
+{5}
+
+.ALIAS {vv}
+{
+	formular toque vampirico:$xp
+}
+{5}
+
+.ALIAS {wa}
+{
+	w ancarak
+}
+{5}
+
+.ALIAS {we}
+{
+	w enemigos
+}
+{5}
+
+.ALIAS {wg}
+{
+	w vagabundo
+}
+{5}
+
+.ALIAS {wgl}
+{
+	w golthur
+}
+{5}
+
+.ALIAS {wi}
+{
+	empuñar
+}
+{5}
+
+.ALIAS {wm}
+{
+	w mor_groddur
+}
+{5}
+
+.ALIAS {ww}
+{
+	formular esfera elastica de wylan:$wylan,$target,%0,$nicks,$xp
+}
+{5}
+
+.ALIAS {x}
+{
+	formular proyectil magico menor:$target,%0,$nicks,$xp
+}
+{5}
+
+.ALIAS {xpoff}
+{
+	.unaction {^\%1 cae al suelo sin vida}
+}
+{5}
+
+.ALIAS {xpon}
+{
+	.action {^\%1 cae al suelo sin vida} {en}
+}
+{5}
+
+.ALIAS {xx}
+{
+	pronunciar durasd
+}
+{5}
+
+.ALIAS {y}
+{
+	formular bola de fuego:%0,$nicks,$xp
+}
+{5}
+
+.ALIAS {z}
+{
+	pronunciar azuneu:$target,%0,$nicks,$xp
+}
+{5}
+
+.CONFIG           {AUTO TAB}  {5000}
+.CONFIG           {BUFFER SIZE}  {40000}
+.CONFIG           {COMMAND COLOR}  {<078>}
+.CONFIG           {COMMAND ECHO}  {ON}
+.CONFIG           {CONNECT RETRY}  {20}
+.CONFIG           {HISTORY SIZE}  {1000}
+.CONFIG           {LOG}  {HTML}
+.CONFIG           {PACKET PATCH}  {0}
+.CONFIG           {REPEAT CHAR}  {!}
+.CONFIG           {REPEAT ENTER}  {OFF}
+.CONFIG           {SCROLL LOCK}  {ON}
+.CONFIG           {SPEEDWALK}  {OFF}
+.CONFIG           {TINTIN CHAR}  {.}
+.CONFIG           {VERBATIM}  {OFF}
+.CONFIG           {VERBATIM CHAR}  {\}
+.CONFIG           {VERBOSE}  {OFF}
+.CONFIG           {WORDWRAP}  {ON}
+.HIGHLIGHT        {%0 percepcion de ambros brazos por igual.}                       {yellow}  {5}
+.HIGHLIGHT        {%0 tejidos y organos}  {red}  {5}
+.HIGHLIGHT        {%1 se retuerce mientras aprieta sus heridas}                         {red}  {5}
+.HIGHLIGHT        {Buscas durante un rato sin encontrar nada que llame tu atención}                                             {red}  {5}
+.HIGHLIGHT        {Comienzas a formular el hechizo %1}                {magenta}  {5}
+.HIGHLIGHT        {De pronto te paras ante algo que ha llamado tu atención, lo recoges y lo guardas, tendrás que identificarlo tranquilamente.}                                                                                                         {green}  {5}
+.HIGHLIGHT        {Demonio Grakknar}  {blink}  {5}
+.HIGHLIGHT        {Demonio Kar%0}  {blink}  {5}
+.HIGHLIGHT        {Encuentras una piedra en el suelo que parece que puede serte útil.}                                                {green}  {5}
+.HIGHLIGHT        {Esta runa no tiene efecto en ti, ya que eres ambidiestro.}                                       {yellow}  {5}
+.HIGHLIGHT        {Estas rodeada por %1 Espadas que te protegen}                          {green}  {5}
+.HIGHLIGHT        {Estás fatigado mentalmente para formular el hechizo}                                 {blink,b magenta}  {5}
+.HIGHLIGHT        {Estás rodeado por %1 imágenes idénticas a ti}                          {cyan}  {5}
+.HIGHLIGHT        {Estás rodeado por un globo translúcido}                    {reverse}  {5}
+.HIGHLIGHT        {Guardia Portuario [Ak'anon]: %1}             {cyan}  {5}
+.HIGHLIGHT        {No perteneces a ninguna horda}           {blink}  {5}
+.HIGHLIGHT        {No puedes formular otro hechizo hasta que transcurra algún tiempo.}                                                {underscore}  {5}
+.HIGHLIGHT        {No puedes imbuir mas poder runico, no lo soportaria.}                                  {green}  {5}
+.HIGHLIGHT        {No puedes lanzar ningún hechizo ahora mismo}                         {b magenta}  {5}
+.HIGHLIGHT        {Paras de perseguir a %1}     {b red}  {5}
+.HIGHLIGHT        {Reconoces el %1}  {b red}  {5}
+.HIGHLIGHT        {Registras lentamente la zona intentando encontrar algo de interés}                                               {yellow}  {5}
+.HIGHLIGHT        {Te sientes más débil cuando tu hechizo de fuerza llega a su fin.}                                              {b magenta}  {5}
+.HIGHLIGHT        {Te vuelves a sentir pesado}        {b magenta}  {5}
+.HIGHLIGHT        {Tu globo de invulnerabilidad empieza a parpadear hasta que desaparece.}                                                    {blink,red}  {5}
+.HIGHLIGHT        {Tu hechizo de %1 }  {b magenta}  {5}
+.HIGHLIGHT        {Tu piel es de piedra}  {yellow}  {5}
+.HIGHLIGHT        {Tu piel vuelve a su estado normal}               {blink,reverse}  {5}
+.HIGHLIGHT        {Tus otras acciones te mantienen demasiado ocupado y pierdes la concentración arruinando tu hechizo}                                                                                {b magenta}  {5}
+.HIGHLIGHT        {Viajero Encapuchado}  {magenta}  {5}
+.HIGHLIGHT        {Viajero encapuchado}  {magenta}  {5}
+.HIGHLIGHT        {^%1 Almanegra}  {magenta}  {5}
+.HIGHLIGHT        {^%1 Amrok}  {green}  {5}
+.HIGHLIGHT        {^%1 Mazkakraneoz}  {green}  {5}
+.HIGHLIGHT        {^%1 de Anduar}  {yellow}  {5}
+.HIGHLIGHT        {apresuramiento}  {blink}  {5}
+.HIGHLIGHT        {efectiva}  {red}  {5}
+.HIGHLIGHT        {evasiva}  {green}  {5}
+.HIGHLIGHT        {fuerza sobrehumana}  {red}  {5}
+.HIGHLIGHT        {tapa}  {blink}  {5}
+.HIGHLIGHT        {¡Tus imágnes se desvanecen!}         {b cyan}  {5}
+.MACRO {[\e22~}
+{
+	p\n
+}
+
+.MACRO {\e[11~}
+{
+	.session dev rlmud.org 23;
+	lochlan;
+	kerovan\n
+}
+
+.MACRO {\e[13~}
+{
+	ww\n
+}
+
+.MACRO {\e[14~}
+{
+	eff\n
+}
+
+.MACRO {\e[15~}
+{
+	man\n
+}
+
+.MACRO {\e[17~}
+{
+	z\n
+}
+
+.MACRO {\e[18~}
+{
+	h\n
+}
+
+.MACRO {\e[19~}
+{
+	len\n
+}
+
+.MACRO {\e[20~}
+{
+	j\n
+}
+
+.MACRO {\e[21~}
+{
+	g\n
+}
+
+.PATHDIR          {ab}  {ar}  {0}
+.PATHDIR          {ar}  {ab}  {0}
+.PATHDIR          {d}  {u}  {0}
+.PATHDIR          {de}  {fu}  {0}
+.PATHDIR          {e}  {o}  {0}
+.PATHDIR          {fu}  {de}  {0}
+.PATHDIR          {n}  {s}  {0}
+.PATHDIR          {ne}  {sw}  {3}
+.PATHDIR          {nw}  {se}  {9}
+.PATHDIR          {o}  {e}  {0}
+.PATHDIR          {s}  {n}  {0}
+.PATHDIR          {se}  {no}  {0}
+.PATHDIR          {so}  {ne}  {0}
+.PATHDIR          {sw}  {ne}  {12}
+.PATHDIR          {u}  {d}  {0}
+.PATHDIR          {w}  {e}  {0}
+.SUBSTITUTE       {# %1 llameantes flechas surgen de la palma de tu mano y %2 logran impactar sobre %3}                                                                 {<140>#<099> <160>%1<099> llameantes flechas surgen de la palma de tu mano y <150>%2<099> logran impactar sobre <110>%3<099>}                                                                                                    {5}
+.SUBSTITUTE       {* El ataque de %1 rebota en tu piel de piedra}                           {* El ataque de  <119>%1<099> rebota en tu <139>piel de piedra<099> <129>-1 piel}                                                        {5}
+.SUBSTITUTE       {* Una de tus imagenes desaparece cuando %1 la golpea}                                  {* Una de tus imagenes desaparece cuando <129>%1<099> la golpea  <149> -1 IMAGEN<099>}                                                             {5}
+.SUBSTITUTE       {Disco flotante de lochlan}       {<239>-disco-<099>}  {5}
+.SUBSTITUTE       {El está revigorizado}  {<129>El está revigorizado<099>}       {5}
+.SUBSTITUTE       {Estás siendo atacado por %1}         {<100>Enemigo: <119>%1<099>}   {5}
+.SUBSTITUTE       {Has agotado la energía necesaría para formular '%1}                                {Has agotado la energía necesaría para formular '<149>%1<099>' %2}                                         {5}
+.SUBSTITUTE       {La lepra hace estragos sobre tu piel.}                   {.}  {5}
+.SUBSTITUTE       {No existe el objetivo}   {.}  {5}
+.SUBSTITUTE       {Pronuncias el cántico: %1}       {<159>Pronuncias el cántico: <059>%1<099>}                 {5}
+.SUBSTITUTE       {Tienes el rostro totalmente pálido.}                 {Tienes el rostro totalmente pálido.                  <029>(envenenado)<099>}                                                    {5}
+.SUBSTITUTE       {btienes %1 puntos de experiencia]}               {<099>XP: <179>%1<099>}  {5}
+.SUBSTITUTE       {¡Tus imágenes se desvanecen!}          {<129>¡Tus imágenes se desvanecen! <179> IMAGENES FUERA!!}                                 {5}
+.SUBSTITUTE       {Él está en perfecto estado}        {<129>Él está en perfecto estado<099>}             {5}
+.SUBSTITUTE       {Él está revigorizado}  {<129>El está revigorizado<099>}       {5}
+.TAB              {Aedah}
+.TAB              {Aelin}
+.TAB              {Agarox}
+.TAB              {Aiura}
+.TAB              {Akenomeves}
+.TAB              {Akira}
+.TAB              {Akxul}
+.TAB              {Alaundo}
+.TAB              {Aldanhor}
+.TAB              {Alembert}
+.TAB              {Almi}
+.TAB              {Alpharius}
+.TAB              {Amgered}
+.TAB              {Anardil}
+.TAB              {Anathar}
+.TAB              {Angok}
+.TAB              {Anorzha}
+.TAB              {Anteo}
+.TAB              {Aohawin}
+.TAB              {Arada}
+.TAB              {Arenvael}
+.TAB              {Argeo}
+.TAB              {Aristos}
+.TAB              {Arraif}
+.TAB              {Arthas}
+.TAB              {Ashear}
+.TAB              {Athazar}
+.TAB              {Athina}
+.TAB              {Athrael}
+.TAB              {Athros}
+.TAB              {Avarieth}
+.TAB              {Bahgtru}
+.TAB              {Bazk}
+.TAB              {Beckett}
+.TAB              {Beders}
+.TAB              {Beles}
+.TAB              {Belrya}
+.TAB              {Braemar}
+.TAB              {Brang}
+.TAB              {Broadriemen}
+.TAB              {Brodda}
+.TAB              {Brumir}
+.TAB              {Bryyo}
+.TAB              {Bufy}
+.TAB              {Bugi}
+.TAB              {Calirion}
+.TAB              {Camneris}
+.TAB              {Candance}
+.TAB              {Cathelyan}
+.TAB              {Clarmox}
+.TAB              {Cormaer}
+.TAB              {Coruga}
+.TAB              {Crew}
+.TAB              {Crysir}
+.TAB              {Crysvyra}
+.TAB              {Culduk}
+.TAB              {Curdaen}
+.TAB              {Daermes}
+.TAB              {Dahiy}
+.TAB              {Dakxul}
+.TAB              {Dankrat}
+.TAB              {Darion}
+.TAB              {Dauzzy}
+.TAB              {Davros}
+.TAB              {Deedlyt}
+.TAB              {Deniska}
+.TAB              {Dhelram}
+.TAB              {Diss}
+.TAB              {Dopheireos}
+.TAB              {Dopkalfar}
+.TAB              {Dorhz}
+.TAB              {Draeg}
+.TAB              {Draek}
+.TAB              {Draekoran}
+.TAB              {Dragador}
+.TAB              {Draghail}
+.TAB              {Drakar}
+.TAB              {Drakkum}
+.TAB              {Dratz}
+.TAB              {Draugdur}
+.TAB              {Drosophilla}
+.TAB              {Drukhum}
+.TAB              {Drun}
+.TAB              {Dunkelkoro}
+.TAB              {Durgan}
+.TAB              {Durissus}
+.TAB              {Dyglisha}
+.TAB              {Dylin}
+.TAB              {Earendyl}
+.TAB              {Ebo}
+.TAB              {Eidica}
+.TAB              {Ekaterina}
+.TAB              {Elhenja}
+.TAB              {Elhinz}
+.TAB              {Elmryn}
+.TAB              {Elohim}
+.TAB              {Elrik}
+.TAB              {Emerynn}
+.TAB              {Enriz}
+.TAB              {Ephif}
+.TAB              {Eranheim}
+.TAB              {Erebus}
+.TAB              {Etzerne}
+.TAB              {Evain}
+.TAB              {Evaldune}
+.TAB              {Faerlwyn}
+.TAB              {Feanoriel}
+.TAB              {Fendow}
+.TAB              {Flaereth}
+.TAB              {Freira}
+.TAB              {Gaedor}
+.TAB              {Galbrag}
+.TAB              {Galdor}
+.TAB              {Galdra}
+.TAB              {Garks}
+.TAB              {Garmish}
+.TAB              {Garney}
+.TAB              {Garthor}
+.TAB              {Garwick}
+.TAB              {Gassra}
+.TAB              {Geddem}
+.TAB              {Gerier}
+.TAB              {Ghriiknichk}
+.TAB              {Gilgast}
+.TAB              {Gilrian}
+.TAB              {Gilrien}
+.TAB              {Glissa}
+.TAB              {Godzy}
+.TAB              {Gohram}
+.TAB              {Gomgril}
+.TAB              {Gorbad}
+.TAB              {Gorkamesh}
+.TAB              {Gorkrim}
+.TAB              {Graghurt}
+.TAB              {Grajjickzth}
+.TAB              {Grauburgh}
+.TAB              {Graujihs}
+.TAB              {Gravir}
+.TAB              {Gravus}
+.TAB              {Grokler}
+.TAB              {Gronch}
+.TAB              {Grorgh}
+.TAB              {Grukzt}
+.TAB              {Gryel}
+.TAB              {Gryffah}
+.TAB              {Gurkrom}
+.TAB              {Gutgur}
+.TAB              {Hadrasil}
+.TAB              {Hadrum}
+.TAB              {Haezmor}
+.TAB              {Hafara}
+.TAB              {Harakrakro}
+.TAB              {Harlen}
+.TAB              {Hasenat}
+.TAB              {Hazar}
+.TAB              {Heinrick}
+.TAB              {Higara}
+.TAB              {Hilt}
+.TAB              {Hujandry}
+.TAB              {Ianwe}
+.TAB              {Igdre}
+.TAB              {Igkor}
+.TAB              {Igniloss}
+.TAB              {Ignizar Campeon del Torneo de Anduar}
+.TAB              {Indrek}
+.TAB              {Inverkell}
+.TAB              {Ioseff}
+.TAB              {Iowen}
+.TAB              {Ippa}
+.TAB              {Irdalys}
+.TAB              {Iritien}
+.TAB              {Irrylath}
+.TAB              {Izghra}
+.TAB              {Izhan}
+.TAB              {Jackhterint}
+.TAB              {Jazuha}
+.TAB              {Jenro}
+.TAB              {Jerom}
+.TAB              {Johan}
+.TAB              {Jorbaur}
+.TAB              {Joy}
+.TAB              {Kalfurneiro}
+.TAB              {Kamui}
+.TAB              {Kardush}
+.TAB              {Kares}
+.TAB              {Karlena}
+.TAB              {Keler}
+.TAB              {Kelshvon}
+.TAB              {Khardras}
+.TAB              {Kheldar}
+.TAB              {Kilshanan}
+.TAB              {Kiratxia}
+.TAB              {Kiskos}
+.TAB              {Kithara}
+.TAB              {Kitia}
+.TAB              {Klikjuhy}
+.TAB              {Kolen}
+.TAB              {Kraenk}
+.TAB              {Kragher}
+.TAB              {Kraghkth}
+.TAB              {Krais}
+.TAB              {Kraiss}
+.TAB              {Kranior}
+.TAB              {Krashnak}
+.TAB              {Kreelwelf}
+.TAB              {Krent}
+.TAB              {Kringer}
+.TAB              {Krizkriz}
+.TAB              {Krounk}
+.TAB              {Kruttum}
+.TAB              {Krylum}
+.TAB              {Krystall}
+.TAB              {Kyht}
+.TAB              {Lameth}
+.TAB              {Lararita}
+.TAB              {Larunae}
+.TAB              {Lebrian}
+.TAB              {Lhan}
+.TAB              {Lieduh}
+.TAB              {Limp}
+.TAB              {Liriam}
+.TAB              {Lochlan}
+.TAB              {Lurther}
+.TAB              {Lustir}
+.TAB              {Lyrdal}
+.TAB              {Lyrelae}
+.TAB              {Lyrith}
+.TAB              {Lyss}
+.TAB              {Maaelcum}
+.TAB              {Maelin}
+.TAB              {Maelur}
+.TAB              {Majjhu}
+.TAB              {Malakias}
+.TAB              {Mandos}
+.TAB              {Marcabru}
+.TAB              {Menzhel}
+.TAB              {Meorther}
+.TAB              {Merelay}
+.TAB              {Meyrin}
+.TAB              {Miliam}
+.TAB              {Misha}
+.TAB              {Morinehtar}
+.TAB              {Myrjala}
+.TAB              {Nadrak}
+.TAB              {Naelin}
+.TAB              {Nanoon}
+.TAB              {Naster}
+.TAB              {Nathrae}
+.TAB              {Naylhena}
+.TAB              {Nealla}
+.TAB              {Neil}
+.TAB              {Neirin}
+.TAB              {Neithan}
+.TAB              {Nerghuk}
+.TAB              {Nessala}
+.TAB              {Nherzog}
+.TAB              {Nihilus}
+.TAB              {Nikkolhai}
+.TAB              {Niterin}
+.TAB              {Nocroth}
+.TAB              {Nohgar}
+.TAB              {Nokoe}
+.TAB              {Nomiya}
+.TAB              {Norks}
+.TAB              {Nym}
+.TAB              {Ofherlunhar}
+.TAB              {Omtrek}
+.TAB              {Ondrik}
+.TAB              {Oxys}
+.TAB              {Pandion}
+.TAB              {Patayth}
+.TAB              {Phapho}
+.TAB              {Phen}
+.TAB              {Philla}
+.TAB              {Pilo}
+.TAB              {Pioter}
+.TAB              {Plantir}
+.TAB              {Poiuy}
+.TAB              {Qizzho}
+.TAB              {Radimcor}
+.TAB              {Rantz}
+.TAB              {Rasis}
+.TAB              {Razk}
+.TAB              {Razyd}
+.TAB              {Reghed}
+.TAB              {Reishin}
+.TAB              {Reistern}
+.TAB              {Rhomdur}
+.TAB              {Rijja}
+.TAB              {Rith}
+.TAB              {Rodrik}
+.TAB              {Rogar}
+.TAB              {Rondath}
+.TAB              {Ruenz}
+.TAB              {Ruzaska}
+.TAB              {Rysargath}
+.TAB              {Saeara}
+.TAB              {Saelcan}
+.TAB              {Saeth}
+.TAB              {Safur}
+.TAB              {Sakarith}
+.TAB              {Sanam}
+.TAB              {Sanavlys}
+.TAB              {Saon}
+.TAB              {Saudo}
+.TAB              {Sawok}
+.TAB              {Saxera}
+.TAB              {Saymar}
+.TAB              {Saymoor}
+.TAB              {Sayurr}
+.TAB              {Sayvyra}
+.TAB              {Sayyan}
+.TAB              {Sebet}
+.TAB              {Sehzidys}
+.TAB              {Seick}
+.TAB              {Selbyrr}
+.TAB              {Selmaer}
+.TAB              {Selvan}
+.TAB              {Sensese}
+.TAB              {Serkka}
+.TAB              {Serwon}
+.TAB              {Sgarck}
+.TAB              {Shadresh}
+.TAB              {Shadreth}
+.TAB              {Shadrula}
+.TAB              {Shak}
+.TAB              {Shakur}
+.TAB              {Shannan}
+.TAB              {Sharzug}
+.TAB              {Shazham}
+.TAB              {Shermy}
+.TAB              {Shezhar}
+.TAB              {Shiram}
+.TAB              {Shiraz}
+.TAB              {Shirhomk}
+.TAB              {Sidera}
+.TAB              {Siko}
+.TAB              {Silaz}
+.TAB              {Sileris}
+.TAB              {Silk}
+.TAB              {Silvhia}
+.TAB              {Sindri}
+.TAB              {Siril}
+.TAB              {Sizzla}
+.TAB              {Snaider}
+.TAB              {Snarz}
+.TAB              {Sree}
+.TAB              {Stalatha}
+.TAB              {Stelios}
+.TAB              {Surko}
+.TAB              {Surok}
+.TAB              {Syranita}
+.TAB              {Syrio}
+.TAB              {Takxula}
+.TAB              {Talessi}
+.TAB              {Talisir}
+.TAB              {Tanry}
+.TAB              {Taras}
+.TAB              {Testdunkb}
+.TAB              {Testdunkx}
+.TAB              {Testgolt}
+.TAB              {Thana}
+.TAB              {Thaurian}
+.TAB              {Thorum}
+.TAB              {Thraghazar}
+.TAB              {Thuanl}
+.TAB              {Tiffany}
+.TAB              {Tish}
+.TAB              {Tomelac}
+.TAB              {Toran}
+.TAB              {Torgaddon}
+.TAB              {Trabanth}
+.TAB              {Trall}
+.TAB              {Ufhes}
+.TAB              {Ulver}
+.TAB              {Urden}
+.TAB              {Urquhart}
+.TAB              {Utagwethir}
+.TAB              {Uuhj}
+.TAB              {Uzgak}
+.TAB              {Uzrim}
+.TAB              {Valen}
+.TAB              {Valiet}
+.TAB              {Valisser}
+.TAB              {Valmar}
+.TAB              {Vartus}
+.TAB              {Vax}
+.TAB              {Velegrand}
+.TAB              {Versit}
+.TAB              {Vhok Tampoco cocina Cerdo Agridulce}
+.TAB              {Vidhrae}
+.TAB              {Violett}
+.TAB              {Vorak}
+.TAB              {Vramuhl}
+.TAB              {Vrenak}
+.TAB              {Vrolo}
+.TAB              {Vrung}
+.TAB              {Vyrytry}
+.TAB              {Waegk}
+.TAB              {Waeraery}
+.TAB              {Waerwugh}
+.TAB              {Wagrack}
+.TAB              {Waukin}
+.TAB              {Whraghzik}
+.TAB              {Willard}
+.TAB              {Wisyakimm}
+.TAB              {Wmaagh}
+.TAB              {Woburg}
+.TAB              {Wordak}
+.TAB              {Worgrak}
+.TAB              {Wornux}
+.TAB              {Wrargh}
+.TAB              {Wrikdarok}
+.TAB              {Wronsteng}
+.TAB              {Wumuthu}
+.TAB              {Wuzka}
+.TAB              {Wyrcaen}
+.TAB              {Wyrpen}
+.TAB              {Xahfur}
+.TAB              {Xarluy}
+.TAB              {Xaruk}
+.TAB              {Xenel}
+.TAB              {Xenos}
+.TAB              {Xhalyswor}
+.TAB              {Xharkrha}
+.TAB              {Xilomen}
+.TAB              {Xiriak}
+.TAB              {Xirian}
+.TAB              {Xocoyol}
+.TAB              {Xrakoz}
+.TAB              {Xssyra}
+.TAB              {Xyn}
+.TAB              {Xyrin}
+.TAB              {Yaghurz}
+.TAB              {Yahira}
+.TAB              {Yalmehd}
+.TAB              {Yarara}
+.TAB              {Yarloss}
+.TAB              {Yarvyra}
+.TAB              {Yeira}
+.TAB              {Yeisha}
+.TAB              {Yerlar}
+.TAB              {Yhemaer}
+.TAB              {Ylaubull}
+.TAB              {Yscirr}
+.TAB              {Ysis}
+.TAB              {Ysmar}
+.TAB              {Yssil}
+.TAB              {Ysvael}
+.TAB              {Yune}
+.TAB              {Yunos}
+.TAB              {Yurj}
+.TAB              {Zaekhum}
+.TAB              {Zahgriel}
+.TAB              {Zandylus}
+.TAB              {Zash}
+.TAB              {Zaygan}
+.TAB              {Zayker}
+.TAB              {Zebleek}
+.TAB              {Zekaufein}
+.TAB              {Zeldir}
+.TAB              {Zelesnor}
+.TAB              {Zelisa}
+.TAB              {Zendak}
+.TAB              {Zeozel}
+.TAB              {Zergh}
+.TAB              {Zert}
+.TAB              {Zhardibeldh}
+.TAB              {Zhauburn}
+.TAB              {Zhayban}
+.TAB              {Zhiin}
+.TAB              {Zhiphora}
+.TAB              {Zidriz}
+.TAB              {Zigil}
+.TAB              {Zin}
+.TAB              {Zion}
+.TAB              {Zirskit}
+.TAB              {Zoldrae}
+.TAB              {Zombran}
+.TAB              {Zoneyk}
+.TAB              {Zungwye}
+.TAB              {Zynthia}
+.TAB              {alhova}
+.TAB              {alrashid}
+.TAB              {anthalas}
+.TAB              {aplicar}
+.TAB              {ayuda}
+.TAB              {comer}
+.TAB              {detener}
+.TAB              {drahalkurk}
+.TAB              {dugmuthur}
+.TAB              {dursha}
+.TAB              {embarcarse}
+.TAB              {escuelas}
+.TAB              {eskumla}
+.TAB              {estatus}
+.TAB              {experiencia}
+.TAB              {explorador}
+.TAB              {formular}
+.TAB              {forrajear}
+.TAB              {habilidades}
+.TAB              {hechizos}
+.TAB              {herbalismo}
+.TAB              {identificar}
+.TAB              {ingerir}
+.TAB              {lameth}
+.TAB              {lochlan}
+.TAB              {navegar}
+.TAB              {orientar}
+.TAB              {peleas}
+.TAB              {pronunciar}
+.TAB              {rumbo}
+.TAB              {skaza}
+.TAB              {subetu}
+.TAB              {takome}
+.TAB              {veleiron}
+.TAB              {velocidad}
+.TAB              {xharkrha}
+.TAB              {xocoyol}
+.TAB              {zekaufein}
+.VARIABLE         {arma}  {arcana}
+.VARIABLE         {imagenes}  {4}
+.VARIABLE         {montura}  {caballo}
+.VARIABLE         {nicks}  {worgh,gravrya,nadrak,mcnor,hemiteo,nanoon,riya,lysir,phear,zola,selmaer,vannyshk,naylhena,nroota,adaokin,shadahn,sayvael,worgh,kamui,jacobus,wirth,ducard,gidry,zellor,jazuha,jazuha,nikkolhai,kardush,arghard,zynthia,zantaroth,vrung,singla,feanoriel,gaedor,ignisloss,limp,crysir,jazuha,arghard,zantaroth,zungwye,zantaroth,siko,drukwhar,belfaht,gorkamesh,elaizh,kilshanan,zantaroth,gaedor,zeyodih,vrung,kringer,ebo,selmaer,zirnam,diss,pandion,ulver,singla,yegua,caballo,lustir,vrolo,xaruk,zhauburn,gnosh,ulver,kranior,serkka,limp,celebdulkan,kilshanan,arghard,zungwye,zirnam,lustir,zantaroth,maldrak,almi,lefnof,morinehtar,thuanl,gorkamesh,dopkalfar,ashear}
+.VARIABLE         {nickx}  {jabali}
+.VARIABLE         {nivel}  {14.}
+.VARIABLE         {p}  {alces,serpiente,ciervos,ciervo,zorros,linces,gusanos,topos,tortolas,golondrinas,ardillas,jabalies,bandidos,bandidos,pajaros,faisanes,pavo,faisanes,pavos,conejos,lechuzas}
+.VARIABLE         {planta}  {dugmuthur}
+.VARIABLE         {target}  {vrung}
+.VARIABLE         {wylan}  {singla}
+.VARIABLE         {xp}  {pavos,pavos,ardillas,faisanes,faisaens,lobos,goblins,linces,ratas,,conejos,jabalies,goblins,devoradores,elfas,elfos,mujeres,artesanas,soldados,guardias,pescadores,artesanos,semi-elfo,soldados,plantas,arañas,liebres,lagartos,cachorros,cachorras,hienas,mariliths,doppelganguers,gnoll,viejo,cachorros,zombies,cobradores,entes,espectros,lobos,vrocs,guardias,hembra,hembras,machos,macho,gnolls,machos,hembras,viejos,osos,gnolls,demonios,ladrones,lobos,linces,huargos,forajidos,concubinas,huargos,cachorros,mendigos,contrabandistas,truk,mercaderes,marineros,vendedores,picaros,pícaros,laidon,forasteros,ratas,aguilas,linces,lobos,alces,serpiente,ciervos,ciervo,zorros,linces,gusanos,topos,tortolas,golondrinas,ardillas,jabalies,bandidos,bandidos,pajaros,faisanes,pavo,faisanes,pavos,conejos,lechuzas,culebras}
+.VARIABLE         {xpleft}  {1282974}
