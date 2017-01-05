@@ -342,7 +342,7 @@
         #CASE {"cette invocatus est pur meus"}  {#VAR spell_name llamar rayos};
         
         #NOP =============== Necromantica ===============;
-        eCASE {"morti refezit"}             {#VAR spell_name consunción de los restos};
+        #CASE {"morti refezit"}             {#VAR spell_name consunción de los restos};
         #CASE {"mortiis oculus deum"}       {#VAR spell_name examinar muerte};
         #CASE {"necrum sharpus mortiis"}    {#VAR spell_name garras de necrófago};
         #CASE {"...carnum modelum, spiritos tomat, ¡in major mortuum servit!"} {#VAR spell_name crear muerto viviente mayor};
