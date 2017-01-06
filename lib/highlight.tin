@@ -48,6 +48,17 @@
 #HIGHLIGHT {^Puedes moverte libremente de nuevo.$}      {bold green} {5};
 #HIGHLIGHT {^La piel de %* vuelve a su estado normal.$} {bold green} {5};
 #HIGHLIGHT {^{¡|}%* pierde la concentraci{ó|o}n!.$}     {bold green} {5};
+#HIGHLIGHT {^{¡|}%* pierde la concentraci{ó|o}n!.$}     {bold green} {5};
+#HIGHILIGHT {¡%1 pierde la concentración!$} {bold,green} {5};
+
+
+/*
+ * Encantamiento
+  */
+
+#HIGHLIGHT {^Consigues adueñarte de la voluntad de %*.$}    {bold green} {5};
+#HIGHLIGHT {^¡%* se resiste a tu hechizo de dominación!$}   {bold red} {5};
+#HIGHLIGHT {^%* quedan rígidos como un poste.$}             {bold green} {5};
 
 /*
  * Encantamiento
