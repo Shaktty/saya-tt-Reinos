@@ -17,7 +17,7 @@
 #CONFIG  {COMMAND ECHO}  {ON}
 #CONFIG  {CONNECT RETRY} {0.2}
 #CONFIG  {HISTORY SIZE}  {100000}
-#CONFIG  {LOG}           {RAW}
+#CONFIG  {LOG}           {HTML}
 #CONFIG  {PACKET PATCH}  {10}
 #CONFIG  {REPEAT CHAR}   {!}
 #CONFIG  {REPEAT ENTER}  {OFF}
@@ -64,4 +64,4 @@
 }
 #EVENT {RECEIVED INPUT} {#VAR pj %0;#UNEVENT {RECEIVED INPUT};cdev}
 #ALIAS cdev {#ses {s1} {62.210.99.120} {23} {pjs/$pj} } {5}
-#EVENT {SESSION CONNECTED} {$pj;$passwd}
+#EVENT {SESSION CONNECTED} {$pj;$passwd;/log on}
