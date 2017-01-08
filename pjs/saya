@@ -49,13 +49,13 @@
 #ALIAS {z} { ataquedoble $target,%0,$nicks } {5}
 #SUBSTITUTE {^%1 se desploma a causa de la pérdida de sangre} {<fac>%1 <099>se desploma a causa de la pérdida de sangre  <119> STUN STUN!<099>}
 #READ lib/numpad_sigilar.tin
-#TICKER {mass} {#showme <CAF> Objetivo: <fca>$objetivo<099>} {610}
-#VAR {objetivo} {3250}
+#NOP #TICKER {mass} {#showme <CAF> Objetivo: <fca>$objetivo<099>} {610}
+#NOP #VAR {objetivo} {3250}
 #VARIABLE conc no
 #VARIABLE f10var {ac}
 #VARIABLE f11var {x}
 #VARIABLE f12var {ee}
-#VARIABLE f1var {esconderse}
+#VARIABLE f1var {1}
 #VARIABLE f2var {j}
 #VARIABLE f3var {q}
 #VARIABLE f4var {qq}
@@ -64,7 +64,7 @@
 #VARIABLE f7var {88}
 #VARIABLE f8var {k}
 #VARIABLE f9var {at}
-#VARIABLE nicks {kobold,zeiring,zhiereng,gondolina}
+#VARIABLE nicks {kobold,zeiring,zethrus,gurlen,zhiereng,gondolina}
 #VARIABLE planta {eskumla} 
 #VARIABLE target zeiring
 #VARIABLE {xp} {viudas,negras,aranyas,hormigas,jabalies,conejos,zombis,necrofagos,esqueletos,lobos,culebras,gatos,boas,serpiente,babeantes}
