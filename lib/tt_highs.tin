@@ -66,7 +66,6 @@
 #HIGHLIGHT  {Artesan{a|o}}  {bold,magenta}  {5};
 #HIGHLIGHT  {Eloras}  {bold,magenta}  {5};
 #HIGHLIGHT  {Ignis}  {bold,magenta}  {5};
-#HIGHLIGHT  {Zaynyr}  {bold,red,blink}  {5};
 #HIGHLIGHT  {Tus alas aún te duelen tras la última maniobra de picado que has realizado.}                                                           {bold,red,reverse}  {5};
 #HIGHLIGHT  {muerto}  {bold,red,reverse}  {5};
 #HIGHLIGHT  {%1 se desploma a causa de la p?rdida de sangre.}                             {bold,red}  {5};
@@ -82,7 +81,6 @@
 #HIGHLIGHT  {Mor Grodd?r}  {bold,red}  {5};
 #HIGHLIGHT  {Ordenas a %1, el Gran Lobo Ancestral habilidad dentellada sobre %2}                                                {bold,red}  {5};
 #HIGHLIGHT  {Te das cuenta de que %1}     {bold,red}  {5};
-#HIGHLIGHT  {Thyaser}  {bold,red}  {5};
 #HIGHLIGHT  {Tiene una fuerte hemorragia en %0}               {bold,red}  {5};
 #HIGHLIGHT  {acercandose}  {bold,red}  {5};
 #HIGHLIGHT  {moribundo}  {bold,red}  {5};
@@ -125,7 +123,6 @@
 #HIGHLIGHT  {%0 , el Gran Lobo Ancestral que consigue esquivar el golpe.}                                         {green}  {5};
 #HIGHLIGHT  {%1, el Gran Lobo Ancestral te protege valientemente}                                 {green}  {5};
 #HIGHLIGHT  {Aprendes de esta actividad y ganas 1 punto de oficio.}                                   {green}  {5};
-#HIGHLIGHT  {Aranya}  {green}  {5};
 #HIGHLIGHT  {Comienzas a concentrarte en tu victima, y te sientes capaz de golpear los puntos débiles de tu enemigo}                                                                                     {green}  {5};
 #HIGHLIGHT  {Continuas observando a lo lejos intentado captar cualquier movimiento}                                                   {green}  {5};
 #HIGHLIGHT  {De pronto te paras ante algo que ha llamado tu atención, lo recoges y lo guardas, tendrás que identificarlo tranquilamente.}                                                                                                         {green}  {5};
@@ -167,7 +164,6 @@
 #HIGHLIGHT  {borracho}  {magenta}  {5};
 #HIGHLIGHT  {Eso ha tenido que hacerle mucho danyo}                   {red,b cyan}  {5};
 #HIGHLIGHT  {Debido a la batalla te ves obligada a olvidar la idea de esconderte.}                                                  {red,blink}  {5};
-#HIGHLIGHT  {cr?ticamente}  {red,bold}  {5};
 #HIGHLIGHT  {críticamente}  {red,bold}  {5};
 #HIGHLIGHT  {rectificar tu estilo de lucha}           {red,bold}  {5};
 #HIGHLIGHT  {fuerza sobrehumana}    {red}                        {5};
@@ -231,7 +227,6 @@
 #HIGHLIGHT {[Solitarios]} {<caf>} {5};
 #HIGHLIGHT {[Renegado]} {<cfa>} {5};
 #HIGHLIGHT {Leñador{|a}}  {yellow}  {5};
-
 #HIGHLIGHT        {Tramper{a|o}}  {<fca>}  {5};
 #HIGHLIGHT        {Kattak}  {<fca>}  {5};
 #HIGHLIGHT        {Kheleb}  {<fca>}  {5};
@@ -239,29 +234,5 @@
 #HIGHLIGHT        {Veleiron}  {<fca>}  {5};
 #HIGHLIGHT        {Eirea}  {GREEN}  {5};
 #HIGHLIGHT        {Limbo}  {WHITE}  {5};
-
-/* 
-* belicosos
-*/
-#HIGHLIGHT {Aradia} {bold,red} {5};
-#HIGHLIGHT {Zeiring} {bold,red} {5};
-#HIGHLIGHT {Kurst} {bold,red} {5};
-#HIGHLIGHT {Louaril} {bold,red} {5};
-#HIGHLIGHT {Lerwyn} {bold,red} {5};
-#HIGHLIGHT {Lexanord} {bold,red} {5};
-#HIGHLIGHT {Sveinbjorn} {bold,red} {5};
-#HIGHLIGHT {Maellor} {bold,red} {5};
-#HIGHLIGHT {Hayuso} {bold,red} {5};
-#HIGHLIGHT {Mhodin} {bold,red} {5};
-#HIGHLIGHT {Mhodhin} {bold,red} {5};
-#HIGHLIGHT {Szhmaynlath} {bold,red} {5};
-#HIGHLIGHT {Zetrus} {bold,red} {5};
-#HIGHLIGHT {Eshgortheon} {bold,red} {5};
-#HIGHLIGHT {Tahurtz} {bold,red} {5};
-#HIGHLIGHT {Xeroxs} {bold,red} {5};
-#HIGHLIGHT {Zethrus} {bold,red} {5};
-#HIGHLIGHT  {Khealan}  {<afc>}  {5};
-#HIGHLIGHT        {Grunjo}  {<cfa>}  {5};
-#HIGHLIGHT        {Yckull}  {<cfa>}  {5};
 
 #CLASS {tt_highs} {close};
