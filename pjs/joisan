@@ -53,16 +53,14 @@
 #ALIAS {dsirv} { decir sirviente te ordeno: %0 } {5}
 #ALIAS {fa} { familia @la %^RED%^M%^BOLD%^BLACK%^atrona %^WHITE%^: %^MAGENTA%^%0%^RESET%^ } {5}
 #ALIAS {gignis} { gritar Casa Ignis! } {5}
-#ALIAS {gkhaolel} { gritar %^BOLD%^BLACK%^Khaol, El Enmascarado! } {5}
-#ALIAS {gkhaol} { gritar %^BOLD%^BLACK%^Khaol! } {5}
-#ALIAS {gk} { gritar Khaol, El Enmascarado! } {5}
 #ALIAS {in} { indicar $target } {5}
 #ALIAS {jj} { oportunidad %0,$target,$nicks,$xp } {5}
-#ALIAS {j} { apuñalar %0,$target,%0nicks,$xp } {5}
+#ALIAS {j} { apuñalar %0,$target,$nicks,$xp } {5}
 #NOP #ALIAS {rm} { robar monedas a %0 } {5}
 #ALIAS {rm} { robar monedas a %0,$target,$nicks,$xp } {5}
 #ALIAS {ro} { robar de mochila a $target,$nicks } {5}
 #ALIAS {rr} { robar $goody a $target } {5}
+#ALIAS {cgo} {#var goody %1;#showme <fac> Goody cambiado a $goody} {5}
 #ALIAS {r} { robar $goody a $target } {5}
 #NOP #ALIAS {rrm} { robar $goody de mochila a $target } {5}
 #ALIAS {rt} { robar monedas a $target } {5}
