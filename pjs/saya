@@ -40,6 +40,7 @@
 #ALIAS {oo} { ordenar halcon:ejecutar picado sobre $target } {5}
 #ALIAS {qo} { esconderse oso } {5}
 #ALIAS {qq} { ordenar $invoca:ejecutar esconderse } {5}
+#VARIABLE {invoca} {ancestral}
 #ALIAS {r} { concentracion } {5}
 #ALIAS {sangre} {gritar %^BOLD%^GREEN%^Sangre %^RESET%^ para la %^BOLD%^GREEN%^Elfa%^RESET%^ de los %^ORANGE%^B%^BOLD%^os%^GREEN%^q%^RESET%^GREEN%^u%^ORANGE%^e%^BOLD%^ s%^GREEN%^!%^RED%^!%^RESET%^} {5}
 #ALIAS {scll} { puntos -av $invoca } {5}
