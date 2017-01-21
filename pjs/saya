@@ -42,6 +42,11 @@
 #ALIAS {qq} { ordenar $invoca:ejecutar esconderse } {5}
 #VARIABLE {invoca} {ancestral}
 #ALIAS {r} { concentracion } {5}
+#ALIAS {wii} { blandir $rarm;blandir $larm} {5}
+#ALIAS {unwii} { envainar todo } {5}
+#ALIAS {wkk} {w -c hostil matar } {5}
+#VARIABLE {larm} {coral} 
+#VARIABLE {rarm} {igneo}
 #ALIAS {sangre} {gritar %^BOLD%^GREEN%^Sangre %^RESET%^ para la %^BOLD%^GREEN%^Elfa%^RESET%^ de los %^ORANGE%^B%^BOLD%^os%^GREEN%^q%^RESET%^GREEN%^u%^ORANGE%^e%^BOLD%^ s%^GREEN%^!%^RED%^!%^RESET%^} {5}
 #ALIAS {scll} { puntos -av $invoca } {5}
 #ALIAS {scl} { puntos -v $invoca } {5}

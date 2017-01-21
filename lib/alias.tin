@@ -2,33 +2,29 @@
 #CLASS {RL_ALIAS} {open};
 
 #ALIAS {/pts}
-{
-	#showme <149> Carta de Navegacion de Puertos Conocidos de Eirea:;
-  #showme <149>--------------------------------------------------------;
-  #showme <039> Bahia de Urlom      : <129>28 <acf> 20 ;
-  #showme <039> Puerto de Alandaen  : <129>36 <acf> 23 ;
-  #showme <039> Pantanos de Zulk    : <129>47 <acf> 21 ;
-  #showme <039> Puerto de Keel      : <129>67 <acf> 29 ;
-  #showme <039> Takome/Aldara       : <129>56 <acf> 18 ;
-  #showme <039> Rio Velerion        : <129>43 <acf> 21 ;
-  #showme <039> Bosque Impenetrable : <129>13 <acf>  9  ;
-  #showme <039> Eldor (oeste)       : <129>42 <acf> 12 ;
-  #showme <039> Eldor (este)        : <129>55 <acf> 12 ;
-  #showme <039> Isla de Arilven     : <129>58 <acf> 13 ;
-  #showme <039> Isla del Bucanero   : <129>79 <acf> 13 ;
-  #showme <039> Archipielago Kamana : <129>88 <acf>  6 ;
-  #showme <039> Isla de Krit        : <129>59 <acf> 15 ;
-  #showme <039> Escondido??         : <129>31 <acf>  7 ;
-  #showme <039> Dendra??            : <129>46 <acf> 21 ;
-  #showme <149>--------------------------------------------------------
+{  
+	 @center{  <149> Carta de Navegacion de Puertos Conocidos de Eirea:};
+   @pullRight{ #showme <039> Bahia de Urlom      : <129>28 <acf> 20 };
+   @pullRight{ #showme <039> Puerto de Alandaen  : <129>36 <acf> 23 };
+   @pullRight{ #showme <039> Pantanos de Zulk    : <129>47 <acf> 21 };
+   @pullRight{ #showme <039> Puerto de Keel      : <129>67 <acf> 29 };
+   @pullRight{ #showme <039> Takome/Aldara       : <129>56 <acf> 18 };
+   @pullRight{ #showme <039> Rio Velerion        : <129>43 <acf> 21 };
+   @pullRight{ #showme <039> Bosque Impenetrable : <129>13 <acf>  9 };
+   @pullRight{ #showme <039> Eldor (oeste)       : <129>42 <acf> 12 };
+   @pullRight{ #showme <039> Eldor (este)        : <129>55 <acf> 12 };
+   @pullRight{ #showme <039> Isla de Arilven     : <129>58 <acf> 13 };
+   @pullRight{ #showme <039> Isla del Bucanero   : <129>79 <acf> 13 };
+   @pullRight{ #showme <039> Archipielago Kamana : <129>88 <acf>  6 };
+   @pullRight{ #showme <039> Isla de Krit        : <129>59 <acf> 15 };
+   @pullRight{ #showme <039> Escondido??         : <129>31 <acf>  7 };
+   @pullRight{ #showme <039> Dendra??            : <129>46 <acf> 21 };
 } {5};
 
 
 #ALIAS {setf %1 %2} { #VARIABLE f%1var %2; #showme <aff>[<119>F%1<aff>]<129> Set to <aff>[<119>%2 %3<aff>]; #SHOWME {@fkeyshow{}} {2}};
 
 #ALIAS {/ayuda} {
-    #SHOWME {@message{Comandos disponibles en RL++}};
-    #SHOWME {};
     #SHOWME {<fac>/pts <acd>Lista de los puertos navegables de Eirea<099>};
     #SHOWME {<fac>/conectar <acd>Conecta a Reinos de Leyenda MUD.<099>};
     #SHOWME {<fac>/limpiar <acd>Borra el contenido de la pantalla.<099>};
