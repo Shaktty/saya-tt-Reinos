@@ -82,12 +82,16 @@
 {
     #VAR {stats[health]} {%1};
     #VAR {stats[maxHealth]} {%2};
+    #SHOWME {@powerline{}} {1};
+    #SHOWME {@fkeyshow{}} {2};
 };
 
 #ACTION {^Puntos de Energía %* (%1/%2) %*$} 
 {
     #VAR {stats[energy]} {%1};
     #VAR {stats[maxEnergy]} {%2};
+    #SHOWME {@powerline{}} {1};
+    #SHOWME {@fkeyshow{}} {2};
 };
 
 #ACTION {^Pvs: %1(%2)  Pe: %3(%4)  Fe: %5(%6)  Po: %7  Xp: %8  Psoc: %9$} {
@@ -118,6 +122,7 @@
 
 #ACTION {^Estás rodead{o|a} por %1 im{a|á}genes id{é|e}nticas a ti.$} {
     #VAR {buffers[images]} {%1};
+   @message{"1 Imagen menos"};
     #SHOWME {@powerline{}} {1};
     #SHOWME {@fkeyshow{}} {2};
 };
@@ -135,6 +140,7 @@
     #IF {$buffers[images] < 0} {
         #VAR {buffers[images]} 0;
     }
+   @message{"1 Imagen menos"};
     #SHOWME {@powerline{}} {1};
     #SHOWME {@fkeyshow{}} {2};
 };
@@ -156,6 +162,7 @@
     #IF {$buffers[stoneLayers] < 0} {
         #VAR {buffers[stoneLayers]} 0;
     }
+    @message{"1 piel menos"};
     #SHOWME {@powerline{}} {1};
     #SHOWME {@fkeyshow{}} {2};
 }

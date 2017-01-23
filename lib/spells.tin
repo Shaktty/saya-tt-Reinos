@@ -383,6 +383,7 @@
 };
 
 #SUBSTITUTE {^Pronuncias el cántico: '%*'$} {@translateSpell{Pronuncias el cántico: '%1';%1}};
+#SUBSTITUTE {^Canta: '%*'$} {@translateSpell{%1 Canta: '%2';%2}};
 #SUBSTITUTE {^Dices en %1: '%2'$} {@translateSpell{Dices en %1: '%2';%2}};
 #SUBSTITUTE {^%* pronuncia el cántico: '%*'$} {@translateSpell{%1 pronuncia el cántico: '%2';%2}};
 

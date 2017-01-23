@@ -36,7 +36,6 @@
 #HIGHLIGHT {^Tu piel vuelve a su estado normal.$}       {bold red} {5};
 #HIGHLIGHT {^Sientes como una fuerza divina te rodea,%*}    {bold red} {5};
 #HIGHLIGHT {^{¡|}Te estremeces y pierdes la concentraci{ó|o}n!$}   {bold red} {5};
-
 #HIGHLIGHT {^Ves como %* se aleja de ti mientras te mira con el rostro enfurecido.$} {bold red} {5};
 #HIGHLIGHT {^%* te mira mientras comprime toda su musculatura.$} {bold red} {5};
 #HIGHLIGHT {^¡Eres agarrad{o|a} brutalmente por %* y no puedes moverte!} {bold red} {5};
@@ -44,7 +43,6 @@
 /*
  * Good things
   */
-
 #HIGHLIGHT {^Puedes moverte libremente de nuevo.$}      {bold green} {5};
 #HIGHLIGHT {^La piel de %* vuelve a su estado normal.$} {bold green} {5};
 #HIGHLIGHT {^{¡|}%* pierde la concentraci{ó|o}n!.$}     {bold green} {5};
@@ -55,15 +53,6 @@
 /*
  * Encantamiento
   */
-
-#HIGHLIGHT {^Consigues adueñarte de la voluntad de %*.$}    {bold green} {5};
-#HIGHLIGHT {^¡%* se resiste a tu hechizo de dominación!$}   {bold red} {5};
-#HIGHLIGHT {^%* quedan rígidos como un poste.$}             {bold green} {5};
-
-/*
- * Encantamiento
-  */
-
 #HIGHLIGHT {^Consigues adueñarte de la voluntad de %*.$}    {bold green} {5};
 #HIGHLIGHT {^¡%* se resiste a tu hechizo de dominación!$}   {bold red} {5};
 #HIGHLIGHT {^%* quedan rígidos como un poste.$}             {bold green} {5};

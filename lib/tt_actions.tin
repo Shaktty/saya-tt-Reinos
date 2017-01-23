@@ -25,9 +25,9 @@
 #ACTION {^Tu relación diplom{á|a}tica con %1 (%2) te permite atacarl{e|a},} {cnick %1;@message{%1 Anyadido a tus nicks};#HIGHLIGHT %1 bold,red};
 #ACTION {Tu última conexión fue }
 {
-  #spl 0 3;
   #showme {@fkeyshow{}} {2};
   #SHOWME {@powerline{}} {1};
+  #spl 0 3;
 }
 #ACTION {Nombre corto x cambiado de %1 a %2} {#va nicks %2;#SHOWME <FCA>Nicks cambiados a:<caf> $nicks<099>};
 

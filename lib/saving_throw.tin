@@ -1,0 +1,95 @@
+#CLASS {RL_SAVING_THROW} {kill};
+#CLASS {RL_SAVING_THROW} {open};
+
+/**********************************************************************************************************************
+ * Module RL_SAVING_THROW                                                                                             *
+ *                                                                                                                    *
+ * Better rendering of saving throws                                                                                  *
+ **********************************************************************************************************************/
+
+/register_module {RL_SAVING_THROW} {Tiradas de salvación} {Muestra información más clara en las tiradas de salvación.};
+
+/**********************************************************************************************************************
+ * Functions                                                                                                          *
+ **********************************************************************************************************************/
+
+/*
+ * Function @parse_saving_throw{type;difficulty;throw;result;comparator}
+ *
+ * Returns a clearer string describing a saving throw.
+ *
+ * Arguments:
+ *   %1 (any) type
+ *   %2 (any) difficulty
+ *   %3 (any) challenge
+ *   %4 (any) result
+ *   %4 (any) comparison
+ *
+ * Example:
+ *   @parse_saving_throw{paralizacion;20;mayor o igual;5;Fallo}
+ */
+#FUNCTION {parse_saving_throw} {
+    #VAR {saving_throw_comparator} {};
+    #SWITCH {"%5"} {
+        #CASE {"Igual o mayor"} {
+            #VAR {saving_throw_comparator} {>=};
+        };
+        #CASE {"Igual o menor"} {
+            #VAR {saving_throw_comparator} {<=};
+        };
+        #CASE {"Igual"} {
+            #VAR {saving_throw_comparator} {==};
+        };
+        #CASE {"Mayor"} {
+            #VAR {saving_throw_comparator} {>};
+        };
+        #CASE {"Menor"} {
+            #VAR {saving_throw_comparator} {<};
+        };
+        #DEFAULT {
+            #VAR {saving_throw_comparator} {<=};
+        };
+    };
+    #VAR {saving_throw_color} {};
+    #SWITCH {"%4"} {
+        #CASE {"Éxito"} {
+            #VAR {saving_throw_color} {<cfa>};
+        };
+        #CASE {"Exito"} {
+            #VAR {saving_throw_color} {<cfa>};
+        };
+        #CASE {"Fallo"} {
+            #VAR {saving_throw_color} {<faa>};
+        };
+    };
+    #VAR {result} {<ffa>⚀ <acf>TS %1:$saving_throw_color %3 $saving_throw_comparator %2<099>};
+    #UNVAR {saving_throw_comparator};
+    #UNVAR {saving_throw_color};
+};
+
+/**********************************************************************************************************************
+ * Substitutions                                                                                                      *
+ **********************************************************************************************************************/
+
+#SUBSTITUTE {[Tiradas] Tirada de salvación de %* % de éxito: %*. Tirada: %d (%*).} {@parse_saving_throw{%1;%2;%3;%4}};
+#SUBSTITUTE {[Tiradas]: Tirada de %* a dificultad: %d (%* para pasar). Tirada: %d (%*)} {@parse_saving_throw{%1;%2;%4;%5;%3}};
+
+/**********************************************************************************************************************
+ * Testing                                                                                                            *
+ **********************************************************************************************************************/
+
+#IF {$_development == 1} {
+    #ALIAS {/test_RL_SAVING_THROW} {
+        #SHOWME {[Tiradas] Tirada de salvación de paralizacion % de éxito: 31. Tirada: 100 (Fallo).};
+        #SHOWME {[Tiradas]: Tirada de desollar a dificultad: 2 (Igual o mayor para pasar). Tirada: 1 (Fallo)};
+        #SHOWME {[Tiradas]: Tirada de desollar a dificultad: 2 (Igual o mayor para pasar). Tirada: 4 (Éxito)};
+        #SHOWME {[Tiradas]: Tirada de sigilar puertas a dificultad: 20 (Igual o menor para pasar). Tirada: 44 (Fallo)};
+        #SHOWME {[Tiradas] Tirada de salvación de conjuro(afligir) % de éxito: 8 (23-15). Tirada: 46 (Fallo).};
+        #SHOWME {[Tiradas] Tirada de salvación de conjuro(mal) % de éxito: 47 (23+24). Tirada: 89 (Fallo).};
+        #SHOWME {[Tiradas] Tirada de salvación de mental(desconcentrar) % de éxito: 25 (60-35). Tirada: 70 (Fallo).};
+        #SHOWME {[Tiradas] Tirada de salvación de paralizacion(flecha de piedra) % de éxito: 45. Tirada: 17 (Éxito).};
+        #SHOWME {[Tiradas] Tirada de salvación de petrificacion(choque funesto) % de éxito: 78 (48+30). Tirada: 74 (Éxito).};
+    };
+};
+
+#CLASS {RL_SAVING_THROW} {close};

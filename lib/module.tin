@@ -1,0 +1,269 @@
+#CLASS {RL_MODULE} {kill};
+#CLASS {RL_MODULE} {open};
+
+/**********************************************************************************************************************
+ * Module RL_MODULE                                                                                                   *
+ *                                                                                                                    *
+ * Write modular features.                                                                                            *
+ **********************************************************************************************************************/
+
+/**********************************************************************************************************************
+ * Variables                                                                                                          *
+ **********************************************************************************************************************/
+
+/*
+ * Variable $rl_modules (table)
+ *
+ * Structure
+ *   rl_modules[<module_name>]
+ *   rl_modules[<module_name>][name]
+ *   rl_modules[<module_name>][description]
+ *   rl_modules[<module_name>][enabled]
+ *   rl_modules[<module_name>][settings]
+ *   rl_modules[<module_name>][settings][<setting_name>]
+ *   rl_modules[<module_name>][settings][<setting_name>][type]
+ *   rl_modules[<module_name>][settings][<setting_name>][description]
+ *   rl_modules[<module_name>][settings][<setting_name>][default]
+ *   rl_modules[<module_name>][settings][<setting_name>][value]
+ *   rl_modules[<module_name>][listeners][<listener_name>]
+ */
+#VAR {rl_modules} {};
+
+/**********************************************************************************************************************
+ * Functions                                                                                                          *
+ **********************************************************************************************************************/
+
+/*
+ * Function @get_module_setting_value{module;setting}
+ *
+ * Returns the value of a module setting.
+ *
+ * Arguments:
+ *   %1 (any) module name
+ *   %2 (any) setting name
+ *
+ * Example:
+ *   @get_module_setting_value{RL_SHAPE;fill}
+ */
+#FUNCTION {get_module_setting_value} {
+    #IF {"$rl_modules[%1]" == ""} {
+        /message {El módulo %1 no existe.};
+        #RETURN;
+    };
+    #IF {!@member_of{{$rl_modules[%1][settings][]};%2}} {
+        /message {El módulo %1 no tiene nada configurable con el nombre %2.};
+        #RETURN;
+    };
+    #RETURN {$rl_modules[%1][settings][%2][value]};
+};
+
+/*
+ * Function @get_module_setting_value{module;setting;value}
+ *
+ * Sets the value of a module setting, and returns the new value.
+ *
+ * Arguments:
+ *   %1 (any) module name
+ *   %2 (any) setting name
+ *   %3 (any) setting value
+ *
+ * Example:
+ *   @set_module_setting_value{RL_SHAPE;fill;star}
+ */
+#FUNCTION {set_module_setting_value} {
+    #IF {"$rl_modules[%1]" == ""} {
+        /message {El módulo %1 no existe.};
+        #RETURN;
+    };
+    #IF {!@member_of{{$rl_modules[%1][settings][]};%2}} {
+        /message {El módulo %1 no tiene nada configurable con el nombre %2.};
+        #RETURN;
+    };
+    #SWITCH {"$rl_modules[%1][settings][%2][type]"} {
+        #CASE {"enum"} {
+            #IF {!@member_of{{$rl_modules[%1][settings][%2][enum]};%3}} {
+                /message {La configuración de %2 no acepta el valor %3. Prueba con: $rl_modules[%1][settings][%2][enum]};
+                #RETURN;
+            };
+        };
+        #CASE {"boolean"} {
+            #IF {"%3" != "1" && "%3" != "0"} {
+                /message {La configuración de %2 no acepta el valor %3. Prueba con 0 o 1.};
+                #RETURN;
+            };
+        };
+        #CASE {"number"} {
+            #REGEX {%3} {^{[0-9]+}$} {} {
+                /message {La configuración de %2 no acepta el valor %3. Prueba con un valor numérico.};
+                #RETURN;
+            }
+        };
+    };
+    #VAR {rl_modules[%1][settings][%2][value]} {%3};
+    #RETURN {@get_module_setting_value{%1;%2}};
+};
+
+/**********************************************************************************************************************
+ * Aliases                                                                                                            *
+ **********************************************************************************************************************/
+
+/*
+ * Alias /register_module {identifier} {name} {description}
+ *
+ * Registers a new module.
+ *
+ * Arguments:
+ *   %1 (any) module identifier
+ *   %2 (any) short name
+ *   %3 (any) description
+ *
+ * Example:
+ *   /register_module {RL_SHAPE} {Shape bars} {Shows ASCII shape bars instead of plain text descriptions};
+ */
+#ALIAS {/register_module} {
+    #VAR {rl_modules[%1][name]} {%2};
+    #VAR {rl_modules[%1][description]} {%3};
+    #VAR {rl_modules[%1][enabled]} {1};
+    /message {Registrado módulo %1};
+}
+
+/*
+ * Alias /list_modules
+ *
+ * Lists all available modules.
+ *
+ * Example:
+ *   /list_modules
+ */
+#ALIAS {/list_modules} {
+    /message {Módulos disponibles:};
+    #FOREACH {$rl_modules[]} {module} {
+        #SHOWME {  <178>$module <099><fac>$rl_modules[$module][name] <g05>// $rl_modules[$module][description]<099>};
+    };
+};
+
+/*
+ * Alias /add_module_setting {identifier} {name} {type} {enum} {default} {description}
+ *
+ * Adds a configurable setting to an existing module.
+ *
+ * Arguments:
+ *   %1 (any) module identifier
+ *   %2 (any) setting name
+ *   %3 (any) variable type (any, enum, boolean, number)
+ *   %4 (list, optional) if variable type is enum, list of possible values
+ *   %5 (any) default value
+ *   %6 (any) description
+ *
+ * Example:
+ *   /add_module_setting {RL_SHAPE} {fill} {enum} {solid;star} {solid} {Fills shape bars with solid blocks or stars};
+ */
+#ALIAS {/add_module_setting} {
+    #IF {"%1" == "" || "%2" == "" || "%3" == "" || "%5" == "" || "%6" == ""} {
+        /message {Sintáxis:\n  <178>/add_module_setting {RL_SHAPE} {fill} {enum} {solid;star} {solid} {Fills shape bars with solid blocks or stars}};
+        #RETURN;
+    }
+    #IF {"$rl_modules[%1]" == ""} {
+        /message {El módulo %1 no existe.};
+        #RETURN;
+    };
+    #VAR {rl_modules[%1][settings][%2][type]} {%3};
+    #VAR {rl_modules[%1][settings][%2][description]} {%6};
+    #VAR {rl_modules[%1][settings][%2][default]} {%5};
+    #VAR {rl_modules[%1][settings][%2][value]} {%5};
+    #IF {"%4" != ""} {
+        #VAR {rl_modules[%1][settings][%2][enum]} {%4};
+    };
+}
+
+/*
+ * Alias /add_module_event_listener {identifier} {event}
+ *
+ * Makes the module listen to the given event. When the event is triggered, the local
+ * function /event_<module_name>_<event_name> will be called. For example, if the module
+ * RL_POWERLINE is listening to the event mirror_images_hit, the local function 
+ * with name event_RL_POWERLINE_mirror_images_hit will be called.
+ *
+ * Arguments:
+ *   %1 (any) module identifier
+ *   %1 (any) event name
+ *
+ * Example:
+ *   /add_module_event_listener {RL_POWERLINE} {mirror_images_hit};
+ */
+#ALIAS {/add_module_event_listener} {
+    #IF {"%1" == ""} {
+        /message {Sintáxis:\n  <178>/add_module_event_listener {event}};
+        #RETURN;
+    }
+    #IF {"$rl_modules[%1]" == ""} {
+        /message {El módulo %1 no existe.};
+        #RETURN;
+    };
+    #IF {"$rl_modules[%1][listeners]" == ""} {
+        #LIST {rl_modules[%1][listeners]} {create} {%2};
+    };
+    #ELSE {
+        #LIST {rl_modules[%1][listeners]} {add} {%2};
+    };
+};
+
+#ALIAS {/trigger_event} {
+    #IF {"%1" == ""} {
+        /message {Sintáxis:\n  <178>/trigger_event {event}};
+        #RETURN;
+    }
+    #FOREACH {$rl_modules[]} {module} {
+        #IF {"$rl_modules[$module][listeners]" == ""} {
+            #CONTINUE;
+        };
+        #LIST {rl_modules[$module][listeners]} {find} {%1} {event_index};
+        #IF {"$event_index" != "0"} {
+            /event_${module}_%1 %2 %3 %4 %5 %6 %7 %8 %9 %10;
+        }
+        #UNVAR {event_index};
+    };
+};
+
+#ALIAS {/configure} {
+    #IF {"%1" == ""} {
+        /message {Modules settings:};
+        #FOREACH {$rl_modules[]} {module} {
+            #IF {"$rl_modules[$module][settings][]" != ""} {
+                #FOREACH {$rl_modules[$module][settings][]} {setting} {
+                    #SHOWME {  <178>$module <099><fac>$setting <acd>$rl_modules[$module][settings][$setting][value] <g05>// $rl_modules[$module][settings][$setting][description]<099>};
+                };
+            };
+        };
+        #RETURN;
+    };
+    #IF {"%2" == "" || "%3" == ""} {
+        /message {Sintáxis:\n  <178>/configure {RL_SHAPE} {fill} {star}};
+        #RETURN;
+    };
+    #SHOWME @set_module_setting_value{%1;%2;%3};
+};
+
+/**********************************************************************************************************************
+ * Autocompletion                                                                                                     *
+ **********************************************************************************************************************/
+
+#TAB {/register_module};
+#TAB {/list_modules};
+#TAB {/add_module_setting};
+#TAB {/configure};
+
+/**********************************************************************************************************************
+ * Testing                                                                                                            *
+ **********************************************************************************************************************/
+
+#IF {$_development == 1} {
+    #ALIAS {/test} {
+        #FOREACH {$rl_modules[]} {module} {
+            /message {Testeando el módulo $module};
+            /test_$module;
+        };
+    };
+};
+
+#CLASS {RL_MODULE} {close};
