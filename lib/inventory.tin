@@ -7,7 +7,7 @@
  * Inventory stuff.                                                                                                   *
  **********************************************************************************************************************/
 
-/register_module {RL_INVENTORY} {Inventario} {Cosas para tu inventario.};
+#NOP /register_module {RL_INVENTORY} {Inventario} {Cosas para tu inventario.};
 
 /**********************************************************************************************************************
  * Functions                                                                                                          *
