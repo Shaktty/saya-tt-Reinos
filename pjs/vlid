@@ -233,6 +233,9 @@
 #VARIABLE         {f5var}  {oo}
 #VARIABLE         {f6var}  {af}
 #VARIABLE         {f7var}  {mal}
+#ALIAS {j} { apuñalar %0,$target,$nicks,$xp } {5}
+#ALIAS {x} { apuñalar %0,$target,$nicks } {5}
+#ALIAS {jj} { oportunidad %0,$target,$nicks,$xp } {5}
 #VARIABLE         {f8var}  {44}
 #VARIABLE         {f9var}  {55}
 #VARIABLE         {goods}  {mochilas,bolsas}
