@@ -27,6 +27,7 @@
     #SHOWME {<fac>/conectar <acd>Conecta a Reinos de Leyenda MUD.<099>};
     #SHOWME {<fac>/limpiar <acd>Borra el contenido de la pantalla.<099>};
     #SHOWME {<fac>/log <on|off> <acd>Activa o desactiva el logeado. Los logs se guardan en el directorio /logs.<099>};
+    #SHOWME {<fac>/logc <on|off> <acd>Activa una ventana nueva con los eventos/subs/actions de tell/chat/canales Los logs /log/i*_chats.log<099>};
     #SHOWME {<fac>/reload <acd>Recarga el script. Sólo funciona en modo desarrollo.<099>};
     #SHOWME {<fac>/rumbo <dirección> <acd>Camina automáticamente en una dirección, de forma similar al comando "galopar".<099>};
     #SHOWME {<fac>/rrumbo <dirección> <acd>Sigila automáticamente en una dirección, de forma similar al comando "galopar".<099>};
@@ -42,6 +43,7 @@
 		#IF {"$logging" != "on"} {
 			#FORMAT {logfile} {log/$pj-%t.log} {%Y-%m-%d};
             #LOG {APPEND} {$logfile};
+#            #LOG {APPEND} {$logfile_chats.log};
             #VAR {logging} {on};
             #SHOWME {@message{Grabando...}};
 		};
@@ -63,6 +65,36 @@
         #SHOWME {@message{Sintáxis: log on|off.}};
 	};
 };
+
+#ALIAS {/logc} {
+	#IF {"%0" == "on"} {
+	#IF {"$loggingc" != "on"} {
+			#FORMAT {logfilec} {log/$pj-Social-%t.log} {%Y-%m-%d};
+            #LOG {APPEND} {$logfilec};
+            #VAR {loggingc} {on};
+            #SHOWME {@message{Mostrando chats y eventos gmcp...}};
+            #READ lib/gmcp.tin
+          #NOP  #SYS {echo "[%1]" >> log/chats.log} };
+		};
+		#ELSE {
+            #SHOWME {@message{Ya estás grabando un log.}};
+		};
+	};
+	#ELSEIF {"%0" == "off"} {
+		#IF {"$loggingc" == "on"} {
+            #LOG {OFF};
+            #VAR {loggingc} {off};
+            #SHOWME {@message{Dejando de redirigir mensajes...}};
+		};
+		#ELSE {
+            #SHOWME {@message{No estás grabando un log.}};
+		};
+	};
+	#ELSE {
+        #SHOWME {@message{Sintáxis: logc on|off.}};
+	};
+};
+
 
 
 #CLASS {RL_ALIAS} {close};

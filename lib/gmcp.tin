@@ -48,7 +48,24 @@
 #EVENT {IAC SB GMCP Char.Ficha IAC SE} {
 
     #NOP TODO: Make events here;
+    #EVENT
+#ACTION {
+#VAR social "[(Chat|Keel|Solitarios|Buenos|Anarquicos|Renegados)]};
+#NOP RED IN LIST {1} {Chat} {2} {Keel} {3} {Solitarios} {4} {Buenos} {5} {Anarquicos} {6} {Renegado{|s}
 
+/* 
+*
+*  VAR social { {1} {Chat} {2} {Keel} {3} {Solitarios} {4} {Buenos} {5} {Anarquicos} {6} {Renegado{|s} };
+* #for (i,0,social.length(),) do
+*   #high {#showme $social {$i} }  
+*  i=i+1111
+* 
+* 0
+* };
+*/
+
+{
+#SHOWME
     #IF {$rl_gmcp[debug] == 1} {
         /message {Received GMCP Char.Ficha event};
     };
@@ -94,6 +111,7 @@
         /message {Received GMCP Comm.Canales event};
         #VAR {rl_gmcp[channels]} {%0};
         #SHOWME {[%1]};
+        #SYS {echo "[%1]" >> log/chats.log} };
     };
 };
 
@@ -101,6 +119,7 @@
     #IF {$rl_gmcp[debug] == 1} {
         /message {Received GMCP Comm.EnciendeCanal event};
         #SHOWME {[%1]};
+        #SYS {echo "[%1]" >> log/chats.log} };
     };
 };
 
@@ -108,12 +127,14 @@
     #IF {$rl_gmcp[debug] == 1} {
         /message {Received GMCP Comm.ApagaCanal event};
         #SHOWME {[%1]};
+        #SYS {echo "[%1]" >> log/chats.log} };
     };
 };
 
 #EVENT {IAC SB GMCP Comm.MensajeCanal IAC SE} {
     #IF {$rl_gmcp[debug] == 1} {
         /message {Received GMCP Comm.MensajeCanal event};        
+        #SYS {echo "[%1]" >> log/chats.log} };
     };
     #VAR {gmcp_data_channel_data} {%0};
     #VAR {gmcp_data_channel_name} {$gmcp_data_channel_data[canal]};
@@ -130,6 +151,7 @@
     #IF {$rl_gmcp[debug] == 1} {
         /message {Received GMCP Mapa event};
         #SHOWME {[%1]};
+        #SYS {echo "[%1]" >> log/chats.log} };
     };
 };
 

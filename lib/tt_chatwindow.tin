@@ -1,0 +1,84 @@
+#CLASS {tt_highs} {kill};
+#CLASS {tt_highs} {open};
+  #NOP==========================================================================
+  #NOP      Configuracion modular de Tintin++ para rlmud.org
+  #NOP      (cc) 2016 Saya Faroth.  Mandadme un mudmail con cualquier duda.
+  #NOP==========================================================================
+
+  #READ pjs/password;
+
+  #NOP--------------------------------------------------------------------------
+  #NOP    Configuracion basica del cliente
+  #NOP--------------------------------------------------------------------------
+  #CONFIG  {256 COLORS}    {ON}
+  #CONFIG  {AUTO TAB}      {5000}
+  #CONFIG  {BUFFER SIZE}   {40000}
+  #CONFIG  {CHARSET}       {UTF-8}
+  #CONFIG  {COLOR PATCH}   {OFF}
+  #CONFIG  {COMMAND COLOR} {<fca>}
+  #CONFIG  {COMMAND ECHO}  {ON}
+  #CONFIG  {CONNECT RETRY} {0.2}
+  #CONFIG  {HISTORY SIZE}  {100000}
+  #CONFIG  {LOG}           {RAW}
+  #CONFIG  {PACKET PATCH}  {10}
+  #CONFIG  {REPEAT CHAR}   {!}
+  #CONFIG  {REPEAT ENTER}  {OFF}
+  #CONFIG  {SCROLL LOCK}   {ON}
+  #CONFIG  {SPEEDWALK}     {OFF}
+  #CONFIG  {TINTIN CHAR}   {#}
+  #CONFIG  {VERBATIM}      {OFF}
+  #CONFIG  {VERBATIM CHAR} {\}
+  #CONFIG  {VERBOSE}       {OFF}
+  #CONFIG  {WORDWRAP}      {OFF}
+
+  #MESSAGE ALL OFF
+
+  #read lib/numpad.tin
+  #read lib/pathdir.tin
+  #read lib/format.tin
+  #read lib/function.tin
+  #read lib/highlight.tin
+  #read lib/lang.tin
+  #read lib/pathdir.tin
+  #read lib/pathwalker.tin
+  #read lib/powerline.tin
+  #read lib/spells.tin
+  #read lib/substitute.tin
+  #read lib/alias.tin
+  #read lib/tt_actions.tin
+  #read lib/tt_highs.tin
+  #read lib/tt_subs.tin
+  #read lib/tt_alias.tin
+  #NOP      -- Este lo leemos desde el archivo del pj que formule mejor
+  #NOP #read lib/tt_magia.tin
+  #read lib/macros_fbar.tin
+  #read lib/tt_tab.tin
+  #NOP nuevos modulos... testear
+  #read lib/gmcp.tin
+  #read lib/inventory.tin
+  #read lib/saving_throw.tin
+  #VAR {rlppPrefix} {<139>☥<099>};
+  #VAR {rlppColor} {<fca>};
+
+  #EVENT {PROGRAM START} 
+  {
+    #SYSTEM {clear};
+    #SHOWME <fac>@center{Reinos de Leyenda - http://reinosdeleyenda.org};
+    #SHOWME {<cfa>  <ACF> LOGGEADOR DE CHATS Y TELL GMCP};
+    #SHOWME <fca>;
+    #SHOWME <acf>Jugador?;
+  }
+  #NOP #EVENT {RECEIVED INPUT} {#VAR pj %0;#UNEVENT {RECEIVED INPUT};cdev}
+#read lib/substitute.tin
+#read lib/tt_subs.tin
+#EVENT {RECEIVED INPUT} {#VAR pj %0;#UNEVENT {RECEIVED INPUT};gmwin}
+#NOP #sys tail -f chats.log &
+/*
+*
+* TEst to parse with colors
+*/
+#ALIAS gmwin {#sys tail -f logs/chat_$pj.log } {5}
+#NOP #EVENT {SESSION CONNECTED} {$pj;$passwd;/logc on}
+#sys tail -f chats.log &
+
+#CLASS {tt_highs} {close};
