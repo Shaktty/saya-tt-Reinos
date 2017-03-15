@@ -9,7 +9,7 @@
 #ALIAS {999} { ordenar oso:ejecutar aguantar sobre parar } {5}
 #ALIAS {99} { ordenar oso:ejecutar aguantar sobre aqui } {5}
 #ALIAS {ac} { ordenar ejecutar acosar sobre $target } {5}
-#ALIAS {at} { dobleataque $target,%0,$nicks,$xp } {5}
+#ALIAS {at} { doblegolpe $target,%0,$nicks,$xp } {5}
 #ALIAS {bbb} { bando ! } {5}
 #ALIAS {bb} { bando @%^RESET%^la %^ORANGE%^E%^GREEN%^c%^ORANGE%^o%^RED%^T%^BOLD%^er%^RESET%^RED%^ro%^BOLD%^ri%^RESET%^RED%^s%^BOLD%^ta %^BLACK%^sisea..%^RED%^ %0%^RESET%^ } {5}
 #ALIAS {bemm} { bando @se %^ORANGE%^mece%^RESET%^ ágilmente de %^GREEN%^l%^ORANGE%^i%^BOLD%^a%^GREEN%^n%^RESET%^GREEN%^a %^RESET%^en %^GREEN%^l%^ORANGE%^i%^BOLD%^a%^GREEN%^n%^RESET%^GREEN%^a%^RESET%^ } {5}
@@ -52,7 +52,7 @@
 #ALIAS {scl} { puntos -v $invoca } {5}
 #ALIAS {toma} { poner %1 en ancestral } {5}
 #ALIAS {x} { cazar $target,%0,$nicks } {5}
-#ALIAS {z} { dobleataque $target,%0,$nicks } {5}
+#ALIAS {z} { doblegolpe $target,%0,$nicks } {5}
 #SUBSTITUTE {^%1 se desploma a causa de la pérdida de sangre} {<fac>%1 <099>se desploma a causa de la pérdida de sangre  <119> STUN STUN!<099>}
 #READ lib/numpad_sigilar.tin
 #NOP #TICKER {mass} {#showme <CAF> Objetivo: <fca>$objetivo<099>} {610}
