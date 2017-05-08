@@ -50,7 +50,6 @@
 		#ELSE {
             #SHOWME {@message{Ya estás grabando un log.}};
 		};
-	};
 	#ELSEIF {"%0" == "off"} {
 		#IF {"$logging" == "on"} {
             #LOG {OFF};
@@ -65,6 +64,7 @@
         #SHOWME {@message{Sintáxis: log on|off.}};
 	};
 };
+};
 
 #ALIAS {/logc} {
 	#IF {"%0" == "on"} {
@@ -73,8 +73,6 @@
             #LOG {APPEND} {$logfilec};
             #VAR {loggingc} {on};
             #SHOWME {@message{Mostrando chats y eventos gmcp...}};
-            #READ lib/gmcp.tin
-          #NOP  #SYS {echo "[%1]" >> log/chats.log} };
 		};
 		#ELSE {
             #SHOWME {@message{Ya estás grabando un log.}};
@@ -91,7 +89,7 @@
 		};
 	};
 	#ELSE {
-        #SHOWME {@message{Sintáxis: logc on|off.}};
+        #SHOWME {@message{Sintáxis: log on|off.}};
 	};
 };
 

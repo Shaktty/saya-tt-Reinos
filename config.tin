@@ -52,7 +52,7 @@
 #read lib/macros_fbar.tin
 #read lib/tt_tab.tin
 #NOP nuevos modulos... testear
-#NOP #read lib/gmcp.tin
+#read lib/gmcp.tin
 #read lib/inventory.tin
 #read lib/saving_throw.tin
 #VAR {rlppPrefix} {<139>☥<099>};

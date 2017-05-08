@@ -48,22 +48,15 @@
 #EVENT {IAC SB GMCP Char.Ficha IAC SE} {
 
     #NOP TODO: Make events here;
-    #EVENT
-#ACTION {
-#VAR social "[(Chat|Keel|Solitarios|Buenos|Anarquicos|Renegados)]};
-#NOP RED IN LIST {1} {Chat} {2} {Keel} {3} {Solitarios} {4} {Buenos} {5} {Anarquicos} {6} {Renegado{|s}
-
-/* 
-*
-*  VAR social { {1} {Chat} {2} {Keel} {3} {Solitarios} {4} {Buenos} {5} {Anarquicos} {6} {Renegado{|s} };
-* #for (i,0,social.length(),) do
-*   #high {#showme $social {$i} }  
-*  i=i+1111
-* 
-* 0
-* };
-*/
-
+    #ACTION {
+      #VAR social { {1} {Chat} {2} {Keel} {3} {Solitarios} {4} {Buenos} {5} {Anarquicos} {6} {Renegado{|s} };
+      #for (i,0,social.length(),) do
+      {
+        #high {#showme $social {$i} }  
+         i=i+1111;
+      };
+  }
+}
 {
 #SHOWME
     #IF {$rl_gmcp[debug] == 1} {
