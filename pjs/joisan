@@ -7,6 +7,7 @@
 #HIGHLIGHT        {escudo}  {bold,reverse,yellow}  {5}
 #HIGHLIGHT        {tormenta de electrica}   {bold,reverse,yellow}  {5}
 #HIGHLIGHT        {flecha acida de dvneil}    {bold,reverse,yellow}  {5}
+#HIGHLIGHT        {piel de piedra}    {bold,reverse,yellow}  {5}
 #HIGHLIGHT        {flecha de llamas}  {bold,reverse,yellow}  {5}
 #HIGHLIGHT        {golpe de rayo}  {bold,reverse,yellow}  {5}
 #HIGHLIGHT        {mano espectral}  {bold,reverse,yellow}  {5}
@@ -20,9 +21,11 @@
 #HIGHLIGHT        {silueta imprecisa}  {bold,reverse,yellow}  {5}
 #HIGHLIGHT        {tormenta de hielo}  {bold,reverse,yellow}  {5}
 #HIGHLIGHT        {tormenta electrica}  {bold,reverse,yellow}  {5}
-#ALIAS denv {desenvainar $arma} {5}
+#ALIAS denv {blandir $arma} {5}
 #ALIAS env {envainar $arma} {5}
 #ALIAS {0} { esconderse arbol } {5}
+#VAR {xp} {aberraciones,demonios,animales,contrabandistas,mercaderes} 
+#VAR {nicks} {zeiring,clayron}
 #VAR {arma} {tulgar}
 #VAR {pincho} {espina}
 #VAR {f1var} {1}
@@ -33,7 +36,7 @@
 #VAR {f6var} {subetu}
 #VAR {f7var} {gi}
 #VAR {f8var} {ess}
-#VAR {f9var} {subetu}
+#VAR {f9var} {par}
 #VAR {f10var} {ee}
 #VAR {f11var} {to}
 #VAR {f12var} {x}
