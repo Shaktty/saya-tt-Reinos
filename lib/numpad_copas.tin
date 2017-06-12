@@ -1,0 +1,19 @@
+#CLASS {tt_numpad} {kill};
+#CLASS {tt_numpad} {open};
+
+#MACRO {\eOl} { saltar abajo }
+#MACRO {\eOm} { saltar arriba }
+#MACRO {\eOn} { estado todos }
+#MACRO {\eOo} { saltar fuera }
+#MACRO {\eOp} { saltar dentro }
+#MACRO {\eOq} { saltar sudoeste }
+#MACRO {\eOr} { saltar sur }
+#MACRO {\eOs} { saltar sudeste }
+#MACRO {\eOt} { saltar oeste }
+#MACRO {\eOu} { ojear }
+#MACRO {\eOv} { saltar este }
+#MACRO {\eOw} { saltar noroeste }
+#MACRO {\eOx} { saltar norte }
+#MACRO {\eOy} { saltar noreste }
+
+#CLASS {tt_numpad} {close};
