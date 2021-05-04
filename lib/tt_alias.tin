@@ -1,6 +1,6 @@
 #CLASS {tt_alias} {kill};
 #CLASS {tt_alias} {open};
-
+/*** 
 #ALIAS {AB} { sigilar abajo } {5};
 #ALIAS {we} {who enemigos} {5};
 #ALIAS {wa} {who aliados} {5};
@@ -11,8 +11,8 @@
 #ALIAS {bqq} {bloqueos} {5};
 #ALIAS {maa} {maestria}
 #ALIAS {CDEV} {#ses s1 62.210.99.120 5001 pjs/$pj;s} {5};
-#ALIAS {a}  {agacharse} {5};
-#ALIAS {aa}  {levantarse} {5};
+#NOP #ALIAS {a}  {agacharse} {5};
+#NOP #ALIAS {aa}  {levantarse} {5};
 #ALIAS {AR} { sigilar arriba } {5};
 #ALIAS {Aab} { acechar abajo } {5};
 #ALIAS {Aar} { acechar arriba } {5};
@@ -237,5 +237,5 @@
 #ALIAS {pdd} {pd cargando} {5};
 #ALIAS {mon} {montar $jaco} {5};
 #ALIAS {ui} {tirar abrojos} {5};
-
+***/
 #CLASS {tt_alias} {close};

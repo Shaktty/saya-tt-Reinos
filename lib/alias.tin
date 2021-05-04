@@ -2,7 +2,7 @@
 #CLASS {RL_ALIAS} {open};
 
 #ALIAS {/pts}
-{  @center{  <149> Carta de Navegacion de Puertos Conocidos de Eirea:};
+{  @pullRight{ #showme <149> Carta de Navegacion de Puertos Conocidos de Eirea:};
    @pullRight{ #showme <039> Bahia de Urlom      : <129>28 <acf> 20 };
    @pullRight{ #showme <039> Puerto de Alandaen  : <129>36 <acf> 23 };
    @pullRight{ #showme <039> Pantanos de Zulk    : <129>47 <acf> 21 };
@@ -32,7 +32,6 @@
     #SHOWME {<fac>/rumbo <dirección> <acd>Camina automáticamente en una dirección, de forma similar al comando "galopar".<099>};
     #SHOWME {<fac>/rrumbo <dirección> <acd>Sigila automáticamente en una dirección, de forma similar al comando "galopar".<099>};
     #SHOWME {<fac>/tars <acd>Computa una lista de enemigos. Has de tener el alias "tarear" establecido con tu "nickear" personal.<099>};
-    #SHOWME {};
 };
 #ALIAS {/limpiar} {
     #system {tput clear};

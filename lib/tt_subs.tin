@@ -83,7 +83,7 @@
 #SUBSTITUTE {Ves como %1 se aleja de ti mientras te mira con el rostro enfurecido.} {Ves como <119>%1<099> se aleja de ti mientras te mira con el rostro enfurecido.  <119> !!! EMBESTIR EMBESTIR !!!!<099>}  {5};
 #SUBSTITUTE {Vuelves a ver a %1 esta vez descendiendo a gran velocidad. Su picado ha comenzado} {Vuelves a ver a <fac>%1<099> esta vez descendiendo a gran velocidad. <acf>Su picado ha comenzado.<099>} {5};
 #SUBSTITUTE {¡%1 convulsiona en agonía cuando %2 le apuñala por la espalda!} {¡%1 convulsiona en agonía cuando %2 le apuñala por la espalda!  <119>%1<129> %2<179> -~- <159>%1<119> !!!} {5};
-#SUBSTITUTE {¡Envuelves a %1 en tu %2!} {<caf>¡Envuelves a <fac>%1<caf> en tu <CAF><199>%2<caf>!}
+#SUBSTITUTE {¡Envuelves a %1 en tu %2!} {<caf>¡Envuelves a <fac>%1<caf> en tu <CAF><199>%2<caf>!};
 
 #CLASS {tt_subs} {close};
 

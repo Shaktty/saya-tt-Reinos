@@ -204,7 +204,7 @@
 #HIGHLIGHT  {lleno de heridas}  {yellow}  {5};
 #HIGHLIGHT  {Es demasiado pronto para ejecutar otra maniobra de caza.} {red} {5};
 #HIGHLIGHT  {Debes equilibrarte después de realizar el movimiento de ataque doble.} {red} {5};
-#HIGHLIGHT	{Detienes tu maniobra de torbellino, pues la has realizado durante demasiado tiempo y temes que tu rival esté preparado para otra acometida.} {red} {5};  
+#HIGHLIGHT	{Detienes tu maniobra de torbellino, pues la has realizado durante demasiado tiempo y temes que tu rival esté preparado para otra acometida.} {red} {5};
 #HIGHLIGHT {¡Eres invulnerable a tu hechizo!} {bold,white,reverse} {5};
 #HIGHLIGHT {¡Resistes los efectos de tu propio hechizo!} {bold,white,reverse} {5};
 #HIGHLIGHT {Estás demasiado cansada para continuar desollando el cadáver.} {bold,magenta,reverse} {5};

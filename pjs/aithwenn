@@ -5,34 +5,23 @@
 #ALIAS {0} { esconderse arbol } {5}
 #ALIAS {coo} { ordenar coger todo de cuerpos } {5}
 #ALIAS {dd} { desmontar ancestral; esconderse ancestral } {5}
-#ALIAS {oo} { ordenar halcon:ejecutar picado sobre $target } {5}
 #ALIAS {toma} { poner %1 en ancestral } {5}
 #ALIAS {k} { sg; ac } {5}
-#ALIAS {ldenv} { desenvainar $larm } {5}
 #ALIAS {nov} { novato @(%^BOLD%^ORANGE%^Instructor Guardabosques%^RESET%^): %^GREEN%^%0%^RESET%^ } {5}
 #ALIAS {qo} { esconderse oso } {5}
 #VARIABLE invoca {ancestral}
 #ALIAS {qq} { ordenar $invoca:ejecutar esconderse } {5}
-#ALIAS {lenv} { envainar $larm } {5}
 #ALIAS {co} { ordenar coger todo } {5}
 #ALIAS {scll} { puntos -av $invoca } {5}
 #ALIAS {scl} { puntos -v $invoca } {5}
-#ALIAS {ac} { ordenar ejecutar acosar sobre $target } {5}
-#ALIAS {at} { doblegolpe $target,%0,$nicks,$xp } {5}
 #ALIAS {r} { concentracion } {5}
 #ALIAS {cc} { chat ! } {5}
 #ALIAS {bbb} { bando ! } {5}
-#ALIAS {z} { doblegolpe $target,%0,$nicks } {5}
-#ALIAS {x} { cazar $target,%0,$nicks } {5}
-#ALIAS {kk} { ordenar lobo:ejecutar dentellada sobre $target,$nicks,$xp,%0 } {5}
-#ALIAS {j} { cazar $target,%0,$nicks,$xp } {5}
 #ALIAS {88} { ordenar ejecutar picado sobre $target } {5}
 #ALIAS {00} { ordenar ejecutar dentellada sobre $target } {5}
-#ALIAS {8} { ordenar ejecutar acosar sobre $target,%0,$nicks,$xp } {5}
 #ALIAS {999} { ordenar oso:ejecutar aguantar sobre parar } {5}
 #ALIAS {99} { ordenar oso:ejecutar aguantar sobre aqui } {5}
 #READ lib/numpad_sigilar.tin
-#VAR {objetivo} {3250}
 #VARIABLE conc no
 #VARIABLE f10var {ac}
 #VARIABLE f11var {x}
@@ -46,13 +35,7 @@
 #VARIABLE f7var {88}
 #VARIABLE f8var {k}
 #VARIABLE f9var {at}
-#VARIABLE nicks {kobold,zeiring,zhiereng,gondolina}
 #VARIABLE planta {eskumla} 
-#VARIABLE target zeiring
-#ALIAS {wii} { blandir $rarm;blandir $larm} {5}
-#ALIAS {unwii} { envainar todo } {5}
 #ALIAS {wkk} {w -c hostil matar } {5}
-#VARIABLE {larm} {filo} 
-#VARIABLE {rarm} {fugaz}
 #ALIAS cgg {ordenar coger todo} {5}
 #ALIAS cgo {ordenar coger todo de cuerpos} {5}

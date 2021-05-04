@@ -1,0 +1,83 @@
+.ALIAS {cdev}
+{
+    #ses {s1} {rlmud.org} {23} 
+}
+
+
+.CONFIG {AUTO TAB} {5000}
+.CONFIG {BUFFER SIZE} {10000}
+.CONFIG {CHARSET} {UTF-8}
+.CONFIG {COLOR MODE} {TRUE}
+.CONFIG {COLOR PATCH} {OFF}
+.CONFIG {COMMAND COLOR} {\e[22;38;5;208m}
+.CONFIG {COMMAND ECHO} {ON}
+.CONFIG {CONNECT RETRY} {0.0}
+.CONFIG {CONVERT META} {OFF}
+.CONFIG {HISTORY SIZE} {1000}
+.CONFIG {LOG MODE} {HTML}
+.CONFIG {MOUSE} {OFF}
+.CONFIG {PACKET PATCH} {10.00}
+.CONFIG {RANDOM SEED} {169679571}
+.CONFIG {REPEAT CHAR} {!}
+.CONFIG {REPEAT ENTER} {OFF}
+.CONFIG {SCREEN READER} {OFF}
+.CONFIG {SCROLL LOCK} {ON}
+.CONFIG {SPEEDWALK} {OFF}
+.CONFIG {TAB WIDTH} {8}
+.CONFIG {TELNET} {ON}
+.CONFIG {TINTIN CHAR} {.}
+.CONFIG {VERBATIM} {OFF}
+.CONFIG {VERBATIM CHAR} {\}
+.CONFIG {VERBOSE} {OFF}
+.CONFIG {WORDWRAP} {OFF}
+
+.EVENT {PROGRAM START}
+{
+    #SYSTEM {clear};
+    #SHOWME <fac>@center{Reinos de Leyenda - http://reinosdeleyenda.org};
+    #SHOWME <fca>;
+    /motd;
+    #SHOWME <acf>Jugador?
+}
+
+.EVENT {SESSION CONNECTED}
+{
+    /log on;
+    #spl 0 3
+}
+
+
+.PATHDIR {d} {u} {32}
+.PATHDIR {e} {o} {2}
+.PATHDIR {n} {s} {1}
+.PATHDIR {ne} {so} {3}
+.PATHDIR {nw} {se} {9}
+.PATHDIR {s} {n} {4}
+.PATHDIR {se} {no} {6}
+.PATHDIR {sw} {ne} {12}
+.PATHDIR {u} {d} {16}
+.PATHDIR {w} {e} {8}
+
+.VARIABLE {chantLength} {45}
+.VARIABLE {exit} {o}
+.VARIABLE {exits}
+{
+    {1} {so}
+    {2} {e}
+    {3} {no}
+    {4} {o}
+}
+.VARIABLE {exitsLength} {4}
+.VARIABLE {fillerLength} {-54}
+.VARIABLE {logfile} {log/aeltas-2021-05-04.log}
+.VARIABLE {logging} {on}
+.VARIABLE {paddingLength} {-6}
+.VARIABLE {pj} {aeltas}
+.VARIABLE {result} {+35 xp}
+.VARIABLE {rlppColor} {<fca>}
+.VARIABLE {rlppPrefix} {<139>☥<099>}
+.VARIABLE {screenWidth} {0:00}
+.VARIABLE {sentenceLength} {6}
+.VARIABLE {spell_name} {espejismo}
+.VARIABLE {spell_nameLength} {9}
+

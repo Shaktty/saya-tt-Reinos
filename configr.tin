@@ -8,7 +8,7 @@
 #CONFIG  {CHARSET}       {UTF-8}
 #CONFIG  {COLOR PATCH}   {OFF}
 #CONFIG  {COMMAND COLOR} {<fca>}
-#CONFIG  {CONVERT META} {ON}
+#CONFIG  {CONVERT META} {OFF}
 #CONFIG  {COMMAND ECHO}  {ON}
 #CONFIG  {CONNECT RETRY} {0.2}
 #CONFIG  {HISTORY SIZE}  {100000}
@@ -51,8 +51,8 @@
 #EVENT {PROGRAM START} 
 {
   #SYSTEM {clear};
-  #SHOWME <fac>@center{Reinos de Leyenda - http://reinosdeleyenda.org};
   #SHOWME <fca>-<acf>Jugador?;
+  #SHOWME <fac>@center{Reinos de Leyenda - http://reinosdeleyenda.org};
 }
 #EVENT {RECEIVED INPUT} {#VAR pj %0;#UNEVENT {RECEIVED INPUT};cdev;s}
 #ALIAS cdev {#ssl {s1} {rlmud.org} {5022} {pjs/$pj} } {5}

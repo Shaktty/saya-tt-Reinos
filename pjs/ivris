@@ -1,40 +1,43 @@
-#VAR PJPVS {3501}
-#VAR PJPGS {600}
-#ALIAS {ppr} { prompt PV: $v/$PJPVS GP: $g/$PJPGS | $s |$j|$b|$a> } {5}
-#ALIAS {0} { esconderse arbol } {5}
-#ALIAS {coo} { ordenar coger todo de cuerpos } {5}
-#ALIAS {dd} { desmontar ancestral; esconderse ancestral } {5}
-#ALIAS {oo} { ordenar halcon:ejecutar picado sobre $target } {5}
-#ALIAS {toma} { poner %1 en ancestral } {5}
-#ALIAS {k} { sg; ac } {5}
-#ALIAS {ldenv} { desenvainar $larm } {5}
-#ALIAS {nov} { novato @(%^BOLD%^ORANGE%^Instructor Guardabosques%^RESET%^): %^GREEN%^%0%^RESET%^ } {5}
-#ALIAS {qo} { esconderse oso } {5}
-#ALIAS {qq} { ordenar $invoca:ejecutar esconderse } {5}
-#ALIAS {lenv} { envainar $larm } {5}
-#ALIAS {co} { ordenar coger todo } {5}
-#ALIAS {scll} { puntos -av $invoca } {5}
-#ALIAS {scl} { puntos -v $invoca } {5}
-#ALIAS {ac} { ordenar ejecutar acosar sobre $target } {5}
-#ALIAS {at} { ataquedoble $target,%0,$nicks,$xp } {5}
-#ALIAS {r} { concentracion } {5}
-#ALIAS {cemm} { chat @se %^ORANGE%^mece%^RESET%^ ágilmente de %^GREEN%^l%^ORANGE%^i%^BOLD%^a%^GREEN%^n%^RESET%^GREEN%^a %^RESET%^en %^GREEN%^l%^ORANGE%^i%^BOLD%^a%^GREEN%^n%^RESET%^GREEN%^a%^RESET%^ } {5}
-#ALIAS {cc} { chat ! } {5}
-#ALIAS {bemm} { bando @se %^ORANGE%^mece%^RESET%^ ágilmente de %^GREEN%^l%^ORANGE%^i%^BOLD%^a%^GREEN%^n%^RESET%^GREEN%^a %^RESET%^en %^GREEN%^l%^ORANGE%^i%^BOLD%^a%^GREEN%^n%^RESET%^GREEN%^a%^RESET%^ } {5}
-#ALIAS {bbb} { bando ! } {5}
-#ALIAS {z} { ataquedoble $target,%0,$nicks } {5}
-#ALIAS {x} { cazar $target,%0,$nicks } {5}
-#ALIAS {kk} { ordenar lobo:ejecutar dentellada sobre $target,$nicks,$xp,%0 } {5}
-#ALIAS {j} { cazar $target,%0,$nicks,$xp } {5}
-#ALIAS {gsombra2c} { gritar La %^GREEN%^Verde%^RESET%^ Sombra del Bosque %^BOLD%^BLACK%^Negro%^RED%^! } {5}
-#ALIAS {gdb} { gritar Guardabosques del Bosque %^BOLD%^BLACK%^Negro } {5}
-#ALIAS {gsombra2} { gritar La Verde Sombra del Bosque Negro! } {5}
-#ALIAS {gsombra3} { gritar La Maldita Sombra del Maldito Bosque!... } {5}
-#ALIAS {gsombra} { gritar Una Sombra Recorre Los Bosques... } {5}
-#ALIAS {88} { ordenar ejecutar picado sobre $target } {5}
-#ALIAS {00} { ordenar ejecutar dentellada sobre $target } {5}
-#ALIAS {8} { ordenar ejecutar acosar sobre $target,%0,$nicks,$xp } {5}
-#ALIAS {999} { ordenar oso:ejecutar aguantar sobre parar } {5}
-#ALIAS {99} { ordenar oso:ejecutar aguantar sobre aqui } {5}
-#PROMPT           {PV: %1/%2 GP: %3/%4 | %5 |%6|%7|%8}                {<afc>[..Pvs.<cfa>%1<119>/<cfa>%2<afc>..|.<fac>Gps.%3<149>/<fac>%4.<afc>.| <acf>$conc<afc> | <fca> Caza: <119>$target <cfa>|<129>~%6~<fca>~%7~<119>~%8~~<cfa>|<109>%5<afc> ]<190> \>}                                                                                                                                                            {3}
-#PROMPT           {^PV: %1/%2 GP: %3/%4 | %5 |%6|%7|%8}                 {<afc>[..Pvs.<cfa>%1<119>/<cfa>%2<afc>..|.<fac>Gps.%3<149>/<fac>%4.<afc>.| <acf>$conc<afc> | <fca> Caza: <119>$target <cfa>|<129>~%6~<fca>~%7~<119>~%8~~<cfa>|<109>%5<afc> ]<190> \>}                                                                                                                                                            {3}
+.VAR PJPVS {3501}
+.VAR PJPGS {600}
+.ALIAS {ppr} { prompt PV: $v/$PJPVS GP: $g/$PJPGS | $s |$j|$b|$a> } {5}
+.ALIAS {0} { esconderse arbol } {5}
+.ALIAS {coo} { ordenar coger todo de cuerpos } {5}
+.ALIAS {dd} { desmontar ancestral; esconderse ancestral } {5}
+.ALIAS {oo} { ordenar halcon:ejecutar picado sobre $target } {5}
+.ALIAS {toma} { poner %1 en ancestral } {5}
+.ALIAS {k} { sg; ac } {5}
+.ALIAS {ldenv} { desenvainar $larm } {5}
+.ALIAS {nov} { novato @(%^BOLD%^ORANGE%^Instructor Guardabosques%^RESET%^): %^GREEN%^%0%^RESET%^ } {5}
+.ALIAS {qo} { esconderse oso } {5}
+.ALIAS {qq} { ordenar $invoca:ejecutar esconderse } {5}
+.ALIAS {lenv} { envainar $larm } {5}
+.ALIAS {co} { ordenar coger todo } {5}
+.ALIAS {scll} { puntos -av $invoca } {5}
+.ALIAS {scl} { puntos -v $invoca } {5}
+.ALIAS {ac} { ordenar ejecutar acosar sobre $target } {5}
+.ALIAS {at} { ataquedoble $target,%0,$nicks,$xp } {5}
+.ALIAS {r} { concentracion } {5}
+.ALIAS {cemm} { chat @se %^ORANGE%^mece%^RESET%^ ágilmente de %^GREEN%^l%^ORANGE%^i%^BOLD%^a%^GREEN%^n%^RESET%^GREEN%^a %^RESET%^en %^GREEN%^l%^ORANGE%^i%^BOLD%^a%^GREEN%^n%^RESET%^GREEN%^a%^RESET%^ } {5}
+.ALIAS {cc} { chat ! } {5}
+.ALIAS {bemm} { bando @se %^ORANGE%^mece%^RESET%^ ágilmente de %^GREEN%^l%^ORANGE%^i%^BOLD%^a%^GREEN%^n%^RESET%^GREEN%^a %^RESET%^en %^GREEN%^l%^ORANGE%^i%^BOLD%^a%^GREEN%^n%^RESET%^GREEN%^a%^RESET%^ } {5}
+.ALIAS {bbb} { bando ! } {5}
+.ALIAS {z} { ataquedoble $target,%0,$nicks } {5}
+.ALIAS {x} { cazar $target,%0,$nicks } {5}
+.ALIAS {kk} { ordenar lobo:ejecutar dentellada sobre $target,$nicks,$xp,%0 } {5}
+.ALIAS {j} { cazar $target,%0,$nicks,$xp } {5}
+.ALIAS {gsombra2c} { gritar La %^GREEN%^Verde%^RESET%^ Sombra del Bosque %^BOLD%^BLACK%^Negro%^RED%^! } {5}
+.ALIAS {gdb} { gritar Guardabosques del Bosque %^BOLD%^BLACK%^Negro } {5}
+.ALIAS {gsombra2} { gritar La Verde Sombra del Bosque Negro! } {5}
+.ALIAS {gsombra} { gritar Una Sombra Recorre Los Bosques... } {5}
+.ALIAS {gsombra3} { gritar La Maldita Sombra del Maldito Bosque!... } {5}
+.ALIAS {88} { ordenar ejecutar picado sobre $target } {5}
+.ALIAS {00} { ordenar ejecutar dentellada sobre $target } {5}
+.ALIAS {8} { ordenar ejecutar acosar sobre $target,%0,$nicks,$xp } {5}
+.ALIAS {999} { ordenar oso:ejecutar aguantar sobre parar } {5}
+.ALIAS {99} { ordenar oso:ejecutar aguantar sobre aqui } {5}
+.PROMPT           {PV: %1/%2 GP: %3/%4 | %5 |%6|%7|%8}                {<afc>[..Pvs.<cfa>%1<119>/<cfa>%2<afc>..|.<fac>Gps.%3<149>/<fac>%4.<afc>.| <acf>$conc<afc> | <fca> Caza: <119>$target <cfa>|<129>~%6~<fca>~%7~<119>~%8~~<cfa>|<109>%5<afc> ]<190> \>}                                                                                                                                                            {3}
+.PROMPT           {^PV: %1/%2 GP: %3/%4 | %5 |%6|%7|%8}                 {<afc>[..Pvs.<cfa>%1<119>/<cfa>%2<afc>..|.<fac>Gps.%3<149>/<fac>%4.<afc>.| <acf>$conc<afc> | <fca> Caza: <119>$target <cfa>|<129>~%6~<fca>~%7~<119>~%8~~<cfa>|<109>%5<afc> ]<190> \>}                                                                                                                                                            {3}
+.VAR PJPVS {3501}
+.VAR PJPGS {600}
+.ALIAS            {fkeyshow}              {.showme {<148>[<129>F1<148>][<139>$f1var<148>]-<148>[<129>F2<148>][<139>$f2var<148>]-<148>[<129>F3<148>][<139>$f3var<148>]-<148>[<129>F4<148>][<139>$f4var<148>]<119>==<148>[<129>F5<148>][<139>$f5var<148>]-<148>[<129>F6<148>][<139>$f6var<148>]-<148>[<129>F7<148>][<139>$f7var<148>]-<148>[<129>F8<148>][<139>$f8var<148>]<119>==<148>[<129>F9<148>][<139>$f9var<148>]-<148>[<129>F10<148>][<139>$f10var<148>]-<148>[<129>F11<148>][<139>$f11var<148>]-<148>[<129>F12<148>][<139>$f12var<148>] } {2}}  {5}

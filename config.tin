@@ -2,7 +2,6 @@
 #NOP      Configuracion modular de Tintin++ para rlmud.org
 #NOP      (cc) 2016 Saya Faroth.  Mandadme un mudmail con cualquier duda.
 #NOP==========================================================================
-#READ pjs/password;
 #CONFIG  {AUTO TAB}      {5000};
 #CONFIG  {BUFFER SIZE}   {10000};
 #CONFIG  {CHARSET}       {UTF-8};
@@ -42,7 +41,7 @@
 #NOP #READ lib/tt_magia.tin;
 #NOP #READ lib/macros_fbar.tin;
 #READ lib/tt_tab.tin;
-#NOP #READ lib/gmcp.tin;
+#READ lib/gmcp.tin;
 #NOP #READ lib/inventory.tin;
 #READ lib/saving_throw.tin;
 #VAR {rlppPrefix} {<139>☥<099>};
@@ -52,8 +51,10 @@
   #SYSTEM {clear};
   #SHOWME <fac>@center{Reinos de Leyenda - http://reinosdeleyenda.org};
   #SHOWME <fca>;
+  /motd;
   #SHOWME <acf>Jugador?;
 }
+#ALIAS cdev {#ses {s1} {rlmud.org} {23} } {5};
+#NOP ALIAS cdev {#ses {s1} {rlmud.org} {23} {pjs/$pj} } {5};
 #EVENT {RECEIVED INPUT} {#VAR pj %0;#UNEVENT {RECEIVED INPUT};cdev;#spl 0 2;sc}
-#ALIAS cdev {#ses {s1} {rlmud.org} {23} {pjs/$pj} } {5};
 #EVENT {SESSION CONNECTED} {/log on;#spl 0 3}

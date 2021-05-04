@@ -57,4 +57,4 @@
 #HIGHLIGHT {^¡%* se resiste a tu hechizo de dominación!$}   {bold red} {5};
 #HIGHLIGHT {^%* quedan rígidos como un poste.$}             {bold green} {5};
 
-#class {RL_FUNCTION} {close};
+#class {RL_HIGHLIGHT} {close};
