@@ -1,0 +1,354 @@
+.ALIAS {DIM}
+{
+    dim
+}
+
+.ALIAS {EE}
+{
+    estado todos
+}
+
+.ALIAS {F}
+{
+    f
+}
+
+.ALIAS {FF}
+{
+    ff
+}
+
+.ALIAS {GCONF}
+{
+    gconf
+}
+
+.ALIAS {I}
+{
+    i
+}
+
+.ALIAS {L}
+{
+    ojear
+}
+
+.ALIAS {M}
+{
+    m
+}
+
+.ALIAS {b}
+{
+    buscar
+}
+
+.ALIAS {bb}
+{
+    bando @la %^BOLD%^MAGENTA%^M%^BLACK%^aga %^MAGENTA%^S%^RED%^alvaje%^BLACK%^: %^ORANGE%^%0%^RESET%^ 
+}
+
+.ALIAS {bbb}
+{
+    bando ! 
+}
+
+.ALIAS {cb}
+{
+    coger %1 de mochila
+}
+
+.ALIAS {cc}
+{
+    chat ! 
+}
+
+.ALIAS {cd}
+{
+    coger %0 de disco
+}
+
+.ALIAS {cg}
+{
+    coger todo de cuerpos;
+    enterrar
+}
+
+.ALIAS {cr}
+{
+    cerrar
+}
+
+.ALIAS {db}
+{
+    poner %1 en mochila
+}
+
+.ALIAS {denv}
+{
+    desenvainar
+}
+
+.ALIAS {en}
+{
+    enterrar
+}
+
+.ALIAS {env}
+{
+    envainar
+}
+
+.ALIAS {eq}
+{
+    equip
+}
+
+.ALIAS {ff}
+{
+    finger
+}
+
+.ALIAS {fff}
+{
+    finger tgt
+}
+
+.ALIAS {ga}
+{
+    golpear arbol
+}
+
+.ALIAS {gg}
+{
+    galopar %0
+}
+
+.ALIAS {ma}
+{
+    mirar arbol
+}
+
+.ALIAS {md}
+{
+    mirar disco
+}
+
+.ALIAS {mm}
+{
+    mirar mochila
+}
+
+.ALIAS {news}
+{
+    noticias
+}
+
+.ALIAS {of}
+{
+    envainar $pincho
+}
+
+.ALIAS {on}
+{
+    blandir $pincho
+}
+
+.ALIAS {op}
+{
+    abrir
+}
+
+.ALIAS {pasta}
+{
+    riquezas
+}
+
+.ALIAS {pkon}
+{
+    .log a /tmp/rlmud.html
+}
+
+.ALIAS {qs}
+{
+    coger todo
+}
+
+.ALIAS {rip}
+{
+    w m
+}
+
+.ALIAS {sae}
+{
+    salvar
+}
+
+.ALIAS {sc}
+{
+    puntos -xp
+}
+
+.ALIAS {scc}
+{
+    puntos -v
+}
+
+.ALIAS {soo}
+{
+    decir so
+}
+
+.ALIAS {sp}
+{
+    conversar
+}
+
+.ALIAS {subetu}
+{
+    envainar todo;
+    trepar arbol
+}
+
+.ALIAS {ta}
+{
+    trepar arbol
+}
+
+.ALIAS {tl}
+{
+    blandir hacha;
+    talar arbol
+}
+
+.ALIAS {tr}
+{
+    trivial %0
+}
+
+.ALIAS {unwi}
+{
+    envainar
+}
+
+.ALIAS {uuu}
+{
+    ciu ! 
+}
+
+.ALIAS {wc}
+{
+    w ciudadanos
+}
+
+.ALIAS {wcc}
+{
+    w ciudadanias
+}
+
+.ALIAS {we}
+{
+    w enemigos
+}
+
+.ALIAS {wg}
+{
+    w vagabundo
+}
+
+.ALIAS {wi}
+{
+    empuñar
+}
+
+.ALIAS {wm}
+{
+    w mor_groddur
+}
+
+
+.CONFIG {AUTO TAB} {5000}
+.CONFIG {BUFFER SIZE} {100000}
+.CONFIG {CHARSET} {UTF-8}
+.CONFIG {COLOR MODE} {TRUE}
+.CONFIG {COLOR PATCH} {OFF}
+.CONFIG {COMMAND COLOR} {\e[0;37m}
+.CONFIG {COMMAND ECHO} {ON}
+.CONFIG {CONNECT RETRY} {20.0}
+.CONFIG {HISTORY SIZE} {1000}
+.CONFIG {LOG MODE} {HTML}
+.CONFIG {MOUSE} {ON}
+.CONFIG {PACKET PATCH} {0.00}
+.CONFIG {RANDOM SEED} {3382594212}
+.CONFIG {REPEAT CHAR} {!}
+.CONFIG {REPEAT ENTER} {OFF}
+.CONFIG {SCREEN READER} {OFF}
+.CONFIG {SCROLL LOCK} {ON}
+.CONFIG {SPEEDWALK} {OFF}
+.CONFIG {TAB WIDTH} {8}
+.CONFIG {TELNET} {ON}
+.CONFIG {TINTIN CHAR} {.}
+.CONFIG {VERBATIM} {OFF}
+.CONFIG {VERBATIM CHAR} {\}
+.CONFIG {VERBOSE} {OFF}
+.CONFIG {WORDWRAP} {ON}
+
+.HIGHLIGHT {%0 %1 te golpea sin producir %2} {green} {5}
+.HIGHLIGHT {%0 Paras el ataque de %1} {yellow} {5}
+.HIGHLIGHT {%1 se %2 de ti} {cyan} {5}
+.HIGHLIGHT {Aprendes de esta actividad y ganas 1 punto de oficio.} {green} {5}
+.HIGHLIGHT {Asno} {yellow} {5}
+.HIGHLIGHT {Eirea} {green} {5}
+.HIGHLIGHT {Limbo} {red} {5}
+.HIGHLIGHT {No estas suficientemente calmado.} {red} {5}
+.HIGHLIGHT {esquivas} {green} {5}
+.HIGHLIGHT {¡Tus imágenes se desvanecen!} {bold,magenta} {5}
+
+.PATHDIR {ab} {ar} {0}
+.PATHDIR {ar} {ab} {0}
+.PATHDIR {d} {u} {32}
+.PATHDIR {de} {fu} {0}
+.PATHDIR {e} {o} {2}
+.PATHDIR {fu} {de} {0}
+.PATHDIR {n} {s} {1}
+.PATHDIR {ne} {sw} {3}
+.PATHDIR {nw} {se} {9}
+.PATHDIR {o} {e} {0}
+.PATHDIR {s} {n} {4}
+.PATHDIR {se} {sudeste} {0}
+.PATHDIR {so} {ne} {0}
+.PATHDIR {sw} {ne} {12}
+.PATHDIR {u} {d} {16}
+.PATHDIR {w} {e} {8}
+
+.TAB {desmontar}
+.TAB {estatus}
+.TAB {experiencia}
+.TAB {gorbak}
+.TAB {habilidades}
+.TAB {hechizos}
+.TAB {iverlan}
+.TAB {ketuo}
+.TAB {pasillo}
+.TAB {peleas}
+.TAB {picar}
+.TAB {reputacion}
+.TAB {sizzla}
+.TAB {sonreir}
+.TAB {thraky}
+.TAB {tsongor}
+
+.VARIABLE {f10var} {x}
+.VARIABLE {f11var} {r}
+.VARIABLE {f12var} {po}
+.VARIABLE {f1var} {te}
+.VARIABLE {f2var} {bf}
+.VARIABLE {f3var} {man}
+.VARIABLE {f4var} {gr}
+.VARIABLE {f5var} {z}
+.VARIABLE {f6var} {subetu}
+.VARIABLE {f7var} {esp}
+.VARIABLE {f8var} {ee}
+.VARIABLE {f9var} {par}
+.VARIABLE {pincho} {baculo}
+

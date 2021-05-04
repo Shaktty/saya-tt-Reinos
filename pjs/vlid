@@ -236,6 +236,7 @@
 #ALIAS {j} { apuñalar %0,$target,$nicks,$xp } {5}
 #ALIAS {x} { apuñalar %0,$target,$nicks } {5}
 #ALIAS {jj} { oportunidad %0,$target,$nicks,$xp } {5}
+#ALIAS {sal} {desinvocar;salir} {5}
 #VARIABLE         {f8var}  {44}
 #VARIABLE         {f9var}  {55}
 #VARIABLE         {goods}  {mochilas,bolsas}

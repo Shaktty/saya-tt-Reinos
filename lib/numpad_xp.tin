@@ -1,0 +1,19 @@
+#CLASS {tt_numpad} {kill};
+#CLASS {tt_numpad} {open};
+
+#MACRO {\eOl} { jj };
+#MACRO {\eOm} { j };
+#MACRO {\eOn} { estado todos };
+#MACRO {\eOo} { abajo };
+#MACRO {\eOp} { ojear };
+#MACRO {\eOq} { sudoeste };
+#MACRO {\eOr} { sur };
+#MACRO {\eOs} { sudeste };
+#MACRO {\eOt} { oeste };
+#MACRO {\eOu} { k };
+#MACRO {\eOv} { este };
+#MACRO {\eOw} { noroeste };
+#MACRO {\eOx} { norte };
+#MACRO {\eOy} { noreste };
+
+#CLASS {tt_numpad} {close};

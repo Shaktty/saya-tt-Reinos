@@ -40,7 +40,6 @@
         #NOP falta poderosa negacion de la esencia;
         #CASE {"eirea colourus sphyre"}     {#VAR spell_name esfera prismática};
         #CASE {"chatec resit ridlum"}       {#VAR spell_name aura elemental};
-        
         #NOP =============== Adivinacion ===============;
         #CASE {"magnus revelat"}                {#VAR spell_name revelar secretos};
         #CASE {"ethos deus beleah"}             {#VAR spell_name conocer alineamiento};
@@ -63,8 +62,7 @@
         #CASE {"capatis mea longa visit est"}   {#VAR spell_name busqueda espontánea};
         #CASE {"Malaekorum korum rum"}          {#VAR spell_name busqueda instantánea};
         #CASE {"Oculis rabidus"}                {#VAR spell_name ojo vago de Khadaon};
-        #CASE {"ein aluin ulu zuel dos"}        {#VAR spell_name localizar personas}
-        
+        #CASE {"ein aluin ulu zuel dos"}        {#VAR spell_name localizar personas};
         #NOP =============== Alteracion ===============;
         #CASE {"groez us marj"}             {#VAR spell_name agrandar};
         #CASE {"temporis ondele areba"}     {#VAR spell_name apresuramiento};
@@ -196,7 +194,6 @@
         #CASE {"magius is iseio"}     {#VAR spell_name detectar magia};
         #CASE {"magius podeiles aneum mane"}     {#VAR spell_name leer magia};
         #CASE {"vamos que nos vamos"}     {#VAR spell_name portal};
-#NOP Esferas ->
         #NOP =============== Adivinacion ===============;
         #CASE {"magius ethos salut"}    {#VAR spell_name detectar enfermedad};
         #CASE {"ethos unkalid"}         {#VAR spell_name detectar hechizo};

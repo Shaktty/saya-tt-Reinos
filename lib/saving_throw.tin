@@ -7,7 +7,7 @@
  * Better rendering of saving throws                                                                                  *
  **********************************************************************************************************************/
 
-#/register_module {RL_SAVING_THROW} {Tiradas de salvación} {Muestra información más clara en las tiradas de salvación.};
+/register_module {RL_SAVING_THROW} {Tiradas de salvación} {Muestra información más clara en las tiradas de salvación.};
 
 /**********************************************************************************************************************
  * Functions                                                                                                          *

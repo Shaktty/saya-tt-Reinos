@@ -1,0 +1,413 @@
+.ACTION {[Daliis orbita a Eirea]}
+{
+	pp;
+	.split
+}
+{~}
+/****
+ TAKING OUT
+****OUT
+
+.ACTION {%1 %2l enemig%3}
+{
+	.variable nicks $nicks,%1
+}
+{5}
+
+.ACTION {%1 %2l exiliad%3}
+{
+	.variable nicks $nicks,%1
+}
+{5}
+
+.ACTION {%1 -> GUERRA}
+{
+	.variable nicks %1,$nicks
+}
+{5}
+
+.ACTION {%1 -> HOSTILIDAD}
+{
+	.variable nicks $nicks,%0
+}
+{5}
+*****/
+.ALIAS {DIM}
+{
+	dim
+}
+{5}
+
+.ALIAS {EE}
+{
+	estado todos
+}
+{5}
+
+.ALIAS {F}
+{
+	f
+}
+{5}
+
+.ALIAS {FF}
+{
+	ff
+}
+{5}
+
+.ALIAS {GCONF}
+{
+	gconf
+}
+{5}
+
+.ALIAS {I}
+{
+	i
+}
+{5}
+
+.ALIAS {L}
+{
+	ojear
+}
+{5}
+
+.ALIAS {M}
+{
+	m
+}
+{5}
+
+.ALIAS {b}
+{
+	buscar
+}
+{5}
+
+.ALIAS {caza}
+{
+	nick tgt %0
+}
+{5}
+
+.ALIAS {cb}
+{
+	coger %1 de mochila
+}
+{5}
+
+.ALIAS {cc}
+{
+	chat !
+}
+{5}
+
+.ALIAS {cd}
+{
+	coger %0 de disco
+}
+{5}
+
+.ALIAS {cg}
+{
+	coger todo de cuerpos;
+	enterrar
+}
+{5}
+
+.ALIAS {cnick}
+{
+	.variable nicks %0,$nicks
+}
+{5}
+
+.ALIAS {con}
+
+{
+	considerar $target,%0,$nicks,$xp;
+	considerar %0:tgt,x
+}
+{5}
+.ALIAS {cr}
+{
+	cerrar
+}
+{5}
+.ALIAS {db}
+{
+	poner %1 en mochila
+}
+{5}
+.ALIAS {en}
+{
+	enterrar
+}
+{5}
+
+.ALIAS {eq}
+{
+	equip
+}
+{5}
+
+.ALIAS {ff}
+{
+	finger
+}
+{5}
+
+.ALIAS {fff}
+{
+	finger $target:tgt;
+	finger tgt
+}
+{5}
+
+.ALIAS {ga}
+{
+	golpear arbol
+}
+{5}
+
+.ALIAS {gg}
+{
+	galopar %0
+}
+{5}
+
+.ALIAS {m}
+{
+	mirar
+}
+{5}
+
+.ALIAS {ma}
+{
+	mirar arbol
+}
+{5}
+
+.ALIAS {mapa}
+{
+	.loadpath
+}
+{5}
+
+.ALIAS {md}
+{
+	mirar disco
+}
+{5}
+
+
+.ALIAS {mm}
+{
+	mirar mochila
+}
+{5}
+
+.ALIAS {mx}
+{
+	mirar $xp
+}
+{5}
+
+.ALIAS {news}
+{
+	noticias
+}
+{5}
+
+.ALIAS {op}
+{
+	abrir
+}
+{5}
+
+.ALIAS {pasta}
+{
+	riquezas
+}
+{5}
+
+.ALIAS {pkon}
+{
+	.log a /tmp/rlmud.html
+}
+{5}
+
+.ALIAS {qs}
+{
+	coger todo
+}
+{5}
+
+.ALIAS {rip}
+{
+	w m
+}
+{5}
+
+.ALIAS {sae}
+{
+	salvar
+}
+{5}
+
+.ALIAS {sc}
+{
+	puntos -xp
+}
+{5}
+
+.ALIAS {scc}
+{
+	puntos -v
+}
+{5}
+
+.ALIAS {sg}
+{
+	seguir $target
+	seguir tgt
+}
+{5}
+
+.ALIAS {soo}
+{
+	decir so
+}
+{5}
+
+.ALIAS {sp}
+{
+	conversar
+}
+{5}
+
+
+.ALIAS {subetu}
+{
+	envainar $arma;
+	trepar arbol
+}
+{5}
+
+.ALIAS {ta}
+{
+	trepar arbol
+}
+{5}
+
+.ALIAS {tr}
+{
+	trivial %0
+}
+{5}
+
+.ALIAS {unwi}
+{
+	desempuñar
+}
+{5}
+
+.ALIAS {uuu}
+{
+	ciu !
+}
+{5}
+
+.ALIAS {wc}
+{
+	w ciudadanos
+}
+{5}
+
+.ALIAS {wcc}
+{
+	w ciudadanias
+}
+{5}
+
+.ALIAS {we}
+{
+	w enemigos
+}
+{5}
+
+.ALIAS {wg}
+{
+	w vagabundo
+}
+{5}
+
+.ALIAS {wi}
+{
+	empuñar
+}
+{5}
+
+.ALIAS {wm}
+{
+	w mor_groddur
+}
+{5}
+
+.CONFIG           {BUFFER SIZE}  {40000}
+.CONFIG           {CONNECT RETRY}  {20}
+.CONFIG           {HISTORY SIZE}  {1000}
+.CONFIG           {LOG}  {HTML}
+.CONFIG           {PACKET PATCH}  {0}
+.CONFIG           {REPEAT CHAR}  {!}
+.CONFIG           {REPEAT ENTER}  {OFF}
+.CONFIG           {SCROLL LOCK}  {ON}
+.CONFIG           {SPEEDWALK}  {OFF}
+.CONFIG           {TINTIN CHAR}  {.}
+.CONFIG           {VERBATIM}  {OFF}
+.CONFIG           {VERBATIM CHAR}  {\}
+.CONFIG           {VERBOSE}  {OFF}
+.CONFIG           {WORDWRAP}  {OFF}
+.HIGHLIGHT        {%0 %1 te golpea sin producir %2}             {green}  {5}
+.HIGHLIGHT        {%0 Paras el ataque de %1}      {yellow}  {5}
+.HIGHLIGHT        {%1 se %2 de ti}  {cyan}  {5}
+.HIGHLIGHT        {Aprendes de esta actividad y ganas 1 punto de oficio.}                                   {green}  {5}
+.HIGHLIGHT        {Asno}  {yellow}  {5}
+.HIGHLIGHT        {Eirea}  {green}  {5}
+.HIGHLIGHT        {Limbo}  {red}  {5}
+.HIGHLIGHT        {No estas suficientemente calmado.}               {red}  {5}
+.HIGHLIGHT        {esquivas}  {green}  {5}
+.HIGHLIGHT        {¡Tus imágenes se desvanecen!}          {bold,magenta}  {5}
+.PATHDIR          {ab}  {ar}  {0}
+.PATHDIR          {ar}  {ab}  {0}
+.PATHDIR          {d}  {u}  {32}
+.PATHDIR          {de}  {fu}  {0}
+.PATHDIR          {e}  {o}  {2}
+.PATHDIR          {fu}  {de}  {0}
+.PATHDIR          {n}  {s}  {1}
+.PATHDIR          {ne}  {sw}  {3}
+.PATHDIR          {nw}  {se}  {9}
+.PATHDIR          {o}  {e}  {0}
+.PATHDIR          {s}  {n}  {4}
+.PATHDIR          {se}  {sudeste}  {0}
+.PATHDIR          {so}  {ne}  {0}
+.PATHDIR          {sw}  {ne}  {12}
+.PATHDIR          {u}  {d}  {16}
+.PATHDIR          {w}  {e}  {8}
+.TAB              {desmontar}
+.TAB              {estatus}
+.TAB              {experiencia}
+.TAB              {gorbak}
+.TAB              {habilidades}
+.TAB              {hechizos}
+.TAB              {iverlan}
+.TAB              {ketuo}
+.TAB              {pasillo}
+.TAB              {peleas}
+.TAB              {picar}
+.TAB              {reputacion}
+.TAB              {sizzla}
+.TAB              {sonreir}
+.TAB              {thraky}
+.TAB              {tsongor}

@@ -7,7 +7,7 @@
  * GMCP support module.                                                                                               *
  **********************************************************************************************************************/
 
-#NOP /register_module {RL_GMCP} {GMCP} {Soport para GMCP.};
+/register_module {RL_GMCP} {GMCP} {Soport para GMCP.};
 
 /**********************************************************************************************************************
  * Variables                                                                                                          *
@@ -46,19 +46,13 @@
 };
 
 #EVENT {IAC SB GMCP Char.Ficha IAC SE} {
-
-    #NOP TODO: Make events here;
     #ACTION {
       #VAR social { {1} {Chat} {2} {Keel} {3} {Solitarios} {4} {Buenos} {5} {Anarquicos} {6} {Renegado{|s} };
       #for (i,0,social.length(),) do
       {
-        #high {#showme $social {$i} }  
+        #high {#showme $social {$i} };
          i=i+1111;
       };
-  }
-}
-{
-#SHOWME
     #IF {$rl_gmcp[debug] == 1} {
         /message {Received GMCP Char.Ficha event};
     };
@@ -126,7 +120,7 @@
 
 #EVENT {IAC SB GMCP Comm.MensajeCanal IAC SE} {
     #IF {$rl_gmcp[debug] == 1} {
-        /message {Received GMCP Comm.MensajeCanal event};        
+        /message {Received GMCP Comm.MensajeCanal event};
         #SYS {echo "[%1]" >> log/chats.log} };
     };
     #VAR {gmcp_data_channel_data} {%0};

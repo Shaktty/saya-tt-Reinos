@@ -47,7 +47,7 @@
 #HIGHLIGHT {^La piel de %* vuelve a su estado normal.$} {bold green} {5};
 #HIGHLIGHT {^{¡|}%* pierde la concentraci{ó|o}n!.$}     {bold green} {5};
 #HIGHLIGHT {^{¡|}%* pierde la concentraci{ó|o}n!.$}     {bold green} {5};
-#HIGHILIGHT {¡%1 pierde la concentración!$} {bold,green} {5};
+#HIGHLIGHT {¡%1 pierde la concentración!$} {bold,green} {5};
 
 
 /*

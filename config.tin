@@ -2,62 +2,51 @@
 #NOP      Configuracion modular de Tintin++ para rlmud.org
 #NOP      (cc) 2016 Saya Faroth.  Mandadme un mudmail con cualquier duda.
 #NOP==========================================================================
-
 #READ pjs/password;
-
-#NOP--------------------------------------------------------------------------
-#NOP    Configuracion basica del cliente
-#NOP--------------------------------------------------------------------------
-#CONFIG  {256 COLORS}    {ON}
-#CONFIG  {AUTO TAB}      {5000}
-#CONFIG  {BUFFER SIZE}   {40000}
-#CONFIG  {CHARSET}       {UTF-8}
-#CONFIG  {COLOR PATCH}   {OFF}
-#CONFIG  {COMMAND COLOR} {<fca>}
-#CONFIG  {COMMAND ECHO}  {ON}
-#CONFIG  {CONNECT RETRY} {0.2}
-#CONFIG  {HISTORY SIZE}  {100000}
-#CONFIG  {LOG}           {RAW}
-#CONFIG  {PACKET PATCH}  {10}
-#CONFIG  {REPEAT CHAR}   {!}
-#CONFIG  {REPEAT ENTER}  {OFF}
-#CONFIG  {SCROLL LOCK}   {ON}
-#CONFIG  {SPEEDWALK}     {OFF}
-#CONFIG  {TINTIN CHAR}   {#}
-#CONFIG  {VERBATIM}      {OFF}
-#CONFIG  {VERBATIM CHAR} {\}
-#CONFIG  {VERBOSE}       {OFF}
-#CONFIG  {WORDWRAP}      {OFF}
-
-#MESSAGE ALL OFF
-
-#read lib/numpad.tin
-#read lib/pathdir.tin
-#read lib/format.tin
-#read lib/function.tin
-#read lib/highlight.tin
-#read lib/lang.tin
-#read lib/pathdir.tin
-#read lib/pathwalker.tin
-#read lib/powerline.tin
-#read lib/spells.tin
-#read lib/substitute.tin
-#read lib/alias.tin
-#read lib/tt_actions.tin
-#read lib/tt_highs.tin
-#read lib/tt_subs.tin
-#read lib/tt_alias.tin
-#NOP      -- Este lo leemos desde el archivo del pj que formule mejor
-#NOP #read lib/tt_magia.tin
-#read lib/macros_fbar.tin
-#read lib/tt_tab.tin
-#NOP nuevos modulos... testear
-#read lib/gmcp.tin
-#read lib/inventory.tin
-#read lib/saving_throw.tin
+#CONFIG  {AUTO TAB}      {5000};
+#CONFIG  {BUFFER SIZE}   {10000};
+#CONFIG  {CHARSET}       {UTF-8};
+#CONFIG  {COLOR PATCH}   {OFF};
+#CONFIG  {COMMAND COLOR} {<fca>};
+#CONFIG  {COMMAND ECHO}  {ON};
+#CONFIG  {CONNECT RETRY} {0.2};
+#CONFIG  {HISTORY SIZE}  {100000};
+#CONFIG  {LOG}           {HTML};
+#CONFIG  {PACKET PATCH}  {10};
+#CONFIG  {REPEAT CHAR}   {!};
+#CONFIG  {REPEAT ENTER}  {OFF};
+#CONFIG  {CONVERT META}  {OFF};
+#CONFIG  {SCROLL LOCK}   {ON};
+#CONFIG  {SPEEDWALK}     {OFF};
+#CONFIG  {TINTIN CHAR}   {#};
+#CONFIG  {VERBATIM}      {OFF};
+#CONFIG  {VERBATIM CHAR} {\};
+#CONFIG  {VERBOSE}       {OFF};
+#CONFIG  {WORDWRAP}      {OFF};
+#READ lib/numpad.tin;
+#READ lib/pathdir.tin;
+#READ lib/format.tin;
+#READ lib/function.tin;
+#READ lib/highlight.tin;
+#READ lib/lang.tin;
+#READ lib/pathdir.tin;
+#READ lib/pathwalker.tin;
+#NOP #READ lib/powerline.tin;
+#READ lib/spells.tin;
+#READ lib/substitute.tin;
+#READ lib/alias.tin;
+#READ lib/tt_actions.tin;
+#READ lib/tt_highs.tin;
+#READ lib/tt_subs.tin;
+#READ lib/tt_alias.tin;
+#NOP #READ lib/tt_magia.tin;
+#NOP #READ lib/macros_fbar.tin;
+#READ lib/tt_tab.tin;
+#NOP #READ lib/gmcp.tin;
+#NOP #READ lib/inventory.tin;
+#READ lib/saving_throw.tin;
 #VAR {rlppPrefix} {<139>☥<099>};
 #VAR {rlppColor} {<fca>};
-
 #EVENT {PROGRAM START} 
 {
   #SYSTEM {clear};
@@ -65,6 +54,6 @@
   #SHOWME <fca>;
   #SHOWME <acf>Jugador?;
 }
-#EVENT {RECEIVED INPUT} {#VAR pj %0;#UNEVENT {RECEIVED INPUT};cdev}
-#ALIAS cdev {#ses {s1} {62.210.99.120} {23} {pjs/$pj} } {5}
-#EVENT {SESSION CONNECTED} {$pj;$passwd;/log on}
+#EVENT {RECEIVED INPUT} {#VAR pj %0;#UNEVENT {RECEIVED INPUT};cdev;#spl 0 2;sc}
+#ALIAS cdev {#ses {s1} {rlmud.org} {23} {pjs/$pj} } {5};
+#EVENT {SESSION CONNECTED} {/log on;#spl 0 3}

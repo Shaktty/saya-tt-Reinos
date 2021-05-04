@@ -41,7 +41,7 @@
         #CLASS {RL_PATHWALKER_IMPL} {kill};
     };
     @message{Sigilando rumbo %1...};
-    %1;
+    sigilar %1;
     #CLASS {RL_PATHWALKER_IMPL} {close};
 }
 

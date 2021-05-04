@@ -96,7 +96,7 @@
             #REGEX {%3} {^{[0-9]+}$} {} {
                 /message {La configuración de %2 no acepta el valor %3. Prueba con un valor numérico.};
                 #RETURN;
-            }
+            };
         };
     };
     #VAR {rl_modules[%1][settings][%2][value]} {%3};
@@ -162,7 +162,7 @@
     #IF {"%1" == "" || "%2" == "" || "%3" == "" || "%5" == "" || "%6" == ""} {
         /message {Sintáxis:\n  <178>/add_module_setting {RL_SHAPE} {fill} {enum} {solid;star} {solid} {Fills shape bars with solid blocks or stars}};
         #RETURN;
-    }
+    };
     #IF {"$rl_modules[%1]" == ""} {
         /message {El módulo %1 no existe.};
         #RETURN;
@@ -195,7 +195,7 @@
     #IF {"%1" == ""} {
         /message {Sintáxis:\n  <178>/add_module_event_listener {event}};
         #RETURN;
-    }
+    };
     #IF {"$rl_modules[%1]" == ""} {
         /message {El módulo %1 no existe.};
         #RETURN;
@@ -212,7 +212,7 @@
     #IF {"%1" == ""} {
         /message {Sintáxis:\n  <178>/trigger_event {event}};
         #RETURN;
-    }
+    };
     #FOREACH {$rl_modules[]} {module} {
         #IF {"$rl_modules[$module][listeners]" == ""} {
             #CONTINUE;
@@ -220,7 +220,7 @@
         #LIST {rl_modules[$module][listeners]} {find} {%1} {event_index};
         #IF {"$event_index" != "0"} {
             /event_${module}_%1 %2 %3 %4 %5 %6 %7 %8 %9 %10;
-        }
+        };
         #UNVAR {event_index};
     };
 };

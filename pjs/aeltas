@@ -1,4 +1,4 @@
-#READ lib/tt_magia.tin
+#NOP #READ lib/tt_magia.tin
 #ALIAS            {pi} {db volcanico;cb petreo;eq;piel} {5}
 #VARIABLE         {f10var}  {x}
 #VARIABLE         {f11var}  {r}
@@ -14,13 +14,10 @@
 #VARIABLE         {f9var}  {par}
 #ALIAS            {denv} {desenvainar} {5}
 #ALIAS            {env} {envainar} {5}
-#VARIABLE  {pincho} {garrote} 
+#VARIABLE  {pincho} {baculo}
 #ALIAS            {on} {blandir $pincho} {5}
 #ALIAS            {of} {envainar $pincho} {5}
 #ALIAS {bbb} { bando ! } {5}
 #ALIAS {bb} { bando @la %^BOLD%^MAGENTA%^M%^BLACK%^aga %^MAGENTA%^S%^RED%^alvaje%^BLACK%^: %^ORANGE%^%0%^RESET%^ } {5}
 #ALIAS {cc} { chat ! } {5}
 #ALIAS {uuu} { ciu ! } {5}
-#VARIABLE {xp} {cobradores,lobos,zombis,entes,vrocs,espiritus,sacerdotes,,novicios,acolitos,peregrinos,soldados,aguasnegras,diablillos,animales}
-#VARIABLE {nicks} {zhiereng,sharz,daakeh,wrunk,syllops,vuurgh,tahurtz,zeiring,thyaser,gurlen,aldamare,zethrus,gondolina,tritux}
-#VARIABLE {target} {zhiereng}
