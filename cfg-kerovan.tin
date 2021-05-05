@@ -69,7 +69,6 @@
 .CONFIG {VERBATIM CHAR} {\}
 .CONFIG {VERBOSE} {OFF}
 .CONFIG {WORDWRAP} {ON}
-
 .HIGHLIGHT {%0 %1 te golpea sin producir %2} {green} {5}
 .HIGHLIGHT {%0 Paras el ataque de %1} {yellow} {5}
 .HIGHLIGHT {%1 se %2 de ti} {cyan} {5}
@@ -80,8 +79,6 @@
 .HIGHLIGHT {No estas suficientemente calmado.} {red} {5}
 .HIGHLIGHT {esquivas} {green} {5}
 .HIGHLIGHT {¡Tus imágenes se desvanecen!} {bold,magenta} {5}
-.HIGHLIGHT {Tus imágenes se desvanecen!} {bold,magenta} {5}
-
 .PATHDIR {ab} {ar} {0}
 .PATHDIR {ar} {ab} {0}
 .PATHDIR {d} {u} {32}
@@ -98,7 +95,6 @@
 .PATHDIR {sw} {ne} {12}
 .PATHDIR {u} {d} {16}
 .PATHDIR {w} {e} {8}
-
 .TAB {desmontar}
 .TAB {estatus}
 .TAB {experiencia}
@@ -115,7 +111,6 @@
 .TAB {sonreir}
 .TAB {thraky}
 .TAB {tsongor}
-
 .NOP .READ lib/tt_magia.tin
 .HIGHLIGHT        {bola de fuego}  {bold,reverse,yellow}  {5}
 .HIGHLIGHT        {bola encadenada de fuego}      {bold,reverse,yellow}  {5}
@@ -154,17 +149,12 @@
 .VAR {f10var} {ee}
 .VAR {f11var} {to}
 .VAR {f12var} {x}
-.alias {qq} {esconderse sjoisan}
+.alias {qq} {esconderse skerovan}
 .ALIAS {bbb} { bando ! } {5}
 .ALIAS {1} {esconderse} {5}
-.ALIAS {bb} { bando @%^BOLD%^BLACK%^Ignis (%^MAGENTA%^M-L%^BLACK%^)%^RED%^: %^B_BLUE%^BOLD%^ORANGE%^ %0 %^RESET%^ } {5}
 .ALIAS {cc} { chat ! } {5}
-.ALIAS {ch0} { chat @deja de %^ORANGE%^divisar %^WHITE%^el %^WHITE%^h%^BOLD%^o%^BLUE%^r%^RESET%^BLUE%^i%^ORANGE%^zo%^BOLD%^n%^WHITE%^t%^RESET%^e, y dice: %^GREEN%^%0%^RESET%^ } {5}
 .ALIAS {conj} { #VARIABLE encan %0; #showme El tipo de conjuro que tienes es $encan }
-.ALIAS {c} { chat @%^BOLD%^BLACK%^Ignis %^RESET%^MAGENTA%^pronuncia%^RESET%^ algo de entre las %^BLACK%^BOLD%^S%^RESET%^ombras y dice: %^BOLD%^MAGENTA%^%0%^RESET%^ } {5}
 .ALIAS {dsirv} { decir sirviente te ordeno: %0 } {5}
-.ALIAS {fa} { familia @la %^RED%^M%^BOLD%^BLACK%^atrona %^WHITE%^: %^MAGENTA%^%0%^RESET%^ } {5}
-.ALIAS {gignis} { gritar Casa Ignis! } {5}
 .NOP .ALIAS {in} { indicar $target } {5}
 .NOP .ALIAS {jj} { oportunidad %0,$target,$nicks,$xp } {5}
 .NOP ALIAS {j} { apuÃ±alar %0,$target,$nicks,$xp } {5}
@@ -177,10 +167,3 @@
 .ALIAS {rt} { robar monedas a $target } {5}
 .ALIAS {rutic} { tell %1 ?Jeje!, Muchas gracias por tu $goody %1, lo necesitaba } {5}
 .ALIAS {uuu} { ciu ! } {5}
-.ALIAS {uu} { ciu @%^BOLD%^BLACK%^Ignis (%^MAGENTA%^M-L%^BLACK%^)%^RED%^: %^B_MAGENTA%^WHITE%^ %0 %^RESET%^ } {5}
-.NOP #ALIAS {x} { apuÃ±alar $target,%0,$nicks } {5}
-.NOP #ALIAS {Ã±} { arrojar $lanza a $target } {5}
-.ALIAS {ppr} { prompt PV: $v/2501 GP: $g/682 | $e | $p | $s |$j|$b|$a>} {5}
-.PROMPT {PV: %1/%2 GP: %3/%4 | %5 | %6 | %7 |%8|%9|%10>}   {<afc>[..Pvs.<cfa>%1<119>/<cfa>%2<afc>..|.<fac>Gps.%3<149>/<fac>%4.<afc>.| <acf>Imagenes: %5<cfa> | <fca>Pieles: %6<cfa> |<fca> Caza: <119>$target <cfa>|<129>~%8~<fca>~%9~<119>~%10~~<cfa>|<109>%7<afc> ]<190> \>} {3}
-.PROMPT {^PV: %1/%2 GP: %3/%4 | %5 | %6 | %7 |%8|%9|%10>}  {<afc>[..Pvs.<cfa>%1<119>/<cfa>%2<afc>..|.<fac>Gps.%3<149>/<fac>%4.<afc>.| <acf>Imagenes: %5<cfa> | <fca>Pieles: %6<cfa> |<fca> Caza: <119>$target <cfa>|<129>~%8~<fca>~%9~<119>~%10~~<cfa>|<109>%7<afc> ]<190> \>} {3}
-.ALIAS ib {interbando @%^BOLD%^BLACK%^Ignis (%^MAGENTA%^M-L%^BLACK%^)%^RED%^: %^B_BLUE%^BOLD%^ORANGE%^ %0 %^RESET%^ } {5}
