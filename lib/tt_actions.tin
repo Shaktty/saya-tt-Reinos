@@ -27,14 +27,12 @@
 #ACTION {^llamada lobo} { #variable invoca lobo};
 #ACTION {Bienvenido}
 {
-  #showme {@fkeyshow{}} {-2};
-  #SHOWME {@powerline{}} {-1};
+  #SHOWME {@powerline{}} {-2};
   #spl 0 3;
 };
 #ALIAS {ppr}
 {
-  #showme {@fkeyshow{}} {2};
-  #SHOWME {@powerline{}} {1};
+  #SHOWME {@powerline{}} {-2};
   #spl 0 3;
 };
 #ACTION {Nombre corto x cambiado de %1 a %2} {#va nicks %2;#SHOWME <FCA>Nicks cambiados a:<caf> $nicks<099>};

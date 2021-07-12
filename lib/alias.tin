@@ -29,8 +29,9 @@
     #SHOWME {<fac>/log <on|off> <acd>Activa o desactiva el logeado. Los logs se guardan en el directorio /logs.<099>};
     #SHOWME {<fac>/logc <on|off> <acd>Activa una ventana nueva con los eventos/subs/actions de tell/chat/canales Los logs /log/i*_chats.log<099>};
     #SHOWME {<fac>/reload <acd>Recarga el script. Sólo funciona en modo desarrollo.<099>};
-    #SHOWME {<fac>/rumbo <dirección> <acd>Camina automáticamente en una dirección, de forma similar al comando "galopar".<099>};
-    #SHOWME {<fac>/rrumbo <dirección> <acd>Sigila automáticamente en una dirección, de forma similar al comando "galopar".<099>};
+    #SHOWME {<fac>/r <dirección> <acd>Camina automáticamente en una dirección, de forma similar al comando "galopar".<099>};
+    #SHOWME {<fac>/s <dirección> <acd>Sigila automáticamente en una dirección, de forma similar al comando "galopar".<099>};
+    #SHOWME {<fac>/macros <dirección> <acd>Muestra la ayuda de macros de Fn<099>};
     #SHOWME {<fac>/tars <acd>Computa una lista de enemigos. Has de tener el alias "tarear" establecido con tu "nickear" personal.<099>};
 };
 #ALIAS {/limpiar} {
