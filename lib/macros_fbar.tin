@@ -1,7 +1,7 @@
 #CLASS {tt_fkey} {kill};
 #CLASS {tt_fkey} {open};
 
-#ALIAS {macrohelp}
+#ALIAS {/macros}
 {
 	#showme {<148>+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++};
 	#showme {<138>Macros};
@@ -114,4 +114,5 @@
 	$f12var;
 	#showme {<aff>[<139>F12<aff>] <129> -= <119>$f12var <129>=-};
 };
+
 #CLASS {tt_fkey} {close};

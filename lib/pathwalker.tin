@@ -1,14 +1,14 @@
 #CLASS {RL_PATHWALKER} {kill};
 #CLASS {RL_PATHWALKER} {open};
 
-#ALIAS {/rrumbo} {
-    #CLASS {RL_PATHWALKER_IMPL} {open};
+#ALIAS {/s} {
+    #CLASS {RL_PATHWALKER_SIGILAR} {open};
     #IF {"%1" == ""} {
-        @message{Sintáxis: /rumbo <dirección>|off};
+        @message{Sintáxis: /r <dirección>|off};
         #RETURN;
     };
     #IF {"%1" == "off"} {
-        #CLASS {RL_PATHWALKER_IMPL} {kill};
+        #CLASS {RL_PATHWALKER_SIGILAR} {kill};
         @message{Rumbo detenido.};
         #RETURN;
     };
@@ -20,11 +20,11 @@
         #LIST {exits} {size} {exitsLength};
         #IF {$exitsLength > 2} {
             @message{Has llegado a una bifurcación en el camino.};
-            #CLASS {RL_PATHWALKER_IMPL} {kill};
+            #CLASS {RL_PATHWALKER_SIGILAR} {kill};
         };
         #ELSEIF {$exitsLength < 2} {
             @message{Has llegado a un callejón sin salida.};
-            #CLASS {RL_PATHWALKER_IMPL} {kill};
+            #CLASS {RL_PATHWALKER_SIGILAR} {kill};
         };
         #ELSE {
             #FOREACH {$exits[%%*]} {exit} {
@@ -38,15 +38,15 @@
     };
     #ACT {^Parece que %* no produjo efecto alguno.$} {
         @message{Deteniendo el rumbo, pues algo raro ha sucedido.};
-        #CLASS {RL_PATHWALKER_IMPL} {kill};
+        #CLASS {RL_SPATHWALKER_SIGILAR} {kill};
     };
     @message{Sigilando rumbo %1...};
     sigilar %1;
-    #CLASS {RL_PATHWALKER_IMPL} {close};
+    #CLASS {RL_PATHWALKER_SIGILAR} {close};
 }
 
 
-#ALIAS {/rumbo} {
+#ALIAS {/r} {
     #CLASS {RL_PATHWALKER_IMPL} {open};
     #IF {"%1" == ""} {
         @message{Sintáxis: /rumbo <dirección>|off};

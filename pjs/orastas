@@ -1,26 +1,26 @@
-.VAR larm sarten
-.VAR pj orastas
-.var rarm doble
-.ALIAS {ppr} { prompt PV: $v/$PJPVS GP: $g/$PJPGS | $s |$j|$b|$a> } {5}
-.ALIAS {0} { esconderse arbol } {5}
-.ALIAS {k} { ss; sg } {5}
-.ALIAS {ldenv} { desenvainar $larm } {5}
-.ALIAS {lenv} { envainar $larm } {5}
-.ALIAS {r} { concentracion } {5}
-.ALIAS {cc} { chat ! } {5}
-.ALIAS {bbb} { bando ! } {5}
-.PROMPT           {PV: %1/%2 GP: %3/%4 | %5 |%6|%7|%8}                {<afc>[..Pvs.<cfa>%1<119>/<cfa>%2<afc>..|.<fac>Gps.%3<149>/<fac>%4.<afc>.| <acf>$conc<afc> | <fca> Caza: <119>$target <cfa>|<129>~%6~<fca>~%7~<119>~%8~~<cfa>|<109>%5<afc> ]<190> \>}                                                                                                                                                            {3}
-.PROMPT           {^PV: %1/%2 GP: %3/%4 | %5 |%6|%7|%8}                 {<afc>[..Pvs.<cfa>%1<119>/<cfa>%2<afc>..|.<fac>Gps.%3<149>/<fac>%4.<afc>.| <acf>$conc<afc> | <fca> Caza: <119>$target <cfa>|<129>~%6~<fca>~%7~<119>~%8~~<cfa>|<109>%5<afc> ]<190> \>}                                                                                                                                                            {3}
-.VAR {f1var} {q} {5}
-.VAR {f2var} {qq} {5}
-.VAR {f3var} {ee} {5}
-.VAR {f4var} {qq} {5}
-.VAR {f5var} {z} {5}
-.VAR {f6var} {x} {5}
-.VAR {f7var} {oo} {5}
-.VAR {f8var} {l} {5}
-.VAR {f8var} {ee} {5}
-.VAR {f9var} {subetu} {5}
-.VAR {f10var} {to} {5}
-.VAR {f11var} {cen} {5}
-.VAR {f12var} {ss} {5}
+#VAR larm sarten
+#VAR pj orastas
+#var rarm doble
+#ALIAS {ppr} { prompt PV: $v/$PJPVS GP: $g/$PJPGS | $s |$j|$b|$a> } {5}
+#ALIAS {0} { esconderse arbol } {5}
+#ALIAS {k} { ss; sg } {5}
+#ALIAS {ldenv} { desenvainar $larm } {5}
+#ALIAS {lenv} { envainar $larm } {5}
+#ALIAS {r} { concentracion } {5}
+#ALIAS {cc} { chat ! } {5}
+#ALIAS {bbb} { bando ! } {5}
+#PROMPT           {PV: %1/%2 GP: %3/%4 | %5 |%6|%7|%8}                {<afc>[##Pvs#<cfa>%1<119>/<cfa>%2<afc>##|#<fac>Gps#%3<149>/<fac>%4#<afc>#| <acf>$conc<afc> | <fca> Caza: <119>$target <cfa>|<129>~%6~<fca>~%7~<119>~%8~~<cfa>|<109>%5<afc> ]<190> \>}                                                                                                                                                            {3}
+#PROMPT           {^PV: %1/%2 GP: %3/%4 | %5 |%6|%7|%8}                 {<afc>[##Pvs#<cfa>%1<119>/<cfa>%2<afc>##|#<fac>Gps#%3<149>/<fac>%4#<afc>#| <acf>$conc<afc> | <fca> Caza: <119>$target <cfa>|<129>~%6~<fca>~%7~<119>~%8~~<cfa>|<109>%5<afc> ]<190> \>}                                                                                                                                                            {3}
+#VAR {f1var} {q} {5}
+#VAR {f2var} {qq} {5}
+#VAR {f3var} {ee} {5}
+#VAR {f4var} {qq} {5}
+#VAR {f5var} {z} {5}
+#VAR {f6var} {x} {5}
+#VAR {f7var} {oo} {5}
+#VAR {f8var} {l} {5}
+#VAR {f8var} {ee} {5}
+#VAR {f9var} {subetu} {5}
+#VAR {f10var} {to} {5}
+#VAR {f11var} {cen} {5}
+#VAR {f12var} {ss} {5}

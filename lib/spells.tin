@@ -374,7 +374,7 @@
     };
     #FORMAT {chantLength} {%L} {%1};
     #FORMAT {spell_nameLength} {%L} {$spell_name};
-    #FORMAT {screenWidth} {%C};
+    #SCREEN {get} {cols} {screenWidth};
     #MATH {fillerLength} {$screenWidth - $chantLength - $spell_nameLength};
       #FORMAT {result} {%s%+${fillerLength}s<060>\e[3m%s<099>} {%1} {} {$spell_name};
 };

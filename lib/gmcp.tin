@@ -72,6 +72,7 @@
     };
     #UNVAR {gmcp_data_char_ficha};
 };
+};
 
 #EVENT {IAC SB GMCP Char.Status IAC SE} {
     #IF {$rl_gmcp[debug] == 1} {
@@ -91,6 +92,7 @@
         /trigger_event player_hp_max $gmcp_data_char_status[pvs][max];
     };
     #UNVAR {gmcp_data_char_status};
+};
 };
 
 #EVENT {IAC SB GMCP Comm.Canales IAC SE} {
@@ -145,7 +147,6 @@
 /**********************************************************************************************************************
  * Testing                                                                                                            *
  **********************************************************************************************************************/
-
 #IF {$_development == 1} {
     #ALIAS {/test_RL_GMCP} {
         #SHOWME {No tests implemented.};
