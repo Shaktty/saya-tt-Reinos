@@ -1,3 +1,6 @@
+#CLASS {aeltas} {kill};
+#CLASS {aeltas} {open};
+
 #READ lib/tt_magia.tin
 #ALIAS            {pi} {db volcanico;cb petreo;eq;piel} {5}
 #VARIABLE         {f10var}  {x}
@@ -21,3 +24,4 @@
 #ALIAS {bb} { bando @la %^BOLD%^MAGENTA%^M%^BLACK%^aga %^MAGENTA%^S%^RED%^alvaje%^BLACK%^: %^ORANGE%^%0%^RESET%^ } {5}
 #ALIAS {cc} { chat ! } {5}
 #ALIAS {uuu} { ciu ! } {5}
+#CLASS {aeltas} {close};

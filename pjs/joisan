@@ -1,3 +1,6 @@
+#CLASS {joisan} {kill};
+#CLASS {joisan } {open};
+
 #NOP #READ lib/tt_magia#tin
 #HIGHLIGHT        {bola de fuego}  {bold,reverse,yellow}  {5}
 #HIGHLIGHT        {bola encadenada de fuego}      {bold,reverse,yellow}  {5}
@@ -39,7 +42,7 @@
 #alias {qq} {esconderse sjoisan}
 #ALIAS {bbb} { bando ! } {5}
 #ALIAS {ui} {tirar abrojos} {5}
-#ALIAS {1} {esconderse} {5}
+#NOP #ALIAS {1} {esconderse} {5}
 #ALIAS {bb} { bando @%^BOLD%^BLACK%^Ignis (%^MAGENTA%^M-L%^BLACK%^)%^RED%^: %^B_BLUE%^BOLD%^ORANGE%^ %0 %^RESET%^ } {5}
 #ALIAS {cc} { chat ! } {5}
 #ALIAS {ch0} { chat @deja de %^ORANGE%^divisar %^WHITE%^el %^WHITE%^h%^BOLD%^o%^BLUE%^r%^RESET%^BLUE%^i%^ORANGE%^zo%^BOLD%^n%^WHITE%^t%^RESET%^e, y dice: %^GREEN%^%0%^RESET%^ } {5}
@@ -49,8 +52,8 @@
 #ALIAS {fa} { familia @la %^RED%^M%^BOLD%^BLACK%^atrona %^WHITE%^: %^MAGENTA%^%0%^RESET%^ } {5}
 #ALIAS {gignis} { gritar Casa Ignis! } {5}
 #ALIAS {in} { indicar $target } {5}
-#ALIAS {jj} { oportunidad %0,$target,$nicks,$xp } {5}
-#ALIAS {j} { apuñalar %0,$target,$nicks,$xp } {5}
+#NOP #ALIAS {jj} { oportunidad %0,$target,$nicks,$xp } {5}
+#NOP #ALIAS {j} { apuñalar %0,$target,$nicks,$xp } {5}
 #ALIAS {rm} { robar monedas a %0 } {5}
 #NOP #ALIAS {ro} { robar de mochila a $target,$nicks } {5}
 #NOP #ALIAS {rr} { robar $goody a $target } {5}
@@ -67,3 +70,4 @@
 #PROMPT {PV: %1/%2 GP: %3/%4 | %5 | %6 | %7 |%8|%9|%10>}   {<afc>[##Pvs#<cfa>%1<119>/<cfa>%2<afc>##|#<fac>Gps#%3<149>/<fac>%4#<afc>#| <acf>Imagenes: %5<cfa> | <fca>Pieles: %6<cfa> |<fca> Caza: <119>$target <cfa>|<129>~%8~<fca>~%9~<119>~%10~~<cfa>|<109>%7<afc> ]<190> \>} {3}
 #PROMPT {^PV: %1/%2 GP: %3/%4 | %5 | %6 | %7 |%8|%9|%10>}  {<afc>[##Pvs#<cfa>%1<119>/<cfa>%2<afc>##|#<fac>Gps#%3<149>/<fac>%4#<afc>#| <acf>Imagenes: %5<cfa> | <fca>Pieles: %6<cfa> |<fca> Caza: <119>$target <cfa>|<129>~%8~<fca>~%9~<119>~%10~~<cfa>|<109>%7<afc> ]<190> \>} {3}
 #ALIAS ib {interbando @%^BOLD%^BLACK%^Ignis (%^MAGENTA%^M-L%^BLACK%^)%^RED%^: %^B_BLUE%^BOLD%^ORANGE%^ %0 %^RESET%^ } {5}
+#CLASS {joisan} {close};

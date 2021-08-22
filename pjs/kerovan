@@ -1,76 +1,68 @@
+#CLASS {kerovan} {kill};
+#CLASS {kerovan} {open};
+
 #ACTION {%1 -> GUERRA}
 {
     #variable nicks $nicks,%0
-}
+};
 
 #ACTION {%1 -> HOSTILIDAD}
 {
     #variable nicks $nicks,%0
-}
+};
 
 #ACTION {Botín: %1}
 {
     #variable botin %1
 }
 
-#ACTION {La puerta %1 está cerrada}
-{
-    abrir %1;
-    sigilar %1
-}
-
-#ACTION {Vislumbras una oportunidad de ataque contra %0}
-{
-    #variable opo %0
-}
-
-#ACTION {^El portero dice desde el otro lado: está bien, puedes pasar. Bienvenido al poblado}
+#ACTION {^El portero dice desde el otro lado: está bien, puedes pasar. Bienvenido al poblado};}
 {
     de
-}
+};
 
 #ACTION {^Finalmente la puerta comienza a abrirse dejandote el paso libre hacia en interior de la ciudad}
 {
     de;
     cr fu
-}
+};
 
 #ACTION {^Nombre corto escondite cambiado de %1 a %2}
 {
     #variable escondite %2
-}
+};
 
 #ACTION {^Nombre corto escondite cmambiado de %1 a %2}
 {
     #variable escondite %2
-}
+};
 
 #ACTION {^Te faltan %1 Puntos de experiencia para subir de nivel}
 {
     #variable xpleft %1
-}
+};
 
 #ACTION {^Vislumbras una oportunidad de ataque contra %1}
 {
     #variable opo %1;
     #showme (OPO) -> %1
-}
+};
 
 
 #ALIAS {.mass}
 {
     #showme Llevas $cont golpes consecutivos
-}
+};
 
 #ALIAS {2}
 {
     esconderse $escondite
-}
+};
 
 #ALIAS {AB}
 {
     sigilar abajo
-}
+};
 
 #ALIAS {AR}
 {
@@ -1443,8 +1435,6 @@
 #TAB {tsongor}
 
 #VARIABLE {arma} {filo}
-#VARIABLE {cont} {2214}
-#VARIABLE {conteo} {329}
 #VARIABLE {escondite} {arbol}
 #VARIABLE {f12var} {pp}
 #VARIABLE {goody} {trozo}
@@ -1452,6 +1442,5 @@
 #VARIABLE {opo} {Morador del Cieno.}
 #VARIABLE {pincho} {alma}
 #VARIABLE {target} {teltem}
-#VARIABLE {xp} {pillos}
-#VARIABLE {xpleft} {2375253}
 
+#CLASS {kerovan} {close};

@@ -21,13 +21,13 @@
 
 #ACTION {^# } {
     #VAR {stats[heartbeat]} {4};
-    #SHOWME {@powerline{}} {-3};
+  #LINE ignore   #SHOWME {@powerline{}} {-3};
     #TICK {hb} {
         #MATH {stats[heartbeat]} {$stats[heartbeat]+1};
         #IF {$stats[heartbeat] > 4} {
             #VAR {stats[heartbeat]} {-1};
         };
-        #SHOWME {@powerline{}} {-3};
+  #LINE ignore #SHOWME {@powerline{}} {-3};
     } {1};
 };
 
@@ -111,7 +111,6 @@
 
 #ACTION {^Estás rodead{o|a} por %1 im{a|á}genes id{é|e}nticas a ti.$} {
     #VAR {buffers[images]} {%1};
-   @message{"1 Imagen menos"};
     #SHOWME {@powerline{}} {-3};
 };
 

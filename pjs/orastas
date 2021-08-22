@@ -1,3 +1,6 @@
+#CLASS {orastas} {kill};
+#CLASS {orastas} {open};
+
 #VAR larm sarten
 #VAR pj orastas
 #var rarm doble
@@ -24,3 +27,4 @@
 #VAR {f10var} {to} {5}
 #VAR {f11var} {cen} {5}
 #VAR {f12var} {ss} {5}
+#CLASS {orastas} {close};

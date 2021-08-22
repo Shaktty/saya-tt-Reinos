@@ -73,6 +73,7 @@
     #UNVAR {gmcp_data_char_ficha};
 };
 };
+};
 
 #EVENT {IAC SB GMCP Char.Status IAC SE} {
     #IF {$rl_gmcp[debug] == 1} {
@@ -93,14 +94,13 @@
     };
     #UNVAR {gmcp_data_char_status};
 };
-};
 
 #EVENT {IAC SB GMCP Comm.Canales IAC SE} {
     #IF {$rl_gmcp[debug] == 1} {
         /message {Received GMCP Comm.Canales event};
         #VAR {rl_gmcp[channels]} {%0};
         #SHOWME {[%1]};
-        #SYS {echo "[%1]" >> log/chats.log} };
+        #SYS {echo "[%1]" >> log/chats.log} 
     };
 };
 
@@ -110,7 +110,6 @@
         #SHOWME {[%1]};
         #SYS {echo "[%1]" >> log/chats.log} };
     };
-};
 
 #EVENT {IAC SB GMCP Comm.ApagaCanal IAC SE} {
     #IF {$rl_gmcp[debug] == 1} {
@@ -118,12 +117,11 @@
         #SHOWME {[%1]};
         #SYS {echo "[%1]" >> log/chats.log} };
     };
-};
 
 #EVENT {IAC SB GMCP Comm.MensajeCanal IAC SE} {
     #IF {$rl_gmcp[debug] == 1} {
         /message {Received GMCP Comm.MensajeCanal event};
-        #SYS {echo "[%1]" >> log/chats.log} };
+        #SYS {echo "[%1]" >> log/chats.log} 
     };
     #VAR {gmcp_data_channel_data} {%0};
     #VAR {gmcp_data_channel_name} {$gmcp_data_channel_data[canal]};
@@ -142,7 +140,6 @@
         #SHOWME {[%1]};
         #SYS {echo "[%1]" >> log/chats.log} };
     };
-};
 
 /**********************************************************************************************************************
  * Testing                                                                                                            *
