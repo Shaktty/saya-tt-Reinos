@@ -2,7 +2,6 @@
 #NOP      Configuracion modular de Tintin++ para rlmud.org
 #NOP      (cc) 2016 Saya Faroth.  Mandadme un mudmail con cualquier duda.
 #NOP==========================================================================
-#READ pjs/password;
 #CONFIG  {AUTO TAB}      {10000};
 #CONFIG  {BUFFER SIZE}   {10000};
 #CONFIG  {CHARSET}       {UTF-8};
@@ -48,11 +47,11 @@
 #VAR {rlppPrefix} {<139>☥<099>};
 #VAR {rlppColor} {<fca>};
 #NOP#EVENT {PROGRAM START} { #SYSTEM {clear}; #SHOWME <fac>@center{Reinos de Leyenda - http://reinosdeleyenda.org}; #SHOWME <fca>; #NOP  /motd; #SHOWME <acf>Jugador?; };
-#EVENT {PROGRAM START} { #SYSTEM {clear}; #ses {reinos} {rlmud.org} {23}};
-#ALIAS cdev {#ses {reinos} {rlmud.org} {23} {pjs/$pj} } {5};
+#EVENT {PROGRAM START} { #SYSTEM {clear}; #ssl {reinos} {rlmud.org} {5022}};
+#ALIAS cdev {#ssl {reinos} {rlmud.org} {5022} {pjs/$pj} } {5};
 #NOP #ALIAS CDEV {#ssl {reinos} {rlmud.org} {5022} {pjs/$pj} } {5};
-#ALIAS cdev {#ses {$pj} {rlmud.org} {23}} {5};
+#NOP #ALIAS cdev {#ses {$pj} {rlmud.org} {23}} {5};
 #EVENT {RECEIVED INPUT} {#VAR pj %0;#UNEVENT {RECEIVED INPUT}};
 #NOP #EVENT {SESSION CONNECTED} {$pj;$passwd};
-#ACTION {Con que nombre quieres ser conocido} {$pj;$passwd};
+#ACTION {Con que nombre quieres ser conocido} {$pj;If6was90,;#read pjs/$pj};
 #NOP #ACTION {Tu última conexión fue el} {#spl 0 3;puntos};
