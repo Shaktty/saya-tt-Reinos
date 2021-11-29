@@ -94,7 +94,16 @@
     #SHOWME {@powerline{}} {-3};
 };
 
-#ACTION {^Pvs: %1\\%2 Pe: %3\\%4$} {
+#ACTION {^Pvs: %1\/%2 (%3) Pe: %4\/%5 (%6)$} {
+    #MATH {healthDelta} {%1 - $stats[health]};
+    #VAR {stats[health]} {%1};
+    #VAR {stats[maxHealth]} {%2};
+    #VAR {stats[energy]} {%4};
+    #VAR {stats[maxEnergy]} {%5};
+    #SHOWME {Δ @deltaColor{$healthDelta}$healthDelta<099>};
+    #SHOWME {@powerline{}} {-3};
+};
+#ACTION {^Pvs: %1\/%2 Pe: %3\/%4$} {
     #MATH {healthDelta} {%1 - $stats[health]};
     #VAR {stats[health]} {%1};
     #VAR {stats[maxHealth]} {%2};

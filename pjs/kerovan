@@ -1,20 +1,10 @@
 #CLASS {kerovan} {kill};
 #CLASS {kerovan} {open};
 
-#ACTION {%1 -> GUERRA}
-{
-    #variable nicks $nicks,%0
-};
-
-#ACTION {%1 -> HOSTILIDAD}
-{
-    #variable nicks $nicks,%0
-};
-
 #ACTION {Botín: %1}
 {
     #variable botin %1
-}
+};
 
 #ACTION {^El portero dice desde el otro lado: está bien, puedes pasar. Bienvenido al poblado};}
 {
@@ -25,16 +15,6 @@
 {
     de;
     cr fu
-};
-
-#ACTION {^Nombre corto escondite cambiado de %1 a %2}
-{
-    #variable escondite %2
-};
-
-#ACTION {^Nombre corto escondite cmambiado de %1 a %2}
-{
-    #variable escondite %2
 };
 
 #ACTION {^Te faltan %1 Puntos de experiencia para subir de nivel}
@@ -54,587 +34,521 @@
     #showme Llevas $cont golpes consecutivos
 };
 
-#ALIAS {2}
-{
-    esconderse $escondite
-};
 
 #ALIAS {AB}
 {
     sigilar abajo
 };
 
-#ALIAS {AR}
-{
-    sigilar arriba
-}
-
-#ALIAS {CDEV}
-{
-    #session a rlmud.org 23;
-    ereris;
-    lagnoma
-}
-
-#ALIAS {CZ}
-{
-    cz
-}
-
 #ALIAS {DE}
 {
     sigilar dentro
-}
+};
 
 #ALIAS {DIM}
 {
     dim
-}
+};
 
 #ALIAS {E}
 {
     sigilar este
-}
+};
 
 #ALIAS {EE}
 {
     estado todos
-}
+};
 
 #ALIAS {ESCA}
 {
     sigilar escaleras
-}
+};
 
 #ALIAS {Ea}
 {
     espiar a %0
-}
+};
 
 #ALIAS {Eab}
 {
     espiar hacia abajo
-}
+};
 
 #ALIAS {Ear}
 {
     espiar hacia arriba
-}
+};
 
 #ALIAS {Ede}
 {
     espiar hacia dentro
-}
+};
 
 #ALIAS {Ee}
 {
     espiar hacia este
-}
+};
 
 #ALIAS {Efu}
 {
     espiar hacia fuera
-}
-
-#ALIAS {Em}
-{
-    espiar mochila de $target
-}
+};
 
 #ALIAS {Emm}
 {
     espiar mochila de %0
-}
+};
 
 #ALIAS {En}
 {
     espiar hacia norte
-}
+};
 
 #ALIAS {Ene}
 {
     espiar hacia noreste
-}
+};
 
 #ALIAS {Eno}
 {
     espiar hacia noroeste
-}
+};
 
 #ALIAS {Eo}
 {
     espiar hacia oeste
-}
+};
 
 #ALIAS {Es}
 {
     espiar hacia sur
-}
+};
 
 #ALIAS {Ese}
 {
     espiar hacia sudeste
-}
+};
 
 #ALIAS {Eso}
 {
     espiar hacia sudoeste
-}
+};
 
-#ALIAS {Et}
-{
-    espiar a $target
-}
 
 #ALIAS {F}
 {
     f
-}
+};
 
 #ALIAS {FF}
 {
     ff
-}
+};
 
 #ALIAS {FU}
 {
     sigilar fuera
-}
+};
 
 #ALIAS {GCONF}
 {
     gconf
-}
+};
 
 #ALIAS {I}
 {
     i
-}
+};
 
 #ALIAS {L}
 {
     ojear
-}
+};
 
 #ALIAS {M}
 {
     m
-}
+};
 
 #ALIAS {MAS}
 {
     mas
-}
+};
 
 #ALIAS {N}
 {
     sigilar norte
-}
+};
 
 #ALIAS {NE}
 {
     sigilar noreste
-}
+};
 
 #ALIAS {NO}
 {
     sigilar noroeste
-}
+};
 
 #ALIAS {O}
 {
     sigilar oeste
-}
+};
 
 #ALIAS {OF}
 {
     of
-}
+};
 
 #ALIAS {ON}
 {
     on
-}
+};
 
 #ALIAS {PU}
 {
     sigilar puerta
-}
+};
 
 #ALIAS {RIP}
 {
     rip
-}
+};
 
 #ALIAS {Rab}
 {
     ruidos abajo
-}
+};
 
 #ALIAS {Rar}
 {
     ruidos arriba
-}
+};
 
 #ALIAS {Rde}
 {
     ruidos dentro
-}
+};
 
 #ALIAS {Re}
 {
     ruidos este
-}
+};
 
 #ALIAS {Rfu}
 {
     ruidos fuera
-}
+};
 
 #ALIAS {Rn}
 {
     ruidos norte
-}
+};
 
 #ALIAS {Rne}
 {
     ruidos noreste
-}
+};
 
 #ALIAS {Rno}
 {
     ruidos noroeste
-}
+};
 
 #ALIAS {Ro}
 {
     ruidos oeste
-}
+};
 
 #ALIAS {Rpu}
 {
     ruidos puerta
-}
+};
 
 #ALIAS {Rr}
 {
     ruidos
-}
+};
 
 #ALIAS {Rs}
 {
     ruidos sur
-}
+};
 
 #ALIAS {Rse}
 {
     ruidos sudeste
-}
+};
 
 #ALIAS {Rso}
 {
     ruidos sudoeste
-}
+};
 
 #ALIAS {S}
 {
     sigilar sur
-}
+};
 
 #ALIAS {SAE}
 {
     sae
-}
+};
 
 #ALIAS {SC}
 {
     sc
-}
+};
 
 #ALIAS {SCC}
 {
     scc
-}
+};
 
 #ALIAS {SE}
 {
     sigilar sudeste
-}
+};
 
 #ALIAS {SG}
 {
     sg
-}
+};
 
 #ALIAS {SO}
 {
     sigilar sudoeste
-}
+};
 
 #ALIAS {TOY}
 {
     toy
-}
+};
 
 #ALIAS {W}
 {
     w
-}
+};
 
-#ALIAS {ap}
-{
-    apuntar $target
-}
 
 #ALIAS {arra}
 {
     arrabales
-}
+};
 
 #ALIAS {asen}
 {
     asentir sab $*$
-}
+};
 
 #ALIAS {b}
 {
     buscar
-}
+};
 
-#ALIAS {caza}
-{
-    #variable target %0
-}
 
 #ALIAS {cb}
 {
     coger %1 de mochila
-}
+};
 
 #ALIAS {cd}
 {
     coger %0 de disco
-}
+};
 
 #ALIAS {cg}
 {
     coger todo de cuerpos;
     enterrar
-}
+};
 
 #ALIAS {cgo}
 {
     #variable goody %0
-}
-
-#ALIAS {clrnk}
-{
-    #variable nicks kobold
-}
-
-#ALIAS {cnick}
-{
-    #variable nicks %0,$nicks
-}
-
-#ALIAS {con}
-{
-    considerar %0,$xp
-}
+};
 
 #ALIAS {conteo}
 {
     #variable cont 0;
     #showme Llevas $cont golpes consecutivos
-}
+};
 
 #ALIAS {conv}
 {
     conversar
-}
+};
 
 #ALIAS {convv}
 {
     conversar temas
-}
+};
 
 #ALIAS {coo}
 {
     quitarse cobardes;
     cobardia 0
-}
+};
 
 #ALIAS {cp}
 {
     #variable pincho %0
-}
+};
 
 #ALIAS {cr}
 {
     cerrar
-}
+};
 
 #ALIAS {cson}
 {
     chat $sonreir desv
-}
-
-#ALIAS {cxp}
-{
-    #variable xp %0,$xp
-}
+};
 
 #ALIAS {cz}
 {
     caza
-}
+};
 
 #ALIAS {db}
 {
     poner %1 en mochila
-}
+};
 
-#ALIAS {dd}
-{
-    desfondar mochila a $target,%0,$nicks
-}
 
 #ALIAS {deca}
 {
     decapitar cuerpo
-}
+};
 
 #ALIAS {denv}
 {
     desenvainar $arma
-}
+};
 
-#ALIAS {des}
-{
-    desfondar $target
-}
 
 #ALIAS {dim}
 {
     diplomacia %0
-}
+};
 
 #ALIAS {ea}
 {
     Ea
-}
+};
 
 #ALIAS {ee}
 {
     estado todos
-}
+};
 
 #ALIAS {em}
 {
     Em
-}
+};
 
 #ALIAS {en}
 {
     enterrar
-}
+};
 
 #ALIAS {ent}
 {
     enterrar
-}
+};
 
 #ALIAS {env}
 {
     envainar $arma
-}
+};
 
 #ALIAS {eq}
 {
     equip
-}
+};
 
 #ALIAS {et}
 {
     Et
-}
+};
 
 #ALIAS {ff}
 {
     finger
-}
+};
 
 #ALIAS {fff}
 {
     finger tgt
-}
+};
 
 #ALIAS {fkeyshow}
 {
-    #showme {<148>[<129>F1<148>][<139>$f1var<148>]-<148>[<129>F2<148>][<139>$f2var<148>]-<148>[<129>F3<148>][<139>$f3var<148>]-<148>[<129>F4<148>][<139>$f4var<148>]<119>==<148>[<129>F5<148>][<139>$f5var<148>]-<148>[<129>F6<148>][<139>$f6var<148>]-<148>[<129>F7<148>][<139>$f7var<148>]-<148>[<129>F8<148>][<139>$f8var<148>]<119>==<148>[<129>F9<148>][<139>$f9var<148>]-<148>[<129>F10<148>][<139>$f10var<148>]-<148>[<129>F11<148>][<139>$f11var<148>]-<148>[<129>F12<148>][<139>$f12var<148>] } {2}
-}
+    #showme {<148>[<129>F1<148>][<139>$f1var<148>]-<148>[<129>F2<148>][<139>$f2var<148>]-<148>[<129>F3<148>][<139>$f3var<148>]-<148>[<129>F4<148>][<139>$f4var<148>]<119>==<148>[<129>F5<148>][<139>$f5var<148>]-<148>[<129>F6<148>][<139>$f6var<148>]-<148>[<129>F7<148>][<139>$f7var<148>]-<148>[<129>F8<148>][<139>$f8var<148>]<119>==<148>[<129>F9<148>][<139>$f9var<148>]-<148>[<129>F10<148>][<139>$f10var<148>]-<148>[<129>F11<148>][<139>$f11var<148>]-<148>[<129>F12<148>][<139>$f12var<148>] }; {2}
+};
 
 #ALIAS {fz}
 {
     forzar %0
-}
+};
 
 #ALIAS {ga}
 {
     golpear arbol
-}
+};
 
 #ALIAS {gconf}
 {
     #write tt/ereris.tin;
     #kill;
     #read tt/ereris.tin
-}
+};
 
 #ALIAS {ge}
 {
     galopar este
-}
+};
 
 #ALIAS {gg}
 {
     galopar %0
-}
+};
 
 #ALIAS {gn}
 {
     galopar norte
-}
+};
 
 #ALIAS {gne}
 {
     galopar noreste
-}
+};
 
 #ALIAS {gno}
 {
     galopar noroeste
-}
+};
 
 #ALIAS {go}
 {
     galopar oeste
-}
+};
 
 #ALIAS {gs}
 {
     galopar sur
-}
+};
 
 #ALIAS {gse}
 {
     galopar sudeste
-}
+};
 
 #ALIAS {gso}
 {
     galopar sudoeste
-}
+};
 
 #ALIAS {guillo-thorin}
 {
@@ -670,17 +584,17 @@
     o;
     no;
     o
-}
+};
 
 #ALIAS {h}
 {
     habilidades
-}
+};
 
 #ALIAS {im}
 {
     ingresar monedas
-}
+};
 
 #ALIAS {kattak-kheleb}
 {
@@ -701,7 +615,7 @@
     so;
     o;
     o
-}
+};
 
 #ALIAS {kheleb-kattak}
 {
@@ -722,12 +636,7 @@
     s;
     e;
     e
-}
-
-#ALIAS {kx}
-{
-    matar $xp
-}
+};
 
 #ALIAS {lego}
 {
@@ -735,60 +644,56 @@
     env;
     cb arco;
     wi arco
-}
+};
 
 #ALIAS {legoo}
 {
     db arco;
     on;
     denv
-}
+};
 
 #ALIAS {linn}
 {
     acoplar linterna en capucha
-}
+};
 
 #ALIAS {linof}
 {
     apagar linterna en capucha
-}
+};
 
 #ALIAS {linon}
 {
     encender linterna en capucha
-}
+};
 
-#ALIAS {ll}
-{
-    recitar $target
-}
 
 #ALIAS {lt}
 {
     cb salvoconducto;
     ab
-}
+};
 
 #ALIAS {lt2}
 {
     levantar tapa;
     alcantarillas
-}
+};
 
 #ALIAS {m}
 {
     mirar %0
-}
+};
 
 #ALIAS {ma}
 {
     mirar arbol
-}
+};
 
 #ALIAS {macrohelp}
 {
-    #showme {<148>+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++};
+    #showme {<148>+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++};;
     #showme {<138>Macros};
     #showme {<148>+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++};
     #showme <129>setf <num> <alias> <179> Sets F<num> to alias.;
@@ -805,108 +710,94 @@
     #showme <129>F11<179> $f11var;
     #showme <129>F12<179> $f12var;
     #showme {<148>+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++}
-}
+};
 
 #ALIAS {mapa}
 {
     #loadpath
-}
+};
 
 #ALIAS {mas}
 {
     maestria %0
-}
+};
 
 #ALIAS {md}
 {
     mirar disco
-}
+};
 
-#ALIAS {mk}
-{
-    mirar %0,$nicks
-}
 
 #ALIAS {mm}
 {
     mirar mochila
-}
+};
 
 #ALIAS {mon}
 {
     montar poney
-}
-
-#ALIAS {mt}
-{
-    mirar $target
-}
-
-#ALIAS {mx}
-{
-    mirar $xp
-}
+};
 
 #ALIAS {news}
 {
     noticias
-}
+};
 
 #ALIAS {nv}
 {
     navegar
-}
+};
 
 #ALIAS {of}
 {
     envainar $pincho
-}
+};
 
 #ALIAS {off}
 {
     envainar $pincho
-}
+};
 
 #ALIAS {on}
 {
     desenvainar $pincho
-}
+};
 
 #ALIAS {op}
 {
     abrir
-}
+};
 
 #ALIAS {opo}
 {
     #variable opo %0
-}
+};
 
 #ALIAS {or}
 {
     orientar
-}
+};
 
 #ALIAS {oro}
 {
     coger bolsas de cuerpos;
     enterrar
-}
+};
 
 #ALIAS {pasta}
 {
     riquezas
-}
+};
 
 #ALIAS {pe}
 {
     peleas
-}
+};
 
 #ALIAS {pkon}
 {
     #log a /tmp/rlmud.html
-}
+};
 
 #ALIAS {poneyboy}
 {
@@ -916,104 +807,76 @@
     ensillar poney;
     riendas poney;
     montar poney
-}
-
-#ALIAS {pp}
-{
-    oportunidad %0,$nicks,$xp
-}
+};
 
 #ALIAS {pr}
 {
     proteger
-}
+};
 
 #ALIAS {prot}
 {
     protecciones
-}
+};
 
 #ALIAS {prr}
 {
     proteger poney
-}
-
-#ALIAS {qq}
-{
-    esconderse $target
-}
+};
 
 #ALIAS {qs}
 {
     coger todo
-}
-
-#ALIAS {r}
-{
-    robar $goody a $target
-}
+};
 
 #ALIAS {rg}
 {
     robar $goody a %0
-}
+};
 
 #ALIAS {ri}
 {
     riendas;
     atar poney
-}
+};
 
 #ALIAS {rii}
 {
     desatar poney;
     riendas poney
-}
+};
 
 #ALIAS {rip}
 {
     w m
-}
+};
 
-#ALIAS {rm}
-{
-    robar monedas a %0,$target,$nicks,$xp
-}
 
 #ALIAS {rmm}
 {
     robar monedas a enano
-}
+};
 
-#ALIAS {rr}
-{
-    robar $goody de mochila a $target
-}
-
-#ALIAS {rt}
-{
-    robar monedas a $target
-}
 
 #ALIAS {rutic}
 {
     tell %1 ¡Jeje!, Muchas gracias por tu $goody %1, lo necesitaba
-}
+};
 
 #ALIAS {sae}
 {
     salvar
-}
+};
 
 #ALIAS {sc}
 {
     puntos -xp
-}
+};
 
 #ALIAS {scc}
 {
     puntos -v
-}
+};
 
 #ALIAS {sess}
 {
@@ -1022,62 +885,54 @@
     lagnoma;
     #ignore prompt on;
     #split
-}
+};
 
 #ALIAS {setf %1 %2}
 {
     #variable f%1var %2;
     #showme <aff>[<119>F%1<aff>]<129> Set to <aff>[<119>%2 %3<aff>];
     fkeyshow
-}
+};
 
-#ALIAS {sg}
-{
-    seguir $target
-}
 
 #ALIAS {sim}
 {
     of;
     blandir simulacro;
     recitar pergamino
-}
+};
 
 #ALIAS {som}
 {
     sombrero
-}
+};
 
 #ALIAS {soo}
 {
     decir so
-}
+};
 
 #ALIAS {sp}
 {
     conversar
-}
+};
 
 #ALIAS {stop}
 {
     peleas parar
-}
+};
 
 #ALIAS {subetu}
 {
     envainar todo;
     trepar arbol
-}
+};
 
-#ALIAS {t}
-{
-    robar $goody a $target
-}
 
 #ALIAS {ta}
 {
     trepar arbol
-}
+};
 
 #ALIAS {thorin-guillo}
 {
@@ -1113,334 +968,239 @@
     e;
     e;
     e
-}
+};
 
 #ALIAS {tl}
 {
     blandir hacha;
     talar arbol
-}
+};
 
 #ALIAS {toy}
 {
     conversar ereris
-}
+};
 
 #ALIAS {tr}
 {
     trivial %0
-}
+};
 
 #ALIAS {unwi}
 {
     envainar
-}
+};
 
 #ALIAS {uuu}
 {
     ciu !
-}
+};
 
 #ALIAS {ve}
 {
     velocidad
-}
+};
 
 #ALIAS {wc}
 {
     w ciudadanos
-}
+};
 
 #ALIAS {wcc}
 {
     w ciudadanias
-}
+};
 
 #ALIAS {we}
 {
     w enemigos
-}
+};
 
 #ALIAS {wg}
 {
     w vagabundo
-}
+};
 
 #ALIAS {wi}
 {
     empuñar
-}
+};
 
 #ALIAS {wm}
 {
     w mor_groddur
-}
+};
 
-#ALIAS {x}
-{
-    apuñalar $target,%0,$nicks,$xp
-}
 
 #ALIAS {xpoff}
 {
     #unaction {^\%1 cae al suelo sin vida}
-}
+};
 
 #ALIAS {xpon}
 {
     #action {^\%1 cae al suelo sin vida} {en}
-}
+};
 
 
-#CONFIG {AUTO TAB} {5000}
-#CONFIG {BUFFER SIZE} {100000}
-#CONFIG {CHARSET} {UTF-8}
-#CONFIG {COLOR MODE} {TRUE}
-#CONFIG {COLOR PATCH} {OFF}
-#CONFIG {COMMAND COLOR} {\e[0;37m}
-#CONFIG {COMMAND ECHO} {ON}
-#CONFIG {CONNECT RETRY} {20.0}
-#CONFIG {HISTORY SIZE} {1000}
-#CONFIG {LOG MODE} {HTML}
-#CONFIG {MOUSE} {OFF}
-#CONFIG {PACKET PATCH} {0.00}
-#CONFIG {RANDOM SEED} {3382594212}
-#CONFIG {REPEAT CHAR} {!}
-#CONFIG {REPEAT ENTER} {OFF}
-#CONFIG {SCREEN READER} {OFF}
-#CONFIG {SCROLL LOCK} {ON}
-#CONFIG {SPEEDWALK} {OFF}
-#CONFIG {TAB WIDTH} {8}
-#CONFIG {TELNET} {ON}
-#CONFIG {TINTIN CHAR} {.}
-#CONFIG {VERBATIM} {OFF}
-#CONFIG {VERBATIM CHAR} {\}
-#CONFIG {VERBOSE} {OFF}
-#CONFIG {WORDWRAP} {ON}
-
-#HIGHLIGHT {%0 %1 te golpea sin producir %2} {green} {5}
-#HIGHLIGHT {%0 Paras el ataque de %1} {yellow} {5}
-#HIGHLIGHT {%1 de Anduar} {yellow} {5}
-#HIGHLIGHT {%1 se %2 de ti} {cyan} {5}
-#HIGHLIGHT {Aprendes de esta actividad y ganas 1 punto de oficio.} {green} {5}
-#HIGHLIGHT {Asno} {yellow} {5}
-#HIGHLIGHT {Eirea} {green} {5}
-#HIGHLIGHT {Has quedado al descubierto!} {red} {5}
-#HIGHLIGHT {Limbo} {red} {5}
-#HIGHLIGHT {No es posible apuñalar, estás inmersa en una lucha.} {b red} {5}
-#HIGHLIGHT {No estas suficientemente calmado.} {red} {5}
-#HIGHLIGHT {No estás suficientemente calmada} {b red} {5}
-#HIGHLIGHT {OFF} {red} {5}
-#HIGHLIGHT {ON} {green} {5}
-#HIGHLIGHT {Off} {red} {5}
-#HIGHLIGHT {On} {green} {5}
-#HIGHLIGHT {Poney} {b blue} {5}
-#HIGHLIGHT {Tu víctima está demasiado atenta, prueba más tarde} {b red} {5}
-#HIGHLIGHT {Vislumbras *} {green} {5}
-#HIGHLIGHT {Vislumbras una oportunidad de ataque contra %0} {green} {5}
-#HIGHLIGHT {Zelmar} {b red} {5}
-#HIGHLIGHT {[Ak'anon]} {cyan} {5}
-#HIGHLIGHT {[Milicia Gnomica]} {red} {5}
-#HIGHLIGHT {^%1 Almanegra} {magenta} {5}
-#HIGHLIGHT {^%1 Amrok} {green} {5}
-#HIGHLIGHT {^%1 Mazkakraneoz} {green} {5}
-#HIGHLIGHT {^%1 de Anduar} {yellow} {5}
-#HIGHLIGHT {^Descubres a %1} {red} {5}
-#HIGHLIGHT {^No hay aquí nadie llamado ereris} {green} {5}
-#HIGHLIGHT {^Su bolsa %1} {green} {5}
-#HIGHLIGHT {esquivas} {green} {5}
-#HIGHLIGHT {tapa} {blink} {5}
-#HIGHLIGHT {¡Tus imágenes se desvanecen!} {bold,magenta} {5}
-
+#HIGHLIGHT {%0 %1 te golpea sin producir %2} {green} {5};
+#HIGHLIGHT {%0 Paras el ataque de %1} {yellow} {5};
+#HIGHLIGHT {%1 de Anduar} {yellow} {5};
+#HIGHLIGHT {%1 se %2 de ti} {cyan} {5};
+#HIGHLIGHT {Aprendes de esta actividad y ganas 1 punto de oficio.} {green} {5};
+#HIGHLIGHT {Asno} {yellow} {5};
+#HIGHLIGHT {Eirea} {green} {5};
+#HIGHLIGHT {Has quedado al descubierto!} {red} {5};
+#HIGHLIGHT {Limbo} {red} {5};
+#HIGHLIGHT {No es posible apuñalar, estás inmersa en una lucha.} {b red} {5};
+#HIGHLIGHT {No estas suficientemente calmado.} {red} {5};
+#HIGHLIGHT {No estás suficientemente calmada} {b red} {5};
+#HIGHLIGHT {OFF} {red} {5};
+#HIGHLIGHT {ON} {green} {5};
+#HIGHLIGHT {Off} {red} {5};
+#HIGHLIGHT {On} {green} {5};
+#HIGHLIGHT {Poney} {b blue} {5};
+#HIGHLIGHT {Tu víctima está demasiado atenta, prueba más tarde} {b red} {5};
+#HIGHLIGHT {Vislumbras *} {green} {5};
+#HIGHLIGHT {Vislumbras una oportunidad de ataque contra %0} {green} {5};
+#HIGHLIGHT {Zelmar} {b red} {5};
+#HIGHLIGHT {[Ak'anon]} {cyan} {5};
+#HIGHLIGHT {[Milicia Gnomica]} {red} {5};
+#HIGHLIGHT {^%1 Almanegra} {magenta} {5};
+#HIGHLIGHT {^%1 Amrok} {green} {5};
+#HIGHLIGHT {^%1 Mazkakraneoz} {green} {5};
+#HIGHLIGHT {^%1 de Anduar} {yellow} {5};
+#HIGHLIGHT {^Descubres a %1} {red} {5};
+#HIGHLIGHT {^Su bolsa %1} {green} {5};
+#HIGHLIGHT {esquivas} {green} {5};
+#HIGHLIGHT {tapa} {blink} {5};
+#HIGHLIGHT {¡Tus imágenes se desvanecen!} {bold,magenta} {5};
 #MACRO {\e0p}
 {
     #walk
-}
+};
 
 #MACRO {\e0u}
 {
     sg\n
-}
+};
 
 #MACRO {\e21~}
 {
-    espiar a $target\n
-}
+    espiar a tgt\n
+};
 
 #MACRO {\eOP}
 {
     $f1var;
     #showme <aff>[<139>F1<aff>] <129>-= <119>$f1var <129>=-
-}
+};
 
 #MACRO {\eOQ}
 {
     $f2var;
     #showme <aff>[<139>F2<aff>] <129>-= <119>$f2var <129>=-
-}
+};
 
 #MACRO {\eOR}
 {
     $f3var;
     #showme <aff>[<139>F3<aff>] <129> -= <119>$f3var <129>=-
-}
+};
 
 #MACRO {\eOS}
 {
     $f4var;
     #showme <aff>[<139>F4<aff>] <129> -= <119>$f4var <129>=-
-}
+};
 
 #MACRO {\e[11~}
 {
     $f1var;
     #showme <aff>[<139>F1<aff>] <129>-= <119>$f1var <129>=-
-}
+};
 
 #MACRO {\e[12~}
 {
     $f2var;
     #showme <aff>[<139>F2<aff>] <129>-= <119>$f2var <129>=-
-}
+};
 
 #MACRO {\e[13~}
 {
     $f3var;
     #showme <aff>[<139>F3<aff>] <129> -= <119>$f3var <129>=-
-}
+};
 
 #MACRO {\e[14~}
 {
     $f4var;
     #showme <aff>[<139>F4<aff>] <129> -= <119>$f4var <129>=-
-}
+};
 
 #MACRO {\e[15~}
 {
     $f5var;
     #showme <aff>[<139>F5<aff>] <129> -= <119>$f5var <129>=-
-}
+};
 
 #MACRO {\e[16~}
 {
     cb abrojo;
     tirar abrojos\n
-}
+};
 
 #MACRO {\e[17~}
 {
     $f6var;
     #showme <aff>[<139>F6<aff>] <129> -= <119>$f6var <129>=-
-}
+};
 
 #MACRO {\e[18~}
 {
     $f7var;
     #showme <aff>[<139>F7<aff>] <129> -= <119>$f7var <129>=-
-}
+};
 
 #MACRO {\e[19~}
 {
     $f8var;
     #showme <aff>[<139>F8<aff>] <129> -= <119>$f8var <129>=-
-}
+};
 
 #MACRO {\e[20~}
 {
     $f9var;
     #showme <aff>[<139>F9<aff>] <129> -= <119>$f9var <129>=-
-}
+};
 
 #MACRO {\e[21~}
 {
     $f10var;
     #showme <aff>[<139>F10<aff>] <129> -= <119>$f10var <129>=-
-}
+};
 
 #MACRO {\e[23~}
 {
     $f11var;
     #showme <aff>[<139>F11<aff>] <129> -= <119>$f11var <129>=-
-}
+};
 
 #MACRO {\e[24~}
 {
     $f12var;
     #showme <aff>[<139>F12<aff>] <129> -= <119>$f12var <129>=-
-}
+};
 
-
-#PATHDIR {ab} {ar} {0}
-#PATHDIR {ar} {ab} {0}
-#PATHDIR {d} {u} {32}
-#PATHDIR {de} {fu} {0}
-#PATHDIR {e} {o} {2}
-#PATHDIR {fu} {de} {0}
-#PATHDIR {n} {s} {1}
-#PATHDIR {ne} {sw} {3}
-#PATHDIR {nw} {se} {9}
-#PATHDIR {o} {e} {0}
-#PATHDIR {s} {n} {4}
-#PATHDIR {se} {sudeste} {0}
-#PATHDIR {so} {ne} {0}
-#PATHDIR {sw} {ne} {12}
-#PATHDIR {u} {d} {16}
-#PATHDIR {w} {e} {8}
-
-#PROMPT {Pvs: %1\\%2 Pe: %3\\%4} {<109>[ <119>Vida: <129>%1<119>/<129>%2 <109>|<149> Maná: <159>%3<149>/<159>%4<099> <109>|<199> XpLeft: <139>$xpleft <109>| <119>Víctima: <169>$target<109> | <129>Chuche: <139>$goody <199> ]<099>} {2} {}
-#PROMPT {^PV: %1/%2 GP: %3/%4>} {<109>[ <119>Vida: <129>%1<119>/<129>%2 <109>|<149> Maná: <159>%3<149>/<159>%4<099> <109>|<199> XpLeft: <139>$xpleft <109>| <119>Víctima: <169>$target<109> | <129>Chuche: <139>$goody <199> ]<099>} {2} {}
-#PROMPT {^PV: %1/%2 GP: %3/%4]} {<109>[ <119>Vida: <129>%1<119>/<129>%2 <109>|<149> Maná: <159>%3<149>/<159>%4<099> <109>|<199> XpLeft: <139>$xpleft <109>| <119>Víctima: <169>$target<109> | <129>Chuche: <139>$goody <199> ]<099>} {2} {}
-#PROMPT {^Pvs: %1\%2 Pe: %3\%4]} {<109>[ <119>Vida: <129>%1<119>/<129>%2 <109>|<149> Maná: <159>%3<149>/<159>%4<099> <109>|<199> XpLeft: <139>$xpleft <109>| <119>Víctima: <169>$target<109> | <129>Chuche: <139>$goody <199> ]<099>} {2} {}
-
-#SUBSTITUTE {# %1 logra esquivar tu ataque} {<129>%1 <118>te esquiva tu!<099> } {5}
-#SUBSTITUTE {No existe el objetivo} {.} {5}
-#SUBSTITUTE {Te encaras contra %1 en posición de combate} {.} {5}
-#SUBSTITUTE {Vaya, %1 te ha descubierta antes de que pudieras robarle nada} {<149>¡¡%1 te ha pillado, tú!!<099>} {5}
-#SUBSTITUTE {Vaya, %1 te ha descubierto antes de que pudieras robarle nada} {<129> ¡Oh! <119>%1 <109> te pilla intentando robarle<149>!!<099>} {5}
-#SUBSTITUTE {^Consigues ver los siguientes objetos al espiar a %1} {<109>Espías a <119>%1<129>: OK<099>} {5}
-#SUBSTITUTE {^Robas con éxito %1} {<119>Botín: <139>%1<099>} {5}
-#SUBSTITUTE {^Robas perfectamente a %1} {<149>Robas a %1<129>: OK<099>} {5}
-#SUBSTITUTE {^Vaya.. %1 %2} {<119>Botín: <119>¡%1 está pelao! <099>} {5}
-#SUBSTITUTE {¡Oh, vaya, %1 parece haberse dado cuenta de tus intenciones!} {<109>Apuñalas a <129>%1<119> pero ¡Te caza!<099>} {5}
-
-#TAB {alarymma}
-#TAB {archimonde}
-#TAB {artencaen}
-#TAB {cucaracha}
-#TAB {desmontar}
-#TAB {erika}
-#TAB {estatus}
-#TAB {experiencia}
-#TAB {gorbak}
-#TAB {habilidades}
-#TAB {hechizos}
-#TAB {ione}
-#TAB {iverlan}
-#TAB {ketuo}
-#TAB {khorghum}
-#TAB {kingoh}
-#TAB {korvan}
-#TAB {murcielago}
-#TAB {pasillo}
-#TAB {peleas}
-#TAB {picar}
-#TAB {pillo}
-#TAB {reputacion}
-#TAB {silvhia}
-#TAB {sizzla}
-#TAB {sonreir}
-#TAB {thraky}
-#TAB {thrugelthim}
-#TAB {thrugeltor}
-#TAB {tsongor}
-
-#VARIABLE {arma} {filo}
-#VARIABLE {escondite} {arbol}
-#VARIABLE {f12var} {pp}
-#VARIABLE {goody} {trozo}
-#VARIABLE {nicks} {teltem,sertor,vidhmernare,valshuk,teltem,ecker,phark,durhazz,ileiun,phark,vidhmernare,loggregar,ecker,valshuk}
-#VARIABLE {opo} {Morador del Cieno.}
-#VARIABLE {pincho} {alma}
-#VARIABLE {target} {teltem}
+#SUBSTITUTE {# %1 logra esquivar tu ataque} {<129>%1 <118>te esquiva tu!<099> } {5};
+#SUBSTITUTE {No existe el objetivo} {.} {5};
+#SUBSTITUTE {Te encaras contra %1 en posición de combate} {.} {5};
+#SUBSTITUTE {Vaya, %1 te ha descubierta antes de que pudieras robarle nada} {<149>¡¡%1 te ha pillado, tú!!<099>} {5};
+#SUBSTITUTE {Vaya, %1 te ha descubierto antes de que pudieras robarle nada} {<129> ¡Oh! <119>%1 <109> te pilla intentando robarle<149>!!<099>} {5};
+#SUBSTITUTE {^Consigues ver los siguientes objetos al espiar a %1} {<109>Espías a <119>%1<129>: OK<099>} {5};
+#SUBSTITUTE {^Robas con éxito %1} {<119>Botín: <139>%1<099>} {5};
+#SUBSTITUTE {^Robas perfectamente a %1} {<149>Robas a %1<129>: OK<099>} {5};
+#SUBSTITUTE {^Vaya.. %1 %2} {<119>Botín: <119>¡%1 está pelao! <099>} {5};
+#SUBSTITUTE {¡Oh, vaya, %1 parece haberse dado cuenta de tus intenciones!} {<109>Apuñalas a <129>%1<119> pero ¡Te caza!<099>} {5};
 
 #CLASS {kerovan} {close};

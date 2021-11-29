@@ -46,12 +46,8 @@
 #READ lib/saving_throw.tin;
 #VAR {rlppPrefix} {<139>☥<099>};
 #VAR {rlppColor} {<fca>};
-#NOP#EVENT {PROGRAM START} { #SYSTEM {clear}; #SHOWME <fac>@center{Reinos de Leyenda - http://reinosdeleyenda.org}; #SHOWME <fca>; #NOP  /motd; #SHOWME <acf>Jugador?; };
 #EVENT {PROGRAM START} { #SYSTEM {clear}; #ssl {reinos} {rlmud.org} {5022}};
 #ALIAS cdev {#ssl {reinos} {rlmud.org} {5022} {pjs/$pj} } {5};
-#NOP #ALIAS CDEV {#ssl {reinos} {rlmud.org} {5022} {pjs/$pj} } {5};
-#NOP #ALIAS cdev {#ses {$pj} {rlmud.org} {23}} {5};
 #EVENT {RECEIVED INPUT} {#VAR pj %0;#UNEVENT {RECEIVED INPUT}};
-#NOP #EVENT {SESSION CONNECTED} {$pj;$passwd};
 #ACTION {Con que nombre quieres ser conocido} {$pj;If6was90,;#read pjs/$pj};
-#NOP #ACTION {Tu última conexión fue el} {#spl 0 3;puntos};
+#ACTION {Tu última conexión fue el} {#spl 0 3;ppr};
