@@ -6,7 +6,7 @@
     #variable botin %1
 };
 
-#ACTION {^El portero dice desde el otro lado: está bien, puedes pasar. Bienvenido al poblado};}
+#ACTION {^El portero dice desde el otro lado: está bien, puedes pasar. Bienvenido al poblado}
 {
     de
 };
