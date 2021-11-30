@@ -748,21 +748,6 @@
     navegar
 };
 
-#ALIAS {of}
-{
-    envainar $pincho
-};
-
-#ALIAS {off}
-{
-    envainar $pincho
-};
-
-#ALIAS {on}
-{
-    desenvainar $pincho
-};
-
 #ALIAS {op}
 {
     abrir
@@ -986,10 +971,6 @@
     trivial %0
 };
 
-#ALIAS {unwi}
-{
-    envainar
-};
 
 #ALIAS {uuu}
 {
@@ -1021,10 +1002,6 @@
     w vagabundo
 };
 
-#ALIAS {wi}
-{
-    empuñar
-};
 
 #ALIAS {wm}
 {
