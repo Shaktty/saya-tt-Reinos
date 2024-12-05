@@ -78,7 +78,7 @@
  * Function @message{string}
  */
 #FUNCTION {message} {
-    #ECHO {$rlppPrefix$rlppColor %s<099>} {%1};
+    #LINE ONESHOT {#ECHO {$rlppPrefix$rlppColor %s<099>} {%1}};
     #RETURN;
 };
 

@@ -5,7 +5,7 @@
     #SCREEN {get} {cols} {screenWidth};
     #SCREEN {get} {height} {screenLength};
     #FORMAT {sentenceLength} {%L} {%1};
-    #MATH {paddingLength} {($screenWidth - $sentenceLength) / 2};
+    #MATH {paddingLength} {(($screenWidth - $sentenceLength) / 2)-35};
     #FORMAT {result} {%+${paddingLength}s%s%+${paddingLength}s} {} {%1} {};
 };
 

@@ -21,13 +21,13 @@
 
 #ACTION {^# } {
     #VAR {stats[heartbeat]} {4};
-  #LINE ignore   #SHOWME {@powerline{}} {-2};
+  #LINE ignore   #NOP #SHOWME {@powerline{}} {-2};
     #TICK {hb} {
         #MATH {stats[heartbeat]} {$stats[heartbeat]+1};
         #IF {$stats[heartbeat] > 4} {
             #VAR {stats[heartbeat]} {-1};
         };
-  #LINE ignore #SHOWME {@powerline{}} {-2};
+  #LINE ignore #NOP #SHOWME {@powerline{}} {-2};
     } {1};
 };
 
@@ -69,21 +69,21 @@
     #VAR {stats[maxHealth]} {%2};
     #VAR {stats[energy]} {%3};
     #VAR {stats[maxEnergy]} {%4};
-    #SHOWME {@powerline{}} {-2};
+    #NOP #SHOWME {@powerline{}} {-2};
 };
 
 #ACTION {^Puntos de Vida %* (%1/%2) %*$}
 {
     #VAR {stats[health]} {%1};
     #VAR {stats[maxHealth]} {%2};
-    #SHOWME {@powerline{}} {-2};
+    #NOP #SHOWME {@powerline{}} {-2};
 };
 
 #ACTION {^Puntos de Energía %* (%1/%2) %*$}
 {
     #VAR {stats[energy]} {%1};
     #VAR {stats[maxEnergy]} {%2};
-    #SHOWME {@powerline{}} {-2};
+    #NOP #SHOWME {@powerline{}} {-2};
 };
 
 #ACTION {^Pvs: %1(%2)  Pe: %3(%4)  Fe: %5(%6)  Po: %7  Xp: %8  Psoc: %9$} {
@@ -91,7 +91,7 @@
     #VAR {stats[maxHealth]} {%2};
     #VAR {stats[energy]} {%3};
     #VAR {stats[maxEnergy]} {%4};
-    #SHOWME {@powerline{}} {-2};
+    #NOP #SHOWME {@powerline{}} {-2};
 };
 
 #ACTION {^Pvs: %1\/%2 (%3) Pe: %4\/%5 (%6)$} {
@@ -101,7 +101,7 @@
     #VAR {stats[energy]} {%4};
     #VAR {stats[maxEnergy]} {%5};
     #SHOWME {Δ @deltaColor{$healthDelta}$healthDelta<099>};
-    #SHOWME {@powerline{}} {-2};
+    #NOP #SHOWME {@powerline{}} {-2};
 };
 #ACTION {^Pvs: %1\/%2 Pe: %3\/%4$} {
     #MATH {healthDelta} {%1 - $stats[health]};
@@ -110,23 +110,23 @@
     #VAR {stats[energy]} {%3};
     #VAR {stats[maxEnergy]} {%4};
     #SHOWME {Δ @deltaColor{$healthDelta}$healthDelta<099>};
-    #SHOWME {@powerline{}} {-2};
+    #NOP #SHOWME {@powerline{}} {-2};
 };
 
 #ACTION {^%1 imagenes semejantes a ti aparecen a tu alrededor.$} {
     #VAR {buffers[images]} {@parseNumber{%1}};
-    #SHOWME {@powerline{}} {-2};
+    #NOP #SHOWME {@powerline{}} {-2};
 };
 
 #ACTION {^Estás rodead{o|a} por %1 im{a|á}genes id{é|e}nticas a ti.$} {
     #VAR {buffers[images]} {%1};
-    #SHOWME {@powerline{}} {-2};
+    #NOP #SHOWME {@powerline{}} {-2};
 };
 
 #NOP TODO: Integrate with above via | -Shaktty
 #ACTION {^Estás rodeada por 1 im{á|a}gen id{é|e}ntica a ti.$} {
     #VAR {buffers[images]} {-1};
-    #SHOWME {@powerline{}} {-2};
+    #NOP #SHOWME {@powerline{}} {-2};
 };
 
 #NOP fixed by taking out the ^ and avoiding the # altogether -shaktty
@@ -136,41 +136,41 @@
         #VAR {buffers[images]} 0;
     }
    @message{"1 Imagen menos"};
-    #SHOWME {@powerline{}} {-2};
-};
+    #NOP #SHOWME {@powerline{}} {-2};
+  };
 
-#ACTION {^¡Tus im{a|á}genes se desvanecen!$} {
-    #VAR {buffers[images]} 0;
-    #SHOWME {@powerline{}} {-2};
-} {4};
+  #ACTION {^¡Tus im{a|á}genes se desvanecen!$} {
+      #VAR {buffers[images]} 0;
+      #NOP #SHOWME {@powerline{}} {-2};
+  } {4};
 
-#ACTION {^Tu piel queda cubierta por %1 fin{i|í}simas, pero resistentes, capas de piedra.$} {
-    #VAR {buffers[stoneLayers]} {%1};
-    #SHOWME {@powerline{}} {-2};
-};
+  #ACTION {^Tu piel queda cubierta por %1 fin{i|í}simas, pero resistentes, capas de piedra.$} {
+      #VAR {buffers[stoneLayers]} {%1};
+      #NOP #SHOWME {@powerline{}} {-2};
+  };
 
-#ACTION {^* El ataque de %* rebota en tu piel de piedra.$} {
-    #MATH {buffers[stoneLayers]} {$buffers[stoneLayers] - 1};
-    #IF {$buffers[stoneLayers] < 0} {
-        #VAR {buffers[stoneLayers]} 0;
-    }
-    @message{"1 piel menos"};
-    #SHOWME {@powerline{}} {-2};
-}
+  #ACTION {^* El ataque de %* rebota en tu piel de piedra.$} {
+      #MATH {buffers[stoneLayers]} {$buffers[stoneLayers] - 1};
+      #IF {$buffers[stoneLayers] < 0} {
+          #VAR {buffers[stoneLayers]} 0;
+      }
+      @message{"1 piel menos"};
+      #NOP #SHOWME {@powerline{}} {-2};
+  }
 
-#ACTION {^Tu piel vuelve a su estado normal.$} {
-    #VAR {buffers[stoneLayers]} 0;
-    #SHOWME {@powerline{}} {-2};
-} {4};
+  #ACTION {^Tu piel vuelve a su estado normal.$} {
+      #VAR {buffers[stoneLayers]} 0;
+      #NOP #SHOWME {@powerline{}} {-2};
+  } {4};
 
-#NOP Added regeneration calculations -Shaktty
-#ACTION {^Tu piel de piedra se endurece y fortalece m{á|a}gicamente, haciendo que tu total de capas de piedra suba a %1.$} {
-    #VAR {buffers[stoneLayers]} {%1};
-    #SHOWME {@powerline{}} {-2};
-};
-#ACTION {^Tus clones ilusorios se dividen y reorganizan, haciendo que tu total de im{a|á}genes suba a %1.$} {
-   #VAR {buffers[images]} {%1};
-   #SHOWME {@powerline{}} {-2};
+  #NOP Added regeneration calculations -Shaktty
+  #ACTION {^Tu piel de piedra se endurece y fortalece m{á|a}gicamente, haciendo que tu total de capas de piedra suba a %1.$} {
+      #VAR {buffers[stoneLayers]} {%1};
+      #NOP #SHOWME {@powerline{}} {-2};
+  };
+  #ACTION {^Tus clones ilusorios se dividen y reorganizan, haciendo que tu total de im{a|á}genes suba a %1.$} {
+     #VAR {buffers[images]} {%1};
+     #NOP #SHOWME {@powerline{}} {-2};
 };
 
  #CLASS {RL_POWERLINE} {close};
