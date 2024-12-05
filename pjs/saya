@@ -294,7 +294,6 @@
 #NOP #ALIAS {x} { cazar $target,%0,$nicks } {5}
 #NOP #ALIAS {z} { doblegolpe $target,%0,$nicks } {5}
 #SUBSTITUTE {^%1 se desploma a causa de la pérdida de sangre} {<fac>%1 <099>se desploma a causa de la pérdida de sangre  <119> STUN STUN!<099>}
-#READ lib/numpad_sigilar.tin
 #VARIABLE conc no
 #VARIABLE f10var {ac}
 #VARIABLE f11var {x}
@@ -308,5 +307,11 @@
 #VARIABLE f7var {88}
 #VARIABLE f8var {k}
 #VARIABLE f9var {at}
-#VARIABLE planta {arlan} 
+#VARIABLE planta {arlan}
+#PROMPT {[%1/%2]:[%3/%4] | %5 | %6 | %7 |%8|%9|%10>} {<afc>[ <119>(<cfa>%1<119>/<cfa>%2<119>)<afc> | <149>(<fac>%3<149>/<fac>%4<149>)<afc> ] <109>%7 @center{<caf>[ <fca>Aliado: $invoca<fac> |<fca> Caza: <119>$target <fac>| <139>Concentrado: <120>$conc <fac>| <129>~%8~<fca>~%9~<119>~%10~~<caf> ]}} {-2};
+#PROMPT {^[%1/%2]:[%3/%4] | %5 | %6 | %7 |%8|%9|%10>} {<afc>[ <119>(<cfa>%1<119>/<cfa>%2<119>)<afc> | <149>(<fac>%3<149>/<fac>%4<149>)<afc> ] <109>%7 @center{<caf>[ <fca>Aliado: $invoca<fac> |<fca> Caza: <119>$target <fac>| <139>Concentrado: <120>$conc <fac>| <129>~%8~<fca>~%9~<119>~%10~~<caf> ]}} {-2};
+#ACT {Gran Oso Ancestral} {#va invoca {<139>Oso Ancestral<109>}};
+#ACT {Gran Lobo Ancestral} {#va invoca {<159>Lobo Ancestral<109>}};
+#ACT {Gran Halcón Vigilante} {#va invoca {<169>Halcón Vigilante<109>}};
+#VAR {Gran Oso Ancestral} {#va invoca {Oso Ancestral}};
 #CLASS {saya} {close};

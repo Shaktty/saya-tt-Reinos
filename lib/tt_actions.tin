@@ -28,7 +28,7 @@
 #ACTION {Bienvenido}
 {
   #SHOWME {@powerline{}} {-2};
-  scc
+  scc;
   #spl 1 2;
 };
 #ALIAS {ppr}
