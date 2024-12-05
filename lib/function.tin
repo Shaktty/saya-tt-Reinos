@@ -22,7 +22,7 @@
     };
     #ELSEIF {%1 <= 50} {
         #RETURN {<158>};
-    }; 
+    };
     #ELSE {
         #RETURN {<128>};
     };
@@ -78,7 +78,7 @@
  * Function @message{string}
  */
 #FUNCTION {message} {
-    #SHOWME {$rlppPrefix$rlppColor %1<099>};
+    #ECHO {$rlppPrefix$rlppColor %s<099>} {%1};
     #RETURN;
 };
 

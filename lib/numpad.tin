@@ -1,19 +1,21 @@
 #CLASS {tt_numpad} {kill};
 #CLASS {tt_numpad} {open};
 
-#MACRO {\eOl} { abajo };
-#MACRO {\eOm} { arriba };
-#MACRO {\eOn} { estado todos };
-#MACRO {\eOo} { abajo };
-#MACRO {\eOp} { ojear };
-#MACRO {\eOq} { sudoeste };
-#MACRO {\eOr} { sur };
-#MACRO {\eOs} { sudeste };
-#MACRO {\eOt} { oeste };
-#MACRO {\eOu} { ojear };
-#MACRO {\eOv} { este };
-#MACRO {\eOw} { noroeste };
-#MACRO {\eOx} { norte };
-#MACRO {\eOy} { noreste };
+#MACRO {\eO2l} { sigilar abajo };
+#MACRO {\eO2j} { sigilar arriba };
+#MACRO {\eO2p} { estado todos };
+#MACRO {\eO2n} {ojear };
+#MACRO {\eO2o} { sigilar abajo };
+#MACRO {\eO2m} {j };
+#MACRO {\eO2k} {jj };
+#MACRO {\eO2q} {sigilar sudoeste };
+#MACRO {\eO2r} {sigilar sur };
+#MACRO {\eO2s} {sigilar sudeste };
+#MACRO {\eO2t} {sigilar oeste };
+#MACRO {\eO2u} { k };
+#MACRO {\eO2v} {sigilar este };
+#MACRO {\eO2w} {sigilar noroeste };
+#MACRO {\eO2x} {sigilar norte };
+#MACRO {\eO2y} {sigilar noreste };
 
 #CLASS {tt_numpad} {close};

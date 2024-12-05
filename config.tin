@@ -39,15 +39,19 @@
 #READ lib/tt_subs.tin;
 #READ lib/tt_alias.tin;
 #NOP READ lib/tt_magia.tin;
-#NOP#READ lib/macros_fbar.tin;
+#READ lib/macros_fbar.tin;
 #READ lib/tt_tab.tin;
 #READ lib/gmcp.tin;
 #READ lib/inventory.tin;
 #READ lib/saving_throw.tin;
 #VAR {rlppPrefix} {<139>☥<099>};
 #VAR {rlppColor} {<fca>};
-#EVENT {PROGRAM START} { #SYSTEM {clear}; #ssl {reinos} {rlmud.org} {5022}};
+#EVENT {PROGRAM START} {#ssl {reinos} {rlmud.org} {5022}};
 #ALIAS cdev {#ssl {reinos} {rlmud.org} {5022} {pjs/$pj} } {5};
 #EVENT {RECEIVED INPUT} {#VAR pj %0;#UNEVENT {RECEIVED INPUT}};
-#ACTION {Con que nombre quieres ser conocido} {$pj;If6was90,;#read pjs/$pj};
-#ACTION {Tu última conexión fue el} {#spl 0 3;ppr};
+#ALIAS {ppr} { prompt [$v/$V]:[$g/$G] | $e | $p | $s |$j|$b|$a>} {5}
+#READ .password;
+#ACTION {Con que nombre quieres ser conocido} {$pj;$pass;#read pjs/$pj};
+#ACTION {Tu última conexión fue el} {ppr;#spl 1 1;cols $screenWidth};
+#PROMPT {[%1/%2]:[%3/%4] | %5 | %6 | %7 |%8|%9|%10>} {@center{<afc>[ <119>(<cfa>%1<119>/<cfa>%2<119>)<afc> | <149>(<fac>%3<149>/<fac>%4<149>)<afc> | <acf>Imagenes: %5<cfa> | <fca>Pieles: %6<cfa> |<fca> Caza: <119>$target <cfa>|<129>~%8~<fca>~%9~<119>~%10~~<cfa>|<109>%7<afc> ]<190>}} {1}
+#PROMPT {^[%1/%2]:[%3/%4] | %5 | %6 | %7 |%8|%9|%10>} {@center{<afc>[ <119>(<cfa>%1<119>/<cfa>%2<119>)<afc> |  <149>(<fac>%3<149>/<fac>%4<149>)<afc> | <acf>Imagenes: %5<cfa> | <fca>Pieles: %6<cfa> |<fca> Caza: <119>$target <cfa>|<129>~%8~<fca>~%9~<119>~%10~~<cfa>|<109>%7<afc> ]<190>}} {1}

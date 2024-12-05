@@ -28,12 +28,13 @@
 #ACTION {Bienvenido}
 {
   #SHOWME {@powerline{}} {-2};
-  #spl 0 3;
+  scc
+  #spl 1 2;
 };
 #ALIAS {ppr}
 {
   #SHOWME {@powerline{}} {-2};
-  #spl 0 3;
+  #spl 1 2;
 };
 #ACTION {Nombre corto x cambiado de %1 a %2} {#va nicks %2;#SHOWME <FCA>Nicks cambiados a:<caf> $nicks<099>};
 #ACTION {Nombre corto tgt cambiado de %1 a %2} {#va tgt %2;#SHOWME <FCA>target cambiados a:<caf> $nicks<099>};

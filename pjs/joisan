@@ -66,8 +66,8 @@
 #ALIAS {uu} { ciu @%^BOLD%^BLACK%^Ignis (%^MAGENTA%^M-L%^BLACK%^)%^RED%^: %^B_MAGENTA%^WHITE%^ %0 %^RESET%^ } {5}
 #NOP #ALIAS {x} { apuñalar $target,%0,$nicks } {5}
 #NOP #ALIAS {ñ} { arrojar $lanza a $target } {5}
-#ALIAS {ppr} { prompt PV: $v/2501 GP: $g/682 | $e | $p | $s |$j|$b|$a>} {5}
-#PROMPT {PV: %1/%2 GP: %3/%4 | %5 | %6 | %7 |%8|%9|%10>}   {<afc>[##Pvs#<cfa>%1<119>/<cfa>%2<afc>##|#<fac>Gps#%3<149>/<fac>%4#<afc>#| <acf>Imagenes: %5<cfa> | <fca>Pieles: %6<cfa> |<fca> Caza: <119>$target <cfa>|<129>~%8~<fca>~%9~<119>~%10~~<cfa>|<109>%7<afc> ]<190> \>} {3}
-#PROMPT {^PV: %1/%2 GP: %3/%4 | %5 | %6 | %7 |%8|%9|%10>}  {<afc>[##Pvs#<cfa>%1<119>/<cfa>%2<afc>##|#<fac>Gps#%3<149>/<fac>%4#<afc>#| <acf>Imagenes: %5<cfa> | <fca>Pieles: %6<cfa> |<fca> Caza: <119>$target <cfa>|<129>~%8~<fca>~%9~<119>~%10~~<cfa>|<109>%7<afc> ]<190> \>} {3}
+#ALIAS {ppr} { prompt [$v/$V]:[$g/$G] | $e | $p | $s |$j|$b|$a>} {5}
+#PROMPT {[%1/%2]:[%3/%4] | %5 | %6 | %7 |%8|%9|%10>} {<afc>[ <119>(<cfa>%1<119>/<cfa>%2<119>)<afc> | <149>(<fac>%3<149>/<fac>%4<149>)<afc> | <acf>Imagenes: %5<cfa> | <fca>Pieles: %6<cfa> |<fca> Caza: <119>$target <cfa>|<129>~%8~<fca>~%9~<119>~%10~~<cfa>|<109>%7<afc> ]<190>} {1}
+#PROMPT {^[%1/%2]:[%3/%4] | %5 | %6 | %7 |%8|%9|%10>} {<afc>[ <119>(<cfa>%1<119>/<cfa>%2<119>)<afc> |  <149>(<fac>%3<149>/<fac>%4<149>)<afc> | <acf>Imagenes: %5<cfa> | <fca>Pieles: %6<cfa> |<fca> Caza: <119>$target <cfa>|<129>~%8~<fca>~%9~<119>~%10~~<cfa>|<109>%7<afc> ]<190>} {1}
 #ALIAS ib {interbando @%^BOLD%^BLACK%^Ignis (%^MAGENTA%^M-L%^BLACK%^)%^RED%^: %^B_BLUE%^BOLD%^ORANGE%^ %0 %^RESET%^ } {5}
 #CLASS {joisan} {close};
