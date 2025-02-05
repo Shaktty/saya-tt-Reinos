@@ -1,5 +1,6 @@
+.DS*
 log/
 pjs/password
 .password
-pjs/*.tin
+pjs/*
 .*.swp

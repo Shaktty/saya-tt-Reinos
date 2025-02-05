@@ -1,20 +1,20 @@
 #CLASS {aeltas} {kill};
 #CLASS {aeltas} {open};
-
-#READ lib/tt_magia.tin
+#NOP #READ lib/tt_magia.tin
+#VAR pj {aeltas};
 #ALIAS            {pi} {db volcanico;cb petreo;eq;piel} {5}
 #VARIABLE         {f10var}  {x}
 #VARIABLE         {f11var}  {r}
-#VARIABLE         {f12var}  {po}
-#VARIABLE         {f1var}  {te}
+#VARIABLE         {f12var}  {t}
+#VARIABLE         {f1var}  {th}
 #VARIABLE         {f2var}  {bf}
 #VARIABLE         {f3var}  {man}
 #VARIABLE         {f4var}  {gr}
-#VARIABLE         {f5var}  {z}
-#VARIABLE         {f6var}  {subetu}
+#VARIABLE         {f5var}  {ef}
+#VARIABLE         {f6var}  {ll}
 #VARIABLE         {f7var}  {esp}
-#VARIABLE         {f8var}  {ee}
-#VARIABLE         {f9var}  {par}
+#VARIABLE         {f8var}  {par}
+#VARIABLE         {f9var}  {sil}
 #ALIAS            {denv} {desenvainar} {5}
 #ALIAS            {env} {envainar} {5}
 #VARIABLE  {pincho} {baculo}
@@ -24,4 +24,40 @@
 #ALIAS {bb} { bando @la %^BOLD%^MAGENTA%^M%^BLACK%^aga %^MAGENTA%^S%^RED%^alvaje%^BLACK%^: %^ORANGE%^%0%^RESET%^ } {5}
 #ALIAS {cc} { chat ! } {5}
 #ALIAS {uuu} { ciu ! } {5}
+#ALIAS {bolaof} {formular disipar magia:aeltas globo}
+#ALIAS {bolaa} {formular globo menor de invulnerabilidad:aeltas}
+#ALIAS {bola} {formular globo mayor de invulnerabilidad:aeltas}
+#ALIAS {por} { prompt [$v/$V]:[$g/$G] | $e | $p | $s |$j|$b|$a>} {5}
+#PROMPT {[%1/%2]:[%3/%4] | %5 | %6 | %7 |%8|%9|%10>} {<afc>[<119>(<cfa>%1<119>/<cfa>%2<119>)<afc>|<149>(<fac>%3<149>/<fac>%4<149>)<afc>]<109>%7<159> [<acf>Imgs:%5<fac>|<fca>Skins:%6<fac>|<fca>Caza:<119>$target<fac>|<129>~%8~<fca>~%9~<119>~%10~<caf> } {-2}
+#PROMPT {^[%1/%2]:[%3/%4] | %5 | %6 | %7 |%8|%9|%10>} {<afc>[<119>(<cfa>%1<119>/<cfa>%2<119>)<afc>|<149>(<fac>%3<149>/<fac>%4<149>)<afc>]<109>%7<159> [<acf>Imgs:%5<fac>|<fca>Skins:%6<fac>|<fca>Caza:<119>$target<fac>|<129>~%8~<fca>~%9~<119>~%10~<caf>} {-2}
+#high {Aeltas} violet
+#HIGH {fuerza} jade
+#HIGH {glifo} jade
+#HIGH {proteccion contra armas magicas} bold,jade
+#HIGH {proteccion contra armas comunes} bold,jade
+#HIGH {proteccion contra armas proyectiles} bold,jade
+#HIGH {proteccion %1} bold,jade
+#HIGH {resistencia %1} jade
+#HIGH {piel de piedra} lime
+#HIGH {silueta imprecisa} lime
+#HIGH {espejismo} lime
+#HIGH {armadura espiritual} lime
+#HIGH {escudo de energia} lime
+#HIGH {escudo} lime
+#high {flecha%1} violet
+#HIGH {meteoros diminutos de ignis} violet
+#HIGH {proyectil magico%1} violet
+#HIGH {toque de %1} azure
+#HIGH {toque %1} azure
+#HIGH {toque %1} azure
+#HIGH {defenestrar} violet
+#HIGH {desintegrar} violet
+#HIGH {cono de frio} violet
+#HIGH {relampago%1} pink
+#HIGH {granizo} pink
+#HIGH {descarga de espadas espectrales} pink
+#HIGH {estallido de fuego} pink
+#HIGH {bola %1} pink
+#HIGH {presa sacudidora} violet
+
 #CLASS {aeltas} {close};

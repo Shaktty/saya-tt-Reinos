@@ -1,7 +1,10 @@
 #CLASS {joisan} {kill};
 #CLASS {joisan } {open};
+#VAR pj {joisan};
 
 #NOP #READ lib/tt_magia.tin
+#ALIAS      pop {envainar todo;blandir grimorio;blandir baculo}
+#ALIAS      pip {envainar todo;blandir arma;on}
 #HIGHLIGHT        {bola de fuego}  {bold,reverse,yellow}  {5}
 #HIGHLIGHT        {bola encadenada de fuego}      {bold,reverse,yellow}  {5}
 #HIGHLIGHT        {defenestrar}  {bold,reverse,yellow}  {5}
@@ -51,6 +54,8 @@
 #ALIAS {in} { indicar $target } {5}
 #ALIAS {rm} { robar monedas a %0 } {5}
 #ALIAS {ro} { robar $goody de mochila a $target,$nicks } {5}
+#al opon {#ac {Vislumbras} jj};
+#al opoff {#unac {Vislumbras}};
 #ALIAS {rr} { robar $goody a $target } {5}
 #ALIAS {cgo} {#var goody %1;#showme <fac> Goody cambiado a $goody} {5}
 #ALIAS {r} { robar $goody a $target } {5}
@@ -60,6 +65,9 @@
 #ALIAS {uu} { ciu @%^BOLD%^BLACK%^Ignis (%^MAGENTA%^M-L%^BLACK%^)%^RED%^: %^B_MAGENTA%^WHITE%^ %0 %^RESET%^ } {5}
 #ALIAS ib {interbando @%^BOLD%^BLACK%^Ignis (%^MAGENTA%^M-L%^BLACK%^)%^RED%^: %^B_BLUE%^BOLD%^ORANGE%^ %0 %^RESET%^ } {5}
 #VARIABLE {DES} {no}
-#PROMPT {[%1/%2]:[%3/%4] | %5 | %6 | %7 |%8|%9|%10>} {<afc>[ <119>(<cfa>%1<119>/<cfa>%2<119>)<afc> | <149>(<fac>%3<149>/<fac>%4<149>)<afc> ] \t<109>%7@center{<159>[ <acf>Imagenes: %5<fac> | <fca>Pieles: %6<fac> | <169>Desaparecido? $DES <fac>|<fca> Caza: <119>$target <fac>| <129>~%8~<fca>~%9~<119>~%10~~<caf> }} {-2}
-#PROMPT {^[%1/%2]:[%3/%4] | %5 | %6 | %7 |%8|%9|%10>} {<afc>[ <119>(<cfa>%1<119>/<cfa>%2<119>)<afc> | <149>(<fac>%3<149>/<fac>%4<149>)<afc> ] \t<109>%7@center{<159>[ <acf>Imagenes: %5<fac> | <fca>Pieles: %6<fac> | <169>Desaparecido? $DES <fac>|<fca> Caza: <119>$target <fac>| <129>~%8~<fca>~%9~<119>~%10~~<caf>}} {-2}
+#PROMPT {[%1/%2]:[%3/%4] | %5 | %6 | %7 |%8|%9|%10>} {<afc>[<119>pvs:<cfa>%1<119>/<cfa>%2<119><afc>|<149>pgs:<fac>%3<149>/<fac>%4<afc>]  <caf>%7<109>  <fac>[<acf>Imgs:%5<fac>|<fca>Skns:%6<fac>|<169>$DES<fac>|<119>$target<fac>|<129>%8~<fca>%9~<119>%10~$herida~<fac>] } {-2}
+#PROMPT {^[%1/%2]:[%3/%4] | %5 | %6 | %7 |%8|%9|%10>} {<afc>[<119>pvs:<cfa>%1<119>/<cfa>%2<119><afc>|<149>pgs:<fac>%3<149>/<fac>%4<afc>]  <caf>%7<109>  <fac>[<acf>Imgs:%5<fac>|<fca>Skns:%6<fac>|<169>$DES<fac>|<119>$target<fac>|<129>%8~<fca>%9~<119>%10~$herida~<fac>]} {-2}
+#PROMPT {^[%1/%2]:[%3/%4] | %5 | %6 | %7 |} {<afc>[<119>pvs:<cfa>%1<119>/<cfa>%2<119><afc>|<149>pgs:<fac>%3<149>/<fac>%4<afc>]  <caf>%7<109>  <fac>[<acf>Imgs:%5<fac>|<fca>Skns:%6<fac>|<169>$DES<fac>|<119>$target<fac>|<129>~<fca>~<119>~$herida~<fac>]} {-2}
+#PROMPT {^[%1/%2]:[%3/%4] | %5 | %6 | %7 |} {<afc>[<119>pvs:<cfa>%1<119>/<cfa>%2<119><afc>|<149>pgs:<fac>%3<149>/<fac>%4<afc>]  <caf>%7<109>  <fac>[<acf>Imgs:%5<fac>|<fca>Skns:%6<fac>|<169>$DES<fac>|<119>$target<fac>|<129>~<fca>~<119>~$herida~<fac>]} {-2}
+#alias en {oro;enterrar};
 #CLASS {joisan} {close};

@@ -1,5 +1,6 @@
 #CLASS {saya} {kill};
 #CLASS {saya} {open};
+#VAR pj {saya};
 
 #ALIAS {DIM}
 {
@@ -288,8 +289,9 @@
 #ALIAS {r} { concentracion } {5}
 #ALIAS {wkk} {w -c hostil matar } {5}
 #ALIAS {sangre} {gritar %^BOLD%^GREEN%^Sangre %^RESET%^ para la %^BOLD%^GREEN%^Elfa%^RESET%^ de los %^ORANGE%^B%^BOLD%^os%^GREEN%^q%^RESET%^GREEN%^u%^ORANGE%^e%^BOLD%^ s%^GREEN%^!%^RED%^!%^RESET%^} {5}
-#ALIAS {scll} { puntos -av $invoca } {5}
-#ALIAS {scl} { puntos -v $invoca } {5}
+#ALIAS {scll} { puntos -av $inv } {5}
+#ALIAS {scl} { puntos -v $inv } {5}
+#VARIABLE {inv} {ancestral}
 #ALIAS {toma} { poner %1 en ancestral } {5}
 #NOP #ALIAS {x} { cazar $target,%0,$nicks } {5}
 #NOP #ALIAS {z} { doblegolpe $target,%0,$nicks } {5}
@@ -308,8 +310,10 @@
 #VARIABLE f8var {k}
 #VARIABLE f9var {at}
 #VARIABLE planta {arlan}
-#PROMPT {[%1/%2]:[%3/%4] | %5 | %6 | %7 |%8|%9|%10>} {<afc>[ <119>(<cfa>%1<119>/<cfa>%2<119>)<afc> | <149>(<fac>%3<149>/<fac>%4<149>)<afc> ] <109>%7 @center{<caf>[ <fca>Aliado: $invoca<fac> |<fca> Caza: <119>$target <fac>| <139>Concentrado: <120>$conc <fac>| <129>~%8~<fca>~%9~<119>~%10~~<caf> ]}} {-2};
-#PROMPT {^[%1/%2]:[%3/%4] | %5 | %6 | %7 |%8|%9|%10>} {<afc>[ <119>(<cfa>%1<119>/<cfa>%2<119>)<afc> | <149>(<fac>%3<149>/<fac>%4<149>)<afc> ] <109>%7 @center{<caf>[ <fca>Aliado: $invoca<fac> |<fca> Caza: <119>$target <fac>| <139>Concentrado: <120>$conc <fac>| <129>~%8~<fca>~%9~<119>~%10~~<caf> ]}} {-2};
+#PROMPT {[%1/%2]:[%3/%4] | %5 | %6 | %7 |%8|%9|%10>} {<119>[<afc>(<cfa>%1<afc>/<cfa>%2<afc>)<119>|<149>(<fac>%3<149>/<fac>%4<149>)<119>]  <acf>%7<109>  <fac>[<caf>$invoca<fac>|<fca>Caza:<119>$target<fac>|<139>Ctrd:<120>$conc<fac>|<129>%8~<fca>%9~<119>%10~$herida<fac>]} {-2};
+#PROMPT {^[%1/%2]:[%3/%4] | %5 | %6 | %7 |%8|%9|%10>} {<119>[<afc>(<cfa>%1<afc>/<cfa>%2<afc>)<119>|<149>(<fac>%3<149>/<fac>%4<149>)<119>]  <acf>%7<109>  <fac>[<caf>$invoca<fac>|<fca>Caza:<119>$target<fac>|<139>Ctrd:<120>$conc<fac>|<129>%8~<fca>%9~<119>%10~$herida<fac>]} {-2};
+#VARIABLE {conc} {no}
+#VARIABLE {herida} {}
 #ACT {Gran Oso Ancestral} {#va invoca {<139>Oso Ancestral<109>}};
 #ACT {Gran Lobo Ancestral} {#va invoca {<159>Lobo Ancestral<109>}};
 #ACT {Gran Halcón Vigilante} {#va invoca {<169>Halcón Vigilante<109>}};
