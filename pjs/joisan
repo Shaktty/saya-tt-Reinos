@@ -14,7 +14,7 @@
 
 #ALIAS {eston}
 {
-    #ACTION {No conoces ningún hechizo llamado \'%1\'.} {
+    #ACTION {No conoces ningún hechizo llamado '{%1}'.} {
         #showme {<acf>Hechizo: <aca>%1};
         #showme {Preparando el hechizo %1};
         preparar %1
@@ -23,7 +23,7 @@
 
 #ALIAS {estof}
 {
-    #UNACTION {No conoces ningún hechizo llamado \'%1\'.};
+    #UNACTION {No conoces ningún hechizo llamado '{%1}'.};
 };
 
 #ACTION {# {Clavas|Hundes|Pinchas} %1 tu Puñal Vampírico %2} {mano};

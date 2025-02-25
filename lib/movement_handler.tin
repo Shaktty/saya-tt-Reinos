@@ -145,6 +145,20 @@
 #MACRO {\eO2n} {#VAR {result} {@handle_numpad_key{u}}; #IF {"$result" != "#NOP"} {$result};}
 #MACRO {\eO2m} {#VAR {result} {@handle_numpad_key{j}}; #IF {"$result" != "#NOP"} {$result};}
 #MACRO {\eO2k} {#VAR {result} {@handle_numpad_key{k}}; #IF {"$result" != "#NOP"} {$result};}
+#MACRO {\eO2l} {#VAR {result} {@handle_numpad_key{l}}; #IF {"$result" != "#NOP"} {$result};}
+#MACRO {\eO2m} {#VAR {result} {@handle_numpad_key{m}}; #IF {"$result" != "#NOP"} {$result};}
+#MACRO {\eO2n} {#VAR {result} {@handle_numpad_key{n}}; #IF {"$result" != "#NOP"} {$result};}
+#MACRO {\eO2o} {#VAR {result} {@handle_numpad_key{o}}; #IF {"$result" != "#NOP"} {$result};}
+#MACRO {\eO2p} {#VAR {result} {@handle_numpad_key{p}}; #IF {"$result" != "#NOP"} {$result};}
+#MACRO {\eO2q} {#VAR {result} {@handle_numpad_key{q}}; #IF {"$result" != "#NOP"} {$result};}
+#MACRO {\eO2r} {#VAR {result} {@handle_numpad_key{r}}; #IF {"$result" != "#NOP"} {$result};}
+#MACRO {\eO2s} {#VAR {result} {@handle_numpad_key{s}}; #IF {"$result" != "#NOP"} {$result};}
+#MACRO {\eO2t} {#VAR {result} {@handle_numpad_key{t}}; #IF {"$result" != "#NOP"} {$result};}
+#MACRO {\eO2u} {#VAR {result} {@handle_numpad_key{u}}; #IF {"$result" != "#NOP"} {$result};}
+#MACRO {\eO2v} {#VAR {result} {@handle_numpad_key{v}}; #IF {"$result" != "#NOP"} {$result};}
+#MACRO {\eO2w} {#VAR {result} {@handle_numpad_key{w}}; #IF {"$result" != "#NOP"} {$result};}
+#MACRO {\eO2x} {#VAR {result} {@handle_numpad_key{x}}; #IF {"$result" != "#NOP"} {$result};}
+#MACRO {\eO2y} {#VAR {result} {@handle_numpad_key{y}}; #IF {"$result" != "#NOP"} {$result};}
 
 #NOP === Integration with PathWalker ===
 #FUNCTION {get_short_direction} {

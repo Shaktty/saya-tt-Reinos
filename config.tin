@@ -62,7 +62,8 @@
 #READ lib/functions.tin;
 #READ lib/formatting.tin;
 #READ lib/spell_effects.tin;
-#READ lib/movement_handler.tin;
+#NOP #READ lib/movement_handler.tin;
+#READ lib/numpad.tin;
 #READ lib/lang_handler.tin;
 #READ lib/gmcp_handler.tin;
 #READ lib/prompts.tin;
