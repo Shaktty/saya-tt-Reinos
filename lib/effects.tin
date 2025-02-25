@@ -1,0 +1,118 @@
+#CLASS {RL_EFFECTS} {kill};
+#CLASS {RL_EFFECTS} {open};
+
+#VAR {effects} {
+    {combat_messages} {
+        {death} {☠ %1 ☠}
+        {critical} {!! %1 !!}
+        {miss} {%1 falla}
+        {dodge} {%1 esquiva}
+    }
+}
+
+#FUNCTION {process_combat_message} {
+    #SWITCH {"%1"} {
+        #CASE {"death"} {#RETURN {@center_text{$effects[combat_messages][death]}}};
+        #CASE {"critical"} {#RETURN {@center_text{$effects[combat_messages][critical]}}};
+        #DEFAULT {#RETURN {%2}};
+    };
+}
+
+#SUBSTITUTE {^[Obtienes %* puntos de experiencia]$}
+    {@align_right{$format[colors][success]+%1 xp<099>}} {5};
+
+#SUBSTITUTE {^%* ha muerto.$}
+    {@process_combat_message{death;%1}} {5};
+
+#SUBSTITUTE {^%* est{á|a} %* herid{o|a}.$}
+    {@format_health_status{%1;%2}} {5};
+
+#NOP === Highlights ===
+#HIGHLIGHT {^Comienzas a formular el hechizo '%*'.$}    {bold cyan} {5};
+#HIGHLIGHT {^Pronuncias el cántico: '%*'$}              {bold cyan} {5};
+#HIGHLIGHT {^Propinas el golpe mortal a %*.$}           {green} {5};
+#HIGHLIGHT {^%* cae al suelo sin vida.$}                {black bold} {5};
+
+#NOP === Warning Highlights ===
+#HIGHLIGHT {^%* empieza a formular un hechizo.$}                {bold magenta} {5};
+#HIGHLIGHT {^¡Descubres a %* intentando moverse en silencio!$}  {bold magenta} {5};
+#HIGHLIGHT {^¡%* descubre a %* intentando moverse en silencio!$}    {bold magenta} {5};
+#HIGHLIGHT {^¡%* realiza un amplio ataque barriendo de un golpe a todos sus oponentes!} {bold magenta} {5};
+#HIGHLIGHT {^¡%* se dispone a golpear a un enemigo!$}   {bold magenta} {5};
+#HIGHLIGHT {^Te vuelves a sentir pesad{a|o}.$}          {bold magenta} {5};
+#HIGHLIGHT {^%* te sigue.$}                             {bold magenta} {5};
+#HIGHLIGHT {^Te haces consciente de la presencia de %*.$} {bold magenta} {5};
+
+#NOP === Danger Highlights ===
+#HIGHLIGHT {^¡Has quedado al descubierto!$}             {bold red} {5};
+#HIGHLIGHT {^¡Tus imágenes se desvanecen!$}             {bold red} {5};
+#HIGHLIGHT {^Tu piel vuelve a su estado normal.$}       {bold red} {5};
+#HIGHLIGHT {^{¡|}Te estremeces y pierdes la concentraci{ó|o}n!$}   {bold red} {5};
+
+#NOP === Success Highlights ===
+#HIGHLIGHT {^Puedes moverte libremente de nuevo.$}      {bold green} {5};
+#HIGHLIGHT {^{¡|}%* pierde la concentraci{ó|o}n!.$}     {bold green} {5};
+#HIGHLIGHT {¡%1 pierde la concentración!$}              {bold green} {5};
+
+#NOP === Combat Substitutions ===
+#SUBSTITUTE {^[Obtienes %* puntos de experiencia]$}
+    {@align_right{$format[colors][success]+%1 xp<099>}} {5};
+
+#SUBSTITUTE {^%* est{á|a} revigorizad{o|a}.$}
+    {%1@healthBar{100;50} @health_color{100}100%+<099>} {5};
+
+#SUBSTITUTE {^%* est{á|a} en perfecto estado.$}
+    {%1 @healthBar{100;50} @health_color{100}100%<099>} {5};
+
+#SUBSTITUTE {^%* est{á|a} en buen estado.$}
+    {%1 @healthBar{89;50} @health_color{85}80-99%<099>} {5};
+
+#SUBSTITUTE {^%* est{á|a} ligeramente herid{o|a}.$}
+    {%1 @healthBar{72;50} @health_color{72}65-79%<099>} {5};
+
+#SUBSTITUTE {^%* est{á|a} considerablemente herid{o|a}.$}
+    {%1 @healthBar{57;50} @health_color{57}50-64%<099>} {5};
+
+#SUBSTITUTE {^%* est{á|a} llen{o|a} de heridas.$}
+    {%1 @healthBar{42;50} @health_color{42}35-49%<099>} {5};
+
+#SUBSTITUTE {^%* est{á|a} herid{o|a} de gravedad.$}
+    {%1 @healthBar{27;50} @health_color{27}20-34%<099>} {5};
+
+#SUBSTITUTE {^%* est{á|a} herid{o|a} cr{í|i}ticamente.$}
+    {%1 @healthBar{13;50} @health_color{13}8-19%<099>} {5};
+
+#SUBSTITUTE {^%* est{á|a} mortalmente herid{o|a}.$}
+    {%1 @healthBar{4;50} @health_color{4}1-7%<099>} {5};
+
+#SUBSTITUTE {^%* est{á|a} moribund{o|a}.$}
+    {%1 @healthBar{0;50} @health_color{0}0%<099>} {5};
+
+#NOP === Combat Action Messages ===
+#SUBSTITUTE {%1 comienza a rodearte. Sin duda no trama nada bueno.}
+    {%1 comienza a rodearte. Sin duda no trama nada bueno. <119> OJO OJO RODEAR!!!<099>} {5};
+
+#SUBSTITUTE {Golpeas a %1 con %2 %3}
+    {<059> Golpeas a<119> %1<059> con <159>%2<059> %3<099>} {5};
+
+#SUBSTITUTE {Estás siendo atacada por %1}
+    {<100>Enemigo: <119>%1<099>} {5};
+
+#NOP === Special Ability Messages ===
+#SUBSTITUTE {%1, el Gran Lobo Ancestral parece encogerse, mientras retrae su cuerpo hacia atrás}
+    {%1, el Gran Lobo Ancestral prepara <119>mordisco<099>!!!} {5};
+
+#SUBSTITUTE {El lobo se desvanece en su entorno}
+    {<159>El lobo se desvanece en su entorno <129>   LOBO ESCONDIDO!! OK :)<099>} {5};
+
+#NOP === Status Effect Messages ===
+#SUBSTITUTE {Esta protegido por un escudo magico.}
+    {Esta protegido por un escudo magico. <159>------------->>>>  <169>Escudo ON<099>} {5};
+
+#SUBSTITUTE {Esta rodeado de un aura brillante de luz oro}
+    {Esta rodeado de un aura brillante de luz oro <159>----->>>> <169> Armadura ON<099>} {5};
+
+#SUBSTITUTE {Esta rodeado por un aura mistica brillante.}
+    {Esta rodeado por un aura mistica brillante. <159>------>>>> <169> Aura Espiritual ON<099>} {5};
+
+#CLASS {RL_EFFECTS} {close};

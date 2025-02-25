@@ -1,6 +1,6 @@
 .VAR PJPVS {3501}
 .VAR PJPGS {600}
-.ALIAS {ppr} { prompt PV: $v/$PJPVS GP: $g/$PJPGS | $s |$j|$b|$a> } {5}
+.ALIAS {ppr} { prompt PV: $v/$V GP: $g/$G | $s |$j|$b|$a> } {5}
 .ALIAS {0} { esconderse arbol } {5}
 .ALIAS {coo} { ordenar coger todo de cuerpos } {5}
 .ALIAS {dd} { desmontar ancestral; esconderse ancestral } {5}

@@ -1,0 +1,118 @@
+#CLASS {RL_GMCP} {kill};
+#CLASS {RL_GMCP} {open};
+
+#NOP === GMCP Configuration ===
+#VAR {gmcp} {
+    {enabled} {1}
+    {debug} {0}
+    {char} {
+        {name} {}
+        {class} {}
+        {level} {1}
+        {status} {
+            {hp} {0}
+            {hp_max} {0}
+            {mp} {0}
+            {mp_max} {0}
+        }
+    }
+}
+
+#NOP === Protocol Constants ===
+#FORMAT {gmcp[protocol][IAC]}  {%a} {255};
+#FORMAT {gmcp[protocol][DONT]} {%a} {254};
+#FORMAT {gmcp[protocol][DO]}   {%a} {253};
+#FORMAT {gmcp[protocol][WONT]} {%a} {252};
+#FORMAT {gmcp[protocol][WILL]} {%a} {251};
+#FORMAT {gmcp[protocol][SB]}   {%a} {250};
+#FORMAT {gmcp[protocol][SE]}   {%a} {240};
+#FORMAT {gmcp[protocol][GMCP]} {%a} {201};
+
+#NOP === Core Functions ===
+#FUNCTION {gmcp_send} {
+    #SEND {$gmcp[protocol][IAC]$gmcp[protocol][SB]$gmcp[protocol][GMCP]%1$gmcp[protocol][IAC]$gmcp[protocol][SE]};
+}
+
+#FUNCTION {gmcp_init} {
+    #SEND {$gmcp[protocol][IAC]$gmcp[protocol][DO]$gmcp[protocol][GMCP]};
+    @gmcp_send{Core.Hello { "client": "TinTin++", "version": "2.02.12" }};
+    @gmcp_send{Core.Supports.Set [ \
+        "Char 1", \
+        "Char.Skills 1", \
+        "Char.Items 1", \
+        "Char.Status 1", \
+        "Room 1", \
+        "Comm.Channel 1", \
+        "Char.Vitals 1" \
+    ]};
+}
+
+#NOP === Prompt Integration ===
+#ACTION {^Pvs: %1/%2  Pe: %3/%4  Po: %5  Pa: %6(%7)  Xp: %8 Psoc: %9} {
+    #variable hpcol @colscale{%1;%2};
+    #variable mncol @colscale{%3;%4};
+    #format {prompt1} {%s%+4s<138>/<169>%s} {$hpcol} {%1} {%2};
+    #format {prompt2} {%s%+4s/<159>%s} {$mncol} {%3} {%4};
+}
+
+#NOP === GMCP Event Handlers ===
+#EVENT {IAC WILL GMCP} {
+    gmcp_init;
+}
+
+#EVENT {IAC SB GMCP Char.Status IAC SE} {
+    #VAR {gmcp[char][status]} {%0};
+    
+    #IF {"$gmcp[char][status][pe][min]" != ""} {
+        #VAR {gmcp[char][status][mp]} {$gmcp[char][status][pe][min]};
+        #VAR {gmcp[char][status][mp_max]} {$gmcp[char][status][pe][max]};
+        
+        #variable mncol @colscale{$gmcp[char][status][mp];$gmcp[char][status][mp_max]};
+        #format {prompt2} {%s%+4s/<159>%s} {$mncol} {$gmcp[char][status][mp]} {$gmcp[char][status][mp_max]};
+    };
+    
+    #IF {"$gmcp[char][status][pvs][min]" != ""} {
+        #VAR {gmcp[char][status][hp]} {$gmcp[char][status][pvs][min]};
+        #VAR {gmcp[char][status][hp_max]} {$gmcp[char][status][pvs][max]};
+        
+        #variable hpcol @colscale{$gmcp[char][status][hp];$gmcp[char][status][hp_max]};
+        #format {prompt1} {%s%+4s<138>/<169>%s} {$hpcol} {$gmcp[char][status][hp]} {$gmcp[char][status][hp_max]};
+    };
+}
+
+#EVENT {IAC SB GMCP Comm.Channel.Text IAC SE} {
+    #VAR {message} {%0};
+    #FORMAT {timestamp} {%t} {[%H:%M:%S]};
+    
+    #IF {$gmcp[channels][log_enabled]} {
+        #SYSTEM {echo "$timestamp $message" >> logs/chat.log};
+    };
+    
+    #SHOWME {$message} {-2};
+}
+
+#NOP === Channel Handling ===
+#ALIAS {/chatlog} {
+    #SWITCH {"%1"} {
+        #CASE {"on"} {
+            #VAR {gmcp[channels][log_enabled]} {1};
+            #SHOWME {<128>Chat logging enabled<099>};
+        };
+        #CASE {"off"} {
+            #VAR {gmcp[channels][log_enabled]} {0};
+            #SHOWME {<128>Chat logging disabled<099>};
+        };
+        #DEFAULT {
+            #SHOWME {Usage: /chatlog <on|off>};
+        };
+    };
+}
+
+#NOP === Initialize on Load ===
+#ALIAS {init_gmcp} {
+    #VAR {gmcp[channels][log_enabled]} {1};
+}
+
+init_gmcp;
+
+#CLASS {RL_GMCP} {close};

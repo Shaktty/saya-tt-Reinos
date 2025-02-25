@@ -170,12 +170,13 @@
 #HIGHLIGHT  {%0 tejidos y organos}  {red}  {5};
 #HIGHLIGHT  {%1 se retuerce mientras aprieta sus heridas}                         {red}  {5};
 #HIGHLIGHT  {Abandonas tu estado de concentraciión bañada en un sudor frío, descubriendo heridas %!}                                                                       {red}  {5};
-#HIGHLIGHT  {Has quedado al descubierto!}         {red}  {5};
+#ACTION  {�Has quedado al descubierto!}         {#va DES {no}}  {5};
+#HIGHLIGHT  {�Has quedado al descubierto!}         {<faa>}  {5};
 #HIGHLIGHT  {No estas suficientemente calmado.}               {red}  {5};
 #HIGHLIGHT  {Surges desde tu escondite para cazar a tu víctima}                                {red}  {5};
 #HIGHLIGHT  {Tensas tus m?sculos preparando un nuevo ataque. ?Golpeas a %1 y r?pidamente, secundas %0}                                                                      {red}  {5};
 #HIGHLIGHT  {^Descubres a %1}  {red}  {5};
-#HIGHLIGHT  {^Notas a %1}  {red}  {5};
+        #HIGHLIGHT  {^Notas a %1}  {red}  {5};
 #HIGHLIGHT  {efectiva}  {red}  {5};
 #HIGHLIGHT  {herido críticamente}  {red}  {5};
 #HIGHLIGHT  {mortalmente}  {red}  {5};

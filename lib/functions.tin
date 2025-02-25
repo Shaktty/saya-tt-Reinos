@@ -1,0 +1,43 @@
+#CLASS {RL_FUNCTIONS} {kill};
+#CLASS {RL_FUNCTIONS} {open};
+
+/*
+ * Function @message{string}
+ */
+#FUNCTION {message} {
+    #LINE ONESHOT {#ECHO {$rlppPrefix$rlppColor %s<099>} {%1}};
+    #RETURN;
+};
+
+
+#FUNCTION {parse_damage} {
+    #SWITCH {"%1"} {
+        #CASE {"débilmente"} {#RETURN {<aaa>1-40}};
+        #CASE {"con poca fuerza"} {#RETURN {<aba>41-80}};
+        #CASE {"con fuerza"} {#RETURN {<ada>121-160}};
+        #CASE {"con mucha fuerza"} {#RETURN {aea>161-210}};
+        #CASE {"violentamente"} {#RETURN {afa>211-280}};
+        #CASE {"con increíble potencia"} {#RETURN {afa><188>281-600}};
+        #CASE {"con fuerza sobrehumana"} {#RETURN {ffa>601-800}};
+        #CASE {"con fuerza divina"} {#RETURN {fca>801-1500}};
+        #CASE {"con cólera titánica"} {#RETURN {faa><188>1500+}};
+        #DEFAULT {#RETURN {<aca>81-120}}
+    }
+};
+
+#FUNCTION {parse_location} {
+    #SWITCH {"%1"} {
+        #CASE {"la cabeza"} {#RETURN {<afa>×1.6}};
+        #CASE {"el pecho"} {#RETURN {<aba>×1.1}};
+        #CASE {"un pie"} {#RETURN {<aaa>×0.8}};
+        #DEFAULT {#RETURN {}}
+    }
+};
+
+#FUNCTION {format_combat_message} {
+    #VAR {damage} {@parse_damage{%2}};
+    #VAR {location} {@parse_location{%3}};
+    #RETURN {%1 %2 en %3 a %4. $damage<099> $location}
+};
+
+#CLASS {RL_FUNCTIONS} {close};

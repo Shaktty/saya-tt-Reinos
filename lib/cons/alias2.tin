@@ -1,4 +1,4 @@
-#ALIAS            {#mass}                 {#showme Llevas $cont golpes consecutivos}  {5}
+# ALIAS            {#mass}                 {#showme Llevas $cont golpes consecutivos}  {5}
 #ALIAS            {2}                     {esconderse $escondite}      {5}
 #ALIAS            {AB}                    {sigilar abajo}              {5}
 #ALIAS            {AR}                    {sigilar arriba}             {5}
@@ -589,7 +589,7 @@
 #ALIAS {pkon}
 #ALIAS {pl} { formular plaga de desdicha:$target,%0,$nicks,$xp } {5}
 #ALIAS {poneyboy}
-#ALIAS {ppr} { prompt PV: $v/$PJPVS GP: $g/$PJPGS | $s |$j|$b|$a> } {5}
+#ALIAS {ppr} { prompt PV: $v/$V GP: $g/$G | $s |$j|$b|$a> } {5}
 #ALIAS {pp} { oportunidad $target,%0,$nicks,$xp } {5}
 #ALIAS {pp} {peleas parar} {5};
 #ALIAS {prot}

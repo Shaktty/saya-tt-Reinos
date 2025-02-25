@@ -1,73 +1,105 @@
 #CLASS {joisan} {kill};
-#CLASS {joisan } {open};
+#CLASS {joisan} {open};
 #VAR pj {joisan};
+#ALIAS {eje}
+{
+    of;
+    blandir garra
+};
+#ALIAS {ejo}
+{
+    envainar garra;
+    on
+};
 
-#NOP #READ lib/tt_magia.tin
-#ALIAS      pop {envainar todo;blandir grimorio;blandir baculo}
-#ALIAS      pip {envainar todo;blandir arma;on}
-#HIGHLIGHT        {bola de fuego}  {bold,reverse,yellow}  {5}
-#HIGHLIGHT        {bola encadenada de fuego}      {bold,reverse,yellow}  {5}
-#HIGHLIGHT        {defenestrar}  {bold,reverse,yellow}  {5}
-#HIGHLIGHT        {desintegrar}  {bold,reverse,yellow}  {5}
-#HIGHLIGHT        {devolver conjuro menor}    {bold,reverse,yellow}  {5}
-#HIGHLIGHT        {escudo}  {bold,reverse,yellow}  {5}
-#HIGHLIGHT        {tormenta de electrica}   {bold,reverse,yellow}  {5}
-#HIGHLIGHT        {flecha acida de dvneil}    {bold,reverse,yellow}  {5}
-#HIGHLIGHT        {piel de piedra}    {bold,reverse,yellow}  {5}
-#HIGHLIGHT        {flecha de llamas}  {bold,reverse,yellow}  {5}
-#HIGHLIGHT        {golpe de rayo}  {bold,reverse,yellow}  {5}
-#HIGHLIGHT        {mano espectral}  {bold,reverse,yellow}  {5}
-#HIGHLIGHT        {muro de niebla}  {bold,reverse,yellow}  {5}
-#HIGHLIGHT        {nube de frio}  {bold,reverse,yellow}  {5}
-#HIGHLIGHT        {nube hedionda}  {bold,reverse,yellow}  {5}
-#HIGHLIGHT        {ojo por ojo}  {bold,reverse,yellow}  {5}
-#HIGHLIGHT        {proteccion bien}  {bold,reverse,yellow}  {5}
-#HIGHLIGHT        {proyectil magico mayor}    {bold,reverse,yellow}  {5}
-#HIGHLIGHT        {sangre a acido}  {bold,reverse,yellow}  {5}
-#HIGHLIGHT        {silueta imprecisa}  {bold,reverse,yellow}  {5}
-#HIGHLIGHT        {tormenta de hielo}  {bold,reverse,yellow}  {5}
-#HIGHLIGHT        {tormenta electrica}  {bold,reverse,yellow}  {5}
-#VAR {arma} {tulgar}
-#VAR {pincho} {espina}
-#VAR {f1var} {1}
-#VAR {f2var} {to}
-#VAR {f3var} {rr}
-#VAR {f4var} {ui}
-#VAR {f5var} {z}
-#VAR {f6var} {subetu}
-#VAR {f7var} {gi}
-#VAR {f8var} {ess}
-#VAR {f9var} {par}
-#VAR {f10var} {ee}
-#VAR {f11var} {to}
-#VARIABLE {goody} {anillo}
-#VAR {f12var} {x}
-#ALIAS {bbb} { bando ! } {5}
-#ALIAS {bb} { bando @%^BOLD%^BLACK%^Ignis (%^MAGENTA%^M-L%^BLACK%^)%^RED%^: %^B_BLUE%^BOLD%^ORANGE%^ %0 %^RESET%^ } {5}
-#ALIAS {cc} { chat ! } {5}
-#ALIAS {ch0} { chat @deja de %^ORANGE%^divisar %^WHITE%^el %^WHITE%^h%^BOLD%^o%^BLUE%^r%^RESET%^BLUE%^i%^ORANGE%^zo%^BOLD%^n%^WHITE%^t%^RESET%^e, y dice: %^GREEN%^%0%^RESET%^ } {5}
-#ALIAS {conj} { #VARIABLE encan %0; #showme El tipo de conjuro que tienes es $encan }
-#ALIAS {c} { chat @%^BOLD%^BLACK%^Ignis %^RESET%^MAGENTA%^pronuncia%^RESET%^ algo de entre las %^BLACK%^BOLD%^S%^RESET%^ombras y dice: %^BOLD%^MAGENTA%^%0%^RESET%^ } {5}
-#ALIAS {dsirv} { decir sirviente te ordeno: %0 } {5}
-#ALIAS {fa} { familia @la %^RED%^M%^BOLD%^BLACK%^atrona %^WHITE%^: %^MAGENTA%^%0%^RESET%^ } {5}
-#ALIAS {gignis} { gritar Casa Ignis! } {5}
-#ALIAS {in} { indicar $target } {5}
-#ALIAS {rm} { robar monedas a %0 } {5}
-#ALIAS {ro} { robar $goody de mochila a $target,$nicks } {5}
-#al opon {#ac {Vislumbras} jj};
-#al opoff {#unac {Vislumbras}};
-#ALIAS {rr} { robar $goody a $target } {5}
-#ALIAS {cgo} {#var goody %1;#showme <fac> Goody cambiado a $goody} {5}
-#ALIAS {r} { robar $goody a $target } {5}
-#ALIAS {rt} { robar monedas a $target } {5}
-#ALIAS {rutic} { tell %1 ?Jeje!, Muchas gracias por tu $goody %1, lo necesitaba } {5}
-#ALIAS {uuu} { ciu ! } {5}
-#ALIAS {uu} { ciu @%^BOLD%^BLACK%^Ignis (%^MAGENTA%^M-L%^BLACK%^)%^RED%^: %^B_MAGENTA%^WHITE%^ %0 %^RESET%^ } {5}
-#ALIAS ib {interbando @%^BOLD%^BLACK%^Ignis (%^MAGENTA%^M-L%^BLACK%^)%^RED%^: %^B_BLUE%^BOLD%^ORANGE%^ %0 %^RESET%^ } {5}
-#VARIABLE {DES} {no}
-#PROMPT {[%1/%2]:[%3/%4] | %5 | %6 | %7 |%8|%9|%10>} {<afc>[<119>pvs:<cfa>%1<119>/<cfa>%2<119><afc>|<149>pgs:<fac>%3<149>/<fac>%4<afc>]  <caf>%7<109>  <fac>[<acf>Imgs:%5<fac>|<fca>Skns:%6<fac>|<169>$DES<fac>|<119>$target<fac>|<129>%8~<fca>%9~<119>%10~$herida~<fac>] } {-2}
-#PROMPT {^[%1/%2]:[%3/%4] | %5 | %6 | %7 |%8|%9|%10>} {<afc>[<119>pvs:<cfa>%1<119>/<cfa>%2<119><afc>|<149>pgs:<fac>%3<149>/<fac>%4<afc>]  <caf>%7<109>  <fac>[<acf>Imgs:%5<fac>|<fca>Skns:%6<fac>|<169>$DES<fac>|<119>$target<fac>|<129>%8~<fca>%9~<119>%10~$herida~<fac>]} {-2}
-#PROMPT {^[%1/%2]:[%3/%4] | %5 | %6 | %7 |} {<afc>[<119>pvs:<cfa>%1<119>/<cfa>%2<119><afc>|<149>pgs:<fac>%3<149>/<fac>%4<afc>]  <caf>%7<109>  <fac>[<acf>Imgs:%5<fac>|<fca>Skns:%6<fac>|<169>$DES<fac>|<119>$target<fac>|<129>~<fca>~<119>~$herida~<fac>]} {-2}
-#PROMPT {^[%1/%2]:[%3/%4] | %5 | %6 | %7 |} {<afc>[<119>pvs:<cfa>%1<119>/<cfa>%2<119><afc>|<149>pgs:<fac>%3<149>/<fac>%4<afc>]  <caf>%7<109>  <fac>[<acf>Imgs:%5<fac>|<fca>Skns:%6<fac>|<169>$DES<fac>|<119>$target<fac>|<129>~<fca>~<119>~$herida~<fac>]} {-2}
-#alias en {oro;enterrar};
+#ALIAS {eston}
+{
+    #ACTION {No conoces ningún hechizo llamado \'%1\'.} {
+        #showme {<acf>Hechizo: <aca>%1};
+        #showme {Preparando el hechizo %1};
+        preparar %1
+    };
+};
+
+#ALIAS {estof}
+{
+    #UNACTION {No conoces ningún hechizo llamado \'%1\'.};
+};
+
+#ACTION {# {Clavas|Hundes|Pinchas} %1 tu Puñal Vampírico %2} {mano};
+#HIGH {# {Clavas|Hundes|Pinchas} %1 tu Puñal Vampírico %2} {<eaa>};
+#ALIAS      pop {envainar todo;blandir grimorio;blandir baculo};
+#ALIAS      pip {envainar todo;blandir arma;on};
+
+#HIGHLIGHT  {bola de fuego}  {bold,reverse,yellow}  {5};
+#HIGHLIGHT  {bola encadenada de fuego}      {bold,reverse,yellow}  {5};
+#HIGHLIGHT  {defenestrar}  {bold,reverse,yellow}  {5};
+#HIGHLIGHT  {desintegrar}  {bold,reverse,yellow}  {5};
+#HIGHLIGHT  {devolver conjuro menor}    {bold,reverse,yellow}  {5};
+#HIGHLIGHT  {escudo}  {bold,reverse,yellow}  {5};
+#HIGHLIGHT  {tormenta de electrica}   {bold,reverse,yellow}  {5};
+#HIGHLIGHT  {flecha acida de dvneil}    {bold,reverse,yellow}  {5};
+#HIGHLIGHT  {piel de piedra}    {bold,reverse,yellow}  {5};
+#HIGHLIGHT  {flecha de llamas}  {bold,reverse,yellow}  {5};
+#HIGHLIGHT  {golpe de rayo}  {bold,reverse,yellow}  {5};
+#HIGHLIGHT  {mano espectral}  {bold,reverse,yellow}  {5};
+#HIGHLIGHT  {muro de niebla}  {bold,reverse,yellow}  {5};
+#HIGHLIGHT  {nube de frio}  {bold,reverse,yellow}  {5};
+#HIGHLIGHT  {nube hedionda}  {bold,reverse,yellow}  {5};
+#HIGHLIGHT  {ojo por ojo}  {bold,reverse,yellow}  {5};
+#HIGHLIGHT  {proteccion bien}  {bold,reverse,yellow}  {5};
+#HIGHLIGHT  {proyectil magico mayor}    {bold,reverse,yellow}  {5};
+#HIGHLIGHT  {sangre a acido}  {bold,reverse,yellow}  {5};
+#HIGHLIGHT  {silueta imprecisa}  {bold,reverse,yellow}  {5};
+#HIGHLIGHT  {tormenta de hielo}  {bold,reverse,yellow}  {5};
+#HIGHLIGHT  {tormenta electrica}  {bold,reverse,yellow}  {5};
+
+#VAR {f1var} {1};
+#VAR {f2var} {to};
+#VAR {f3var} {rr};
+#VAR {f4var} {ui};
+#VAR {f5var} {z};
+#VAR {f6var} {subetu};
+#VAR {f7var} {gi};
+#VAR {f8var} {ess};
+#VAR {f9var} {par};
+#VAR {f10var} {ee};
+#VAR {f11var} {to};
+#VAR {f12var} {x};
+
+#VARIABLE {goody} {cotas,petos,anillos,bolsas,pergaminos,monedas};
+#VARIABLE {DES} {no};
+
+#ALIAS {bb} { bando @%^BOLD%^BLACK%^Ignis (%^MAGENTA%^M-L%^BLACK%^)%^RED%^: %^B_BLUE%^BOLD%^ORANGE%^ %0 %^RESET%^ };
+#ALIAS {ch0} { chat @deja de %^ORANGE%^divisar %^WHITE%^el %^WHITE%^h%^BOLD%^o%^BLUE%^r%^RESET%^BLUE%^i%^ORANGE%^zo%^BOLD%^n%^WHITE%^t%^RESET%^e, y dice: %^GREEN%^%0%^RESET%^ };
+#ALIAS {c} { chat @%^BOLD%^BLACK%^Ignis %^RESET%^MAGENTA%^pronuncia%^RESET%^ algo de entre las %^BLACK%^BOLD%^S%^RESET%^ombras y dice: %^BOLD%^MAGENTA%^%0%^RESET%^ };
+#ALIAS {dsirv} { decir sirviente te ordeno: %0 };
+#ALIAS {fa} { familia @la %^RED%^M%^BOLD%^BLACK%^atrona %^WHITE%^: %^MAGENTA%^%0%^RESET%^ };
+#ALIAS {gignis} { gritar Casa Ignis! };
+#ALIAS {in} { indicar $target };
+#ALIAS {rm} { robar monedas a %0 };
+#ALIAS {ro} { robar $goody de mochila a $target,$nicks };
+#ALIAS {opon} {#ac {Vislumbras} jj};
+#ALIAS {opof} {#unac {Vislumbras}};
+#ALIAS {rr} { robar $goody a $target };
+#ALIAS {cgo} {coger $goody de cuerpos};
+#ALIAS {vgo} {#va goody {%0};#showme @pullRight{<aba>Goody: <fca>$goody<109>}};
+#ALIAS {r} { robar $goody a $target };
+#ALIAS {rt} { robar monedas a $target };
+#ALIAS {rutic} { tell %1 ?Jeje!, Muchas gracias por tu $goody %1, lo necesitaba };
+#ALIAS {uuu} { ciu ! };
+#ALIAS {uu} { ciu @%^BOLD%^BLACK%^Ignis (%^MAGENTA%^M-L%^BLACK%^)%^RED%^: %^B_MAGENTA%^WHITE%^ %0 %^RESET%^ };
+#ALIAS {ib} {interbando @%^BOLD%^BLACK%^Ignis (%^MAGENTA%^M-L%^BLACK%^)%^RED%^: %^B_BLUE%^BOLD%^ORANGE%^ %0 %^RESET%^ };
+#ALIAS {en} {oro;enterrar};
+
+#PROMPT {[%1/%2]:[%3/%4] | %5 |%6|%7|%8} {@center{
+    <099><afc>[$prompt1<cfa>|$prompt2<afc>]\t $prompt3 @pushRight{<fac>[ <149>Imgs:<cfa>%6 <fac>| <fca>Skns:<afc>%7 <fac>| <fcc>tgt:<119>$target <fac>| <cfc>des:<169>$DES <fac>|<129>~%8<fca>~%9<119>$herida~<fac>]}
+    <099>}
+} {-2}
+
+#PROMPT {^[%1/%2]:[%3/%4] | %5 |%6|%7|%8} {@center{
+    <099><afc>[$prompt1<cfa>|$prompt2<afc>]\t $prompt3 @pushRight{<fac>[ <149>Imgs:<cfa>%6 <fac>| <fca>Skns:<afc>%7 <fac>| <fcc>tgt:<119>$target <fac>| <cfc>des:<169>$DES <fac>|<129>~%3<fca>~%9<119>$herida~<fac>]}
+    <099>}
+} {-2}
+
 #CLASS {joisan} {close};

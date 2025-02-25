@@ -1,0 +1,39 @@
+#CLASS {RL_SPELL_EFFECTS} {kill};
+#CLASS {RL_SPELL_EFFECTS} {open};
+
+#NOP === Spell Highlights ===
+#HIGHLIGHT {bola de fuego}               {bold,reverse,yellow} {5};
+#HIGHLIGHT {bola encadenada de fuego}    {bold,reverse,yellow} {5};
+#HIGHLIGHT {defenestrar}                 {bold,reverse,yellow} {5};
+#HIGHLIGHT {desintegrar}                 {bold,reverse,yellow} {5};
+#HIGHLIGHT {devolver conjuro menor}      {bold,reverse,yellow} {5};
+#HIGHLIGHT {escudo}                      {bold,reverse,yellow} {5};
+#HIGHLIGHT {tormenta electrica}          {bold,reverse,yellow} {5};
+#HIGHLIGHT {flecha acida de dvneil}      {bold,reverse,yellow} {5};
+#HIGHLIGHT {piel de piedra}              {bold,reverse,yellow} {5};
+#HIGHLIGHT {flecha de llamas}            {bold,reverse,yellow} {5};
+#HIGHLIGHT {golpe de rayo}               {bold,reverse,yellow} {5};
+#HIGHLIGHT {mano espectral}              {bold,reverse,yellow} {5};
+#HIGHLIGHT {nube de frio}                {bold,reverse,yellow} {5};
+#HIGHLIGHT {nube hedionda}               {bold,reverse,yellow} {5};
+#HIGHLIGHT {ojo por ojo}                 {bold,reverse,yellow} {5};
+#HIGHLIGHT {proyectil magico mayor}      {bold,reverse,yellow} {5};
+#HIGHLIGHT {sangre a acido}              {bold,reverse,yellow} {5};
+#HIGHLIGHT {silueta imprecisa}           {bold,reverse,yellow} {5};
+#HIGHLIGHT {tormenta de hielo}           {bold,reverse,yellow} {5};
+
+#NOP === Spell Cast Messages ===
+#SUBSTITUTE {Comienzas a formular el hechizo %1} 
+    {<059>Comienzas a formular el hechizo <159>%1<099>} {5};
+
+#SUBSTITUTE {Pronuncias el cántico: '%1'.} 
+    {Pronuncias el cantico: '<140>%1<099>'.} {5};
+
+#SUBSTITUTE {Te concentras en el hechizo '%1'.} 
+    {Te concentras en el hechizo '<140>%1<099>'.} {5};
+
+#NOP === Spell Effect Messages ===
+#SUBSTITUTE {Por desgracia, eres incapaz de mantener en tu cabeza durante más tiempo los hechizos que habías preparado.} 
+    {<acf>%0<fca> --- ESTUDIO OFFF!!!!} {5};
+
+#CLASS {RL_SPELL_EFFECTS} {close};

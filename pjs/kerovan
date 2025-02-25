@@ -1,6 +1,5 @@
 #CLASS {kerovan} {kill};
 #CLASS {kerovan} {open};
-
 #VAR pj {kerovan};
 #ACTION {^El portero dice desde el otro lado: está bien, puedes pasar. Bienvenido al poblado}
 {
@@ -1150,13 +1149,11 @@
 #SUBSTITUTE {^Vaya.. %1 %2} {<119>Botín: <119>¡%1 está pelao! <099>} {5};
 #SUBSTITUTE {¡Oh, vaya, %1 parece haberse dado cuenta de tus intenciones!} {<109>Apuñalas a <129>%1<119> pero ¡Te caza!<099>} {5};
 
-
-#VARIABLE {DES} {no}
-#PROMPT {[%1/%2]:[%3/%4] | %5 | %6 | %7 |%8|%9|%10>} {<afc>[<119>(<cfa>%1<119>/<cfa>%2<119>)<afc>|<149>(<fac>%3<149>/<fac>%4<149>)<afc>]    <dab>%7<159>     [ <109>$DES<fac> | <fca>$target<fac> | <129>~%8<fca>~%9$herida<119>~%10 <caf><159>]} {-2}
-#PROMPT {^[%1/%2]:[%3/%4] | %5 | %6 | %7 |%8|%9|%10>} {<afc>[<119>(<cfa>%1<119>/<cfa>%2<119>)<afc>|<149>(<fac>%3<149>/<fac>%4<149>)<afc>]    <dab>%7<159>     [ <109>$DES<fac> | <fca>$target<fac> | <129>~%8<fca>~%9$herida<119>~%10 <caf><159>]} {-2}
-#PROMPT {^[%1/%2]:[%3/%4] | %5 | %6 | %7 |>} {<afc>[<119>(<cfa>%1<119>/<cfa>%2<119>)<afc>|<149>(<fac>%3<149>/<fac>%4<149>)<afc>]    <fac>%7<159>     [ <109>$DES<fac> | <fca>$target<fac> | <129>~%8<fca>~%9$herida<119>~%10 <caf><159>]} {-2}
-#PROMPT {[%1/%2]:[%3/%4] | %5 | %6 | %7 |>} {<afc>[<119>(<cfa>%1<119>/<cfa>%2<119>)<afc>|<149>(<fac>%3<149>/<fac>%4<149>)<afc>]    <fac>%7<159>     [ <109>$DES<fac> | <fca><119>$target<fac> | <129>~%8<fca>~%9$herida<faa>%10 <caf><159>]} {-2}
-#PROMPT {[%1/%2]:[%3/%4] | %5 | %6 | %7 |]} {<afc>[<119>(<cfa>%1<119>/<cfa>%2<119>)<afc>|<149>(<fac>%3<149>/<fac>%4<149>)<afc>]    <fac>%7<159>     [ <109>$DES<fac> | <fca><119>$target<fac> | <129>~%8<fca>~%9$herida<faa>%10 <caf><159>]} {-2}
-#PROMPT {^[%1/%2]:[%3/%4] | %5 | %6 | %7 |]} {<afc>[<119>(<cfa>%1<119>/<cfa>%2<119>)<afc>|<149>(<fac>%3<149>/<fac>%4<149>)<afc>]    <fac>%7<159>     [ <109>$DES<fac> | <fca>119>$target<fac> | <129>~%8<fca>~%9$herida<faa>%10 <caf><159>]} {-2}
 #AC {Desaparecido} {#va DES {<169>SI<109>}}
+#VARIABLE {DES} {no}
+
+#PROMPT {[%1/%2]:[%3/%4] | %5 |%6|%7|%8} {@center{<099><afc>[$prompt1<cfa>|$prompt2<afc>]\t $prompt3 @pushRight{[ <109>$DES<fac> | <fca><119>$target<fac> | <129>~%8<fca>~%9$herida<faa>%10 <caf><159>]}}} {-2}
+#PROMPT {^[%1/%2]:[%3/%4] | %5 |%6|%7|%8} {@center{<099><afc>[$prompt1<cfa>|$prompt2<afc>]\t $prompt3 @pushRight{[ <109>$DES<fac> | <fca><119>$target<fac> | <129>~%8<fca>~%9$herida<faa>%10 <caf><159>]}}} {-2}
+
+
 #CLASS {kerovan} {close}

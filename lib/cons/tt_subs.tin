@@ -49,7 +49,7 @@
 #SUBSTITUTE {%1 abre sus fauces para dejar caer el cuerpo inerte de su víctima} {<129>%1, el Gran Lobo Ancestral abre sus fauces para dejar caer el cuerpo inerte de su víctima<119> ESSE ES MI LOBO!!! <099>}                                                                                                     {5};
 #SUBSTITUTE {Con un rápido y ágil movimiento de muñeca realizas una pequeña brecha en el %1 de %2.} {<129>Con un rápido y ágil movimiento de muñeca realizas una pequeña brecha en el %1 de %2.<099>}                                                                        {5};
 #SUBSTITUTE {Lobo salvaje abre sus fauces para dejar caer el cuerpo inerte de su víctima} {<129>Lobo salvaje abre sus faucers para dejar caer el cuerpo inerte de su víctima<130>  LOBO DEJA CAER CUERPO MUERTO! :)<070>}                                                                                                      {5};
-#SUBSTITUTE {Propinas el golpe mortal a %1} {<129>Muere: <159>%1<099>}  {5};
+#SUBSTITUTE {Propinas el golpe mortal a %1} {@center{<129>Muere: <159>%1<099>}}  {5};
 #SUBSTITUTE {Vaya, %1 te ha descubierto antes de que pudieras robarle nada} {<129>¡Oh! <119>%1 <109>te pilla intentando robarle<149>!!<099>}                                       {5};
 #SUBSTITUTE {Cantas: %0}  {<149>Cantas:<099> %0}  {5};
 #SUBSTITUTE {^Robas perfectamente a %1} {<149>Robas a %1<129>: OK<099>}      {5};

@@ -9,11 +9,11 @@
 
 #SUBSTITUTE {se va {hacia el|hacia|en dirección} %w} {se va %1 <BCA><178> @exitShortName{%2} <099>};
 #SUBSTITUTE {%1 {llega|aparece} {desde el|desde|saltando desde el|de la dirección} %w} {%1 %2 %3 <BCA><178> @exitShortName{%4} <099>};
+#SUBSTITUTE {[El bloqueo '%w' termina]} {@pullRight{<bca>libre: <CAF> <afc>%1 }<099>};
 
-#SUBSTITUTE {^[%* orbita a Eirea]$} {[%1 <bee>entra<099> a Eirea]};
-#SUBSTITUTE {^[%* orbita al Limbo]$} {[%1 <g10>sale<099> de Eirea]};
+#SUBSTITUTE {^[%w orbita al Limbo]$} {@center{<CAA> %w <099>}};
 
-#SUBSTITUTE {^%* est{á|a} revigorizad{o|a}.$} {%1 @healthBar{100;50} @healthColor{100}100%+<099>};
+#SUBSTITUTE {^%* est{á|a} revigorizad{o|a}.$} {%1@healthBar{100;50} @healthColor{100}100%+<099>};
 #SUBSTITUTE {^%* est{á|a} en perfecto estado.$} {%1 @healthBar{100;50} @healthColor{100}100%<099>};
 #SUBSTITUTE {^%* est{á|a} en buen estado.$} {%1 @healthBar{89;50} @healthColor{85}80-99%<099>};
 #SUBSTITUTE {^%* est{á|a} ligeramente herid{o|a}.$} {%1 @healthBar{72;50} @healthColor{72}65-79%<099>};

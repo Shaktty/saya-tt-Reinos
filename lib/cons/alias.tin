@@ -20,6 +20,8 @@
    @pullRight{ #showme <039> Dendra??            : <129>46 <acf> 21 };
 } {5};
 
+#ALIAS cvv {conversar borracho;conversar jarra};
+
 #ALIAS {setf %1 %2} { #VARIABLE f%1var %2; #showme <aff>[<119>F%1<aff>]<129> Set to <aff>[<119>%2 %3<aff>]; #SHOWME {@fkeyshow{}} {2}};
 
 #ALIAS {/ayuda} {

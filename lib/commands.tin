@@ -1,0 +1,84 @@
+#CLASS {RL_COMMANDS} {kill};
+#CLASS {RL_COMMANDS} {open};
+
+#VAR {movement_types} {
+    {normal} {
+        {prefix} {}
+        {suffix} {}
+    }
+    {sigilo} {
+        {prefix} {sigilar }
+        {suffix} { silenciosamente}
+    }
+    {combate} {
+        {prefix} {galopar }
+        {suffix} { rápidamente}
+    }
+}
+
+#VAR {directions} {
+    {n} {norte}
+    {s} {sur}
+    {e} {este}
+    {o} {oeste}
+    {ne} {noreste}
+    {no} {noroeste}
+    {se} {sudeste}
+    {so} {sudoeste}
+    {ar} {arriba}
+    {ab} {abajo}
+}
+
+#NOP === Create movement aliases ===
+#ALIAS {n} {norte};
+#ALIAS {s} {sur};
+#ALIAS {e} {este};
+#ALIAS {o} {oeste};
+#ALIAS {ne} {noreste};
+#ALIAS {no} {noroeste};
+#ALIAS {se} {sudeste};
+#ALIAS {so} {sudoeste};
+#ALIAS {ar} {arriba};
+#ALIAS {ab} {abajo};
+
+#NOP === Create stealth movement aliases ===
+#ALIAS {sn} {sigilar norte};
+#ALIAS {ss} {sigilar sur};
+#ALIAS {se} {sigilar este};
+#ALIAS {so} {sigilar oeste};
+#ALIAS {sne} {sigilar noreste};
+#ALIAS {sno} {sigilar noroeste};
+#ALIAS {sse} {sigilar sudeste};
+#ALIAS {sso} {sigilar sudoeste};
+#ALIAS {sar} {sigilar arriba};
+#ALIAS {sab} {sigilar abajo};
+
+#NOP === Create combat movement aliases ===
+#ALIAS {gn} {galopar norte};
+#ALIAS {gs} {galopar sur};
+#ALIAS {ge} {galopar este};
+#ALIAS {go} {galopar oeste};
+#ALIAS {gne} {galopar noreste};
+#ALIAS {gno} {galopar noroeste};
+#ALIAS {gse} {galopar sudeste};
+#ALIAS {gso} {galopar sudoeste};
+#ALIAS {gar} {galopar arriba};
+#ALIAS {gab} {galopar abajo};
+
+#NOP === Movement mode switches ===
+#ALIAS {modo_normal} {
+    #SHOWME {<128>Modo normal activado<099>};
+    #VAR {current_mode} {normal};
+};
+
+#ALIAS {modo_sigilo} {
+    #SHOWME {<128>Modo sigilo activado<099>};
+    #VAR {current_mode} {sigilo};
+};
+
+#ALIAS {modo_combate} {
+    #SHOWME {<128>Modo combate activado<099>};
+    #VAR {current_mode} {combate};
+};
+
+#CLASS {RL_COMMANDS} {close};

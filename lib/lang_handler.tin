@@ -1,0 +1,120 @@
+#CLASS {RL_LANG_HANDLER} {kill};
+#CLASS {RL_LANG_HANDLER} {open};
+
+#NOP === Number Parsing ===
+#VAR {number_words} {
+    {un} {1}
+    {una} {1}
+    {dos} {2}
+    {tres} {3}
+    {cuatro} {4}
+    {cinco} {5}
+    {seis} {6}
+    {siete} {7}
+    {ocho} {8}
+    {nueve} {9}
+    {diez} {10}
+    {once} {11}
+    {doce} {12}
+    {trece} {13}
+    {catorce} {14}
+    {quince} {15}
+}
+
+#FUNCTION {parseNumber} {
+    #FORMAT {parsedNumberLowerCase} {%l} {%1};
+    #IF {"$number_words[$parsedNumberLowerCase]" != ""} {
+        #RETURN {$number_words[$parsedNumberLowerCase]};
+    };
+    #RETURN {0};
+}
+
+#NOP === Direction Mapping ===
+#VAR {direction_map} {
+    {long_to_short} {
+        {este} {E}
+        {el este} {E}
+        {noreste} {NE}
+        {el noreste} {NE}
+        {norte} {N}
+        {el norte} {N}
+        {noroeste} {NO}
+        {el noroeste} {NO}
+        {oeste} {O}
+        {el oeste} {O}
+        {sudoeste} {SO}
+        {el sudoeste} {SO}
+        {sur} {S}
+        {el sur} {S}
+        {sudeste} {SE}
+        {el sudeste} {SE}
+        {dentro} {DE}
+        {fuera} {FU}
+        {arriba} {AR}
+        {abajo} {AB}
+    }
+    {opposite} {
+        {e} {o}
+        {ne} {so}
+        {n} {s}
+        {no} {se}
+        {o} {e}
+        {so} {ne}
+        {s} {n}
+        {se} {no}
+        {ar} {ab}
+        {ab} {ar}
+        {de} {fu}
+        {fu} {de}
+    }
+}
+
+#FUNCTION {exitShortName} {
+    #IF {"$direction_map[long_to_short][%1]" != ""} {
+        #RETURN {$direction_map[long_to_short][%1]};
+    };
+    #RETURN {%1};
+}
+
+#FUNCTION {oppositeDirection} {
+    #IF {"$direction_map[opposite][%1]" != ""} {
+        #RETURN {$direction_map[opposite][%1]};
+    };
+    #RETURN {%1};
+}
+
+#NOP === Integration Functions ===
+#FUNCTION {getMovementDirection} {
+    #LOCAL {short_dir} {@exitShortName{%1}};
+    #RETURN {$short_dir};
+}
+
+#FUNCTION {getOppositeMovement} {
+    #LOCAL {short_dir} {@exitShortName{%1}};
+    #RETURN {@oppositeDirection{$short_dir}};
+}
+
+#NOP === Utility Functions for Movement Handler ===
+#FUNCTION {isValidDirection} {
+    #IF {"$direction_map[long_to_short][%1]" != ""} {
+        #RETURN {1};
+    };
+    #FOREACH {$direction_map[opposite][]} {dir} {opp} {
+        #IF {"%1" == "$dir"} {
+            #RETURN {1};
+        };
+    };
+    #RETURN {0};
+}
+
+#FUNCTION {normalizeDirection} {
+    #LOCAL {short_dir} {@exitShortName{%1}};
+    #FOREACH {$direction_map[opposite][]} {dir} {opp} {
+        #IF {"$short_dir" == "$dir" || "$short_dir" == "$opp"} {
+            #RETURN {$dir};
+        };
+    };
+    #RETURN {%1};
+}
+
+#CLASS {RL_LANG_HANDLER} {close};
