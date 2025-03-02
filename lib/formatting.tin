@@ -35,26 +35,11 @@
     #FORMAT {result} {%+${paddingLength}s%s} {} {%1};
 }
 
-#FUNCTION {health_color} {
-    #MATH {percent} {%1 * 100 / %2};
-    #IF {$percent <= 25} {
-        #RETURN {<118>};
-    };
-    #ELSEIF {$percent <= 50} {
-        #RETURN {<158>};
-    };
-    #ELSEIF {$percent <= 75} {
-        #RETURN {<128>};
-    };
-    #ELSE {
-        #RETURN {<138>};
-    };
-}
 
 #FUNCTION {healthBar} {
     #MATH {currentHealth} {%1 * %2 / 100};
     #MATH {missingHealth} {%2 - $currentHealth};
-    #FORMAT {currentHealth} {<033>%+${currentHealth}s<099>} {};
+    #FORMAT {currentHealth} {<cfa>%+${currentHealth}s<099>} {};
     #FORMAT {missingHealth} {<011>%+${missingHealth}s<099>} {};
     #RETURN {$currentHealth$missingHealth};
 }

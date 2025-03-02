@@ -3,33 +3,12 @@
 #NOP      (cc) 2016 Saya Faroth.  Mandadme un mudmail con cualquier duda.
 #NOP
 
-#al {/reload} {#read config.tin;#read pjs/$pj;#unspl;#spl 1 1};
-#ALIAS {macrohelp}
-{
-    #showme {<148>+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++};;
-    #showme {<138>Macros};
-    #showme {<148>+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++};
-    #showme <129>F1<179> $f1var;
-    #showme <129>F2<179> $f2var;
-    #showme <129>F3<179> $f3var;
-    #showme <129>F4<179> $f4var;
-    #showme <129>F5<179> $f5var;
-    #showme <129>F6<179> $f6var;
-    #showme <129>F7<179> $f7var;
-    #showme <129>F8<179> $f8var;
-    #showme <129>F9<179> $f9var;
-    #showme <129>F10<179> $f10var;
-    #showme <129>F11<179> $f11var;
-    #showme <129>F12<179> $f12var;
-    #showme {<148>+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++}
-};
-
 #VAR {rlppPrefix} {<caf>☥<099>};
 #VAR {rlppColor} {<fac>};
+
 #ALIAS {ppr} {prompt [$v/$V]:[$g/$G] | $s |$e|$p|$a};
-#va des {}
-#va herida {}
-#va target {}
+
+
 #CONFIG  {AUTO TAB}      {10000};
 #CONFIG  {BUFFER SIZE}   {10000};
 #CONFIG  {CHARSET}       {UTF-8};
@@ -46,9 +25,9 @@
 #CONFIG  {REPEAT ENTER}  {OFF};
 #CONFIG  {CONVERT META}  {OFF};
 #CONFIG  {DEBUG TELNET}  {OFF};
-#CONFIG  {MOUSE}  {OFF};
-#CONFIG  {MCCP}  {ON};
-#CONFIG  {SCREEN READER}  {OFF};
+#CONFIG  {MOUSE}         {OFF};
+#CONFIG  {MCCP}          {ON};
+#CONFIG  {SCREEN READER} {OFF};
 #CONFIG  {SCROLL LOCK}   {OFF};
 #CONFIG  {SPEEDWALK}     {OFF};
 #CONFIG  {TINTIN CHAR}   {#};
@@ -56,7 +35,6 @@
 #CONFIG  {VERBATIM CHAR} {\};
 #CONFIG  {VERBOSE}       {OFF};
 #CONFIG  {WORDWRAP}      {ON};
-
 
 #READ lib/spells.tin;
 #READ lib/cooldowns.tin;
@@ -68,39 +46,20 @@
 #READ lib/numpad.tin;
 #READ lib/lang_handler.tin;
 #READ lib/gmcp_handler.tin;
-#NOP #READ lib/mdspmapper.tin
-#NOP #READ lib/navigation.tin;
 #READ lib/prompts.tin;
 #READ lib/pathdir.tin;
-#NOP #READ lib/pathwalker.tin;
-#NOP #READ lib/autohandler.tin
 
-#ACTION {^%1 te causa una profunda {hemorragia|herid}a en {un|el|la|los|una} %2!}
-{
-    #va herida %2;
-    #showme @pullRight{<faa>Herida: <afa>%2<109>}
-};
-#SUBS {^Vislumbras una oportunidad de ataque contra %1} {@pullRight{<fca>Oportunidad! <faa>-> <adb>%1<109>}};
-#SUBST {[%1 orbita a Eirea]} {@center{<afa>%1<109>}};
-#SUBSTIT {[%1 orbita al Limbo]} {@center{<119> %1 <109>}};
-#AC {Desaparecido} {#va DES {<169>SI<109>}};
-#AC {%1 descubierto!} {#va DES {<129>SI<109>}};
+#NOP ==== CREAD UN ARCHIVO .password con este contenido:
+#NOP #var .pass {PONAQUITUPASSWORD};
+#NOP ===================================================
+#READ .password;
+
+
+#ALIAS cdev {#ssl {reinos} {rlmud.org} {5022} {pjs/$pj} } {5};
 
 
 #EVENT {PROGRAM START} {#ssl {reinos} {rlmud.org} {5022}};
-#ALIAS cdev {#ssl {reinos} {rlmud.org} {5022} {pjs/$pj} } {5};
-
 #EVENT {RECEIVED INPUT} {#VAR pj %0;#UNEVENT {RECEIVED INPUT}};
-
-#READ .password;
-
 #ACTION {Con que nombre quieres ser conocido} {$pj;$pass;#read pjs/$pj};
 #ACTION {Tu última conexión fue el} {ppr;#spl 1 1;cols $screenWidth};
 
-#ac {Estás herdi{o|a} en {la|el} %1} {#va herida {<faa{%1}<109>}};
-
-#ACT {Tu cuerpo responde y finalmente logra contener tu herida que queda cicatrizada.} {#va herida {}};
-
-#VA DES visible;
-
-#ALIAS {SER} {rebuscar tras el mostrador;coger todo de cuerpos;descerrojar oeste;op o;O;#5 N;AB;#3 N;arrojar cuerpo por el desague;#3 S;AR;#5 S;descerrojar este;op e;E;repa};

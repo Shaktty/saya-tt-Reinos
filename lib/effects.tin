@@ -1,6 +1,9 @@
 #CLASS {RL_EFFECTS} {kill};
 #CLASS {RL_EFFECTS} {open};
 
+#va des {};
+#va herida {};
+#va target {};
 #VAR {effects} {
     {combat_messages} {
         {death} {☠ %1 ☠}
@@ -11,7 +14,7 @@
 };
 
 #VAR {attack_type} {
-{Abrasas en ácido|Golpeas con un remolino de aire|Electrocutas|Congelas|Dañas con chispas mágicas|Golpeas con una onda psiónica|Envenenas|Golpeas con un chorro de agua|Rodeas de energía benigna|Quemas|Abrasas|Rodeas de energía maligna|Destrozas|Azotas con un halo divino|Cortas|Sesgas|Rajas|Pinchas|Perforas|Atraviesas|Aplastas|Golpeas|Desgarras|Laceras}
+{Abrasas en ácido|Un aura %* envuelve|Golpeas con un remolino de aire|Electrocutas|Congelas|Dañas con chispas mágicas|Golpeas con una onda psiónica|Envenenas|Golpeas con un chorro de agua|Rodeas de energía benigna|Quemas|Abrasas|Rodeas de energía maligna|Destrozas|Azotas con un halo divino|Cortas|Sesgas|Rajas|Pinchas|Perforas|Atraviesas|Aplastas|Envuelves|Golpeas|Desgarras|Laceras}
 };
 
 #FUNCTION {process_combat_message} {
@@ -55,10 +58,10 @@
         #DEFAULT {#VAR {multiplier} {}};
     };
     #IF {"%2" == ""} {
-        #RETURN {#<099> %1 en %3 a %4. \t $damage<099> $multiplier};
+        #RETURN {#<099> %1 en %3 a %4.\t$damage<199> $multiplier};
     };
     #ELSE {
-        #RETURN {#<099> %1 %2 en %3 a %4. \t $damage<099> $multiplier};
+        #RETURN {#<099> %1 %2 en %3 a %4.\t$damage<199> $multiplier};
     };
 };
 
@@ -80,14 +83,16 @@
 #SUBSTITUTE {^%* ha muerto.$}
     {@process_combat_message{death;%1}} {5};
 
+#SUBSTITUTE {^%* cae al suelo sin vida.$}
+    {@process_combat_message{death;%1}} {5};
 
 #NOP === Info Highlights ===
-#SUBSTITUTE {^Comienzas a formular el hechizo '%*'.$}    { $format[colors][magic]%0 } {5};
-#SUBSTITUTE {^Pronuncias el cántico: '%*'$}              { $format[colors][magic]%0 } {5};
-#SUBSTITUTE {^Tu piel es de piedra.$}              {$format[colors][magic]%0} {5};
-#SUBSTITUTE {^Est{a|á}s rodead{a|o} por %* im{a|á}genes id{e|é}nticas a t{í|i}.$}              {$format[colors][magic]%0} {5};
-#SUBSTITUTE {^Propinas el golpe mortal a %*.$}           {$format[colors][info]%0} {5};
-#SUBSTITUTE {^%* cae al suelo sin vida.$}                {$format[colors][info]%0} {5};
+#SUBSTITUTE {^Comienzas a formular el hechizo '%*'.$}                                       {$format[colors][magic]%0 } {5};
+#SUBSTITUTE {^Pronuncias el cántico: '%*'$}                                                 {$format[colors][magic]%0 } {5};
+#SUBSTITUTE {^Tu piel es de piedra.$}                                                       {$format[colors][magic]%0} {5};
+#SUBSTITUTE {^Est{a|á}s rodead{a|o} por %* im{a|á}genes id{e|é}nticas a t{í|i}.$}           {$format[colors][magic]%0} {5};
+#SUBSTITUTE {^Propinas el golpe mortal a %*.$}                                              {$format[colors][info]%0} {5};
+#SUBSTITUTE {^%* cae al suelo sin vida.$}                                                   {$format[colors][info]%0} {5};
 
 #NOP === Channels ===
 #HIGHLIGHT {[%w]} $format[colors][comms];
@@ -122,13 +127,15 @@
 #SUBSTITUTE {^{¡|}Te estremeces y pierdes la concentraci{ó|o}n!$}                           {$format[colors][danger]%0} {5};
 
 #NOP === Success Highlights ===
-#SUBSTITUTE {^Puedes moverte libremente de nuevo.$}      {$format[colors][success]%0} {5};
-#SUBSTITUTE {^{¡|}%* pierde la concentraci{ó|o}n!.$}     {$format[colors][success]%0} {5};
-#SUBSTITUTE {¡%1 pierde la concentración!$}              {$format[colors][success]%0} {5};
+#SUBSTITUTE {^Puedes moverte libremente de nuevo.$}                                         {$format[colors][success]%0} {5};
+#SUBSTITUTE {^{¡|}%* pierde la concentraci{ó|o}n!.$}                                        {$format[colors][success]%0} {5};
+#SUBSTITUTE {¡%1 pierde la concentración!$}                                                 {$format[colors][success]%0} {5};
 
 #NOP === Combat Highlights ===
 #SUBSTITUTE {^Estás persiguiendo a %*.$}                                                    {$format[colors][combat]%0} {5};
 #SUBSTITUTE {^¡%* se dispone a golpear a un enemigo!$}                                      {$format[colors][combat]%0} {5};
+#SUBSTITUTE {^¡Lanzas un ataque de oportunidad contra %*!}                                  {$format[colors][combat]%0} {5};
+#SUBSTITUTE {^No existe el objetivo %* o ya estás luchando con él.$}                        {$format[colors][combat]%0} {5}; 
 
 #NOP === Combat Substitutions ===
 #SUBSTITUTE {^[Obtienes %* puntos de experiencia]$}
@@ -137,56 +144,56 @@
 #ACTION {^%* est{á|a} revigorizad{o|a}.$}
 {
     #GAG {^%* est{á|a} revigorizad{o|a}.$};
-    #echo {@colscale{100}%s<099> @healthBar{100;20} @colscale{100}100%%} {%0};
+    #echo {%s @healthBar{100;10} 100%%} {%0};
 } {5};
 
 #ACTION {^%* est{á|a} en perfecto estado.$}
 {
     #GAG {^%* est{á|a} en perfecto estado.$};
-    #ECHO {@colscale{99}%s<099> @healthBar{100;20} @colscale{100}100%%} {%0};
+    #ECHO {%s @healthBar{100;10} 100%%} {%0};
 } {5};
 #ACTION {^%* est{á|a} en buen estado.$}
 {
     #GAG {^%* est{á|a} en buen estado.$};
-    #echo {@colscale{85}%s<099> @healthBar{85;20} @colscale{85}80-99%%} {%0}; 
+    #echo {%s @healthBar{85;10} 80-99%%} {%0}; 
 } {5};
 #ACTION {^%* est{á|a} ligeramente herid{o|a}.$}
 {
     #GAG {^%* est{á|a} lgeramente herid{o|a}.$};
-    #ECHO {@colscale{72}%s<099> @healthBar{72;20} @colscale{72}65-79%%} {%0};
+    #ECHO {%s @healthBar{72;10} 65-79%%} {%0};
 } {5};
 #ACTION {^%* est{á|a} considerablemente herid{o|a}.$}
 {
         #GAG {^%* est{á|a} considerablemente herid{o|a}.$};
-    #ECHO {@colscale{57}%s<099> @healthBar{57;20} @colscale{57}50-64%%} {%0};
+    #ECHO {%s @healthBar{57;10} 50-64%%} {%0};
 } {5};
 #ACTION {^%* est{á|a} llen{o|a} de heridas.$}
 {
     #GAG {^%* est{á|a} llen{o|a} de heridas.$};
-    #ECHO {@colscale{42}%s<099> @healthBar{42;20} @colscale{42}35-49%%} {%0};
+    #ECHO {%s @healthBar{42;10} 35-49%%} {%0};
 } {5};
 #ACTION {^%* est{á|a} herid{o|a} de gravedad.$}
 {
     #GAG {^%* est{á|a} herid{o|a} de gravedad.$};
-    #ECHO {@colscale{27}%s<099> @healthBar{27;20} @colscale{27}20-34%%} {%0};
+    #ECHO {%s @healthBar{27;10} 20-34%%} {%0};
 } {5};
 
 #ACTION {^%* est{á|a} herid{o|a} cr{í|i}ticamente.$}
 {
     #GAG {^%* est{á|a} herid{o|a} cr{í|i}ticamente.$};
-    #ECHO {@colscale{13}%s<099> @healthBar{13;20} @colscale{13}8-19%%} {%0};
+    #ECHO {%s @healthBar{13;10} 8-19%%} {%0};
 } {5};
 
 #ACTION {^%* est{á|a} mortalmente herid{o|a}.$}
 {
     #GAG {^%* est{á|a} mortalmente herid{o|a}.$};
-    #ECHO {@colscale{4}%s<099> @healthBar{4;20} @colscale{4}1-7%%} {%0};
+    #ECHO {%s @healthBar{4;10} 1-7%%} {%0};
 } {5};
 
 #ACTION {^%* est{á|a} moribund{o|a}.$}
 {
     #GAG {^%* est{á|a} moribund{o|a}.$};
-    #ECHO {@colscale{0}%s<099> @healthBar{0;20} @colscale{0}0%%} {%0};
+    #ECHO {%s @healthBar{0;10} 0%%} {%0};
 } {5};
 
 #NOP === Combat Action Messages ===
@@ -196,5 +203,19 @@
 #SUBSTITUTE {Estás siendo atacada por %1}
     {<100>Enemigo: <119>%1<099>} {5};
 
+#ACTION {^%1 te causa una profunda {hemorragia|herid}a en {un|el|la|los|una} %2!}
+{
+    #va herida %2;
+    #showme @pullRight{<faa>Herida: <afa>%2<109>}
+};
+#SUBS {^Vislumbras una oportunidad de ataque contra %1} {@pullRight{<fca>Oportunidad! <faa>-> <adb>%1<109>}};
+#SUBST {[%1 orbita a Eirea]} {@center{<afa>%1<109>}};
+#SUBSTIT {[%1 orbita al Limbo]} {@center{<119> %1 <109>}};
+#AC {Desaparecido} {#va DES {<169>SI<109>}};
+#AC {%1 descubierto!} {#va DES {<129>NO<109>}};
+#ac {Estás herdi{o|a} en {la|el} %1} {#va herida {<faa{%1}<109>}};
+#ACT {Tu cuerpo responde y finalmente logra contener tu herida que queda cicatrizada.} {#va herida {}};
+#VA DES visible;
+#ALIAS {SER} {rebuscar tras el mostrador;coger todo de cuerpos;descerrojar oeste;op o;O;#5 N;AB;#3 N;arrojar cuerpo por el desague;#3 S;AR;#5 S;descerrojar este;op e;E;repa};
 
 #CLASS {RL_EFFECTS} {close};
