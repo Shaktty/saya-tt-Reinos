@@ -8,21 +8,21 @@ Tambien implementa una barra de macros de Fn encima del estado, asi como un item
 ## Estructura de ficheros
 La forma de ejecutar esto es
 
-'''
+```
 tt++ -r config.tin pjs/tupj.tin
-'''
+```
 
 Una vez te hayas creado ese archivo, a partir del ejemplo. 
 
 ## Archivo de contrasenya para loging automatico
 Has de crearte un archivo de contrasenya, llamarlo .password, y guardarlo en este mismo directorio. Dentro ha de contenter>
-'''
+```
 #var pass {mipasaswd};
-'''
+```
 
 ### Arbol de directorios:
 #### classes de configuracion
-'''
+```
 cooldowns.tin
 effects.tin
 formatting.tin
@@ -35,8 +35,10 @@ prompts.tin
 saving_throw.tin
 spell_effects.tin
 spells.tin
-'''
+```
 
-#![screenshot](aeltas-tt.png)
+#![screenshot](p1.png)
+#![screenshot](p2.png)
+#![screenshot](p3.png)
 
 Shaktty.
