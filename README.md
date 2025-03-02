@@ -39,6 +39,5 @@ spells.tin
 
 #![screenshot](p1.png)
 #![screenshot](p2.png)
-#![screenshot](p3.png)
 
 Shaktty.
