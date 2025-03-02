@@ -69,6 +69,7 @@
 #READ lib/lang_handler.tin;
 #READ lib/gmcp_handler.tin;
 #NOP #READ lib/mdspmapper.tin
+#NOP #READ lib/navigation.tin;
 #READ lib/prompts.tin;
 #READ lib/pathdir.tin;
 #NOP #READ lib/pathwalker.tin;

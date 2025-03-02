@@ -134,35 +134,60 @@
 #SUBSTITUTE {^[Obtienes %* puntos de experiencia]$}
     {@align_right{$format[colors][success]+%1 xp<099>}} {5};
 
-#SUBSTITUTE {^%* est{á|a} revigorizad{o|a}.$}
-    {@colscale{100}%0<099> @healthBar{100;20} @colscale{100}100%+<099>} {5};
+#ACTION {^%* est{á|a} revigorizad{o|a}.$}
+{
+    #GAG {^%* est{á|a} revigorizad{o|a}.$};
+    #echo {@colscale{100}%s<099> @healthBar{100;20} @colscale{100}100%%} {%0};
+} {5};
 
-#SUBSTITUTE {^%* est{á|a} en perfecto estado.$}
-    {@colscale{99}%0<099> @healthBar{100;20} @colscale{100}100%<099>} {5};
+#ACTION {^%* est{á|a} en perfecto estado.$}
+{
+    #GAG {^%* est{á|a} en perfecto estado.$};
+    #ECHO {@colscale{99}%s<099> @healthBar{100;20} @colscale{100}100%%} {%0};
+} {5};
+#ACTION {^%* est{á|a} en buen estado.$}
+{
+    #GAG {^%* est{á|a} en buen estado.$};
+    #echo {@colscale{85}%s<099> @healthBar{85;20} @colscale{85}80-99%%} {%0}; 
+} {5};
+#ACTION {^%* est{á|a} ligeramente herid{o|a}.$}
+{
+    #GAG {^%* est{á|a} lgeramente herid{o|a}.$};
+    #ECHO {@colscale{72}%s<099> @healthBar{72;20} @colscale{72}65-79%%} {%0};
+} {5};
+#ACTION {^%* est{á|a} considerablemente herid{o|a}.$}
+{
+        #GAG {^%* est{á|a} considerablemente herid{o|a}.$};
+    #ECHO {@colscale{57}%s<099> @healthBar{57;20} @colscale{57}50-64%%} {%0};
+} {5};
+#ACTION {^%* est{á|a} llen{o|a} de heridas.$}
+{
+    #GAG {^%* est{á|a} llen{o|a} de heridas.$};
+    #ECHO {@colscale{42}%s<099> @healthBar{42;20} @colscale{42}35-49%%} {%0};
+} {5};
+#ACTION {^%* est{á|a} herid{o|a} de gravedad.$}
+{
+    #GAG {^%* est{á|a} herid{o|a} de gravedad.$};
+    #ECHO {@colscale{27}%s<099> @healthBar{27;20} @colscale{27}20-34%%} {%0};
+} {5};
 
-#SUBSTITUTE {^%* est{á|a} en buen estado.$}
-    {@colscale{85}%0<099> @healthBar{85;20} @colscale{85}80-99%<099>} {5};
+#ACTION {^%* est{á|a} herid{o|a} cr{í|i}ticamente.$}
+{
+    #GAG {^%* est{á|a} herid{o|a} cr{í|i}ticamente.$};
+    #ECHO {@colscale{13}%s<099> @healthBar{13;20} @colscale{13}8-19%%} {%0};
+} {5};
 
-#SUBSTITUTE {^%* est{á|a} ligeramente herid{o|a}.$}
-    {@colscale{72}%0<099> @healthBar{72;20} @colscale{72}65-79%<099>} {5};
+#ACTION {^%* est{á|a} mortalmente herid{o|a}.$}
+{
+    #GAG {^%* est{á|a} mortalmente herid{o|a}.$};
+    #ECHO {@colscale{4}%s<099> @healthBar{4;20} @colscale{4}1-7%%} {%0};
+} {5};
 
-#SUBSTITUTE {^%* est{á|a} considerablemente herid{o|a}.$}
-    {@colscale{57}%0<099> @healthBar{57;20} @colscale{57}50-64%<099>} {5};
-
-#SUBSTITUTE {^%* est{á|a} llen{o|a} de heridas.$}
-    {@colscale{42}%0<099> @healthBar{42;20} @colscale{42}35-49%<099>} {5};
-
-#SUBSTITUTE {^%* est{á|a} herid{o|a} de gravedad.$}
-    {@colscale{27}%0<099> @healthBar{27;20} @colscale{27}20-34%<099>} {5};
-
-#SUBSTITUTE {^%* est{á|a} herid{o|a} cr{í|i}ticamente.$}
-    {@colscale{13}%0<099> @healthBar{13;20} @colscale{13}8-19%<099>} {5};
-
-#SUBSTITUTE {^%* est{á|a} mortalmente herid{o|a}.$}
-    {@colscale{4}%0<099> @healthBar{4;20} @colscale{4}1-7%<099>} {5};
-
-#SUBSTITUTE {^%* est{á|a} moribund{o|a}.$}
-    {@colscale{0}%0<099> @healthBar{0;20} @colscale{0}0%<099>} {5};
+#ACTION {^%* est{á|a} moribund{o|a}.$}
+{
+    #GAG {^%* est{á|a} moribund{o|a}.$};
+    #ECHO {@colscale{0}%s<099> @healthBar{0;20} @colscale{0}0%%} {%0};
+} {5};
 
 #NOP === Combat Action Messages ===
 #SUBSTITUTE {%1 comienza a rodearte. Sin duda no trama nada bueno.}
