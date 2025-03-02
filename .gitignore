@@ -5,3 +5,8 @@ pjs/password
 .password
 pjs/*
 .*.swp
+*.sh
+*.png
+*.map
+lib/cons/*
+untested/*
