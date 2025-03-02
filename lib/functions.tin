@@ -1,14 +1,11 @@
 #CLASS {RL_FUNCTIONS} {kill};
 #CLASS {RL_FUNCTIONS} {open};
 
-/*
- * Function @message{string}
- */
 #FUNCTION {message} {
-    #LINE ONESHOT {#ECHO {$rlppPrefix$rlppColor %s<099>} {%1}};
-    #RETURN;
+    #LINE background {#SHOWME {$rlppPrefix$rlppColor %0 \n<099>}};
 };
 
+#GAG {[0;39;49m [1;33m[ [22;38;5;46m};
 
 #FUNCTION {parse_damage} {
     #SWITCH {"%1"} {

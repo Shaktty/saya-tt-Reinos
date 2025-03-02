@@ -1,0 +1,21 @@
+#class {RL_PATHDIR} {kill};
+#class {RL_PATHDIR} {open};
+
+#PATHDIR {ab} {ar} {32};
+#PATHDIR {e} {o} {2};
+#PATHDIR {n} {s} {1};
+#PATHDIR {ne} {so} {3};
+#PATHDIR {no} {se} {9};
+#PATHDIR {s} {n} {4};
+#PATHDIR {se} {no} {6};
+#PATHDIR {so} {ne} {12};
+#PATHDIR {ar} {ab} {16};
+#PATHDIR {o} {e} {8};
+
+#UNPATHDIR {w} {e} {8} 
+#UNPATHDIR {u} {d} {16} 
+#UNPATHDIR {sw} {ne} {12} 
+#UNPATHDIR {nw} {se} {9} 
+#UNPATHDIR {d} {u} {32} 
+
+#class {RL_PATHDIR} {close};

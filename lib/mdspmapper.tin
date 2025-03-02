@@ -1,0 +1,106 @@
+#CLASS {RL_MDSPMAPPER} {kill};
+#CLASS {RL_MDSPMAPPER} {open};
+
+#EVENT {SESSION CONNECTED}
+{
+    #variable TELNET[IAC]  \xFF;
+    #variable TELNET[DONT] \xFE;
+    #variable TELNET[DO]   \xFD;
+    #variable TELNET[WONT] \xFC;
+    #variable TELNET[WILL] \xFB;
+    #variable TELNET[SB]   \xFA;
+    #variable TELNET[SE]   \xF0;
+    #variable TELNET[MSDP] \x45;
+    #variable MSDP[VAR]   \x01;
+    #variable MSDP[VAL]   \x02;
+    #variable MSDP[TABLE_OPEN]  \x03;
+    #variable MSDP[TABLE_CLOSE] \x04;
+    #variable MSDP[ARRAY_OPEN]  \x05;
+    #variable MSDP[ARRAY_CLOSE] \x06;
+    #variable MSDP_REPORTABLE_VARIABLES {{ROOM}{}};
+    #nop Turn telnet debug on if there are problems.;
+    #config {debug telnet} {off};
+    #split 16 1;
+    #map create 100000;
+    #map flag nofollow;
+    #map flag vtmap;
+    #map flag static;
+    #map read msdp.map
+}
+
+#EVENT {SESSION DISCONNECTED}
+{
+    #map write msdp.map
+}
+
+#EVENT {IAC WILL MSDP}
+{
+    #send {$TELNET[IAC]$TELNET[DO]$TELNET[MSDP]\};
+    msdp_report
+}
+
+#EVENT {IAC SB MSDP}
+{
+    #nop Save all variables with an MSDP_ prefix.;
+    #variable {MSDP_%0} {%1}
+}
+
+#EVENT {IAC SB MSDP ROOM}
+{
+    #variable {MSDP_ROOM} {%1};
+    #map goto {$MSDP_ROOM[VNUM]} {dig};
+    #map set roomarea $MSDP_ROOM[AREA];
+    #map set roomname $MSDP_ROOM[NAME];
+    #map set roomterrain $MSDP_ROOM[TERRAIN];
+    #map set roomcolor <178>;
+    #nop Create unmapped exits and color unexplored rooms red.;
+    #foreach {*MSDP_ROOM[EXITS][]} {EXIT}
+    {
+        #map get {roomexit} {EXIT_LIST};
+        #if {&EXIT_LIST[$EXIT] == 0}
+        {
+            #map get {roomvnum} {EXIT_VNUM} {$MSDP_ROOM[EXITS][$EXIT]};
+            #map dig {$EXIT} {$MSDP_ROOM[EXITS][$EXIT]};
+            #if {$EXIT_VNUM == 0}
+            {
+                #map set {roomcolor} {<118>} {$MSDP_ROOM[EXITS][$EXIT]}
+            }
+        }
+    }
+}
+
+#ALIAS {msdp_report}
+{
+    #nop Ask the server to report all keys inside REPORTABLE_VARIABLES;
+    #variable result {$TELNET[IAC]$TELNET[SB]$TELNET[MSDP]$MSDP[VAR]REPORT};
+    #foreach {*MSDP_REPORTABLE_VARIABLES[]} {tmp}
+    {
+        #variable result {$result$MSDP[VAL]$tmp}
+    };
+    #send {$result$TELNET[IAC]$TELNET[SE]\}
+}
+
+#ALIAS {msdp_list}
+{
+    #send {$TELNET[IAC]$TELNET[SB]$TELNET[MSDP]$MSDP[VAR]LIST$MSDP[VAL]%0$TELNET[IAC]$TELNET[SE]\}
+}
+
+#ALIAS {msdp_send}
+{
+    #send {$TELNET[IAC]$TELNET[SB]$TELNET[MSDP]$MSDP[VAR]SEND$MSDP[VAL]%0$TELNET[IAC]$TELNET[SE]\}
+}
+
+#ALIAS {example}
+{
+    msdp_list COMMANDS;
+    msdp_list REPORTABLE_VARIABLES;
+    msdp_report
+}
+
+
+
+
+
+
+
+#CLASS {RL_MDSPMAPPER} {close};

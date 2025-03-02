@@ -33,7 +33,9 @@
 #CONFIG  {AUTO TAB}      {10000};
 #CONFIG  {BUFFER SIZE}   {10000};
 #CONFIG  {CHARSET}       {UTF-8};
+#CONFIG  {COLOR MODE}    {TRUE};
 #CONFIG  {COLOR PATCH}   {OFF};
+#CONFIG  {COMPACT}       {OFF};
 #CONFIG  {COMMAND COLOR} {<fca>};
 #CONFIG  {COMMAND ECHO}  {ON};
 #CONFIG  {CONNECT RETRY} {0.2};
@@ -43,7 +45,11 @@
 #CONFIG  {REPEAT CHAR}   {!};
 #CONFIG  {REPEAT ENTER}  {OFF};
 #CONFIG  {CONVERT META}  {OFF};
-#CONFIG  {SCROLL LOCK}   {ON};
+#CONFIG  {DEBUG TELNET}  {OFF};
+#CONFIG  {MOUSE}  {OFF};
+#CONFIG  {MCCP}  {ON};
+#CONFIG  {SCREEN READER}  {OFF};
+#CONFIG  {SCROLL LOCK}   {OFF};
 #CONFIG  {SPEEDWALK}     {OFF};
 #CONFIG  {TINTIN CHAR}   {#};
 #CONFIG  {VERBATIM}      {OFF};
@@ -53,20 +59,20 @@
 
 
 #READ lib/spells.tin;
-#READ lib/tt_actions.tin;
-#READ lib/tt_tab.tin;
+#READ lib/cooldowns.tin;
 #READ lib/saving_throw.tin;
-
-#READ lib/commands.tin;
 #READ lib/effects.tin;
 #READ lib/functions.tin;
 #READ lib/formatting.tin;
 #READ lib/spell_effects.tin;
-#NOP #READ lib/movement_handler.tin;
 #READ lib/numpad.tin;
 #READ lib/lang_handler.tin;
 #READ lib/gmcp_handler.tin;
+#NOP #READ lib/mdspmapper.tin
 #READ lib/prompts.tin;
+#READ lib/pathdir.tin;
+#NOP #READ lib/pathwalker.tin;
+#NOP #READ lib/autohandler.tin
 
 #ACTION {^%1 te causa una profunda {hemorragia|herid}a en {un|el|la|los|una} %2!}
 {

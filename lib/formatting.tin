@@ -3,14 +3,17 @@
 
 #VAR {format} {
     {colors} {
-        {info} {<fca>}
-        {warning} {<faa>}
+        {info} {<fac>}
+        {warning} {<faf>}
+        {magic} {<caf>}
         {success} {<afa>}
         {error} {<faa>}
+        {danger} {<FAA>}
         {health} {<128>}
         {energy} {<148>}
         {combat} {<118>}
         {system} {<138>}
+        {comms}  {<fac>}
     }
 }
 

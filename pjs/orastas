@@ -1,8 +1,6 @@
 #CLASS {orastas} {kill};
 #CLASS {orastas} {open};
 
-#UNPROMPT {^[%1/%2]:[%3/%4] | %5 | %6 | %7 |>}
-#UNPROMPT {[%1/%2]:[%3/%4] | %5 | %6 | %7 |>}
 #VAR larm sarten
 #VAR pj orastas
 #ALIAS {0} { esconderse arbol } {5}
@@ -12,11 +10,12 @@
 #ALIAS {r} { concentracion } {5}
 #ALIAS {cc} { chat ! } {5}
 #ALIAS {bbb} { bando ! } {5}
-#PROMPT {PV: %1/%2 GP: %3/%4 | %5 |%6|%7|%8}  {<afc>[<lime>Pvs: <cfa>%1<119>/<cfa>%2<afc> |<dad>Gps: <bold,magenta>%3<149>/<fac>%4<afc> ]\t<Pink>%5<azure>\t[ <acf>$conc<afc> | <119>$target <cfa>|<129>~%6~<fca>~%7~<119>~%8~$herida~<azure>]<190>}} {3};
-#PROMPT {^PV: %1/%2 GP: %3/%4 | %5 |%6|%7|%8} {<afc>[<lime>Pvs: <cfa>%1<119>/<cfa>%2<afc> |<dad>Gps: <bold,magenta>%3<149>/<fac>%4<afc> ]\t<Pink>%5\t<azure>[ <acf>$conc<afc> | <119>$target <cfa>|<129>~%6~<fca>~%7~<119>~%8~$herida~<azure>]<190>}} {3};
 #VAR  conc no
 #VAR herida {}
 #VAR target {}
+#var {prompt4} { @pushRight{<azure>[ <fca>Caza:<119>$target<fac>|<139>Ctrd:<120>$conc<fac>|<129>%8~<fca>%9~<119>%10~$herida<azure>]}}
+#PROMPT {PV: %1/%2 GP: %3/%4 | %5 |%6|%7|%8}  {@center{<099>$format[colors][system]\[$prompt1$format[colors][system]|$prompt2$format[colors][system]]\t $prompt3 $prompt4 } {-2};
+#PROMPT {^PV: %1/%2 GP: %3/%4 | %5 |%6|%7|%8} {@center{<099>$format[colors][system]\[$prompt1$format[colors][system]|$prompt2$format[colors][system]]\t $prompt3 $prompt4 } {-2};
 #VAR {f1var} {q} {5}
 #VAR {f2var} {qq} {5}
 #VAR {f3var} {ee} {5}

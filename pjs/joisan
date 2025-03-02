@@ -14,7 +14,8 @@
 
 #ALIAS {eston}
 {
-    #ACTION {No conoces ningún hechizo llamado '{%1}'.} {
+    #ACTION {No conoces ningún hechizo llamado '%*'}
+    {
         #showme {<acf>Hechizo: <aca>%1};
         #showme {Preparando el hechizo %1};
         preparar %1
@@ -23,7 +24,7 @@
 
 #ALIAS {estof}
 {
-    #UNACTION {No conoces ningún hechizo llamado '{%1}'.};
+    #UNACTION {No conoces ningún hechizo llamado '%*'};
 };
 
 #ACTION {# {Clavas|Hundes|Pinchas} %1 tu Puñal Vampírico %2} {mano};
@@ -92,14 +93,9 @@
 #ALIAS {ib} {interbando @%^BOLD%^BLACK%^Ignis (%^MAGENTA%^M-L%^BLACK%^)%^RED%^: %^B_BLUE%^BOLD%^ORANGE%^ %0 %^RESET%^ };
 #ALIAS {en} {oro;enterrar};
 
-#PROMPT {[%1/%2]:[%3/%4] | %5 |%6|%7|%8} {@center{
-    <099><afc>[$prompt1<cfa>|$prompt2<afc>]\t $prompt3 @pushRight{<fac>[ <149>Imgs:<cfa>%6 <fac>| <fca>Skns:<afc>%7 <fac>| <fcc>tgt:<119>$target <fac>| <cfc>des:<169>$DES <fac>|<129>~%8<fca>~%9<119>$herida~<fac>]}
-    <099>}
-} {-2}
+#VA prompt4 {<acf>[ <149>Imgs:<cfa>%6 <fac>| <fca>Skns:<afc>%7 <fac>| <fcc>tgt:<119>$target <fac>| <cfc>des:<169>$DES <fac>|<129>~%8<fca>~%9<119>$herida~<acf>]};
 
-#PROMPT {^[%1/%2]:[%3/%4] | %5 |%6|%7|%8} {@center{
-    <099><afc>[$prompt1<cfa>|$prompt2<afc>]\t $prompt3 @pushRight{<fac>[ <149>Imgs:<cfa>%6 <fac>| <fca>Skns:<afc>%7 <fac>| <fcc>tgt:<119>$target <fac>| <cfc>des:<169>$DES <fac>|<129>~%3<fca>~%9<119>$herida~<fac>]}
-    <099>}
-} {-2}
+#PROMPT  {[%1/%2]:[%3/%4] | %5 |%6|%7|%8}  {@center{<099>$format[colors][system]\[$prompt1$format[colors][system]|$prompt2$format[colors][system]]\t $format[colors][magic]$prompt3 @pushRight{<acf>[<149>Imgs:<cfa>%6<fac>|<fca>Skns:<afc>%7<fac>|<fcc>tgt:<119>$target<fac>|<cfc>des:<169>$DES<fac>|<129>~%8<fca>~%9<119>$herida~<acf>]}<099>}} {-2};
+#PROMPT {^[%1/%2]:[%3/%4] | %5 |%6|%7|%8} {@center{ <099>$format[colors][system]\[$prompt1$format[colors][system]|$prompt2$format[colors][system]]\t $format[colors][magic]$prompt3 @pushRight{<acf>[<149>Imgs:<cfa>%6<fac>|<fca>Skns:<afc>%7<fac>|<fcc>tgt:<119>$target<fac>|<cfc>des:<169>$DES<fac>|<129>~%8<fca>~%9<119>$herida~<acf>]}<099>}} {-2};
 
 #CLASS {joisan} {close};

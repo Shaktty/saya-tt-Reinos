@@ -16,7 +16,16 @@
             {mp_max} {0}
         }
     }
-}
+    {room} {
+        {info} {
+            {zone} {}
+            {environment} {}
+            {name} {}
+            {terrain} {}
+            {details} {}
+        }
+    }
+};
 
 #NOP === Protocol Constants ===
 #FORMAT {gmcp[protocol][IAC]}  {%a} {255};
@@ -31,7 +40,7 @@
 #NOP === Core Functions ===
 #FUNCTION {gmcp_send} {
     #SEND {$gmcp[protocol][IAC]$gmcp[protocol][SB]$gmcp[protocol][GMCP]%1$gmcp[protocol][IAC]$gmcp[protocol][SE]};
-}
+};
 
 #FUNCTION {gmcp_init} {
     #SEND {$gmcp[protocol][IAC]$gmcp[protocol][DO]$gmcp[protocol][GMCP]};
@@ -42,10 +51,20 @@
         "Char.Items 1", \
         "Char.Status 1", \
         "Room 1", \
+        "Room.Info 1", \
         "Comm.Channel 1", \
         "Char.Vitals 1" \
     ]};
-}
+#nop Turn telnet debug on to see telnet debugging information.;
+    #nop #config {debug telnet} {on};
+    #split 16 1;
+    #map create 100000;
+    #map goto 1;
+    #map flag vtmap;
+    #map flag static;
+    #map flag nofollow;
+    #map read gmcp.map
+};
 
 #NOP === Prompt Integration ===
 #ACTION {^Pvs: %1/%2  Pe: %3/%4  Po: %5  Pa: %6(%7)  Xp: %8 Psoc: %9} {
@@ -53,43 +72,37 @@
     #variable mncol @colscale{%3;%4};
     #format {prompt1} {%s%+4s<138>/<169>%s} {$hpcol} {%1} {%2};
     #format {prompt2} {%s%+4s/<159>%s} {$mncol} {%3} {%4};
-}
+};
 
 #NOP === GMCP Event Handlers ===
 #EVENT {IAC WILL GMCP} {
     gmcp_init;
-}
+};
 
 #EVENT {IAC SB GMCP Char.Status IAC SE} {
     #VAR {gmcp[char][status]} {%0};
-    
     #IF {"$gmcp[char][status][pe][min]" != ""} {
         #VAR {gmcp[char][status][mp]} {$gmcp[char][status][pe][min]};
         #VAR {gmcp[char][status][mp_max]} {$gmcp[char][status][pe][max]};
-        
         #variable mncol @colscale{$gmcp[char][status][mp];$gmcp[char][status][mp_max]};
         #format {prompt2} {%s%+4s/<159>%s} {$mncol} {$gmcp[char][status][mp]} {$gmcp[char][status][mp_max]};
     };
-    
     #IF {"$gmcp[char][status][pvs][min]" != ""} {
         #VAR {gmcp[char][status][hp]} {$gmcp[char][status][pvs][min]};
         #VAR {gmcp[char][status][hp_max]} {$gmcp[char][status][pvs][max]};
-        
         #variable hpcol @colscale{$gmcp[char][status][hp];$gmcp[char][status][hp_max]};
         #format {prompt1} {%s%+4s<138>/<169>%s} {$hpcol} {$gmcp[char][status][hp]} {$gmcp[char][status][hp_max]};
     };
-}
+};
 
 #EVENT {IAC SB GMCP Comm.Channel.Text IAC SE} {
     #VAR {message} {%0};
     #FORMAT {timestamp} {%t} {[%H:%M:%S]};
-    
     #IF {$gmcp[channels][log_enabled]} {
         #SYSTEM {echo "$timestamp $message" >> logs/chat.log};
     };
-    
     #SHOWME {$message} {-2};
-}
+};
 
 #NOP === Channel Handling ===
 #ALIAS {/chatlog} {
@@ -106,12 +119,45 @@
             #SHOWME {Usage: /chatlog <on|off>};
         };
     };
-}
+};
 
 #NOP === Initialize on Load ===
 #ALIAS {init_gmcp} {
     #VAR {gmcp[channels][log_enabled]} {1};
-}
+};
+#EVENT {IAC SB GMCP Room.Info IAC SE}
+{
+    #variable gmcp[room][info] {%0};
+    #if {$gmcp[room][info][num] == -1}
+    {
+        #return
+    };
+    #map goto {$gmcp[room][info][num]} {dig};
+    #map get roomarea {result};
+    #if {"$result" == ""}
+    {
+        #map set roomarea $gmcp[room][info][zone];
+        #map set roomnote $gmcp[room][info][environment];
+        #map set roomname $gmcp[room][info][name];
+        #map set roomterr $gmcp[room][info][terrain];
+        #map set roominfo $gmcp[room][info][details];
+        #map set roomcolor <178>
+    };
+    #foreach {*gmcp[room][info][exits][]} {exit}
+    {
+        #map get {roomexit} {result};
+        #if {&result[$exit] == 0}
+        {
+            #map get {roomvnum} {result} {$gmcp[room][info][exits][$exit]};
+            #map dig {$exit} {$gmcp[room][info][exits][$exit]};
+            #if {$result == 0}
+            {
+                #map set {roomcolor} {<118>} {$gmcp[room][info][exits][$exit]}
+            };
+        };
+    };
+};
+
 
 init_gmcp;
 

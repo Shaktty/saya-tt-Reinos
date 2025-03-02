@@ -14,19 +14,19 @@
 #va {f12var} {};
 
 #FUNCTION {colscale} {
-    #switch {10 * %1 / %2} {
-        #case {0} {#return <faa>};
-        #case {1} {#return <fba>};
-        #case {2} {#return <fca>};
-        #case {3} {#return <fda>};
-        #case {4} {#return <fea>};
-        #case {5} {#return <ffa>};
-        #case {6} {#return <efa>};
-        #case {7} {#return <dfa>};
-        #case {8} {#return <cfa>};
-        #case {9} {#return <bfa>};
-        #default {#return <afa>}
-    }
+      #switch {10 * %1 / %2} {
+          #case {0} {#return <faa>};
+          #case {1} {#return <fba>};
+          #case {2} {#return <fca>};
+          #case {3} {#return <fda>};
+          #case {4} {#return <fea>};
+          #case {5} {#return <efa>};
+          #case {6} {#return <dfa>};
+          #case {7} {#return <cfa>};
+          #case {8} {#return <bfa>};
+          #case {9} {#return <afa>};
+          #default {#return <afa>}
+      }
 };
 
 #variable mvcol {<caf>};
@@ -34,78 +34,78 @@
 #ACTION {^Pvs: %1/%2 Pe: %3/%4} {
     #variable hpcol @colscale{%1;%2};
     #variable mncol @colscale{%3;%4};
-    #format {prompt1} {%s%+4s<138>/<159>%s} {$hpcol} {%1} {%2};
-    #format {prompt2} {%s%+4s/<159>%s} {$mncol} {%3} {%4};
+    #format {prompt1} {%s%+4s$format[colors][info]/$format[colors][success]%s<099>} {$hpcol} {%1} {%2};
+    #format {prompt2} {%s%+4s$format[colors][info]/$format[colors][magic]%s<099>} {$mncol} {%3} {%4};
     #format {prompt3} {%s%s} {$mvcol} {%5}
 };
 
 #ACTION {Pvs: %1/%2 (%3) Pe: %4/%5 (%6)} {
     #variable hpcol @colscale{%1;%2};
     #variable mncol @colscale{%4;%5};
-    #format {prompt1} {%s%+4s<138>/<169>%s} {$hpcol} {%1} {%2};
-    #format {prompt2} {%s%+4s/<159>%s} {$mncol} {%4} {%5}
+    #format {prompt1} {%s%+4s$format[colors][info]/$format[colors][success]%s<099>} {$hpcol} {%1} {%2};
+    #format {prompt2} {%s%+4s$format[colors][info]/$format[colors][magic]%s<099>} {$mncol} {%4} {%5}
 };
 
 #ACTION {^Pvs: %1/%2 (%3) Pe: %4/%5 (%6)} {
     #variable hpcol @colscale{%1;%2};
     #variable mncol @colscale{%4;%5};
-    #format {prompt1} {%s%+4s<138>/<169>%s} {$hpcol} {%1} {%2};
-    #format {prompt2} {%s%+4s/<159>%s} {$mncol} {%4} {%5}
+    #format {prompt1} {%s%+4s$format[colors][info]/$format[colors][success]%s<099>} {$hpcol} {%1} {%2};
+    #format {prompt2} {%s%+4s$format[colors][info]/$format[colors][magic]%s<099>} {$mncol} {%4} {%5}
 };
 
 #ACTION {Pvs: %1/%2 Pe: %3/%4} {
     #variable hpcol @colscale{%1;%2};
     #variable mncol @colscale{%3;%4};
-    #format {prompt1} {%s%+4s<138>/<169>%s} {$hpcol} {%1} {%2};
-    #format {prompt2} {%s%+4s/<159>%s} {$mncol} {%3} {%4}
+    #format {prompt1} {%s%+4s$format[colors][info]/$format[colors][success]%s<099>} {$hpcol} {%1} {%2};
+    #format {prompt2} {%s%+4s$format[colors][info]/$format[colors][magic]%s<099>} {$mncol} {%3} {%4}
 };
 
 #ACTION {^[%1/%2]:[%3/%4] | %5 |%6|%7|%8} {
     #variable hpcol @colscale{%1;%2};
     #variable mncol @colscale{%3;%4};
-    #format {prompt1} {%s%+4s<138>/<169>%s} {$hpcol} {%1} {%2};
-    #format {prompt2} {%s%+4s/<159>%s} {$mncol} {%3} {%4};
+    #format {prompt1} {%s%+4s$format[colors][info]/$format[colors][success]%s<099>} {$hpcol} {%1} {%2};
+    #format {prompt2} {%s%+4s$format[colors][info]/$format[colors][magic]%s<099>} {$mncol} {%3} {%4};
     #format {prompt3} {%s%s} {$mvcol} {%5}
 };
 
 #ACTION {^Pvs: %1(%2)  Pe: %3(%4)  Po: %5  Pa: %6(%7)  Xp: %8 Psoc: %9} {
     #variable hpcol @colscale{%1;%2};
     #variable mncol @colscale{%3;%4};
-    #format {prompt1} {%s%+4s<138>/<169>%s} {$hpcol} {%1} {%2};
-    #format {prompt2} {%s%+4s/<159>%s} {$mncol} {%3} {%4}
+    #format {prompt1} {%s%+4s$format[colors][info]/$format[colors][success]%s<099>} {$hpcol} {%1} {%2};
+    #format {prompt2} {%s%+4s$format[colors][info]/$format[colors][magic]%s<099>} {$mncol} {%3} {%4}
 };
 
 #ACTION {Pvs: %1(%2)  Pe: %3(%4)  Po: %5  Pa: %6(%7)  Xp: %8 Psoc: %9} {
     #variable hpcol @colscale{%1;%2};
     #variable mncol @colscale{%3;%4};
-    #format {prompt1} {%s%+4s<138>/<169>%s} {$hpcol} {%1} {%2};
-    #format {prompt2} {%s%+4s/<159>%s} {$mncol} {%3} {%4}
+    #format {prompt1} {%s%+4s$format[colors][info]/$format[colors][success]%s<099>} {$hpcol} {%1} {%2};
+    #format {prompt2} {%s%+4s$format[colors][info]/$format[colors][magic]%s<099>} {$mncol} {%3} {%4}
 };
 
 #ACTION {[%1/%2]:[%3/%4] | %5 |%6|%7|%8} {
     #variable hpcol @colscale{%1;%2};
     #variable mncol @colscale{%3;%4};
-    #format {prompt1} {%s%+4s<138>/<169>%s} {$hpcol} {%1} {%2};
-    #format {prompt2} {%s%+4s/<159>%s} {$mncol} {%3} {%4};
+    #format {prompt1} {%s%+4s$format[colors][info]/$format[colors][success]%s<099>} {$hpcol} {%1} {%2};
+    #format {prompt2} {%s%+4s$format[colors][info]/$format[colors][magic]%s<099>} {$mncol} {%3} {%4};
     #format {prompt3} {%s%s} {$mvcol} {%5}
 };
 #ACTION {[%1/%2]:[%3/%4] |%5|} {
     #variable hpcol @colscale{%1;%2};
     #variable mncol @colscale{%3;%4};
-    #format {prompt1} {%s%+4s<138>/<169>%s} {$hpcol} {%1} {%2};
-    #format {prompt2} {%s%+4s/<159>%s} {$mncol} {%3} {%4};
+    #format {prompt1} {%s%+4s$format[colors][info]/$format[colors][success]%s<099>} {$hpcol} {%1} {%2};
+    #format {prompt2} {%s%+4s$format[colors][info]/$format[colors][magic]%s<099>} {$mncol} {%3} {%4};
     #format {prompt3} {%s%s} {$mvcol} {%5}
 };
 #NOP === PROMPT POR DEFECTO SIN IMAGENES N
 #PROMPT {[%1/%2]:[%3/%4] | %5 |%6|%7|%8} {@center{
-    <099><afc>[$prompt1<cfa>|$prompt2<afc>]\t $prompt3 @pushRight{<fac>[ <149>Imgs:<cfa>%6 <fac>| <fca>Skns:<afc>%7 <fac>| <fcc>tgt:<119>$target <fac>| <cfc>des:<169>$DES <fac>|<129>~%8<fca>~%9<119>$herida~<fac>]}
+    <099>$format[colors][system]\[$prompt1$format[colors][system]|$prompt2$format[colors][system]]\t $prompt3 @pushRight{<fac>[ <149>Imgs:<cfa>%6 <fac>| <fca>Skns:<afc>%7 <fac>| <fcc>tgt:<119>$target <fac>| <cfc>des:<169>$DES <fac>|<129>~%8<fca>~%9<119>$herida~<fac>]}
     <099>}
-} {-2}
+} {-2};
 
 #PROMPT {^[%1/%2]:[%3/%4] | %5 |%6|%7|%8} {@center{
-    <099><afc>[$prompt1<cfa>|$prompt2<afc>]\t $prompt3 @pushRight{<fac>[ <149>Imgs:<cfa>%6 <fac>| <fca>Skns:<afc>%7 <fac>| <fcc>tgt:<119>$target <fac>| <cfc>des:<169>$DES <fac>|<129>~%3<fca>~%9<119>$herida~<fac>]}
-    <099>}
-} {-2}
+    <099>$format[colors][system]\[$prompt1$format[colors][system]|$prompt2$format[colors][system]]\t $prompt3 @pushRight{<fac>[ <149>Imgs:<cfa>%6 <fac>| <fca>Skns:<afc>%7 <fac>| <fcc>tgt:<119>$target <fac>| <cfc>des:<169>$DES <fac>|<129>~%3<fca>~%9<119>$herida~<fac>]}
+  <099>}
+} {-2};
 
 #ALIAS {/macros}
 {

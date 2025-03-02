@@ -312,8 +312,8 @@
 #VARIABLE f9var {at}
 #VARIABLE planta {arlan}
 #NOP #ALIAS {ppr} {prompt [$v/$V]:[$g/$G] | $s |$a};
-#PROMPT {[%1/%2]:[%3/%4] | %5 |%6|%7|%8} {@center{<099><afc>[$prompt1<cfa>|$prompt2<afc>]\t $prompt3 @pushRight{<fac>[<caf>$invoca<fac>|<fca>Caza:<119>$target<fac>|<139>Ctrd:<120>$conc<fac>|<129>%8~<fca>%9~<119>%10~$herida<fac>]}}} {-2};
-#PROMPT {^[%1/%2]:[%3/%4] | %5 |%6|%7|%8} {@center{<099><afc>[$prompt1<cfa>|$prompt2<afc>]\t $prompt3 @pushRight{<fac>[<caf>$invoca<fac>|<fca>Caza:<119>$target<fac>|<139>Ctrd:<120>$conc<fac>|<129>%8~<fca>%9~<119>%10~$herida<fac>]}}} {-2};
+#PROMPT {^[%1/%2]:[%3/%4] | %5 |%6|%7|%8} {@center{<099>$format[colors][system]\[$prompt1$format[colors][system]|$prompt2$format[colors][system]]\t $prompt3 @pushRight{<fac>[<caf>$invoca<fac>|<fca>Caza:<119>$target<fac>|<139>Ctrd:<120>$conc<fac>|<129>%8~<fca>%9~<119>%10~$herida<fac>]}}} {-2};
+#PROMPT {[%1/%2]:[%3/%4] | %5 |%6|%7|%8} {@center{<099>$format[colors][system]\[$prompt1$format[colors][system]|$prompt2$format[colors][system]]\t $prompt3 @pushRight{<fac>[<caf>$invoca<fac>|<fca>Caza:<119>$target<fac>|<139>Ctrd:<120>$conc<fac>|<129>%8~<fca>%9~<119>%10~$herida<fac>]}}} {-2};
 #VARIABLE {conc} {no}
 #ACT {Gran Oso Ancestral} {#va invoca {<139>Oso Ancestral<109>}};
 #ACT {Gran Lobo Ancestral} {#va invoca {<159>Lobo Ancestral<109>}};
