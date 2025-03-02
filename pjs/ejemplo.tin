@@ -1,0 +1,21 @@
+#CLASS {RL_PJ} {kill};
+#CLASS {RL_PJ} {open};
+#VAR pj {TUNICK};
+
+#VAR {f1var} {1};
+#VAR {f2var} {to};
+#VAR {f3var} {rr};
+#VAR {f4var} {ui};
+#VAR {f5var} {z};
+#VAR {f6var} {subetu};
+#VAR {f7var} {gi};
+#VAR {f8var} {ess};
+#VAR {f9var} {par};
+#VAR {f10var} {ee};
+#VAR {f11var} {to};
+#VAR {f12var} {x};
+
+#PROMPT  {[%1/%2]:[%3/%4] | %5 |%6|%7|%8}  {@center{<099>$format[colors][system]\[$prompt1$format[colors][system]|$prompt2$format[colors][system]]\t $format[colors][magic]$prompt3 @pushRight{<acf>[<149>Imgs:<cfa>%6<fac>|<fca>Skns:<afc>%7<fac>|<fcc>tgt:<119>$target<fac>|<cfc>des:<169>$DES<fac>|<129>~%8<fca>~%9<119>$herida~<acf>]}<099>}} {-2};
+#PROMPT {^[%1/%2]:[%3/%4] | %5 |%6|%7|%8} {@center{ <099>$format[colors][system]\[$prompt1$format[colors][system]|$prompt2$format[colors][system]]\t $format[colors][magic]$prompt3 @pushRight{<acf>[<149>Imgs:<cfa>%6<fac>|<fca>Skns:<afc>%7<fac>|<fcc>tgt:<119>$target<fac>|<cfc>des:<169>$DES<fac>|<129>~%8<fca>~%9<119>$herida~<acf>]}<099>}} {-2};
+
+#CLASS {RL_PJ} {close};
